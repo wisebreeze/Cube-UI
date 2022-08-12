@@ -1,0 +1,1 @@
+{"namespace":"dropper_help","dropper_help":{"type":"stack_panel","orientation":"vertical","controls":[{"header_1@how_to_play_common.header":{"$text":"howtoplay.droppers.header.1"}},{"paragraph_2@how_to_play_common.paragraph":{"$text":"howtoplay.droppers.text.2"}}]}}

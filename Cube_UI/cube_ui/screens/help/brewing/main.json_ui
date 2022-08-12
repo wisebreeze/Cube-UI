@@ -1,0 +1,198 @@
+{
+  "namespace": "brewing_help",
+  "brewing_help": {
+    "$resource_item_name|default": "item.fermented_spider_eye.name",
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {"blaze_powder@brewing_common.blaze_powder_item_panel": {}},
+      {"full_panel@brewing_common.full_panel": {}},
+      {"divider@cube_ui_common.divider": {}},
+      {"awkward@brewing_list.awkward_list": {}},
+      {"splash@brewing_list.splash_list": {}},
+      {"lingering@brewing_list.lingering_list": {}},
+      {
+        "positive_header@cube_ui_common.cube_ui_header": {
+          "$cube_ui_header_text": "help.positive_effect"
+        }
+      },
+      {"speed_text@brewing_common.paragraph": {"$effect_name": "potion.moveSpeed.name"}},
+      {"speed@brewing_list.speed_list": {}},
+      {"jump_text@brewing_common.paragraph": {"$effect_name": "potion.jump.name"}},
+      {"jump@brewing_list.jump_list": {}},
+      {"damage_text@brewing_common.paragraph": {"$effect_name": "potion.damageBoost.name"}},
+      {"damage@brewing_list.damage_list": {}},
+      {"instant_health_text@brewing_common.paragraph": {"$effect_name": "potion.heal.name"}},
+      {"instant_health@brewing_list.instant_health_list": {}},
+      {"regeneration_text@brewing_common.paragraph": {"$effect_name": "potion.regeneration.name"}},
+      {"regeneration@brewing_list.regeneration_list": {}},
+      {"fire_resistance_text@brewing_common.paragraph": {"$effect_name": "potion.fireResistance.name"}},
+      {"fire_resistance@brewing_list.fire_resistance_list": {}},
+      {"water_text@brewing_common.paragraph": {"$effect_name": "potion.waterBreathing.name"}},
+      {"water@brewing_list.water_list": {}},
+      {"night_text@brewing_common.paragraph": {"$effect_name": "potion.nightVision.name"}},
+      {"night@brewing_list.night_list": {}},
+      {"hide_text@brewing_common.paragraph": {"$effect_name": "potion.invisibility.name"}},
+      {"hide@brewing_list.hide_list": {}},
+      {"slowfall_text@brewing_common.paragraph": {"$effect_name": "potion.slowFalling.name"}},
+      {"slowfall@brewing_list.slowfall_list": {}},
+      {"turtle_text@brewing_common.paragraph": {"$effect_name": "potion.turtleMaster.name"}},
+      {"turtle@brewing_list.turtle_list": {}},
+      {
+        "positive_header@cube_ui_common.cube_ui_header": {
+          "$cube_ui_header_text": "help.negative_effect"
+        }
+      },
+      {"slowness_text@brewing_common.paragraph": {"$effect_name": "potion.moveSlowdown.name"}},
+      {"slowness_1@brewing_list.slowness_list": {}},
+      {"slowness_2@brewing_list.slowness_list_2": {}},
+      {"poison_text@brewing_common.paragraph": {"$effect_name": "potion.poison.name"}},
+      {"poison@brewing_list.poison_list": {}},
+      {"instant_damage_text@brewing_common.paragraph": {"$effect_name": "potion.harm.name"}},
+      {"instant_damage_1@brewing_list.instant_damage_list": {}},
+      {"instant_damage_2@brewing_list.instant_damage_list_2": {}},
+      {"weakness_text@brewing_common.paragraph": {"$effect_name": "potion.weakness.name"}},
+      {"weakness@brewing_list.weakness_list": {}}
+    ]
+  },
+  "brewing_item_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c + 4px"
+    ],
+    "$time|default": "§a",
+    "$result_plus|default": false,
+    "$potion_plus|default": false,
+    "$bottle_item_name|default": "potion.awkward.name",
+    "$potion_item|default": "textures/items/potion_bottle_drinkable",
+    "$resource_item|default": "textures/items/apple",
+    "$result_item|default": "textures/items/potion_bottle_drinkable",
+    "controls": [
+      {
+        "brewing_item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            18
+          ],
+          "controls": [
+            {
+              "potion_bottle_cell@cube_ui_common.cell": {
+                "$item_texture|default": "$potion_item",
+                "$is_plus": "$potion_plus",
+                "$item_name": "$bottle_item_name"
+              }
+            },
+            {
+              "panel_1@cube_ui_common.h_panel": {}
+            },
+            {
+              "plus@text_panel": {
+                "$main_text": "+"
+              }
+            },
+            {
+              "panel_2@cube_ui_common.h_panel": {}
+            },
+            {
+              "resource_cell@cube_ui_common.cell": {
+                "$item_texture|default": "$resource_item",
+                "$item_name": "$resource_item_name"
+              }
+            },
+            {
+              "panel_3@cube_ui_common.h_panel": {}
+            },
+            {
+              "result_text@text_panel": {
+                "$main_text": "="
+              }
+            },
+            {
+              "panel_4@cube_ui_common.h_panel": {}
+            },
+            {
+              "result_cell@cube_ui_common.cell": {
+                "$item_texture|default": "$result_item",
+                "$is_plus": "$result_plus"
+              }
+            },
+            {
+              "panel_4@cube_ui_common.h_panel": {}
+            },
+            {
+              "time@cube_ui_common.time": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "text_panel": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "$main_text|default": "",
+    "$text_color|default": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "size": [
+            "default",
+            10
+          ],
+          "text": "$main_text",
+          "layer": 4,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "color": "$text_color"
+        }
+      }
+    ]
+  },
+  "effect_name": {
+    "type": "label",
+    "size": [
+      "default",
+      "default"
+    ],
+    "text": "$effect_name",
+    "layer": 4,
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "font_scale_factor": 1.2
+  },
+  "image_panel": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "texture_size|default": [
+      16,
+      16
+    ],
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "layer": 5,
+          "size": "$texture_size",
+          "texture": "$main_texture"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "namespace": "chat_host_options",
+  "host_panel": {
+    "type": "panel",
+    "size": [ 160, "100%-20px" ],
+    "offset": [ 0, -47 ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "$offset_sub_tabs": [ "10%", 0 ],
+    "$offset_second_sub_tabs": [ "110% + 2px", 0 ],
+    "controls": [
+      { "host_main_panel@host_options.host_main_buttons": {} },
+      { "host_teleport_panel@host_options.host_teleport_buttons": {} },
+      { "host_teleport_player_panel@host_options.host_teleport_player_buttons": {} },
+      { "host_time_panel@host_options.host_time_buttons": {} },
+      { "host_weather_panel@host_options.host_weather_buttons": {} }
+    ]
+  }
+}

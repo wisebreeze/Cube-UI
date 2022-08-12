@@ -1,0 +1,165 @@
+{
+  "namespace": "hud_effect",
+////////////////////
+// item
+  "effect_icon": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "offset": [ 2, 0 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "texture": "#texture",
+    "layer": 4,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#texture",
+        "binding_collection_name": "mob_effects_collection",
+        "binding_condition": "visible"
+      }
+    ]
+  },
+  
+  "effect_time": {
+    "type": "label",
+    "font_type": "smooth",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [ -2, 0 ],
+    "text": "#mob_effect_timer",
+    "color": [ 0.235, 0.235, 0.235 ],
+    "text_alignment": "right",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#mob_effect_timer",
+        "binding_collection_name": "mob_effects_collection",
+        "binding_condition": "always_when_visible"
+      }
+    ]
+  },
+  
+  "effect_name": {
+    "type": "label",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 20, 0 ],
+    "text_alignment": "left",
+    "text": "#mob_effect_name",
+    "layer": 5,
+    "font_scale_factor": 1.2,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#mob_effect_name",
+        "binding_collection_name": "mob_effects_collection",
+        "binding_condition": "visible"
+      }
+    ]
+  },
+
+  "mob_effect_grid_main_item": {
+    "type": "image",
+    "size": [ "100%", 20 ],
+    "offset": [ 4, 0 ],
+    "color": "$global_background_color",
+    "texture": "textures/ui/white_background",
+    "nineslice_size": 1,
+    "layer": 3,
+    "alpha": "$global_background_alpha",
+    "controls": [
+      { "name@hud_effect.effect_name": {}},
+      { "time@hud_effect.effect_time": {}},
+      { "icon@hud_effect.effect_icon": {}}
+    ]
+  },
+  
+  "mob_effect_grid_item": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", 26 ],
+    "controls": [
+      {"p1@cube_ui_common.v_panel": {}},
+      {"main@mob_effect_grid_main_item": {}},
+      {"p2@cube_ui_common.v_panel": {}}
+    ]
+  },
+////////////////////
+// grid
+  "mob_effect_grid": {
+    "type": "grid",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100% - 6px", "100%c" ],
+    "grid_item_template": "hud_effect.mob_effect_grid_item",
+    "grid_dimension_binding": "#mob_effect_grid_size",
+    "collection_name": "mob_effects_collection",
+    "bindings": [{"binding_name": "#mob_effect_grid_size"}]
+  },
+  
+  "mob_effect_grid_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {"p1@cube_ui_common.h_panel": {}},
+      {"grid@mob_effect_grid": {}},
+      {"p2@cube_ui_common.h_panel": {}}
+    ]
+  },
+////////////////////
+// main panel
+  "effect_scrolling_panel@common.scrolling_panel": {
+    "$scrolling_content": "hud_effect.mob_effect_grid_panel",
+    "$show_background": false,
+    "$scroll_size": [ "6px", "100% - 4px" ],
+    "$scrolling_pane_size": [ "100%", "100%" ],
+    "$scroll_box_mouse_image_control": "common-classic.button_state_default",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle"
+  },
+  
+  "effect_scroll_panel": {
+    "type": "panel",
+    "size": [ "100%", "100% - 20px" ],
+    "controls": [
+      {"effect_scrolling_panel@hud_effect.effect_scrolling_panel": {}}
+    ]
+  },
+  
+  "main_screen_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {
+          "$title": "itemGroup.name.potion",
+          "$headbar_add": "hud_effect.right_button",
+          
+          "$back_button_ignored": "(not $is_left_handed)"
+        }
+      },
+      {"effect_scrolling_panel@hud_effect.effect_scroll_panel": {}}
+    ]
+  },
+  
+  "right_button@common.close_button": {
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [ -2, 0 ],
+    "ignored": "$is_left_handed",
+    "$button_tts_header": "accessibility.button.back"
+  },
+//////////////////////////
+// screen
+  "screen_bg": {
+    "type": "panel",
+    "layer": 2,
+    "size": [ "70%", "85%" ],
+    "controls": [
+      {"background@cube_ui_common.container_pocket_background": {}},
+      {"tab_panel@hud_effect.main_screen_panel": {}}
+    ]
+  }
+}

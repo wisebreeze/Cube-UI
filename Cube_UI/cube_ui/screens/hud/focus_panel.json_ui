@@ -1,0 +1,410 @@
+{
+  "namespace": "hud_focus",
+  
+  "button_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": ["100%","100%c"],
+    "controls": [
+      {
+        "hide_all_hud_button@hide_all_hud_button": {}
+      },
+      {
+        "hide_doll_button@hide_doll_button": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "button_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "notice_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": ["100%","100%c"],
+    "controls": [
+      {
+        "chat_toggle@chat_toggle": {}
+      },
+      {
+        "title_toggle@title_toggle": {}
+      },
+      {
+        "actionbar_toggle@actionbar_toggle": {}
+      },
+      {
+        "note_toggle@note_toggle": {}
+      },
+      {
+        "item_name_toggle@item_name_toggle": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "notice_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "other_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": ["100%","100%c"],
+    "controls": [
+      {
+        "scb_toggle@scb_toggle": {}
+      },
+      {
+        "player_position_toggle@player_position_toggle": {}
+      },
+      {
+        "effect_toggle@effect_toggle": {}
+      },
+      {
+        "boss_toggle@boss_toggle": {}
+      },
+      {
+        "switch_toggle@switch_toggle": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "other_tab_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+  "hide_all_hud_button@button_common": {
+    "$pressed_button_name": "button.hide_gui_all",
+    "$icon": "cube_ui/textures/common/icons/hide_hud_icon",
+    "$title": "hud.btn.hide_all"
+  },
+  
+  "hide_doll_button@button_common": {
+    "$pressed_button_name": "button.hide_paperdoll_hud",
+    "$icon": "textures/ui/invisibility_effect",
+    "$title": "hud.btn.hide_doll"
+  },
+  
+  "scb_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "scb_toggle"
+  },
+  
+  "scb_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.scb_toggle_control",
+    "$icon_name": "sign",
+    "$icon_prefix": "textures/items/",
+    "$title": "hud.toggle.scb"
+  },
+  
+  "item_name_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "item_name_toggle"
+  },
+  
+  "item_name_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.item_name_toggle_control",
+    "$icon_name": "name_tag",
+    "$icon_prefix": "textures/items/",
+    "$title": "hud.toggle.item_name"
+  },
+  
+  "effect_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "effect_toggle"
+  },
+  
+  "effect_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.effect_toggle_control",
+    "$icon_name": "potion_bottle_absorption",
+    "$icon_prefix": "textures/items/",
+    "$title": "hud.toggle.effect"
+  },
+  
+  "switch_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "switch_toggle"
+  },
+  
+  "switch_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.switch_toggle_control",
+    "$icon_name": "arrow_right",
+    "$icon_prefix": "textures/ui/",
+    "$title": "hud.switch"
+  },
+  
+  "boss_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "boss_toggle"
+  },
+  
+  "boss_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.boss_toggle_control",
+    "$icon_name": "dragon_fireball",
+    "$icon_prefix": "textures/items/",
+    "$title": "hud.boss"
+  },
+  
+  "chat_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "chat_toggle"
+  },
+  
+  "chat_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.chat_toggle_control",
+    "$icon_name": "mute_off",
+    "$icon_prefix": "textures/ui/",
+    "$title": "hud.chat"
+  },
+  
+  "note_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "note_toggle"
+  },
+  
+  "note_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.note_toggle_control",
+    "$icon_name": "noteblock",
+    "$icon_prefix": "textures/blocks/",
+    "$title": "hud.note"
+  },
+  
+  "actionbar_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "actionbar_toggle"
+  },
+  
+  "actionbar_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.actionbar_toggle_control",
+    "$icon_name": "title_icon",
+    "$icon_prefix": "cube_ui/textures/common/icons/",
+    "$title": "hud.hide.actionbar"
+  },
+  
+  "title_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "title_toggle"
+  },
+  
+  "title_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.title_toggle_control",
+    "$icon_name": "title_icon",
+    "$icon_prefix": "cube_ui/textures/common/icons/",
+    "$title": "hud.hide.title"
+  },
+  
+  "player_position_toggle_control@hud_focus.toggle_common": {
+    "$toggle_name": "player_position_toggle"
+  },
+  
+  "player_position_toggle@cube_ui_common.toggle": {
+    "$control_name": "hud_focus.player_position_toggle_control",
+    "$icon_name": "position_icon",
+    "$icon_prefix": "cube_ui/textures/common/icons/",
+    "$title": "hud.hide.player_position"
+  },
+//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+  "toggle_common@cube_ui_common.toggle_control": {
+    "$toggle_size": [ "100%", 20 ],
+    "$show_option_label": false,
+    "$option_binding_name": "('#' + $toggle_name)",
+    "$icon": "($icon_prefix + $icon_name)",
+    "$unchecked_control": "cube_ui_common.hide_toggle_off",
+    "$checked_control": "cube_ui_common.hide_toggle_on",
+    "$unchecked_hover_control": "cube_ui_common.hide_toggle_off_hover",
+    "$checked_hover_control": "cube_ui_common.hide_toggle_on_hover"
+  },
+  
+  "button_common@common.button": {
+    "size": [ "100%", 20 ],
+    "layer": 2,
+    "controls": [
+      {"default@hide_button": {}},
+      {"hover@hide_button_hover": {}},
+      {"pressed@hide_button": {}}
+    ]
+  },
+  
+  "hide_button@cube_ui_common.hide_common": {
+    "$status_text": "§r",
+    "$bg_color": "$global_toggle_unchecked_default_color"
+  },
+  
+  "hide_button_hover@cube_ui_common.hide_common": {
+    "$status_text": "§r",
+    "$bg_color": "$global_toggle_unchecked_hover_color"
+  },
+//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+  "other_toggle@left_tab": {
+    "$tab_view_binding_name": "other_tab_toggle",
+    "$toggle_group_forced_index": 2,
+    "$songlist_title": "hud.focus_menu.tab_3"
+  },
+  
+  "notice_toggle@left_tab": {
+    "$tab_view_binding_name": "notice_tab_toggle",
+    "$toggle_group_forced_index": 1,
+    "$songlist_title": "hud.focus_menu.tab_2"
+  },
+  
+  "button_toggle@left_tab": {
+    "$toggle_group_forced_index": 0,
+    "$tab_view_binding_name": "button_tab_toggle",
+    "$songlist_title": "hud.focus_menu.tab_1"
+  },
+  
+  "left_tab@common_tabs.tab_top": {
+    "$radio_toggle_group": true,
+    "size": [ "100%", 20 ],
+    "$toggle_name": "navigation_tab",
+    "$background_texture": "textures/ui/Black",
+    "$toggle_group_default_selected": 0,
+    "$tab_panel": "cube_ui_common.songlist_toggle_state_template"
+  },
+////////////////////////
+  "personalization_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {"panel@cube_ui_common.h_panel": {}},
+      {
+        "main@hud_focus.personalization_panel": {
+          "anchor_to": "top_left",
+          "anchor_from": "top_left"
+        }
+      },
+      {"panel_1@cube_ui_common.h_panel": {}}
+    ]
+  },
+  
+  "personalization_screen_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {
+          "$title": "hud.personalization.title",
+          "$back_button_ignored": true
+        }
+      },
+      {"padding@tabbed_upsell.padding_vertical": {}},
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "size": [ "100%", "fill" ],
+          "$scrolling_content": "hud_focus.personalization_stack_panel",
+          "$show_background": false,
+          "$scroll_size": [ "3px", "100% - 4px" ],
+          "layer": 3
+        }
+      },
+      {"padding_2@tabbed_upsell.padding_vertical": {}}
+    ]
+  },
+//////////////////////////
+  "close_toggle@cube_ui_common.group_toggle": {
+    "$toggle_size": [ 16, 16 ],
+    "offset": [20,2],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "$toggle_name": "focus_toggle",
+    "$group_name": "focus_on_toggle",
+    "$toggle_group_forced_index": 0,
+    "$toggle_tts_header": "hud.personalization.title",
+    "$unchecked_control": "hud_focus.close_default",
+    "$checked_control": "hud_focus.close_default",
+    "$unchecked_hover_control": "hud_focus.close_hover",
+    "$checked_hover_control": "hud_focus.close_hover"
+  },
+
+  "close_default@cube_ui_common.button_image_base": {
+    "$close_texture": "textures/ui/close_button_default",
+    "color": "$global_button_default_color"
+  },
+  
+  "close_hover@cube_ui_common.button_image_base": {
+    "$close_texture": "textures/ui/close_button_default_light",
+    "color": "$global_button_hover_color"
+  },
+//////////////////////////
+  "personalization_panel_bg": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 3,
+    "size": [ "60%", "55%" ],
+    "controls": [
+      {
+        "left_content": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "color": "$global_background_color",
+          "alpha": 0.25,
+          "fill": true,
+          "size": [ "30%", "100%" ],
+          "layer": 4,
+          "controls": [
+            {
+              "stack_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": ["100% - 4px", "100% - 4px"],
+                "controls": [
+                  {"button_toggle@button_toggle": {}},
+                  {"notice_toggle@notice_toggle": {}},
+                  {"other_toggle@other_toggle": {}}
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"panel@cube_ui_common.h_panel":{}},
+      {
+        "right_content": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "color": "$global_background_color",
+          "alpha": 0.25,
+          "fill": true,
+          "size": [ "70% - 3px", "100%" ],
+          "layer": 4,
+          "controls": [
+            {
+              "panel": {
+                "type": "panel",
+                "size": ["100% - 4px", "100% - 4px"],
+                "controls": [
+                  {"button_panel@button_panel": {}},
+                  {"notice_panel@notice_panel": {}},
+                  {"other_panel@other_panel": {}},
+                  {"close@close_toggle": {}}
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "focus_on_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

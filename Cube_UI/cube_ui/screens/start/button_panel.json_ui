@@ -1,0 +1,128 @@
+{
+  "namespace": "start_button_panel",
+
+  "setting_button@start_button_panel.start_button": {
+    "$focus_id": "set_focus",
+    "$focus_override_down": "achievement_focus",
+    "$button_name": "button.menu_settings",
+    "$button_tts_header": "menu.settings",
+    "$toggle_text": "menu.settings",
+    "$toggle_left_image": "cube_ui/textures/start/setting_icon",
+    "sound_name": "random.anvil_use"
+  },
+  
+  "about_button@start_button_panel.start_button": {
+    "$focus_id": "about_focus",
+    "$focus_override_up": "set_focus",
+    "$focus_override_down": "achievement_focus",
+    "$button_name": "button.menu_buy_game",
+    "$button_tts_header": "about.ui_pack",
+    "$toggle_text": "about.ui_pack",
+    "$toggle_left_image": "cube_ui/textures/start/about_icon",
+    "sound_name": "item.book.page_turn"
+  },
+  
+  "achievements_button@start_button_panel.start_button": {
+    "$focus_id": "achievement_focus",
+    "$focus_override_up": "about_focus",
+    "$focus_override_down": "store_focus",
+    "$button_name": "button.menu_achievements",
+    "$button_tts_header": "menu.achievements",
+    "$toggle_text": "menu.achievements",
+    "$toggle_left_image": "cube_ui/textures/start/achievement_icon",
+    "sound_name": "random.potion.brewed"
+  },
+  
+  "store_button@start_button_panel.start_button": {
+    "$focus_id": "store_focus",
+    "$focus_override_up": "achievement_focus",
+    "$focus_override_down": "dress_focus",
+    "$button_name": "button.menu_store",
+    "$button_tts_header": "menu.store",
+    "$toggle_text": "menu.store",
+    "$toggle_left_image": "cube_ui/textures/start/store_icon",
+    "sound_name": "mob.wanderingtrader.idle"
+  },
+  
+  "dressroom_button@start_button_panel.start_button": {
+    "$focus_id": "dress_focus",
+    "$focus_override_up": "store_focus",
+    "$focus_override_down": "feed_focus",
+    "$button_name": "button.to_profile_screen",
+    "$button_tts_header": "profileScreen.header",
+    "$toggle_text": "profileScreen.header",
+    "$toggle_left_image": "cube_ui/textures/start/dress_icon",
+    "sound_name": "armor.equip_iron"
+  },
+  
+  "invite_button@start_button_panel.start_button": {
+    "$focus_id": "invite_focus",
+    "$show_number": true,
+    "$focus_override_up": "dress_focus",
+    "$focus_override_down": "feed_focus",
+    "$button_name": "button.menu_invite_notification",
+    "$button_tts_header": "realmsInvitationScreen.shareTitle",
+    "$toggle_text": "realmsInvitationScreen.shareTitle",
+    "$toggle_left_image": "cube_ui/textures/start/invite_icon",
+    "sound_name": "portal.trigger"
+  },
+  
+  "feedback_button@start_button_panel.start_button": {
+    "$focus_id": "feed_focus",
+    "$focus_override_up": "invite_focus",
+    "$button_name": "button.menu_open_uri",
+    "property_bag": {"#hyperlink": "https://aka.ms/minecraftfb"},
+    "$button_tts_header": "options.group.feedback",
+    "$toggle_text": "options.group.feedback",
+    "$toggle_left_image": "cube_ui/textures/start/feedback_icon",
+    "sound_name": "mob.villager.idle"
+  },
+  
+  "start_button@common.button": {
+    "$focus_override_right": "play_focus",
+    "$pressed_button_name": "$button_name",
+    "size": [ "100%", 20 ],
+    "sound_volume": 1.0,
+    "controls": [
+      {"default@cube_ui_common.sidebar_tab_base": {}},
+      {"hover@cube_ui_common.sidebar_tab_hover_base": {"$checked":true}},
+      {"pressed@cube_ui_common.sidebar_tab_hover_base": {"$checked":true}}
+    ]
+  },
+  
+  "common_start_button": {
+    "type": "image",
+    "layer": 2,
+    "fill": true,
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/white_background",
+    "color": "$button_color",
+    "alpha": "$global_button_alpha",
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "layer": 3,
+          "texture": "$button_image",
+          "offset": [0,-5],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": "$image_size"
+        }
+      },
+      {
+        "label": {
+          "type": "label",
+          "layer": 4,
+          "text": "$button_tts_header",
+          "color": "$button_text_color",
+          "font_type": "$global_button_text_font",
+          "offset": [0,10],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "default", 10 ]
+        }
+      }
+    ]
+  }
+}

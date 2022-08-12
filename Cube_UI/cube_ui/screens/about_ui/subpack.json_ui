@@ -1,0 +1,245 @@
+{
+  "namespace": "subpack",
+    
+  "subpack_panel": {
+    "controls": [
+      {"first_panel@tabbed_upsell.padding_vertical": {}},
+      {
+        "text@about_ui.label_panel": {
+          "size": [ "100%", 13 ],
+          "$text": "$title_text",
+          "$text_alignment": "center",
+          "$text_color": "$main_header_text_color",
+          "$text_font_scale_factor": 1.8
+        }
+      },
+      {
+        "tip@cube_ui_common.image_header": {
+          "$header_image": "textures/ui/infobulb",
+          "$cube_ui_header_text": "about_ui.subpack_sorting"
+        }
+      },
+      {
+        "no_subpack@no_subpack": {}
+      },
+      {
+        "pack_1@pack_common": {
+          "$pack": "subpack_info.pack_1"
+        }
+      },
+      {
+        "pack_2@pack_common": {
+          "$pack": "subpack_info.pack_2"
+        }
+      },
+      {
+        "pack_3@pack_common": {
+          "$pack": "subpack_info.pack_3"
+        }
+      },
+      {
+        "pack_4@pack_common": {
+          "$pack": "subpack_info.pack_4"
+        }
+      },
+      {
+        "pack_5@pack_common": {
+          "$pack": "subpack_info.pack_5"
+        }
+      },
+      {
+        "pack_6@pack_common": {
+          "$pack": "subpack_info.pack_6"
+        }
+      },
+      // 预留空位
+      {"pack_7@pack_common":{"$pack":"subpack_info.pack_7"}},
+      {"pack_8@pack_common":{"$pack":"subpack_info.pack_8"}},
+      {"pack_9@pack_common":{"$pack":"subpack_info.pack_9"}},
+      {"pack_10@pack_common":{"$pack":"subpack_info.pack_10"}},
+      {"pack_11@pack_common":{"$pack":"subpack_info.pack_11"}},
+      {"pack_12@pack_common":{"$pack":"subpack_info.pack_12"}},
+      {"pack_13@pack_common":{"$pack":"subpack_info.pack_13"}},
+      {"pack_14@pack_common":{"$pack":"subpack_info.pack_14"}},
+      {"pack_15@pack_common":{"$pack":"subpack_info.pack_15"}},
+      {"pack_16@pack_common":{"$pack":"subpack_info.pack_16"}},
+      {"pack_17@pack_common":{"$pack":"subpack_info.pack_17"}},
+      {"pack_18@pack_common":{"$pack":"subpack_info.pack_18"}},
+      {"pack_19@pack_common":{"$pack":"subpack_info.pack_19"}},
+      {"pack_20@pack_common":{"$pack":"subpack_info.pack_20"}}
+    ]
+  },
+  
+  "pack_common": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": [ "100%", "100%c" ],
+    "controls": [{"pack@$pack": {}}]
+  },
+  
+  "no_subpack": {
+    "$cube_ui_header_text": "about_ui.no_subpack",
+    "ignored": "$subpacks_ignored",
+    "$subpacks_ignored|default": false,
+    "type": "panel",
+    "size": [ "100%", "28px" ],
+    "controls": [
+      {"header@cube_ui_common.cube_ui_header_background": {}}
+    ]
+  },
+
+  "subpack_info_common_label": {
+    "type": "label",
+    "layer": 5,
+    "size": [ "default", 10 ],
+    "text_alignment": "left"
+  },
+
+  "subpack_background": {
+    "type": "image",
+    "size": [ "100%", 40 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color",
+    
+    // 引用属性
+    "$pack_icon|default": "cube_ui/textures/about_ui/default_pack_icon",
+    "$subpack_version_prefix|default": "V",
+    "$subpack_version|default": "1.0",
+    "$pack_author|default": "$cube_author",
+    "$compatible|default": 1,
+    "controls": [
+      {
+        "main_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100% - 4px", 40 ],
+          "offset": [2,0],
+          "controls": [
+            {
+              "pack_icon": {
+                "type": "image",
+                "layer": 3,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "size": [ 38, 38 ],
+                "texture": "$pack_icon"
+              }
+            },
+            {"empty_panel@cube_ui_common.h_panel": {}},
+            {
+              "info_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ "100% - 4px", "100%" ],
+                "controls": [
+                  {
+                    "pack_name_and_version": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 10 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "pack_name@subpack.subpack_info_common_label": {
+                            "color": [ 0, 0.667, 0.667 ],
+                            "text": "$pack_name",
+                            "$pack_name|default": "subpack.no_name",
+                            "font_scale_factor": 1.2
+                          }
+                        },
+                        {"version_separation@cube_ui_common.h_panel":{"size":[ 5, 0 ]}},
+                        {
+                          "version@subpack.subpack_info_common_label": {
+                            "color": [ 1, 1, 0.333 ],
+                            "text": "($subpack_version_prefix + $subpack_version)",
+                            "font_type": "MinecraftTen"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_author": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 10 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "controls": [
+                        {
+                          "author_text@subpack.subpack_info_common_label": {
+                            "color": [ 0.667, 0.667, 0.667 ],
+                            "text": "book.byAuthor",
+                            "font_type": "OldSmoothFont"
+                          }
+                        },
+                        {
+                          "author_text_2@subpack.subpack_info_common_label": {
+                            "color": [ 0.667, 0.667, 0.667 ],
+                            "text": ": ",
+                            "font_type": "OldSmoothFont",
+                            "size": [ "default", 10 ]
+                          }
+                        },
+                        {
+                          "author@subpack.subpack_info_common_label": {
+                            "color": [ 0.333, 0.333, 1 ],
+                            "text": "$pack_author",
+                            "font_type": "OldSmoothFont"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "version_warning": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", 10 ],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "ignored": "(($compatible = 5) or ($compatible > 5))",
+                      "controls": [
+                        {
+                          "warning_image": {
+                            "type": "image",
+                            "size": [ 8, 8 ],
+                            "layer": 6,
+                            "texture": "textures/ui/ErrorGlyph"
+                          }
+                        },
+                        {
+                          "pack_version_warning@subpack.subpack_info_common_label": {
+                            "text": "subpack.incompatibility"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "pack_describe@subpack.subpack_info_common_label": {
+                      "text": "$pack_describe",
+                      "ignored": "($pack_describe = '')",
+                      "visible": "(($compatible = 5) or ($compatible > 5))"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

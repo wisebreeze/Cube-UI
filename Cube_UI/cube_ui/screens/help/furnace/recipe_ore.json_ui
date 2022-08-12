@@ -1,0 +1,99 @@
+{
+  "namespace": "furnace_recipe_ore",
+  "ore_help": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c"],
+    "visible": "($is_furnace or $is_blast_furnace)",
+    "controls": [
+      {
+        "ore@cube_ui_common.cube_ui_header": {
+          "$cube_ui_header_text": "itemGroup.name.ore"
+        }
+      },
+      {
+        "in@furnace_common.fired_item_panel": {
+          "$unfire_item": 344,
+          "$fired_item": 569,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "gn@furnace_common.fired_item_panel": {
+          "$unfire_item": 352,
+          "$fired_item": 425,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "c@furnace_common.fired_item_panel": {
+          "$unfire_item": 16,
+          "$fired_item": 302,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "i@furnace_common.fired_item_panel": {
+          "$unfire_item": 505,
+          "$fired_item": 305,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "c@furnace_common.fired_item_panel": {
+          "$unfire_item": 507,
+          "$fired_item": 504,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "g@furnace_common.fired_item_panel": {
+          "$unfire_item": 506,
+          "$fired_item": 306,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "q@furnace_common.fired_item_panel": {
+          "$unfire_item": 153,
+          "$fired_item": 524
+        }
+      },
+      {
+        "l@furnace_common.fired_item_panel": {
+          "$unfire_item": 21,
+          "$fired_item": 414,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "d@furnace_common.fired_item_panel": {
+          "$unfire_item": 56,
+          "$fired_item": 304,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "e@furnace_common.fired_item_panel": {
+          "$unfire_item": 129,
+          "$fired_item": 512,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "rs@furnace_common.fired_item_panel": {
+          "$unfire_item": 73,
+          "$fired_item": 373,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "ad@furnace_common.fired_item_panel": {
+          "$unfire_item": -271,
+          "$fired_item": 613,
+          "$unfired_plus": true
+        }
+      }
+    ]
+  }
+}

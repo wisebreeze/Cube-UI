@@ -1,0 +1,208 @@
+{
+  "namespace": "error_content",
+  
+  "background": {
+    "type": "image",
+    "nineslice_size": 1.0,
+    "alpha": "$global_background_alpha",
+    "texture": "textures/ui/white_background",
+    "color": "$global_background_color"
+  },
+  
+  "clipboard_button@common.button": {
+    "size": [ 25, 25 ],
+    "$pressed_button_name": "button.copy_to_clipboard",
+    "$button_content": "manifest_validation.clipboard_icon_wrapper",
+    "bindings": [
+      {
+        "binding_name": "(not #is_working)",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      { "default@button_common": {} },
+      { "hover@button_common": {"$btn_color": "$global_button_hover_color"} },
+      { "pressed@button_common": {"$btn_color": "$global_button_pressed_color"} }
+    ]
+  },
+  
+  "button_common": {
+    "type": "image",
+    "layer": 1,
+    "alpha": 0.4,
+    "nineslice_size": 1,
+    "texture": "textures/ui/white_background",
+    "color": "$btn_color",
+    "$btn_color|default": "$global_button_default_color",
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "layer": 2,
+          "texture": "textures/ui/copy",
+          "anchor_from": "center",
+          "anchor_to": "center"
+        }
+      }
+    ]
+  },
+  
+  "error_content_grid": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "factory": {
+      "name": "pack_error_factory",
+      "control_name": "error_content.error_pack_content_layout"
+    },
+    "collection_name": "pack_errors",
+    "bindings": [
+      {
+        "binding_name": "#error_grid_dimensions",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  
+  "error_pack_content_layout": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "black@error_content.background": {
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "error_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ "100% - 8px", "100%c + 8px" ],
+                "controls": [
+                  {
+                    "error_header_panel": {
+                      "type": "panel",
+                      "size": [ "100%", "100%cm + 2px" ],
+                      "controls": [
+                        {
+                          "error_type_panel": {
+                            "type": "label",
+                            "layer": 3,
+                            "size": [ "default", "default" ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [ 2, 2 ],
+                            "text": "#error_type_label",
+                            "font_type": "smooth",
+                            "font_scale_factor": 1.2,
+                            "color": "$main_header_text_color",
+                            "bindings": [
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_name": "#error_type_label",
+                                "binding_type": "collection"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "button@error_content.clipboard_button": {
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "offset": [ -2, 2 ],
+                            "bindings": [
+                              {
+                                "binding_name": "#has_errors_or_warnings",
+                                "binding_name_override": "#visible"
+                              },
+                              {
+                                "binding_collection_name": "pack_errors",
+                                "binding_type": "collection_details"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding_0@manifest_validation.section_divider": {
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "error_text_panel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [ "100%", "100%cm" ],
+                      "controls": [
+                        {
+                          "error_text@common.minecraftTenLabel": {
+                            "size": [ 30, 10 ],
+                            "layer": 3,
+                            "text": "manifestvalidation.issue",
+                            "color": "$main_header_text_color"
+                          }
+                        },
+                        {
+                          "space": {
+                            "type": "panel",
+                            "size": [ 2, 2 ]
+                          }
+                        },
+                        {
+                          "offset": {
+                            "type": "panel",
+                            "size": [ "fill", "100%c" ],
+                            "controls": [
+                              {
+                                "error_label": {
+                                  "type": "label",
+                                  "color": "$main_header_text_color",
+                                  "size": [ "100% - 8px", "default" ],
+                                  "font_type": "smooth",
+                                  "offset": [ 0, 2 ],
+                                  "layer": 3,
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "text": "#error_content_label",
+                                  "bindings": [
+                                    {
+                                      "binding_collection_name": "pack_errors",
+                                      "binding_name": "#error_content_label",
+                                      "binding_type": "collection"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#has_errors_or_warnings",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

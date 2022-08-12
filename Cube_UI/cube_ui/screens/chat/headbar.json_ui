@@ -1,0 +1,176 @@
+{
+  "namespace": "chat_headbar",
+
+////////////////////
+// radio
+  "radio_panel": {
+    "type": "panel",
+    "$radio_content": "cube_ui_common.radio_text_content",
+    "controls": [
+      {
+        "1@cube_ui_common.radio_with_label": {
+          "size": ["100%","100%"],
+          "$toggle_state_binding_name": "#coordinate_type_position",
+          "$radio_text": "chat.coordinateTypeFacing",
+          "bindings": [
+            {
+              "binding_name": "#coordinate_type_facing",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "2@cube_ui_common.radio_with_label": {
+          "size": ["100%","100%"],
+          "$toggle_state_binding_name": "#coordinate_type_facing",
+          "$radio_text": "chat.coordinateTypePosition",
+          "bindings": [
+            {
+              "binding_name": "#coordinate_type_position",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+////////////////////
+// image
+  "copy_image": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/ui/copy"
+  },
+  "paste_image": {
+    "type": "image",
+    "size": [ 12, 12 ],
+    "texture": "textures/ui/paste"
+  },
+////////////////////
+// button
+  "small_button@common_buttons.light_content_button": {
+    "size": [ 27, 27 ],
+    "$pressed_button_name": "button.send",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right"
+  },
+
+  "copy_coordinate_button@chat_headbar.small_button": {
+    "$button_content": "chat_headbar.copy_image",
+    "$pressed_button_name": "copy_coordinates_button",
+    "$focus_id": "coordinate_copy_button_focus_id",
+    "$focus_override_left": "coordinate_dropdown_focus_id",
+    "$focus_override_right": "paste_button_focus_id",
+    "$focus_override_down": "text_edit_box_focus_id",
+    "bindings": [
+      {
+        "binding_name": "#copy_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
+  },
+
+  "paste_button@chat_headbar.small_button": {
+    "$button_content": "chat_headbar.paste_image",
+    "$pressed_button_name": "paste_button",
+    "$focus_id": "paste_button_focus_id",
+    "$focus_override_left": "coordinate_copy_button_focus_id",
+    "$focus_override_down": "text_edit_box_focus_id"
+  },
+
+////////////////////
+// coordinates
+  "coordinates_background": {
+    "type": "image",
+    "anchor_to": "center",
+    "anchor_from": "center",
+    "fill": true,
+    "offset": [0,1],
+    "size": [ "100%c + 14px", 18 ],
+    "min_size": [ 100, 18 ],
+    "alpha": "$global_header_alpha",
+    "color": "$global_header_color",
+    "texture": "textures/ui/white_background",
+    "layer": 1,
+    "controls": [
+      {
+        "coordinates_text": {
+          "type": "label",
+          "size": [ "default", 10 ],
+          "text": "#text",
+          "color": "$global_header_label_color",
+          "font_type": "$global_header_label_font",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#coordinates_text",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+////////////////////
+// main
+  "chat_header_content_area": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 20 ],
+    "offset": [ -2, 22 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_name": "#chat_coordinate_dropdown_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "coordinate_dropdown@chat_headbar.radio_panel": {
+          "size": [ 100, 20 ]
+        }
+      },
+      {"p@cube_ui_common.h_panel":{}},
+      {
+        "coordinates_panel": {
+          "type": "panel",
+          "size": [ "100%c", 18 ],
+          "controls": [
+            {"background@chat_headbar.coordinates_background": {}}
+          ]
+        }
+      },
+      {"p2@cube_ui_common.h_panel":{}},
+      {
+        "copy_coordinate_button@chat_headbar.copy_coordinate_button": {
+          "size": [ 20, 20 ]
+        }
+      },
+      {
+        "paste_button@chat_headbar.paste_button": {
+          "size": [ 20, 20 ]
+        }
+      }
+    ]
+  },
+
+  "popup_toast@toast_screen.popup": {
+    "layer": 100,
+    "$display_time": 0.75,
+    "$transition_in_time": 0.15,
+    "$transition_out_time": 0.15,
+    "$popup_size": [ 40, 20 ],
+    "$toast_text_offset": [ 0, 4 ],
+    "$toast_offset": [ 0, 23 ],
+    "$toast_text_alignment": "center",
+    "$toast_anchor_from": "top_middle",
+    "$toast_anchor_to": "bottom_middle",
+    "$toast_font_type": "smooth",
+    "$offset_anims": [],
+    "$alpha_anims": []
+  }
+}

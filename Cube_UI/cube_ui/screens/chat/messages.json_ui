@@ -1,0 +1,67 @@
+{
+  "namespace": "chat_messages",
+
+  "messages_text": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "anims": ["@cube_ui_anim.chat_push"],
+    "$chat_message_font|default": "$chat_font_type",
+    "variables": {
+      "requires": "$chat_use_global_main_font",
+      "$chat_message_font": "$global_main_font"
+    },
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "color": "$chat_text_color",
+          "localize": false,
+          "size": [ "100%", "default" ],
+          "text": "#text",
+          "text_tts": "#text_tts",
+          "font_type": "$chat_message_font",
+          "font_scale_factor": "$chat_font_scale_factor",
+          "line_padding": "$chat_line_spacing"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#chat_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "message_tts_wrapper@common.tts_label_focus_wrapper": {
+    "$tts_label_panel": "chat_messages.messages_text",
+    "$focus_border_visible_binding": "#host_options_menu_not_open_and_tts_enabled"
+  },
+
+  "messages_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "$scrolling_content_anchor_from": "bottom_left",
+    "$scrolling_content_anchor_to": "bottom_left",
+    "factory": {
+      "name": "messages_factory",
+      "max_children_size": 100,
+      "control_ids": {
+        "chat_screen_messages": "chat_screen_messages@chat_messages.message_tts_wrapper"
+      }
+    }
+  },
+  
+  "messages_scrolling_panel@common.scrolling_panel": {
+    "type": "panel",
+    "size": [ "100%-2px", "100%-69px" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 2, -48 ],
+    "$scrolling_content": "chat_messages.messages_stack_panel",
+    "$scroll_size": [ 5, "100%-4px" ],
+    "$jump_to_bottom_on_update": true,
+    "$show_background": false,
+    "$always_handle_scrolling": true
+  }
+}

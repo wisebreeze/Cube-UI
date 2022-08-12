@@ -1,0 +1,613 @@
+{
+  "namespace": "brewing_common",
+
+  "heart": {
+    "type": "image",
+    "layer": 14,
+    "size": [10,10],
+    "texture": "cube_ui/textures/help/heart"
+  },
+  "heart_half@brewing_common.heart": {
+    "texture": "cube_ui/textures/help/heart_half"
+  },
+  "damage@brewing_common.heart": {
+    "texture": "cube_ui/textures/help/damage"
+  },
+//////////////////
+  "item_cell": {
+    "type": "image",
+    "size": "$cell_size",
+    "$cell_size|default": [20,20],
+    "$cell_item_size|default": ["75%","75%"],
+    "$cell_effect_size|default": ["45%","45%"],
+    "texture": "textures/ui/white_background",
+    "alpha": 0.4,
+    "fill": true,
+    "color": "$global_cell_color",
+    "layer": 4,
+    "variables": [
+      {
+        "requires": "($item_name = 'potion.awkward.name')",
+        "$hover_text_anchor": "left_middle",
+        "$hover_text_offset": ["50%",0]
+      },
+      {
+        "requires": "(not ($potion_effect_name = ''))",
+        "$hover_text_anchor": "bottom_right",
+        "$hover_text_offset": ["-50%","-50%"]
+      }
+    ],
+    "$has_durability|default": false,
+    "$hover_text_anchor|default": "bottom_left",
+    "$hover_text_offset|default": ["50%","-50%"],
+    "controls": [
+      {
+        "hover_text@common.button": {
+          "size": ["100%","100%"],
+          "controls": [
+            {"hover@brewing_common.item_hover_text_background": {}},
+            {"pressed@brewing_common.item_hover_text_background": {}}
+          ]
+        }
+      },
+      {
+        "item": {
+          "type": "image",
+          "size": "$cell_item_size",
+          "layer": 5,
+          "texture": "$item_texture"
+        }
+      },
+      {
+        "durability": {
+          "type": "image",
+          "visible": "$has_durability",
+          "size": ["85%",1],
+          "layer": 8,
+          "fill": true,
+          "offset": [0,-2],
+          "color": "$a_color_format",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "texture": "textures/ui/white_background"
+        }
+      },
+      {
+        "durability_2": {
+          "type": "image",
+          "visible": "$has_durability",
+          "size": ["85%",1],
+          "layer": 7,
+          "fill": true,
+          "offset": [0.5,-1.5],
+          "color": [0,0,0],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "texture": "textures/ui/white_background"
+        }
+      },
+      {
+        "effect": {
+          "type": "image",
+          "ignored": "($effect_texture = '')",
+          "size": "$cell_effect_size",
+          "layer": 7,
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "texture": "$effect_texture",
+          "visible": "$brewing_effect_icon"
+        }
+      },
+      {
+        "effect_2": {
+          "type": "image",
+          "ignored": "($effect_texture_2 = '')",
+          "size": "$cell_effect_size",
+          "layer": 6,
+          "offset": [-4,0],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "texture": "$effect_texture_2",
+          "visible": "$brewing_effect_icon"
+        }
+      }
+    ]
+  },
+  
+  "item_hover_text_background": {
+    "type": "image",
+    "allow_clipping": false,
+    "layer": 10,
+    "size": ["100%c + 8px","100%c + 8px"],
+    "texture": "textures/ui/purpleBorder",
+    "anchor_from": "$hover_text_anchor",
+    "anchor_to": "$hover_text_anchor",
+    "offset": "$hover_text_offset",
+    "controls": [
+      {"hover_text@item_hover_text": {}}
+    ]
+  },
+
+  "item_hover_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%cm","100%c"],
+
+    "$image_list|default": "common.empty_panel",
+    "$item_name|default": "unknow",
+    "$potion_level|default": "0",
+    "$potion_time|default": "0:00",
+    "$effect_text_color|default": "$3_color_format",
+    "$item_description_color|default": "$7_color_format",
+    "$potion_effect_text|default": "effect ",
+    "$potion_effect|default": "???",
+    "$has_image_list|default": false,
+    "$is_empty|default": false,
+    "$has_effect|default": false,
+    "controls": [
+      {
+        "item_name": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "main": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "main": {
+                      "type": "label",
+                      "layer": 11,
+                      "size": ["default",10],
+                      "text": "$item_name"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "no_effect": {
+          "type": "label",
+          "layer": 12,
+          "visible": "$is_empty",
+          "color": [0.5,0.5,0.5],
+          "size": ["default",10],
+          "text": "potion.empty"
+        }
+      },
+      {
+        "more_effect": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "ignored": "($potion_effect_name = '')",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "texture": {
+                "type": "image",
+                "size": [10,10],
+                "layer": 13,
+                "texture": "$effect_texture",
+                "visible": "$brewing_effect_icon",
+                "ignored": "($effect_texture = '')"
+              }
+            },
+            {
+              "effect": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$9_color_format",
+                      "size": ["default",10],
+                      "text": "$potion_effect_name"
+                    }
+                  }
+                ]
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{"ignored":"($potion_level = '0')"}},
+            {
+              "level": {
+                "type": "panel",
+                "ignored": "($potion_level = '0')",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$9_color_format",
+                      "size": ["default",10],
+                      "text": "('potion.potency.' + $potion_level)"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "more_effect_2": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "ignored": "($potion_effect_name_2 = '')",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "texture": {
+                "type": "image",
+                "size": [10,10],
+                "layer": 13,
+                "texture": "$effect_texture_2",
+                "visible": "$brewing_effect_icon",
+                "ignored": "($effect_texture_2 = '')"
+              }
+            },
+            {
+              "effect": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$9_color_format",
+                      "size": ["default",10],
+                      "text": "$potion_effect_name_2"
+                    }
+                  }
+                ]
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{}},
+            {
+              "level": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$9_color_format",
+                      "size": ["default",10],
+                      "text": "('potion.potency.' + $potion_level_2)"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"panel@cube_ui_common.v_panel": {"ignored":"($potion_time = '0:00')","size": [0,7]}},
+      {
+        "time": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "ignored": "($potion_time = '0:00')",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "timer_image": {
+                "type": "image",
+                "size": [10,10],
+                "layer": 12,
+                "texture": "textures/ui/timer"
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{}},
+            {
+              "time": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "level": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$8_color_format",
+                      "size": ["default",10],
+                      "text": "$potion_time"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"panel_2@cube_ui_common.v_panel": {"ignored":"(($redstone_text = '') and ($glowstone_text = ''))","size": [0,5]}},
+      {
+        "redstone": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "ignored": "($redstone_text = '')",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "texture": {
+                "type": "image",
+                "size": [10,10],
+                "layer": 13,
+                "texture": "textures/items/redstone_dust"
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{}},
+            {
+              "time": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": [1,1,1],
+                      "size": ["default",10],
+                      "text": "$redstone_text"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "glowstone": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "ignored": "($glowstone_text = '')",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "texture": {
+                "type": "image",
+                "size": [10,10],
+                "layer": 13,
+                "texture": "textures/items/glowstone_dust"
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{}},
+            {
+              "effect": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": [1,1,1],
+                      "size": ["default",10],
+                      "text": "$glowstone_text"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"panel_3@cube_ui_common.v_panel": {"visible":"$has_effect","size": [0,7]}},
+      {"whendrink":{"visible":"$has_effect","type":"label","text":"potion.effects.whenDrank","color":"$5_color_format","layer":12,"size":["default","default"]}},
+      {
+        "effect": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "visible": "$has_effect",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "icon": {
+                "type": "panel",
+                "visible": "$has_image_list",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "image_panel@$image_list": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": ["100%c",10],
+                      "layer": 13
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "effect_text": {
+                "type": "panel",
+                "ignored": "(not ($potion_effect_text_2 = ''))",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$effect_text_color",
+                      "size": ["default",10],
+                      "text": "$potion_effect_text"
+                    }
+                  }
+                ]
+              }
+            },
+            {"panel@cube_ui_common.h_panel":{"ignored":"(not ($potion_effect_text_2 = ''))"}},
+            {
+              "effect": {
+                "type": "panel",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$effect_text_color",
+                      "size": ["default",10],
+                      "text": "$potion_effect"
+                    }
+                  }
+                ]
+              }
+            },
+            {"panel_2@cube_ui_common.h_panel":{"ignored":"($potion_effect_text_2 = '')"}},
+            {
+              "effect_text_2": {
+                "type": "panel",
+                "ignored": "($potion_effect_text_2 = '')",
+                "size": ["100%cm",10],
+                "controls": [
+                  {
+                    "label": {
+                      "type": "label",
+                      "layer": 13,
+                      "color": "$effect_text_color",
+                      "size": ["default",10],
+                      "text": "$potion_effect_text_2"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "description": {
+          "type": "label",
+          "layer": 12,
+          "ignored": "($item_description = '')",
+          "color": "$item_description_color",
+          "size": ["default",10],
+          "text": "$item_description"
+        }
+      }
+    ]
+  },
+//--------------------------//
+  "list_common": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ]
+  },
+  "blaze_powder_item_panel@list_common": {
+    "controls": [
+      {
+        "brewing_use": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "potion_bottle_cell@cube_ui_common.cell": {
+                "$item_texture|default": "textures/items/blaze_powder",
+                "$item_name": "item.blaze_powder.name"
+              }
+            },
+            {"arrow@brewing_arrow.right": {}},
+            {"use_count@brewing_common.brewing_stand_use_count": {}}
+          ]
+        }
+      }
+    ]
+  },
+  "full_panel@list_common": {
+    "controls": [
+      {
+        "item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 18 ],
+          "controls": [
+            {
+              "full_icon@image_panel": {
+                "$main_texture": "textures/ui/brewing_arrow_full",
+                "$texture_size": [ 20, 20 ]
+              }
+            },
+            {"arrow@brewing_arrow.right": {}},
+            {"time@cube_ui_common.time": {"$time": "20s"}}
+          ]
+        }
+      }
+    ]
+  },
+//--------------------------//
+  "paragraph": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["30%","100%c"],
+    "controls": [
+      {
+        "top": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "color": "$global_divider_color",
+          "alpha": "$global_divider_alpha",
+          "fill": true,
+          "layer": 2,
+          "size": ["100%",1]
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "$effect_name",
+          "layer": 3,
+          "color": [ 1, 1, 1 ],
+          "font_scale_factor": 1.1
+        }
+      },
+      {
+        "bottom": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "color": "$global_divider_color",
+          "alpha": "$global_divider_alpha",
+          "fill": true,
+          "layer": 2,
+          "size": ["100%",1]
+        }
+      }
+    ]
+  },
+//--------------------------//
+  "image_panel": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "texture_size|default": [ 16, 16 ],
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "layer": 5,
+          "size": "$texture_size",
+          "texture": "$main_texture"
+        }
+      }
+    ]
+  },
+//--------------------------//
+  "item_has_count": {
+    "type": "panel",
+    "size": [16,16],
+    "controls": [
+      {"item_texture":{"type":"image","size":["100%","100%"],"texture":"$item_icon","layer":7}},
+      {"count":{"type":"label","layer":8,"text":"$count","font_type":"$global_main_font","anchor_from":"bottom_right","anchor_to":"bottom_right","size":["default",10],"offset":[0,3],"font_scale_factor":0.8}}
+    ]
+  },
+  "brewing_stand_use_count@brewing_common.item_has_count":{"$item_icon":"textures/items/brewing_stand","$count":"20"}
+}

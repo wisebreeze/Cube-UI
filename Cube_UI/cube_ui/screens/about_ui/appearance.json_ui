@@ -1,0 +1,246 @@
+{
+  "namespace": "appearance",
+    
+  "appearance_panel": {
+    "controls": [
+      {"first_panel@tabbed_upsell.padding_vertical": {}},
+      {
+        "title@about_ui.label_panel": {
+          "size": [ "100%", 13 ],
+          "$text": "dr.header.previewAppearance",
+          "$text_alignment": "center",
+          "$text_color": "$main_header_text_color",
+          "$text_font_scale_factor": 1.6
+        }
+      },
+      {"theme@theme": {}},
+      {"background@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_1"}},
+      {
+        "preview_background": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 100 ],
+          "controls": [
+            {"p1@cube_ui_common.h_panel": {}},
+            {
+              "default_bg@cube_ui_background.screen_background_content": {
+                "size": [ "fill", 100 ]
+              }
+            },
+            {"p2@cube_ui_common.h_panel": {}},
+            {
+              "blur_bg@cube_ui_background.screen_blur_background_content": {
+                "size": [ "fill", 100 ]
+              }
+            },
+            {"p3@cube_ui_common.h_panel": {}}
+          ]
+        }
+      },
+      {"button@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_2"}},
+      {
+        "preview_button": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 30 ],
+          "controls": [
+            {"p1@cube_ui_common.h_panel": {}},
+            {
+              "image_button@common_buttons.light_content_button": {
+                "size": [ 30, 30 ],
+                "$button_content": "start.achievements_icon",
+                "$pressed_button_name": "button.empty"
+              }
+            },
+            {"p2@cube_ui_common.h_panel": {}},
+            {
+              "text_button@start.main_button": {
+                "size": [ "fill", 30 ],
+                "$pressed_button_name": "button.empty",
+                "$button_text": "menu.play"
+              }
+            },
+            {"p3@cube_ui_common.h_panel": {}}
+          ]
+        }
+      },
+      {"text@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_3"}},
+      {
+        "preview_text_1": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "abcdefghijklmnopqrstuvwxyz",
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_2": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "1234567890",
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_3": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_type": "MinecraftTen",
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_4": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_type": "OldSmoothFont",
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_5": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_scale_factor": 1.2,
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_6": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_scale_factor": 1.4,
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_7": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_scale_factor": 1.6,
+          "text_alignment": "left"
+        }
+      },
+      {
+        "preview_text_8": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "text": "Test",
+          "font_scale_factor": 1.8,
+          "text_alignment": "left"
+        }
+      },
+      {"toggle@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_4"}},
+      {
+        "preview_toggle@cube_ui_common.toggle": {
+          "$toggle_size": ["100%",20],
+          "$show_option_label": true,
+          "$option_label": "Test"
+        }
+      },
+      {"slider@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_5"}},
+      {
+        "preview_slider@settings_common.option_slider": {
+          "$option_label": "Test slider",
+          "$slider_name": "slider",
+          "$slider_value_binding_name": "#slider",
+          "$slider_tts_text_value": "#slider"
+        }
+      }
+    ]
+  },
+  
+  "theme": {
+    "type": "image",
+    "size": [ "100%", 40 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color",
+    "controls": [
+      {
+        "main_panel": {
+          "type": "stack_panel",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ "100% - 4px", 40 ],
+          "offset": [2,0],
+          "controls": [
+            {
+              "pack_name_and_version": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", 10 ],
+                "offset": [2,0],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "pack_name@subpack.subpack_info_common_label": {
+                      "color": [ 0, 0.667, 0.667 ],
+                      "text": "$cube_theme_name",
+                      "font_scale_factor": 1.2
+                    }
+                  },
+                  {"version_separation@cube_ui_common.h_panel":{"size":[ 5, 0 ]}},
+                  {
+                    "version@subpack.subpack_info_common_label": {
+                      "color": [ 1, 1, 0.333 ],
+                      "text": "($cube_theme_prefix_version + $cube_theme_main_version)",
+                      "font_type": "MinecraftTen"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pack_author": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", 10 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "author_text@subpack.subpack_info_common_label": {
+                      "color": [ 0.667, 0.667, 0.667 ],
+                      "text": "book.byAuthor",
+                      "font_type": "OldSmoothFont"
+                    }
+                  },
+                  {
+                    "author_text_2@subpack.subpack_info_common_label": {
+                      "color": [ 0.667, 0.667, 0.667 ],
+                      "text": ": ",
+                      "font_type": "OldSmoothFont",
+                      "size": [ "default", 10 ]
+                    }
+                  },
+                  {
+                    "author@subpack.subpack_info_common_label": {
+                      "color": [ 0.333, 0.333, 1 ],
+                      "text": "$cube_theme_author",
+                      "font_type": "OldSmoothFont"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pack_describe@subpack.subpack_info_common_label": {
+                "text": "$cube_theme_description"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

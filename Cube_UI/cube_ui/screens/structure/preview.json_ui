@@ -1,0 +1,226 @@
+{
+  "namespace": "structure_preview",
+
+  "structure_renderer": {
+    "type": "input_panel",
+    "focus_enabled": true,
+    "gesture_tracking_button": "button.turn_structure",
+    "always_handle_controller_direction": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.turn_structure",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#structure_renderer_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "renderer": {
+          "type": "custom",
+          "renderer": "3d_structure_renderer",
+          "property_bag": {
+            "#has_focus": false,
+            "#block_position": [ 0, 0, 0 ],
+            "#bottom_left_block": [ 0, 0, 0 ],
+            "#top_right_block": [ 1, 1, 1 ],
+            "#include_entities": false,
+            "#remove_blocks": false,
+            "#include_players": false
+          },
+          "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#has_focus",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#block_position",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#bottom_left_block",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#top_right_block",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#include_entities",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#remove_blocks",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_name": "#include_players",
+              "binding_condition": "visible"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "structure_renderer",
+              "source_property_name": "#gesture_delta_source",
+              "target_property_name": "#gesture_delta_source"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "structure_renderer",
+              "source_property_name": "#gesture_mouse_delta_x",
+              "target_property_name": "#gesture_mouse_delta_x"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "structure_renderer",
+              "source_property_name": "#gesture_mouse_delta_y",
+              "target_property_name": "#gesture_mouse_delta_y"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "corner_text_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "bindings": [
+      {
+        "binding_name": "#corner_text_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "paragraph_1_corner@how_to_play_common.paragraph": {
+          "font_scale_factor": 1.2,
+          "$text": "structure_block.corner.text.1.title"
+        }
+      },
+      { "padding_1@cube_ui_common.v_panel": {} },
+      {
+        "paragraph_2_corner@how_to_play_common.paragraph": {
+          "$text": "structure_block.corner.text.2.paragraph"
+        }
+      }
+    ]
+  },
+
+  "progress_panel": {
+    "type": "input_panel",
+    "modal": true,
+    "bindings": [
+      {
+        "binding_name": "#progress_panel_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "90%", "100%c" ],
+          "controls": [
+            {
+              "label_wrapper": {
+                "type": "panel",
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  {
+                    "progress_label@structure_screen.common_text_label": {
+                      "size": [ "default", 10 ],
+                      "text": "structure_block.progress.generating"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "progress_bar@file_upload.progress_bar_icon": {
+                "size": [ "100%", 5 ],
+                "layer": 3,
+                "$progress_bindings": [
+                  {
+                    "binding_name": "#progress_percentage",
+                    "binding_name_override": "#clip_ratio",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "rotation_arrows": {
+    "type": "image",
+    "texture": "textures/ui/Rotate",
+    "color": [ 0.6, 0.6, 0.6 ],
+    "bindings": [
+      {
+        "binding_name": "#rotation_arrows_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "image_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "border_indent": {
+          "type": "panel",
+          "size": [ "100%", "100%" ],
+          "layer": 2,
+          "controls": [
+            {
+              "structure_renderer@structure_preview.structure_renderer": {
+                "layer": 3
+              }
+            },
+            {
+              "text_corner@structure_preview.corner_text_panel": {
+                "size": [ "100% - 6px", "100%" ],
+                "layer": 3,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 4, 2 ]
+              }
+            },
+            {
+              "progress_panel@structure_preview.progress_panel": {
+                "layer": 3
+              }
+            },
+            {
+              "rotate_arrows@structure_preview.rotation_arrows": {
+                "size": [ 45, 7 ],
+                "offset": [ 0, -4 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 2
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

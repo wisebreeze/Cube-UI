@@ -1,0 +1,558 @@
+{
+  "namespace": "chat_bottom_bar",
+
+  // Button Images //
+  "common_image": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "layer": 5,
+    "texture": "$icon"
+  },
+
+  "tab_image@common_image": {
+    "$icon": "cube_ui/textures/common/icons/tab"
+  },
+  
+  "tab_back_image@common_image": {
+    "$icon": "cube_ui/textures/common/icons/tab_back"
+  },
+  
+  "up_image@common_image": {
+    "$icon": "cube_ui/textures/common/icons/up"
+  },
+  
+  "down_image@common_image": {
+    "$icon": "cube_ui/textures/common/icons/down"
+  },
+  
+  "down_arrow_image": {
+    "type": "image",
+    "size": [ 12, 8 ],
+    "texture": "textures/ui/chat_down_arrow"
+  },
+  
+  "keyboard_image": {
+    "type": "image",
+    "size": [ 9, 7 ],
+    "texture": "textures/ui/chat_keyboard"
+  },
+  
+  "gear_image": {
+    "type": "image",
+    "size": [ 14, 14 ],
+    "texture": "textures/ui/gear"
+  },
+  
+  "send_image": {
+    "type": "image",
+    "size": [ 21, 18 ],
+    "texture": "textures/ui/chat_send"
+  },
+  
+  "common_button": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "color": "$global_button_default_color",
+    "alpha": 0.4,
+    "fill": true,
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "button_content@$button_content": {}
+      }
+    ]
+  },
+  
+  "common_hover_button": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "color": "$global_button_hover_color",
+    "alpha": 0.4,
+    "fill": true,
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "button_content@$button_content": {}
+      }
+    ]
+  },
+  
+  "send_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ 44, 17 ],
+    "controls": [
+      {
+        "send_image_panel": {
+          "type": "panel",
+          "size": [ "fill", "100%c" ],
+          "controls": [
+            { "send_image@send_image": {} }
+          ]
+        }
+      },
+      {
+        "gamepad_x_button": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ 23, "100%" ],
+          "controls": [
+            {
+              "side_padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ]
+              }
+            },
+            {
+              "gamepad_x_button_image": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "icon@common.gamepad_helper_x": {
+                      "$icon_description_bind_type": "none"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#gamepad_helper_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "keyboard_image_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "keyboard_image@chat_bottom_bar.keyboard_image": {
+          "bindings": [
+            {
+              "binding_name": "(not #keyboard_being_used)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "down_arrow_image@chat_bottom_bar.down_arrow_image": {
+          "bindings": [
+            {
+              "binding_name": "#keyboard_being_used",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // Buttons //
+  "small_button@common.button": {
+    "size": [ 27, 20 ],
+    "layer": 3,
+    "$pressed_button_name": "button.send",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "default@common_button": {}
+      },
+      {
+        "hover@common_hover_button": {}
+      },
+      {
+        "pressed@common_button": {}
+      }
+    ]
+  },
+  
+  "host_main_button@chat_bottom_bar.small_button": {
+    "$pressed_button_name": "button.host_toggle",
+    "$focus_id": "host_main_button_focus_id",
+    "$button_content": "host_options.host_image_panel",
+    "bindings": [
+      /*{
+        "binding_name": "#cheats_on",
+        "binding_name_override": "#visible"
+      },*/
+      {
+        "binding_name": "#host_main_button_focus_override_up",
+        "binding_name_override": "#focus_change_up"
+      },
+      {
+        "binding_name": "#host_main_button_focus_override_down",
+        "binding_name_override": "#focus_change_down"
+      }
+    ],
+    "controls": [
+      {
+        "default@common_button": {
+          "$text_color": [ 1.0, 1.0, 1.0 ]
+        }
+      },
+      {
+        "hover@common_hover_button": {
+          "$text_color": [ 0.4, 0.4, 0.4 ]
+        }
+      },
+      {
+        "pressed@common_button": {
+          "$text_color": [ 1.0, 1.0, 1.0 ]
+        }
+      }
+    ]
+  },
+
+  "keyboard_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.keyboard_image_panel",
+    "$pressed_button_name": "button.keyboard_toggle",
+    "$focus_id": "keyboard_button_focus_id",
+    "$button_tts_header": "accessibility.chat.tts.keyboard",
+    "bindings": [
+      {
+        "binding_name": "#keyboard_button_focus_override_up",
+        "binding_name_override": "#focus_change_up"
+      },
+      {
+        "binding_name": "#keyboard_button_focus_override_down",
+        "binding_name_override": "#focus_change_down"
+      },
+      {
+        "binding_name": "#keyboard_button_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "chat_settings_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.gear_image",
+    "$pressed_button_name": "button.open_chat_settings",
+    "$focus_id": "chat_settings_button_focus_id",
+    "$button_tts_header": "chat.settings"
+  },
+
+  "next_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.down_image",
+    "$pressed_button_name": "button.chat_next_message",
+    "$button_tts_header": "chat.next"
+  },
+
+  "previous_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.up_image",
+    "$pressed_button_name": "button.chat_previous_message",
+    "$button_tts_header": "chat.back"
+  },
+
+  "tab_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.tab_image",
+    "$pressed_button_name": "button.chat_autocomplete",
+    "$button_tts_header": "tab"
+  },
+
+  "tab_back_button@chat_bottom_bar.small_button": {
+    "$button_content": "chat_bottom_bar.tab_back_image",
+    "$pressed_button_name": "button.chat_autocomplete_back",
+    "$button_tts_header": "tab.back"
+  },
+
+  "back@chat_bottom_bar.small_button": {
+    "size": [ "100%", 20 ],
+    "layer": 2,
+    "$button_content": "common.empty_panel",
+    "$pressed_button_name": "button.menu_exit",
+    "$button_tts_header": "accessibility.button.back"
+  },
+
+  "send_button@common_buttons.light_text_form_fitting_button": {
+    "$pressed_button_name": "button.send",
+    "$anchor": "bottom_right",
+    "size": [ "fill", 27 ],
+    "$tts_enabled|default": true,
+    "focus_enabled": "$tts_enabled",
+
+    "$button_type_panel": "chat_bottom_bar.send_panel",
+    "$button_tts_header": "#send_button_accessibility_text",
+    "bindings": [
+      {
+        "binding_name": "#send_button_visible",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#send_button_accessibility_text"
+      }
+    ]
+  },
+
+  // Chat Text Edit //
+  "text_edit_box@common.multiline_text_edit_box": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100% - 54px", 27 ],
+    "max_length": "$text_box_max_length",
+
+    "always_listening": true,
+
+    "$text_box_name": "#message_text_box",
+    "$text_edit_box_content_binding_name": "#message_text_box_content",
+
+    // 这个认为它很重要，所以第一个被选中
+    "default_focus_precedence": 1,
+    "$focus_id": "text_edit_box_focus_id",
+    "$focus_override_right": "keyboard_button_focus_id",
+    "$focus_override_left": "chat_settings_button_focus_id",
+    // 使用绑定控制焦点覆盖的向上和向下
+    "$text_box_tts_header": "accessibility.chat.tts.textboxTitle",
+    "bindings": [
+      {
+        "binding_type": "$text_edit_box_enabled_binding_type",
+        "binding_collection_name": "$text_edit_box_grid_collection_name",
+        "binding_name": "$text_box_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#text_edit_box_focus_override_up",
+        "binding_name_override": "#focus_change_up"
+      },
+      {
+        "binding_name": "#text_edit_box_focus_override_down",
+        "binding_name_override": "#focus_change_down"
+      }
+    ],
+    "button_mappings": [
+      // 原始映射 - 定义 common.multiline_text_edit_box //
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        // 取消选择Textbox并允许使用相同的鼠标按键选择另一个UI控件
+        "consume_event": false
+      },
+      /*{
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },*/
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$text_edit_box_deselected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "$text_edit_box_hovered_button_id",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "$text_edit_box_clear_from_button_id",
+        "to_button_id": "$text_edit_box_clear_to_button_id",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+
+      // 额外映射 //
+      {
+        "from_button_id": "button.menu_autocomplete",
+        "to_button_id": "button.chat_autocomplete",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_autocomplete_back",
+        "to_button_id": "button.chat_autocomplete_back",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_textedit_up",
+        "to_button_id": "button.chat_previous_message",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_textedit_down",
+        "to_button_id": "button.chat_next_message",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+
+      // 控制器映射 //
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.send",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": false
+      },
+      {
+        "from_button_id": "button.controller_start",
+        "to_button_id": "button.send",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": false
+      },
+      {
+        "from_button_id": "button.controller_autocomplete",
+        "to_button_id": "button.chat_autocomplete",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_autocomplete_back",
+        "to_button_id": "button.chat_autocomplete_back",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_textedit_up",
+        "to_button_id": "button.chat_previous_message",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_textedit_down",
+        "to_button_id": "button.chat_next_message",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      }
+    ]
+  },
+
+  // Chat Bottom Panel //
+  "chat_bottom_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "size": [ "100%", 47 ],
+    "min_size": [ "100%", 47 ],
+    "controls": [
+      {
+        "button_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 20 ],
+          "controls": [
+            {
+              "panel_1": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "keyboard_button@chat_bottom_bar.keyboard_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "host_main_button@chat_bottom_bar.host_main_button": { "ignored": "$is_pregame" } }
+                ]
+              }
+            },
+            {
+              "panel_3": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "chat_settings@chat_bottom_bar.chat_settings_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_4": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "up@chat_bottom_bar.next_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_5": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "down@chat_bottom_bar.previous_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_6": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "tab@chat_bottom_bar.tab_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_7": {
+                "type": "panel",
+                "size": [ 27, 20 ],
+                "controls": [
+                  { "tab_back@chat_bottom_bar.tab_back_button": {} }
+                ]
+              }
+            },
+            {
+              "panel_8": {
+                "type": "panel",
+                "size": [ "fill", 20 ],
+                "controls": [
+                  { "back@chat_bottom_bar.back": {} }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_box_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 27 ],
+          "controls": [
+            { "text_box@chat_bottom_bar.text_edit_box": {} },
+            { "send_button@chat_bottom_bar.send_button": { "offset": [ -20, 0 ] } }
+          ]
+        }
+      }
+    ]
+  }
+}

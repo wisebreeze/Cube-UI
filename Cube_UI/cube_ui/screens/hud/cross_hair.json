@@ -1,0 +1,31 @@
+{
+  "namespace": "hud_cross_hair",
+
+  // 虚拟准心 //
+  "cross_hair_image": {
+    "ignored": "(not $always_show_cross_hair)",
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "cube_ui/textures/cross_hair",
+    "layer": 30,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_name": "#hud_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_alpha",
+        "binding_name_override": "#alpha",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_propagate_alpha",
+        "binding_name_override": "#propagateAlpha",
+        "binding_type": "global"
+      }
+    ]
+  }
+}

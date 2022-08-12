@@ -1,0 +1,92 @@
+{
+  "namespace": "furnace_fuel",
+  "furnace_fuel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "fuel@cube_ui_common.cube_ui_header": {
+          "$cube_ui_header_text": "furnaceScreen.fuel"
+        }
+      },
+      {
+        "lava@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/bucket_lava",
+          "$time": "1000s (16:40)"
+        }
+      },
+      {
+        "coal_block@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/blocks/coal_block",
+          "$time": "800s (13:20)"
+        }
+      },
+      {
+        "dried_block@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/blocks/dried_kelp_top",
+          "$time": "200s (3:20)"
+        }
+      },
+      {
+        "blaze_rod@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/blaze_rod",
+          "$time": "120s (2:00)"
+        }
+      },
+      {
+        "coal@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/coal",
+          "$time": "80s (1:20)"
+        }
+      },
+      {
+        "charcoal@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/charcoal",
+          "$time": "80s (1:20)"
+        }
+      },
+      {
+        "boat@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/boat_oak",
+          "$time": "60s (1:00)",
+          "$fuel_plus": true
+        }
+      },
+      {
+        "log@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/blocks/log_oak",
+          "$time": "15s (0:15)",
+          "$fuel_plus": true
+        }
+      },
+      {
+        "planks@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/blocks/planks_oak",
+          "$time": "15s (0:15)",
+          "$fuel_plus": true
+        }
+      },
+      {
+        "wood_tool@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/wood_pickaxe",
+          "$time": "5s (0:05)",
+          "$fuel_plus": true
+        }
+      },
+      {
+        "stick@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/stick",
+          "$time": "5s (0:05)",
+          "$fuel_plus": true
+        }
+      },
+      {
+        "bamboo@furnace_common.fuel_item_panel": {
+          "$fuel": "textures/items/bamboo",
+          "$time": "2.5s"
+        }
+      }
+    ]
+  }
+}

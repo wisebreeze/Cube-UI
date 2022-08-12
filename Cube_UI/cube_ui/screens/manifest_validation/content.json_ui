@@ -1,0 +1,42 @@
+{
+  "namespace": "manifest_validation_content",
+  
+  "manifest_validation_screen@common.base_screen": {
+    "force_render_below": true,
+    "$screen_background_control": "common.screen_background",
+    "$screen_background_alpha": 0.65,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "manifest_validation_content.manifest_validation_screen_content"
+  },
+  
+  "manifest_validation_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {"$title":"manifestvalidation.title"}
+      },
+      {
+        "main_content_panel@manifest_main_content.manifest_validation_scroll_content": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "namespace": "pack_info",
+  
+  "info_panel": {
+    "type": "panel",
+    "size": ["100% - 4px","100%"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "top@info_top_stack_panel": {}
+      },
+      {
+        "bottom@info_bottom_stack_panel": {}
+      }
+    ]
+  },
+  
+  "info_top_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%","100%c"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {"start@tabbed_upsell.padding_vertical": {}},
+      {"fill@common.empty_panel": {"size": [0,25]}},
+      {
+        "cube_ui_icon": {
+          "type": "image",
+          "texture": "cube_ui/textures/about_ui/pack_icon",
+          "size": [ "100%", 40 ]
+        }
+      },
+      {
+        "panel@cube_ui_common.v_panel": {
+          "size": [ 0, 5 ]
+        }
+      },
+      {
+        "pack_name@pack_name": {
+          "$text": "Cube UI"
+        }
+      },
+      {
+        "pack_version@about_ui.label_panel": {
+          "size": [ "100%", 12 ],
+          "$text": "($cube_version_prefix + $cube_main_version)",
+          "$text_alignment": "center",
+          "$text_color": "yellow",
+          "$text_font_scale_factor": 1.4
+        }
+      }
+    ]
+  },
+  "info_bottom_stack_panel": {
+    "type": "stack_panel",
+    "size": ["100%","100%c"],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "author_name@about_ui.label_panel": {
+          "size": [ "100%", 10 ],
+          "$text": "('作者' + '：' + $cube_author + ' | ©2021 - 2022')",
+          "$text_alignment": "center",
+          "$text_color": [ 0.8, 0.8, 0.8 ],
+          "$text_font_scale_factor": 1.0
+        }
+      },
+      {"divider@cube_ui_common.divider": {}},
+      {
+        "cube_ui_access_channel": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "variables": [
+            {
+              "requires": "($cube_access_channel = mcpedl)",
+              "$text_2": "mcpedl"
+            },
+            {
+              "requires": "($cube_access_channel = klpbbs)",
+              "$text_2": "苦力怕论坛"
+            },
+            {
+              "requires": "($cube_access_channel = mcutc)",
+              "$text_2": "MCutc论坛"
+            }
+          ],
+          "$text_2|default": "unknow",
+          "$text_1": "about_ui.access_channel",
+          "controls": [
+            {
+              "info_background@info_background": {
+                "$icon": "cube_ui/textures/common/icons/ui"
+              }
+            }
+          ]
+        }
+      },
+      {"panel_3@cube_ui_common.v_panel": {}},
+      {
+        "UI": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "$text_2|default": "unknow",
+          "variables": [
+            {
+              "requires": "$pocket_screen",
+              "$text_2": "options.uiprofile.pocket"
+            },
+            {
+              "requires": "$desktop_screen",
+              "$text_2": "options.uiprofile.classic"
+            }
+          ],
+          "controls": [
+            {
+              "info_background@info_background": {
+                "$icon": "cube_ui/textures/common/icons/ui",
+                "$text_1": "about_ui.ui_file"
+              }
+            }
+          ]
+        }
+      },
+      {"panel_4@cube_ui_common.v_panel": {}},
+      {
+        "OS": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "$text_1": "about_ui.default_os",
+          "$text_2|default": "unknow",
+          "variables": [
+            {
+              "requires": "$is_win10_arm",
+              "$text_2": "Windows ARM"
+            },
+            {
+              "requires": "$win10_edition",
+              "$text_2": "Windows"
+            },
+            {
+              "requires": "$is_ios",
+              "$text_2": "ios"
+            },
+            {
+              "requires": "$osx_edition",
+              "$text_2": "ios"
+            },
+            {
+              "requires": "$is_windows_10_mobile",
+              "$text_2": "Windows 10 mobile"
+            },
+            {
+              "requires": "$is_ps4",
+              "$text_2": "PS4"
+            },
+            {
+              "requires": "$is_android",
+              "$text_2": "Android"
+            }
+          ],
+          "controls": [
+            {
+              "info_background@info_background": {
+                "$icon": "textures/ui/infobulb"
+              }
+            }
+          ]
+        }
+      },
+      {"end@tabbed_upsell.padding_vertical": {}}
+    ]
+  },
+  
+  "pack_name@about_ui.label_panel": {
+    "size": [ "100%", 13 ],
+    "$text_alignment": "center",
+    "$text_color": "white",
+    "$text_font_scale_factor": 1.8
+  },
+  
+  "precautions_common@about_ui.label_panel": {
+    "size": [ "default", "100%c" ],
+    "$text_alignment": "left",
+    "$text_color": [ 0.9, 0.9, 0.9 ],
+    "$text_font_scale_factor": 1.0
+  },
+  
+  "info_background": {
+    "type": "image",
+    "size": [ "100%", 20 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/ui/white_background",
+    "nineslice_size": 1,
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color",
+    "controls": [
+      {
+        "main_panel": {
+          "type": "panel",
+          "size": [ "100% - 4px", 18 ],
+          "offset": [ 2, 0 ],
+          "controls": [
+            {
+              "icon": {
+                "type": "image",
+                "layer": 3,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 18, 18 ],
+                "texture": "$icon",
+                "$icon|default": "cube_ui/textures/about_ui/default_pack_icon"
+              }
+            },
+            {
+              "text_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ "100%", 10 ],
+                "offset": [ 21, 0 ],
+                "controls": [
+                  {
+                    "text": {
+                      "type": "label",
+                      "color": [ 1.0, 1.0, 1.0 ],
+                      "text": "$text_1",
+                      "layer": 5,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "font_scale_factor": 1.0,
+                      "text_alignment": "left",
+                      "size": [ "default", "default" ]
+                    }
+                  },
+                  {
+                    "text_2": {
+                      "type": "label",
+                      "color": [ 1.0, 1.0, 1.0 ],
+                      "text": "$text_2",
+                      "layer": 5,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "font_scale_factor": 1.0,
+                      "text_alignment": "left",
+                      "size": [ "default", "default" ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

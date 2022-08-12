@@ -1,0 +1,1 @@
+{"namespace":"empty_help","empty_help":{"type":"stack_panel","orientation":"vertical","controls":[{"header@cube_ui_common.image_header":{"$cube_ui_header_text":"help.empty_help","$header_image":"textures/ui/WarningGlyph"}}]}}

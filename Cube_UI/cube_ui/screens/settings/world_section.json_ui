@@ -1,0 +1,487 @@
+{
+  "namespace": "world_setting",
+  "world_game_mode_dropdown_content": {
+    "controls": [
+      {
+        "survival_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+          "$radio_text": "createWorldScreen.gameMode.survival"
+        }
+      },
+      {
+        "creative_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+          "$radio_text": "createWorldScreen.gameMode.creative"
+        }
+      },
+      {
+        "adventure_mode@cube_ui_common.radio_with_label": {
+          "ignored": "$trial",
+          "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
+          "$radio_text": "createWorldScreen.gameMode.adventure"
+        }
+      }
+    ]
+  },
+  
+  "player_game_mode_dropdown_content": {
+    "controls": [
+      {
+        "default_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_default",
+          "$radio_text": "createWorldScreen.gameMode.serverDefault"
+        }
+      },
+      {
+        "survival_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_survival",
+          "$radio_text": "createWorldScreen.gameMode.survival"
+        }
+      },
+      {
+        "creative_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_creative",
+          "$radio_text": "createWorldScreen.gameMode.creative"
+        }
+      },
+      {
+        "adventure_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
+          "$radio_text": "createWorldScreen.gameMode.adventure"
+        }
+      }
+    ]
+  },
+  
+  "world_difficulty_dropdown_content": {
+    "controls": [
+      {
+        "@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_peaceful",
+          "$radio_text": "options.difficulty.peaceful"
+        }
+      },
+      {
+        "@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_easy",
+          "$radio_text": "options.difficulty.easy"
+        }
+      },
+      {
+        "@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_normal",
+          "$radio_text": "options.difficulty.normal"
+        }
+      },
+      {
+        "@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#world_difficulty_radio_hard",
+          "$radio_text": "options.difficulty.hard"
+        }
+      }
+    ]
+  },
+  
+  "world_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "world_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "world_preferences_label@settings_common.option_group_label": {
+          "$text": "createWorldScreen.worldPreferences",
+          "variables": [
+            {
+              "requires": "$education_edition",
+              "$font_type": "MinecraftTen",
+              "$font_scale_factor": 1.2
+            }
+          ]
+        }
+      },
+      {
+        "starting_map_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldPreferences",
+          "$option_label": "createWorldScreen.startWithMap",
+          "$option_binding_name": "#start_with_map",
+          "$option_enabled_binding_name": "#start_with_map_enabled",
+          "$toggle_name": "start_with_map",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+        }
+      },
+      {
+        "bonus_chest_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldPreferences",
+          "enabled": "(not $trial)",
+          "$option_label": "createWorldScreen.bonusChest",
+          "$option_binding_name": "#bonus_chest",
+          "$option_enabled_binding_name": "#bonus_chest_enabled",
+          "$toggle_name": "bonus_chest",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+        }
+      },
+      {"divider@cube_ui_common.divider": {}},
+      {
+        "world_options_label@settings_common.option_group_label": {
+          "$text": "createWorldScreen.worldOptions",
+          "variables": [
+            {
+              "requires": "$education_edition",
+              "$font_type": "MinecraftTen",
+              "$font_scale_factor": 1.2
+            }
+          ]
+        }
+      },
+      {"title_1@cheat_title": {"$title": "stat.generalButton"}},
+      {
+        "pvp_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.pvp",
+          "$option_binding_name": "#pvp",
+          "$option_enabled_binding_name": "#pvp_enabled",
+          "$toggle_name": "pvp",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "show_coordinates_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.showCoordinates",
+          "$option_binding_name": "#show_coordinates",
+          "$option_enabled_binding_name": "#show_coordinates_enabled",
+          "$toggle_name": "show_coordinates",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "fire_spreads_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.fireSpreads",
+          "$option_binding_name": "#fire_spreads",
+          "$option_enabled_binding_name": "#fire_spreads_enabled",
+          "$toggle_name": "fire_spreads",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "tnt_explodes_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.tntexplodes",
+          "$option_binding_name": "#tnt_explodes",
+          "$option_enabled_binding_name": "#tnt_explodes_enabled",
+          "$toggle_name": "tnt_explodes",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "respawn_blocks_explode_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "ignored": "$education_edition",
+          "$option_label": "createWorldScreen.respawnblocksexplode",
+          "$option_binding_name": "#respawn_blocks_explode",
+          "$option_enabled_binding_name": "#respawn_blocks_explode_enabled",
+          "$toggle_name": "respawn_blocks_explode",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "natural_regeneration_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.naturalregeneration",
+          "$option_binding_name": "#natural_regeneration",
+          "$option_enabled_binding_name": "#natural_regeneration_enabled",
+          "$toggle_name": "natural_regeneration",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {"title_2@cheat_title": {"$title": "stat.drop"}},
+      {
+        "mob_loot_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.mobLoot",
+          "$option_binding_name": "#mob_loot",
+          "$option_enabled_binding_name": "#mob_loot_enabled",
+          "$toggle_name": "mob_loot",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "tile_drops_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.tileDrops",
+          "$option_binding_name": "#tile_drops",
+          "$option_enabled_binding_name": "#tile_drops_enabled",
+          "$toggle_name": "tile_drops",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {"title_3@cheat_title": {"$title": "deathScreen.respawn"}},
+      {
+        "immediate_respawn_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.worldSettings",
+          "$option_label": "createWorldScreen.immediaterespawn",
+          "$option_binding_name": "#immediaterespawn",
+          "$option_enabled_binding_name": "#immediaterespawn_enabled",
+          "$toggle_name": "doimmediaterespawn",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "respawn_radius@settings_common.option_text_edit": {
+          "$option_label": "createWorldScreen.respawnRadius",
+          "$option_binding_name": "#respawn_radius",
+          "$option_enabled_binding_name": "#respawn_radius_enabled",
+          "$text_box_name": "respawn_radius_text_box",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$max_text_edit_length": 8,
+          "$text_edit_box_text_type": "NumberChars"
+        }
+      }
+    ]
+  },
+  "experimental_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "experimental_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "experimental_toggles_label@settings_common.option_group_label": {
+          "$text": "createWorldScreen.experimentalgameplay"
+        }
+      },
+      {
+        "experimental_toggles_label_info@settings_common.option_group_label": {
+          "$text": "createWorldScreen.experimentalgameplayinfo"
+        }
+      },
+      {
+        "experimental_toggles": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "factory": {
+            "name": "experimental_toggle_factory",
+            "control_name": "world_section.experimental_toggle"
+          },
+          "collection_name": "experimental_toggles",
+          "bindings": [
+            {
+              "binding_name": "#experimental_toggle_count",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cheat_title": {
+    "type": "panel",
+    "size": ["100%",10],
+    "controls": [
+      {
+        "label": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "type": "label",
+          "font_type": "$global_main_font",
+          "text": "$title",
+          "color": "$e_color_format"
+        }
+      }
+    ]
+  },
+  "cheat_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "cheat_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "world_cheats_label@settings_common.option_group_label": {
+          "$text": "createWorldScreen.cheatSettings",
+          "variables": [
+            {
+              "requires": "$education_edition",
+              "$font_type": "MinecraftTen",
+              "$font_scale_factor": 1.2
+            }
+          ]
+        }
+      },
+      {
+        "allow_cheats_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "selectWorld.cheats",
+          "$option_binding_name": "#allow_cheats",
+          "$option_enabled_binding_name": "#allow_cheats_enabled",
+          "$toggle_name": "allow_cheats",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {"divider@cube_ui_common.divider": {}},
+      {"title_1@cheat_title": {"$title": "howtoplay.category.education"}},
+      {
+        "education_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "ignored": "$education_edition",
+          "$option_label": "createWorldScreen.educationtoggle",
+          "$option_binding_name": "#education_toggle",
+          "$option_enabled_binding_name": "#education_toggle_enabled",
+          "$toggle_name": "education_toggle",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+        }
+      },
+      {"title_2@cheat_title": {"$title": "stat.generalButton"}},
+      {
+        "keep_inventory_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.keepInventory",
+          "$option_binding_name": "#keep_inventory",
+          "$option_enabled_binding_name": "#keep_inventory_enabled",
+          "$toggle_name": "keep_inventory",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "always_day_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.alwaysDay",
+          "$option_binding_name": "#always_day",
+          "$option_enabled_binding_name": "#always_day_enabled",
+          "$toggle_name": "always_day",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "daylight_cycle_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.daylightcycle",
+          "$option_binding_name": "#daylight_cycle",
+          "$option_enabled_binding_name": "#daylight_cycle_enabled",
+          "$toggle_name": "daylight_cycle",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "weather_cycle_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.weathercycle",
+          "$option_binding_name": "#weather_cycle",
+          "$option_enabled_binding_name": "#weather_cycle_enabled",
+          "$toggle_name": "weather_cycle",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "variables": [
+            {
+              "requires": "($is_world_edit and not $is_mp_client and not $trial and $is_pregame and not $pocket_edition and not $export_disabled and not $education_ios and $file_picking_supported)",
+              "$focus_override_down": "export_world_button"
+            },
+            {
+              "requires": "($is_world_edit and not $is_mp_client and not $trial and $is_pregame and ($pocket_edition or $export_disabled or $education_ios or not $file_picking_supported))",
+              "$focus_override_down": "delete_world_button"
+            }
+          ],
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {"title_3@cheat_title": {"$title": "stat.mobsButton"}},
+      {
+        "mob_spawn_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.mobSpawn",
+          "$option_binding_name": "#mob_spawn",
+          "$option_enabled_binding_name": "#mob_spawn_enabled",
+          "$toggle_name": "mob_spawn",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "mob_griefing_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.mobgriefing",
+          "$option_binding_name": "#mob_griefing",
+          "$option_enabled_binding_name": "#mob_griefing_enabled",
+          "$toggle_name": "mob_griefing",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "entities_drop_loot_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.entitiesdroploot",
+          "$option_binding_name": "#entities_drop_loot",
+          "$option_enabled_binding_name": "#entities_drop_loot_enabled",
+          "$toggle_name": "entities_drop_loot",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {"title_4@cheat_title": {"$title": "key.categories.misc"}},
+      {
+        "command_blocks_enabled_toggle@settings_common.option_toggle": {
+          "$tts_section_header": "createWorldScreen.cheatSettings",
+          "$option_label": "createWorldScreen.commandblocksenabled",
+          "$option_binding_name": "#command_blocks_enabled",
+          "$option_enabled_binding_name": "#command_blocks_enabled_on",
+          "$toggle_name": "command_blocks_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "random_tick_speed@settings_common.option_text_edit_with_text_button": {
+          "$option_label": "createWorldScreen.randomtickspeed",
+          "$option_binding_name": "#random_tick_speed",
+          "$option_enabled_binding_name": "#random_tick_speed_enabled",
+          "$max_text_edit_length": 4,
+          "$text_edit_box_text_type": "NumberChars",
+          "$option_text_edit_control_size": [ "50%", "100%" ],
+          "$text_box_name": "random_tick_speed_text_box",
+          "$button_text": "createWorldScreen.randomtickspeed.reset",
+          "$pressed_button_name": "reset_random_tick_speed"
+        }
+      }
+    ]
+  }
+}

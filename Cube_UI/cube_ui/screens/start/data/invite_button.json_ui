@@ -1,0 +1,88 @@
+{
+  "namespace": "start_invite_button",
+  
+  "invite_panel": {
+    "type": "panel",
+    "layer": 3,
+    "size": [ 24, 24 ],
+    "controls": [
+      {
+        "button@common.button": {
+          "$focus_id": "invite_focus",
+          "$focus_override_down": "play_focus",
+          "$pressed_button_name": "button.menu_invite_notification",
+          "$button_tts_header": "realmsInvitationScreen.shareTitle",
+          "size": [ 20, 20 ],
+          "offset": [ 2, 21 ],
+          "controls": [
+            { "default@start_invite_button.invite_notification_icon": {}},
+            { "hover@start_invite_button.invite_notification_icon": {}},
+            { "pressed@start_invite_button.invite_notification_icon": {}}
+          ]
+        }
+      },
+      {
+        "count@start_invite_button.notification_button_text_panel": {
+          "offset": [ -2.5, 25 ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#realms_notification_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  
+  "invite_notification_icon": {
+    "type": "image",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "1@cube_ui_anim.invite_entrance_push",
+      "2@cube_ui_anim.invite_entrance_pop",
+      "3@cube_ui_anim.invite_exit_push",
+      "4@cube_ui_anim.invite_exit_pop"
+    ],
+    "texture": "textures/ui/invite_base",
+    "size": [ 20, 20 ],
+    "offset": [ "2%", 0 ]
+  },
+  
+  "notification_button_text_panel": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "background@start.notification_button_text_background": {
+          "layer": 4,
+          "size": [ 10, 10 ],
+          "offset": [ -0.5, 0 ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "1@cube_ui_anim.left_offset_entrance_push",
+            "2@cube_ui_anim.left_offset_entrance_pop",
+            "3@cube_ui_anim.left_offset_exit_push",
+            "4@cube_ui_anim.left_offset_exit_pop"
+          ],
+          "controls": [
+            { "text@start_invite_button.notification_button_text": {} }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "notification_button_text": {
+    "type": "label",
+    "layer": 5,
+    "font_type": "$global_main_font",
+    "text": "#realms_notification_count",
+    "bindings": [
+      {
+        "binding_name": "#realms_notification_count"
+      }
+    ]
+  }
+}

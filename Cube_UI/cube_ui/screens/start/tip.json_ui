@@ -1,0 +1,110 @@
+{
+  "namespace": "start_tip",
+  
+  "tip_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": ["32%","100%c"],
+    "offset": [32,36],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "cube_ui_common.default_toggle_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"marketplace_disabled@marketplace_disabled": {}}
+    ]
+  },
+  
+  "marketplace_disabled@tip_common": {
+    "$content_name": "marketplace_disabled",
+    "$tip_title": "disconnectionScreen.noInternet",
+    "$tip_icon": "textures/ui/WarningGlyph",
+    "$tip_visible_name": "#marketplace_disabled"
+  },
+  
+  // right half circle //
+  "right_half_circle": {
+    "type": "panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": ["50%c",32],
+    "offset": ["100%",0],
+    "clips_children": true,
+    "controls": [
+      {
+        "circle": {
+          "type": "image",
+          "size": [32,32],
+          "offset": ["-50%",0],
+          "color": "$global_start_tip_background_color",
+          "alpha": "$global_start_tip_background_alpha",
+          "texture": "cube_ui/textures/start/button"
+        }
+      }
+    ]
+  },
+  
+  "tip_common": {
+    "type": "panel",
+    "size": ["100%",32],
+    "controls": [
+      {"content@start_tip.tip_content_common": {}}
+    ]
+  },
+  "tip_content_common": {
+    "$tip_visible_name|default": "none",
+    "$tip_title|default": "unset $tip_title",
+    "$tip_icon|default": "cube_ui/textures/about_ui/default_pack_icon",
+
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.tip_entrance"
+    ],
+
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "size": ["100%","100%"],
+    "color": "$global_start_tip_background_color",
+    "alpha": "$global_start_tip_background_alpha",
+    "bindings": [
+      {
+        "binding_name": "$tip_visible_name",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "layer": 3,
+          "size": [16,16],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [2,0],
+          "texture": "$tip_icon"
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "size": ["100% - 20px","default"],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [20,0],
+          "layer": 4,
+          "color": "$global_start_tip_title_color",
+          "font_type": "$global_start_tip_title_font",
+          "text": "$tip_title"
+        }
+      },
+      {"half_circle@start_tip.right_half_circle": {}}
+    ]
+  }
+}

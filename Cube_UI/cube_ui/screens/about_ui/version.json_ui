@@ -1,0 +1,212 @@
+{
+  "namespace": "version",
+  
+  "version_panel": {
+    "$version_toggle|default": "more_version_toggle",
+    "$version_toggle_control|default": "more_version_toggle_control",
+    "controls": [
+      {"first_panel@tabbed_upsell.padding_vertical": {}},
+      {
+        "title@about_ui.label_panel": {
+          "size": [ "100%", 13 ],
+          "$text": "$title_text",
+          "$text_color": "$main_header_text_color",
+          "$text_font_scale_factor": 1.6
+        }
+      },
+      // §6 > 更改 // §a + 增加 // §b ✔ 修复 // §c - 移除 //
+      {
+        "present@version.version_common": {
+          "$version": "($cube_version_prefix + $cube_main_version)",
+          "$update_time": "2022.8.1",
+          "$description": "§l§a(增加)§r\n§f+ 新的背景\n+ 新的命令方块界面\n+ 开始界面断网提示\n+ 关于UI界面加入外观浏览和常见问题选项\n+ 新的背包界面和容器界面\n+ HUD快捷栏快速切换\n+ 更多可供用户修改的变量\n§l§6(更改)§r\n§f> 关于UI界面顶部选项栏更改为侧边栏\n> 更好的Cube UI版本描述排版\n> 新的加载等待提示\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复加载界面背景显示问题\n✔ 修复一些问题"
+        }
+      },
+      {
+        "V1.13@version.version_common": {
+          "$version": "V1.13",
+          "$update_time": "2022.7.17",
+          "$description": "§l§6(更改)§r\n§f> 适配1.19.10版本"
+        }
+      },
+      {
+        "V1.12.1@version.version_common": {
+          "$version": "V1.12.1",
+          "$update_time": "2022.6.28",
+          "$description": "§l§6(更改)§r\n§f> 适配1.19.0版本"
+        }
+      },
+      {
+        "V1.11@version.version_common": {
+          "$version": "V1.11",
+          "$update_time": "2022.4.30",
+          "$description": "§l§6(更改)§r\n§f> 适配1.18.30版本"
+        }
+      },
+      {
+        "V1.10_plus@version.version_common": {
+          "$version": "V1.10 - 1.10.2",
+          "$update_time": "2022.3.17",
+          "$description": "§l§b(修复)§r\n§f✔ 修复一些已知问题"
+        }
+      },
+      {
+        "V1.9.2@version.version_common": {
+          "$version": "V1.9.2",
+          "$update_time": "2022.3.13",
+          "$description": "§l§b(修复)§r\n§f✔ 修复手柄光标无法显示问题"
+        }
+      },
+      {
+        "V1.9.1@version.version_common": {
+          "$version": "V1.9.1",
+          "$update_time": "2022.3.5",
+          "$description": "§l§b(修复)§r\n§f✔ 修复上个版本的问题"
+        }
+      },
+      {
+        "V1.9@version.version_common": {
+          "$version": "V1.9",
+          "$update_time": "2022.3.5",
+          "$description": "§l§a(增加)§r\n§f+ 对物品栏和容器增加了快捷按钮(丢出和销毁物品操作)\n§l§6(更改)§r\n§f> 重新布局的加载界面\n§l§b(修复)§r\n§f✔ 在经典档案UI下，容器的关闭按钮位置偏移修正\n✔ 部分icon修改"
+        }
+      },
+      {
+        "V1.8.1@version.version_common": {
+          "$version": "V1.8.1",
+          "$update_time": "2022.2.22",
+          "$description": "§l§b(修复)§r\n§f✔ 修复打开容器无法使用返回问题"
+        }
+      },
+      {
+        "V1.8@version.version_common": {
+          "$version": "V1.8",
+          "$update_time": "2022.2.16",
+          "$description": "§l§6(更改)§r\n§f> 支持1.18.10版本\n§l§b(修复)§r\n§f✔ 更正部分翻译"
+        }
+      },
+      { "dividers@cube_ui_common.divider": {"ignored": "(not $subpacks_ignored)"} },
+      { "no_subpack@subpack.no_subpack": {} },
+      { "pack_6_version@subpack_version.HD_patch_version": {} }
+    ]
+  },
+  
+  "subpack_version_common": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      },
+      {
+        "pack_name@about_ui.label_panel": {
+          "size": [ "100%", 15 ],
+          "$text": "$pack_name",
+          "$text_color": [ 1.0, 0.667, 0.0 ],
+          "$text_font_scale_factor": 1.3
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "update_time@about_ui.label_panel": {
+          "size": [ "100%", 12 ],
+          "$text": "$update_time",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text_alignment": "left",
+          "$text_color": [ 0.2, 0.4, 0.8 ],
+          "$text_font_scale_factor": 1.1
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 0, 1 ]
+        }
+      },
+      {
+        "description@about_ui.label_panel": {
+          "size": [ "100%", "100%c" ],
+          "$text": "$description",
+          "$text_color": "white",
+          "$text_font_scale_factor": 1.0
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      }
+    ]
+  },
+
+  "version_common": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "controls": [
+      {
+        "panel_0": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      },
+      {
+        "version@about_ui.label_panel": {
+          "size": [ "100%", 15 ],
+          "$text": "$version",
+          "$label_font_type": "MinecraftTen",
+          "$text_color": "yellow",
+          "$text_font_scale_factor": 1.3
+        }
+      },
+      {
+        "panel_1": {
+          "type": "panel",
+          "size": [ 0, 2 ]
+        }
+      },
+      {
+        "time@about_ui.label_panel": {
+          "size": [ "default", 12 ],
+          "$text": "$update_time",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "text_alignment": "left",
+          "$text_color": [ 0.2, 0.4, 0.8 ],
+          "$text_font_scale_factor": 1.1
+        }
+      },
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [ 0, 1 ]
+        }
+      },
+      {
+        "description@about_ui.label_panel": {
+          "size": [ "100%", "100%c" ],
+          "$text": "$description",
+          "$text_color": "white",
+          "$text_font_scale_factor": 1.0
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ "100%", 4 ]
+        }
+      }
+    ]
+  }
+}

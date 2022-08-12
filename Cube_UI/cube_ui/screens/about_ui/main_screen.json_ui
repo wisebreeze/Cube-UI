@@ -1,0 +1,288 @@
+{
+  "namespace": "about_ui",
+
+// common_text
+  "label_panel": {
+    "type": "panel",
+    "$text": "unset $text",
+    "$text_color|default": [1,1,1],
+    "$text_font_scale_factor|default": 0.9,
+    "$text_alignment|default": "left",
+    "$label_font_type|default": "smooth",
+    "controls": [
+      {
+        "label_text": {
+          "type": "label",
+          "size": [ "100%", "default" ],
+          "font_scale_factor": "$text_font_scale_factor",
+          "font_type": "$label_font_type",
+          "text_alignment": "$text_alignment",
+          "text": "$text",
+          "color": "$text_color"
+        }
+      }
+    ]
+  },
+// tab_content
+  "tab_content_scrolling_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "content@$content_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical"
+        }
+      }
+    ]
+  },
+
+  "tab_content_scrolling_template": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "default" ],
+    "controls": [
+      { "content_panel@about_ui.tab_content_scrolling_panel": {}}
+    ]
+  },
+
+  "tab_content_template": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "size": [ "100% - 2px", "100%" ],
+          "$scrolling_content": "about_ui.tab_content_scrolling_template",
+          "$show_background": false,
+          "$scroll_size": [ "5px", "100% - 4px" ],
+          "$scroll_bar_left_padding_size": [ 1, 0 ],
+          "layer": 3
+        }
+      }
+    ]
+  },
+
+  "common_tab_content_panel": {
+    "type": "panel",
+    "$scroll_tab_content|default": "about_ui.tab_content_template",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      {
+        "content@$scroll_tab_content": {
+          "layer": 2,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [ "100% - 2px", "100%" ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_bind_toggle_source_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+// screen_content
+  "about_ui_screen_content_layout": {
+    "type": "panel",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": [ "100%", "fill" ],
+    "controls": [
+      {
+        "info_content_tab_content@about_ui.common_tab_content_panel": {
+          "$scroll_tab_content": "pack_info.info_panel",
+          "$visible_bind_toggle_source_control": "info_navigation_tab_toggle"
+        }
+      },
+      {
+        "update_content_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "update_content_navigation_tab_toggle",
+          "$title_text": "renewal.history",
+          "$content_panel": "version.version_panel"
+        }
+      },
+      {
+        "subpack_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "subpack_navigation_tab_toggle",
+          "$title_text": "about.sub_package",
+          "$content_panel": "subpack.subpack_panel"
+        }
+      },
+      {
+        "faq_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "faq_navigation_tab_toggle",
+          "$title_text": "store.realmsPlus.faq.header",
+          "$content_panel": "cube_faq.faq_panel"
+        }
+      },
+      {
+        "appearance_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "appearance_navigation_tab_toggle",
+          "$title_text": "dr.header.previewAppearance",
+          "$content_panel": "appearance.appearance_panel"
+        }
+      },
+      {
+        "info_verbose_content_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "info_verbose_tab_toggle",
+          "$scroll_tab_content": "pack_info.info_panel"
+        }
+      },
+      {
+        "update_verbose_content_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "update_content_verbose_tab_toggle",
+          "$title_text": "renewal.history",
+          "$content_panel": "version.version_panel"
+        }
+      },
+      {
+        "subpack_verbose_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "subpack_verbose_tab_toggle",
+          "$title_text": "about.sub_package",
+          "$content_panel": "subpack.subpack_panel"
+        }
+      },
+      {
+        "faq_verbose_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "faq_verbose_tab_toggle",
+          "$title_text": "store.realmsPlus.faq.header",
+          "$content_panel": "cube_faq.faq_panel"
+        }
+      },
+      {
+        "appearance_verbose_tab_content@about_ui.common_tab_content_panel": {
+          "$visible_bind_toggle_source_control": "appearance_verbose_tab_toggle",
+          "$title_text": "dr.header.previewAppearance",
+          "$content_panel": "appearance.appearance_panel"
+        }
+      }
+    ]
+  },
+
+  "about_ui_screen_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"tab_content_panel@about_ui.about_ui_screen_content_layout": {}}
+    ]
+  },
+  
+// sidebar_tab
+  "verbose_tab_navigation_panel_layout": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", 80 ],
+    "controls": [
+      {
+        "info_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "info_verbose_tab_toggle",
+          "$toggle_group_forced_index": 10,
+          "$toggle_text": "Cube UI",
+          "$toggle_left_image": "cube_ui/textures/about_ui/pack_icon"
+        }
+      },
+      {
+        "update_content_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "update_content_verbose_tab_toggle",
+          "$toggle_group_forced_index": 11,
+          "$toggle_text": "renewal.history",
+          "$toggle_left_image": "textures/items/book_writable"
+        }
+      },
+      {
+        "subpack_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "subpack_verbose_tab_toggle",
+          "$toggle_group_forced_index": 12,
+          "$toggle_text": "about.sub_package",
+          "$toggle_left_image": "cube_ui/textures/about_ui/subpack_icon"
+        }
+      },
+      {
+        "faq_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "faq_verbose_tab_toggle",
+          "$toggle_group_forced_index": 13,
+          "$toggle_text": "store.realmsPlus.faq.header",
+          "$toggle_left_image": "textures/ui/how_to_play_button_default_light"
+        }
+      },
+      {
+        "appearance_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "appearance_verbose_tab_toggle",
+          "$toggle_group_forced_index": 14,
+          "$toggle_text": "dr.header.previewAppearance",
+          "$toggle_left_image": "textures/items/iron_chestplate"
+        }
+      }
+    ]
+  },
+  
+  "default_tab_navigation_panel_layout": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", 80 ],
+    "controls": [
+      {
+        "info_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "info_navigation_tab_toggle",
+          "$toggle_group_forced_index": 0,
+          "$toggle_left_image": "cube_ui/textures/about_ui/pack_icon"
+        }
+      },
+      {
+        "update_content_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "update_content_navigation_tab_toggle",
+          "$toggle_group_forced_index": 1,
+          "$toggle_left_image": "textures/items/book_writable"
+        }
+      },
+      {
+        "subpack_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "subpack_navigation_tab_toggle",
+          "$toggle_group_forced_index": 2,
+          "$toggle_left_image": "cube_ui/textures/about_ui/subpack_icon"
+        }
+      },
+      {
+        "faq_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "faq_navigation_tab_toggle",
+          "$toggle_group_forced_index": 3,
+          "$toggle_left_image": "textures/ui/how_to_play_button_default_light"
+        }
+      },
+      {
+        "appearance_navigation_tab@cube_ui_common.sidebar_tab": {
+          "$tab_name": "appearance_navigation_tab_toggle",
+          "$toggle_group_forced_index": 4,
+          "$toggle_left_image": "textures/items/iron_chestplate"
+        }
+      }
+    ]
+  },
+
+// screen
+  "about_ui_sidebar_screen@cube_ui_common.sidebar_view": {
+    "$sidebar_main_content": "about_ui.about_ui_screen_content",
+    "$default_sidebar_control": "about_ui.default_tab_navigation_panel_layout",
+    "$verbose_sidebar_control": "about_ui.verbose_tab_navigation_panel_layout"
+  },
+  
+  "about_ui_screen@cube_ui_common.headbar_screen": {
+    "$main_screen": "about_ui.about_ui_sidebar_screen",
+    "$title": "about.ui_pack",
+    "$main_screen_offset": [-2,0],
+    "$main_screen_size": [ "100%", "100% - 20px" ]
+  }
+}

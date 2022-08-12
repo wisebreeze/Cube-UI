@@ -1,0 +1,63 @@
+{
+  "namespace": "chat_set",
+
+  "chat_settings_scrolling_content": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "chat_settings_content_area": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            // toggle //
+            { "mute_all_toggle@chat_settings.mute_all_toggle": {} },//静音所有聊天
+            { "chat_tts_toggle@chat_settings.chat_tts_toggle": {} },//聊天本文转语音
+            
+            // dividing line //
+            { "toggles_to_font_shape@chat_settings.line_break": {} },
+            
+            // slider //
+            { "typeface_dropdown@chat_settings.typeface_dropdown": {} },//字体
+            { "font_size@chat_settings.font_size_slider": {} },//字体大小
+            { "line_spacing@chat_settings.line_spacing_slider": {} },//文字行间距
+            
+            // dividing line //
+            { "font_shape_to_font_colors@chat_settings.line_break": {} },
+            
+            // dropdown //
+            { "chat_color@chat_settings.chat_color_dropdown": {} },//聊天颜色
+            { "mentions_color@chat_settings.mentions_color_dropdown": {} },//我的提及颜色
+            
+            // button //
+            { "reset_button@chat_settings.reset_button": {} }//重置聊天设置
+          ]
+        }
+      }
+    ]
+  },
+
+  "chat_setting_scrolling_panel@common.scrolling_panel": {
+    "size": [ 120, 100 ],
+    "clips_children": true,
+    "$scroll_bar_left_padding_size": [ 2.5, 0 ],
+    "$scroll_bar_right_padding_size": [ 2.5, 0 ],
+    "$scrolling_content": "chat_set.chat_settings_scrolling_content",
+    "$show_background": false
+  },
+
+  "chat_settings_popup@popup_dialog.form_fit_modal_dialog_popup": {
+    "$modal_title": "chat.settings",
+    "$popup_dialog_escape_button_name": "button.close_chat_settings",
+    "$modal_contents": "chat_set.chat_setting_scrolling_panel",
+    "$screen_background_alpha": 0.4,
+    "$modal_contents_padding": [ 8, 6 ]
+  },
+
+  "popup_factory": {
+    "type": "factory",
+    "control_ids": {
+      "chat_setting_popup": "@chat_set.chat_settings_popup"
+    }
+  }
+}

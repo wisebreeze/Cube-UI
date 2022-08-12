@@ -1,0 +1,27 @@
+{
+  "namespace": "brewing_arrow",
+
+  "arrow_common": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 16 ],
+    "controls": [
+      {"left@cube_ui_common.h_panel":{}},
+      {
+        "arrow": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "texture": "$arrow_icon",
+          "layer": 6,
+          "bilinear": true
+        }
+      },
+      {"right@cube_ui_common.h_panel":{}}
+    ]
+  },
+
+  "down@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/down"},
+  "right@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right"},
+  "right_plus@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right_plus"},
+  "right_to@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right_to"}
+}

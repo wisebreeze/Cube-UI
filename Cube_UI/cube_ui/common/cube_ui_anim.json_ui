@@ -1,0 +1,598 @@
+{
+  "namespace": "cube_ui_anim",
+
+  "exit_push_anim_base": {
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "exit_pop_anim_base": {
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "entrance_push_anim_base": {
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "entrance_pop_anim_base": {
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+//////////////////
+  "tip_entrance": {
+    "anim_type": "offset",
+    "from": [ "-100%", 20 ],
+    "to": [ 0, 20 ],
+    "duration": 2.5,
+    "easing": "in_back",
+    "next": "cube_ui_anim.tip_end_wait"
+  },
+
+  "tip_end_wait": {
+    "anim_type": "wait",
+    "duration": 8,// 提示的等待时间
+    "next": "@cube_ui_anim.tip_end_anim_1"
+  },
+ 
+  "tip_end_anim_1": {
+    "anim_type": "offset",
+    "from": [0, 20],
+    "to": [0, 16],
+    "duration": 0.5,
+    "easing": "out_back",
+    "next": "@cube_ui_anim.tip_end_anim_2"
+  },
+ 
+  "tip_end_anim_2": {
+    "anim_type": "offset",
+    "from": [0, 16],
+    "to": [0, "1000%"],
+    "duration": 1.5,
+    "destroy_at_end": "$content_name",
+    "easing": "in_out_back"
+  },
+//////////////////
+  "screen_background_anim_1": {
+    "anim_type": "wait",
+    "duration": 9.5,// 提示的等待时间
+    "next": "@cube_ui_anim.screen_background_anim_2"
+  },
+ 
+  "screen_background_anim_2": {
+    "anim_type": "size",
+    "from": ["100%","100%"],
+    "to": ["100% + 4px", "100% + 4px"],
+    "duration": 1.8,
+    "easing": "in_out_back",
+    "next": "@cube_ui_anim.screen_background_anim_3"
+  },
+ 
+  "screen_background_anim_3": {
+    "anim_type": "wait",
+    "duration": 20,
+    "next": "@cube_ui_anim.screen_background_anim_4"
+  },
+ 
+  "screen_background_anim_4": {
+    "anim_type": "size",
+    "duration": 1,
+    "easing": "out_expo",
+    "from": ["100% + 4px", "100% + 4px"],
+    "to": ["100%","100%"],
+    "next": "@cube_ui_anim.screen_background_anim_5"
+  },
+ 
+  "screen_background_anim_5": {
+    "anim_type": "wait",
+    "duration": 2.5,
+    "next": "@cube_ui_anim.screen_background_anim_1"
+  },
+//////////////////
+  "loading_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 4,
+    "frame_step": 26,
+    "fps": 5
+  },
+//////////////////
+  "offset_1@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_2","$anim_point": [0,0]},
+  "offset_2@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_3","$anim_point": [0,-10]},
+  "offset_3@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_4","$anim_point": [0,-20]},
+  "offset_4@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_5","$anim_point": [0,-30]},
+  "offset_5@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_6","$anim_point": [0,-40]},
+  "offset_6@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_7","$anim_point": [0,-50]},
+  "offset_7@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_8","$anim_point": [0,-60]},
+  "offset_8@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_9","$anim_point": [0,-70]},
+  "offset_9@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_10","$anim_point": [0,-80]},
+  "offset_10@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_11","$anim_point": [0,-90]},
+  "offset_11@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_12","$anim_point": [0,-100]},
+  "offset_12@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_13","$anim_point": [0,-110]},
+  "offset_13@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_14","$anim_point": [0,-120]},
+  "offset_14@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_15","$anim_point": [0,-130]},
+  "offset_15@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_16","$anim_point": [0,-140]},
+  "offset_16@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_17","$anim_point": [0,-150]},
+  "offset_17@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_18","$anim_point": [0,-160]},
+  "offset_18@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_19","$anim_point": [0,-170]},
+  "offset_19@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_20","$anim_point": [0,-180]},
+  "offset_20@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_21","$anim_point": [0,-190]},
+  "offset_21@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_22","$anim_point": [0,-200]},
+  "offset_22@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_23","$anim_point": [0,-210]},
+  "offset_23@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_24","$anim_point": [0,-220]},
+  "offset_24@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_25","$anim_point": [0,-230]},
+  "offset_25@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_26","$anim_point": [0,-240]},
+  "offset_26@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_27","$anim_point": [0,-250]},
+  "offset_27@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_28","$anim_point": [0,-260]},
+  "offset_28@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_29","$anim_point": [0,-270]},
+  "offset_29@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_30","$anim_point": [0,-280]},
+  "offset_30@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_31","$anim_point": [0,-290]},
+  "offset_31@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_32","$anim_point": [0,-300]},
+  "offset_32@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_33","$anim_point": [0,-310]},
+  "offset_33@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_34","$anim_point": [0,-320]},
+  "offset_34@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_35","$anim_point": [0,-330]},
+  "offset_35@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_36","$anim_point": [0,-340]},
+  "offset_36@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_37","$anim_point": [0,-350]},
+  "offset_37@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_38","$anim_point": [0,-360]},
+  "offset_38@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_39","$anim_point": [0,-370]},
+  "offset_39@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_40","$anim_point": [0,-380]},
+  "offset_40@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_41","$anim_point": [0,-390]},
+  "offset_41@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_42","$anim_point": [0,-400]},
+  "offset_42@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_43","$anim_point": [0,-410]},
+  "offset_43@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_44","$anim_point": [0,-420]},
+  "offset_44@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_45","$anim_point": [0,-430]},
+  "offset_45@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_46","$anim_point": [0,-440]},
+  "offset_46@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_47","$anim_point": [0,-450]},
+  "offset_47@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_48","$anim_point": [0,-460]},
+  "offset_48@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_49","$anim_point": [0,-470]},
+  "offset_49@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_50","$anim_point": [0,-480]},
+  "offset_50@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_51","$anim_point": [0,-490]},
+  "offset_51@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_52","$anim_point": [0,-500]},
+  "offset_52@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_53","$anim_point": [0,-510]},
+  "offset_53@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_54","$anim_point": [0,-520]},
+  "offset_54@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_55","$anim_point": [0,-530]},
+  "offset_55@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_56","$anim_point": [0,-540]},
+  "offset_56@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_57","$anim_point": [0,-550]},
+  "offset_57@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_58","$anim_point": [0,-560]},
+  "offset_58@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_59","$anim_point": [0,-570]},
+  "offset_59@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_60","$anim_point": [0,-580]},
+  "offset_60@cube_ui_anim.offset_anim_common": {"$anim_next": "@cube_ui_anim.offset_1", "$anim_point": [0,-590]},
+  
+  "offset_anim_common": {
+    "anim_type": "offset",
+    "next": "$anim_next",
+    "easing": "linear",
+    "duration": 1,
+    "to": "$anim_point",
+    "from": "$anim_point"
+  },
+//////////////////
+// 模糊背景
+  "blur_exit_push@cube_ui_anim.exit_push_anim_base": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": 4.8,
+    "from": 1,
+    "to": 0
+  },
+
+  "blur_exit_pop@cube_ui_anim.exit_pop_anim_base": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": 4.8,
+    "from": 1,
+    "to": 0
+  },
+  
+  "blur_entrance_push@cube_ui_anim.entrance_push_anim_base": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": 1.8,
+    "from": 0,
+    "to": 1
+  },
+
+  "blur_entrance_pop@cube_ui_anim.entrance_pop_anim_base": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": 1.8,
+    "from": 0,
+    "to": 1
+  },
+//////////////////
+// npc交互
+  "npc_exit_animation_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": 1.5,
+    "from": [ 0, 0 ],
+    "to": "$anim_default_point"
+  },
+
+  "npc_exit_animation_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": 1.5,
+    "from": [ 0, 0 ],
+    "to": "$anim_default_point"
+  },
+  
+  "npc_entrance_animation_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": 2.5,
+    "from": "$anim_default_point",
+    "to": [ 0, 0 ]
+  },
+
+  "npc_entrance_animation_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": 2.5,
+    "from": "$anim_default_point",
+    "to": [ 0, 0 ]
+  },
+//////////////////
+// 容器
+  "container_screen_exit_animation_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": "$container_transition_time_push",
+    "from": [ 0, 0 ],
+    "to": [ 0, "50%" ]
+  },
+
+  "container_screen_exit_animation_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": "$container_transition_time_push",
+    "from": [ 0, 0 ],
+    "to": [ 0, "50%" ]
+  },
+  
+  "container_screen_entrance_animation_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": "$container_transition_time_push",
+    "from": [ 0, "10%" ],
+    "to": [ 0, 0 ]
+  },
+
+  "container_screen_entrance_animation_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": "$container_transition_time_push",
+    "from": [ 0, "10%" ],
+    "to": [ 0, 0 ]
+  },
+////////////////////////
+  // 顶栏屏幕动画
+  "headbar_screen_exit_animation_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_bounce",
+    "duration": 1,
+    "$offset|default": [ 0, 0 ],
+    "from": "$offset",
+    "to": [ 0, "100%" ]
+  },
+
+  "headbar_screen_exit_animation_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_bounce",
+    "duration": 1,
+    "$offset|default": [ 0, 0 ],
+    "from": "$offset",
+    "to": [ 0, "100%" ]
+  },
+  
+  "headbar_screen_entrance_animation_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.6,
+    "from": [ 0, "100%" ],
+    "$offset|default": [ 0, 0 ],
+    "to": "$offset"
+  },
+
+  "headbar_screen_entrance_animation_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.6,
+    "from": [ 0, "100%" ],
+    "$offset|default": [ 0, 0 ],
+    "to": "$offset"
+  },
+////////////////////////
+  // 开始按钮
+  "start_play_exit_animation_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": 0.8,
+    "from": "$offset",
+    "to": [0,"40%"]
+  },
+
+  "start_play_exit_animation_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "out_back",
+    "duration": 0.8,
+    "from": "$offset",
+    "to": [0,"40%"]
+  },
+  
+  "start_play_entrance_animation_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": 1.2,
+    "from": [0,"40%"],
+    "to": "$offset"
+  },
+
+  "start_play_entrance_animation_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_out_back",
+    "duration": 1.2,
+    "from": [0,"40%"],
+    "to": "$offset"
+  },
+////////////////////////
+  // 聊天动画 //
+  "chat_push": {
+    "anim_type": "offset",
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 0.8,
+    "easing": "in_bounce"
+  },
+////////////////////////
+  // effect动画 //
+  "effect_push": {
+    "anim_type": "offset",
+    "from": [ "25%", 24 ],
+    "to": [ 0, 24 ],
+    "duration": 0.3,
+    "easing": "in_out_back"
+  },
+////////////////////////
+
+  // 开始界面底部文字动画 //
+  "start_text_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, "10%" ],
+    "to": [ 0, 0 ],
+    "easing": "in_out_expo",
+    "duration": 1.2
+  },
+  
+  "start_text_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, "10%" ],
+    "to": [ 0, 0 ],
+    "easing": "in_out_expo",
+    "duration": 1.2
+  },
+ 
+  "start_text_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "from": [ 0, 0 ],
+    "to": [ 0, "10%" ],
+    "duration": 0.8
+  },
+ 
+  "start_text_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "from": [ 0, 0 ],
+    "to": [ 0, "10%" ],
+    "duration": 0.8
+  },
+  
+  // 侧边栏动画 //
+  "sidebar_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": ["-5%",0],
+    "to": [0,0],
+    "easing": "in_out_back",
+    "duration": 1.5
+  },
+  
+  "sidebar_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": ["-5%",0],
+    "to": [0,0],
+    "easing": "in_out_back",
+    "duration": 1.5
+  },
+  
+  "sidebar_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": [0,0],
+    "to": ["-5%",0],
+    "easing": "out_expo",
+    "duration": 0.8
+  },
+  
+  "sidebar_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [0,0],
+    "to": ["-5%",0],
+    "easing": "out_expo",
+    "duration": 0.8
+  },
+  
+  // 快捷槽选中动画 //
+  "hotbar_slot_selected_image_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 14,
+    "frame_step": 25,
+    "fps": 5,
+    "reversible": true,
+    "easing": "linear"
+  },
+  
+  // 邀请按钮动画 //
+  "invite_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2.5,
+    "easing": "in_out_back"
+  },
+  
+  "invite_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-100%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2.5,
+    "easing": "in_out_back"
+  },
+ 
+  "invite_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "-100%", 0 ],
+    "duration": 2.5,
+    "easing": "out_back"
+  },
+ 
+  "invite_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "-100%", 0 ],
+    "duration": 2.5,
+    "easing": "out_back"
+  },
+  
+  // 设置界面动画 //
+  "set_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-40%", 21 ],
+    "to": "$anim_offset",
+    "duration": 1.2,
+    "easing": "out_expo"
+  },
+  
+  "set_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-40%", 21 ],
+    "to": "$anim_offset",
+    "duration": 1.2,
+    "easing": "out_expo"
+  },
+ 
+  "set_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": "$anim_offset",
+    "to": [ "-40%", 21 ],
+    "duration": 1.5,
+    "easing": "out_back"
+  },
+ 
+  "set_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": "$anim_offset",
+    "to": [ "-40%", 21 ],
+    "duration": 1.5,
+    "easing": "out_back"
+  },
+  
+  // 头像动画 //
+  "gamepic_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ "100%", 0 ],
+    "to": "$offset",
+    "duration": 2.5,
+    "easing": "in_out_back"
+  },
+  
+  "gamepic_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ "100%", 0 ],
+    "to": "$offset",
+    "duration": 2.5,
+    "easing": "in_out_back"
+  },
+ 
+  "gamepic_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": "$offset",
+    "to": [ "100%", 0 ],
+    "duration": 2.5,
+    "easing": "out_back"
+  },
+ 
+  "gamepic_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": "$offset",
+    "to": [ "100%", 0 ],
+    "duration": 2.5,
+    "easing": "out_back"
+  },
+  
+  // 侧边栏动画 //
+  "left_offset_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-30%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2.0,
+    "easing": "in_bounce"
+  },
+  
+  "left_offset_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ "-30%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2.0,
+    "easing": "in_bounce"
+  },
+ 
+  "left_offset_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "-30%", 0 ],
+    "duration": 0.2
+  },
+ 
+  "left_offset_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "-30%", 0 ],
+    "duration": 0.2
+  },
+  
+  "right_offset_entrance_push@entrance_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ "30%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2,
+    "easing": "in_back"
+  },
+  
+  "right_offset_entrance_pop@entrance_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ "30%", 0 ],
+    "to": [ 0, 0 ],
+    "duration": 2,
+    "easing": "in_back"
+  },
+ 
+  "right_offset_exit_push@exit_push_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "30%", 0 ],
+    "duration": 0.8,
+    "easing": "in_expo"
+  },
+ 
+  "right_offset_exit_pop@exit_pop_anim_base": {
+    "anim_type": "offset",
+    "from": [ 0, 0 ],
+    "to": [ "30%", 0 ],
+    "duration": 0.8,
+    "easing": "in_expo"
+  }
+}
