@@ -1,0 +1,64 @@
+{
+  "namespace": "labtable",
+
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 176, 200 ],
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  { "top_half@labtable.top_half": {}},
+                  { "inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} } // Gamepad tool tips
+    ]
+  },
+
+  "right_panel": {
+    "type": "panel",
+    "controls": [
+      { "title_label@labtable_pocket.title_label": {} },
+      {
+        "tools@labtable_pocket.tools_panel": {
+          "layer": 2,
+          "offset": [ 0, -40 ]
+        }
+      },
+      { "input@labtable_pocket.input_grid": {} },
+      { "combine@labtable_pocket.combine_button": {} }
+    ]
+  },
+
+  "lab_table": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "$screen_bg_content": "common.screen_background",
+    "$title": "labtable.title",
+    "$container_image": "textures/blocks/lab_table_side_c",
+    "$right_anchor": "top_right",
+    "$allow_exchange": false,
+    "$right_panel": "labtable.right_panel",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "labtable.content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

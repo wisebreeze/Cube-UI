@@ -1,0 +1,50 @@
+{
+  "realms_pending_invitations_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "realms_pending_invitations.realms_invitation_screen_content"
+  },
+  
+  "content_panel": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ]
+  },
+
+  "realms_invitation_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel": {
+          "type": "input_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            { "headbar@cube_ui_common.headbar": { "$title": "realmsPendingInvitationsScreen.pendingInvitations","layer": 10 } },
+            {
+              "content_panel@content_panel": {
+                "offset": [ 0, 20 ],
+                "$offset": [ 0, 20 ]
+              }
+            },
+            { "sgh@realms_pending_invitations.gamepad_helpers": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

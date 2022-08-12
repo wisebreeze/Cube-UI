@@ -1,0 +1,155 @@
+{
+  "profile_screen_main_panel_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "profile_screen_main_content": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "fill_padding@profile.vertical_fill_padding": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #is_using_dressing_room_debugging)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { "persona_preset_section@profile.persona_preset_section_panel": {} },
+            {
+              "debug_view@profile.debug_skin_view": {
+                "bindings": [
+                  {
+                    "binding_name": "#is_using_dressing_room_debugging",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 0, 25 ]
+              }
+            },
+            {
+              "lower_button_section@profile.lower_button_section": {
+                "focus_container": true,
+                "use_last_focus": false,
+                "focus_wrap_enabled": false,
+                "focus_nagivation_mode_left": "stop",
+                "focus_nagivation_mode_right": "stop"
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 0, 10 ]
+              }
+            }
+          ]
+        }
+      },
+      { "manage_options_modal@profile.manage_options_modal_content": {} }
+    ]
+  },
+
+  "profile_screen_deprecated": {
+    "gamepad_cursor_deflection_mode":false,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+  
+  "popup_dialog_delete_persona_content": {
+    "controls": [
+      {
+        "popup_dialog_message@popup_dialog.popup_dialog_message": {
+          "color": "$dressing_room_right_side_default_text_color",
+          "font_type": "$global_main_font",
+          "font_scale_factor": 1,
+          "size": [ "100%", "68%" ],
+          "offset": [ 0, 4 ]
+        }
+      },
+      {
+        "button_stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": ["100%",20],
+          "controls": [
+            {
+              "popup_dialog_left_button@popup_dialog.popup_dialog_left_button": {
+                "size": [ "50% - 2px", 20 ],
+                "$new_ui_label_offset": [ 0, 0 ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_cancel",
+                    "to_button_id": "$left_button_press",
+                    "mapping_type": "global"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "$left_button_press",
+                    "mapping_type": "focused"
+                  },
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "$left_button_press",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_left",
+                    "to_button_id": "button.menu_left",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  },
+                  {
+                    "from_button_id": "button.menu_right",
+                    "to_button_id": "button.menu_right",
+                    "mapping_type": "global",
+                    "scope": "view"
+                  }
+                ]
+              }
+            },
+            {
+              "padding@common.empty_panel": {
+                "size": [ 4, "100%" ]
+              }
+            },
+            {
+              "popup_dialog_right_button@popup_dialog.popup_dialog_right_button": {
+                "size": [ "50% - 2px", 20 ],
+                "$new_ui_label_offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "popup_dialog__delete_persona@popup_dialog.popup_dialog": {
+    "layer": 500,
+    "$left_button_press": "button.close_dialog",
+    "$right_button_press": "button.confirm_delete",
+    "$message_text": "dr.modal.persona_delete_confirm",
+    "$persona_popup_title_text": "",
+    "$left_button_text": "gui.cancel",
+    "$right_button_text": "gui.confirm",
+    "size": [ 200, 75 ],
+    "$section_content_size": [ "100% - 16px", "100% - 4px" ],
+    "$section_content_offset": [ 0, 0 ],
+    "controls": [
+      {
+        "popup_dialog_bg@persona_deprecated.popup_dialog_bg": {
+          "$dialog_content": "profile_deprecated.popup_dialog_delete_persona_content"
+        }
+      }
+    ]
+  }
+}

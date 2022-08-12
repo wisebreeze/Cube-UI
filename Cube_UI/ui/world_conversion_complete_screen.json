@@ -1,0 +1,43 @@
+{
+  "world_conversion_complete_screen_content": {
+    "controls": [
+      {
+        "dialog@cube_ui_common.headbar_screen": {
+          "$title": "worldConversionComplete.title",
+          "$screen_type": "stack_panel",
+          "$main_screen": "world_conversion_complete.main_panel"
+        }
+      }
+    ]
+  },
+
+  // Main screen
+  "world_conversion_complete_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$background_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "force_render_below": true,
+    "$screen_content": "world_conversion_complete.world_conversion_complete_screen_content",
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  }
+}

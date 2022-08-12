@@ -1,0 +1,150 @@
+{
+  "pause_screen_menu": {
+    "type": "stack_panel",
+    "size": [ "fill", "100%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "filler@pause.filler_panel": {
+          "size": [ "100%", 10 ]
+        }
+      }
+    ]
+  },
+  
+  "disconnected_label": {"font_type": "$global_main_font"},
+  "skin_panel_interior": {
+    "type": "panel",
+    "size": [ 100, "100%c" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ "-4%", "-3%" ],
+    "controls": [
+      {
+        "viewer_panel@pause.skin_viewer_panel": {
+          "tts_ignore_count": true
+        }
+      }
+    ]
+  },
+  
+  "skin_viewer_panel/paper_doll_name_tag": {
+    "ignored": false
+  },
+
+  "info_panel@pause.pause_screen_border": {
+    "size": [ 150, "100%" ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    /*"bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "pause_sidebar.player_listbar_toggle_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],*/
+    "controls": [
+      { "info_panel_background@pause.info_panel_background": {} },
+      { "info_panel_list@pause.info_panel_content_list": {} }
+    ]
+  },
+
+  "player_list": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "100%c" ],
+    "focus_container": true,
+    "use_last_focus": true,
+    "focus_nagivation_mode_right": "contained",
+    "controls": [
+      {
+        "vertical_padding_0@pause.vertical_padding": {
+          "size": [ 0, 4 ]
+        }
+      },
+      {
+        "players_list_label@cube_ui_common.cube_ui_header": {
+          "$cube_ui_header_text": "key.playerlist"
+        }
+      },
+      {
+        "vertical_padding_1@pause.vertical_padding": {
+          "size": [ 0, 4 ]
+        }
+      },
+      { "players_grid_panel@pause.players_grid": {} },
+      {
+        "vertical_padding_2@pause.vertical_padding": {
+          "size": [ 0, 3 ]
+        }
+      },
+      { "invite_players_button_panel@pause.invite_players_button_panel": {} },
+      {
+        "vertical_padding_3@pause.vertical_padding": {
+          "size": [ 0, 3 ]
+        }
+      },
+      { "disconnected_from_multiplayer_label_panel@pause.disconnected_from_multiplayer_label_panel": {} },
+      {
+        "vertical_padding_4@pause.vertical_padding": {
+          "size": [ 0, 1 ]
+        }
+      }
+    ]
+  },
+  
+  "transparent_background": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  },
+  
+  "trialTime": {
+    "type": "custom",
+    "ignored": "(not $trial)",
+    "renderer": "trial_time_renderer",
+    "size": [ "default", 10 ],
+    "offset": [ -2, -4 ],
+    "layer": 3,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "bindings": [
+      {
+        "binding_name": "#is_trial_version",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+  
+  "pause_screen_main_panels": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.right_offset_exit_push",
+      "@cube_ui_anim.right_offset_exit_pop",
+      "@cube_ui_anim.right_offset_entrance_push",
+      "@cube_ui_anim.right_offset_entrance_pop"
+    ]
+  },
+  
+  "pause_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 1,
+    "controls": [
+      { "pause_sidebar@pause_sidebar.pause_sidebar": {} },
+      { "trialtime@pause.trialTime": {} },
+      { "skin_panel@pause.skin_panel_interior": {} },
+      { "pause_screen_main_panels@pause.pause_screen_main_panels": {} },
+      { "gamepad_helpers@pause.gamepad_helpers": {} },
+      { "keyboard_helpers@pause.keyboard_helpers": {} }
+    ]
+  }
+}

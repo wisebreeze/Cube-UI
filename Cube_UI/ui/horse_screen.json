@@ -1,0 +1,201 @@
+{
+  "horse_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "flying_item_renderer@common.flying_item_renderer": {} },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  {"equipment@horse.equip_panel": {"offset": [ 7, 18 ]}},
+                  {"inv_panel@horse.inv_panel": {}},
+                  {"inventory_panel@common.inventory_panel_bottom_half_with_label": {}},
+                  {"hotbar_grid@common.hotbar_grid_template": {}}
+                ]
+              }
+            },
+            {
+              "renderer@horse.horse_renderer": {
+                "offset": [ 25, 18 ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pocket_horse_main_screen": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "controls": [
+      {
+        "horse_renderer": {
+          "type": "panel",
+          "size": [ "100% - 8px", 64 ],
+          "controls": [
+            {
+              "background": {
+                "type": "image",
+                "texture": "textures/ui/white_background",
+                "color": "$global_background_color",
+                "alpha": "$global_background_alpha",
+                "fill": true
+              }
+            },
+            {
+              "horse_custom": {
+                "type": "custom",
+                "renderer": "live_horse_renderer",
+                "layer": 4,
+                "size": [ 25, 25 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "bindings": [
+                  {
+                    "binding_name": "#entity_id"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel@cube_ui_common.v_panel": {}
+      },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100% - 64px" ],
+          "controls": [
+            {
+              "equip_grid_panel": {
+                "type": "panel",
+                "size": [ 32, 64 ],
+                "controls": [
+                  { "equip_grid@horse_pocket.equip_grid": {} },
+                  {
+                    "centered_0@horse_pocket.saddle_image": {
+                      "size": [ 16, 16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#sadle_slot_centered",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "offset@horse_pocket.saddle_image": {
+                      "size": [ 16, 16 ],
+                      "offset": [ 0, -16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_armor_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "centered_1@horse_pocket.armor_image": {
+                      "size": [ 16, 16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_only_armor_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "centered_2@horse_pocket.carpet_image": {
+                      "size": [ 16, 16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_only_carpet_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "armor_image@horse_pocket.armor_image": {
+                      "size": [ 16, 16 ],
+                      "offset": [ 0, 16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_armor_and_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "carpet_image@horse_pocket.carpet_image": {
+                      "size": [ 16, 16 ],
+                      "offset": [ 0, 16 ],
+                      "layer": 5,
+                      "bindings": [
+                        {
+                          "binding_name": "#has_carpet_and_saddle_slot",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "horse_inv": {
+                "type": "panel",
+                "size": [ "100% - 22px", "100%" ],
+                "$container_size": "$chest_size",
+                "$pane_collection": "container_items",
+                "controls": [
+                  {
+                    "inv@horse_pocket.chest_grid": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "horse_screen": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "$container_image": "textures/items/saddle",
+    "$right_panel": "horse.pocket_horse_main_screen",
+    "$right_anchor": "top_right",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "horse.horse_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "update_version_screen@common.modal_screen": {
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_content": "update_version.headbar_screen",
+    "force_render_below": true,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+
+  "headbar_screen@headbar_screen": {
+    "$title_text_binding_type": "global",
+    "$title": "#update_screen_title",
+    "$main_screen": "update_version.update_version_content"
+  },
+
+  "update_version_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 2px", "100% - 2px" ],
+    "offset": [ 1, 1 ],
+    "controls": [
+      {
+        "top_of_version_panel@update_version.picture_and_patch_notes": {}
+      },
+      {
+        "spacer_1px": {
+          "type": "panel",
+          "size": [ "100%", "1px" ]
+        }
+      },
+      {
+        "update_body_text@update_version.update_body_text": {}
+      },
+      {
+        "spacer_1px_2": {
+          "type": "panel",
+          "size": [ "100%", "1px" ]
+        }
+      }
+    ]
+  },
+  
+  "headbar_screen": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {
+          "$headbar_size": [ "100%", 20 ]
+        }
+      },
+      {
+        "screen@$main_screen": {
+          "type": "panel",
+          "size": [ "100%", "100% - 45px" ]
+        }
+      },
+      {
+        "button@update_version.update_button": {}
+      }
+    ]
+  },
+
+  "patch_notes_panel": {
+    "type": "image",
+    "size": [ "100%", "100%" ],
+    "texture": "textures/ui/panel_outline",
+    "controls": [
+      {
+        "patch_notes_text@common.scrolling_panel": {
+          "offset": [ 0, 1 ],
+          "$scrolling_pane_size": [ "100%-1px", "100%-2px" ],
+          "$scrolling_content": "update_version.patch_notes",
+          "$scroll_view_port_size": [ "100% - 4px", "100% - 4px" ],
+          "$scroll_view_port_size_touch": [ "100% - 4px", "100% - 4px" ],
+          "$scroll_view_port_offset": [ 2, 2 ],
+          "$scroll_view_port_offset_touch": [ 2, 2 ],
+          "$scroll_size": [ 5, "100%-2px" ],
+          "$scroll_size_touch": [ 5, "100%-2px" ],
+          "$background_size": [ "100%", "100%" ],
+          "$background_size_touch": [ "100%", "100%" ],
+          "$show_background": true,
+          "$scroll_bar_contained": true,
+          "$scroll_bar_contained_touch": true
+
+        }
+      }
+    ]
+  },
+
+  "picture_and_patch_notes": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100% - 2px", "60%" ],
+    "offset": [ 1, 1 ],
+    "controls": [
+      {
+        "patch_notes_image_outline": {
+          "size": [ "100%c + 2px", "100%" ],
+          "type": "image",
+          "texture": "textures/ui/panel_outline",
+          "controls": [
+            {
+              "patch_notes_image": {
+                "size": [ "137%y", "100% - 2px" ],
+                "type": "image",
+                "texture": "textures/ui/storexblsignin"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "patch_notes_panel@update_version.patch_notes_panel": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
+
+  "patch_notes": {
+    "type": "panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "patch_notes_text": {
+          "type": "label",
+          "offset": [ 1, 0 ],
+          "size": [ "100%", "default" ],
+          "color": "$body_text_color",
+          "layer": 3,
+          "text": "#update_screen_patch_notes",
+          "bindings": [
+            {
+              "binding_name": "#update_screen_patch_notes"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "update_body_text": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text": "#update_screen_description",
+    "color": "$body_text_color",
+    "bindings": [
+      {
+        "binding_name": "#update_screen_description"
+      }
+    ]
+  },
+
+  "update_button@common_buttons.light_text_button": {
+    "size": [ "100% - 4px", 20 ],
+    "$pressed_button_name": "button.update",
+    "$button_text": "updateScreen.update"
+  }
+}

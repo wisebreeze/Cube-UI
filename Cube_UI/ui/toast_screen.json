@@ -1,0 +1,176 @@
+{
+  "popup_anim_start": {
+    "anim_type": "offset",
+    "easing": "spring",
+    "from": [ 0, 0 ],
+    "to": [0,"13% + 4px"],
+    "duration": "$transition_in_time",
+    "next": "@toast_screen.popup_anim_wait"
+  },
+
+  "popup_anim_end": {
+    "anim_type": "offset",
+    "easing": "in_sine",
+    "to": [ 0, 0 ],
+    "from": [0,"13% + 4px"],
+    "duration": "$transition_out_time",
+    "destroy_at_end": "popup",
+    "end_event": "toast_end"
+  },
+
+  "toast_label": {
+    "font_type": "$global_main_font"
+  },
+
+  "half_circle": {
+    "type": "panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": ["50%c","100%"],
+    "offset": ["-50%c",0],
+    "clips_children": true,
+    "$circle_offset|default": ["50%",0],
+    "controls": [
+      {
+        "circle": {
+          "type": "image",
+          "size": ["100%y","100%"],
+          "offset": "$circle_offset",
+          "color": "$global_toast_background_color",
+          "alpha": "$global_toast_background_alpha",
+          "texture": "cube_ui/textures/start/button"
+        }
+      }
+    ]
+  },
+
+  "popup@common.input_panel": {
+    "$toast_offset|default": [ 0, 3 ],
+    "size": ["80%","14%"],
+    "controls": [
+      {"left@toast_screen.half_circle": {}},
+      {"right@toast_screen.half_circle": {"offset": ["50%c",0],"anchor_from": "right_middle","anchor_to": "right_middle","$circle_offset": ["-50%",0]}},
+      {
+        "background": {
+          "type": "image",
+          "color": "$global_toast_background_color",
+          "fill": true,
+          "alpha": "$global_toast_background_alpha",
+          "texture": "textures/ui/white_background",
+          "anims": "$alpha_anims"
+        }
+      },
+      {
+        "popup_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 6, 0 ],
+          "layer": 1,
+          "controls": [
+            {
+              "icon_padding": {
+                "layer": 1,
+                "type": "stack_panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%c", "100%" ],
+                "factory": {
+                  "name": "toast_image_factory",
+                  "control_ids": {
+                    "xbox_icon": "@toast_screen.xbox_icon",
+                    "third_party_achievement_icon": "@toast_screen.third_party_achievement_icon",
+                    "third_party_invite_icon": "@toast_screen.third_party_invite_icon",
+                    "icon_resource_pack": "@toast_screen.resource_pack_icon",
+                    "key_art_image": "@toast_screen.key_art_image",
+                    "persona_icon": "@toast_screen.persona_icon"
+                  },
+                  "factory_variables": [
+                    "$hide_xbox_live_icon"
+                  ]
+                },
+                "bindings": [
+                  {
+                    "binding_type": "global",
+                    "binding_name": "#toast_icon_section_content",
+                    "binding_name_override": "#collection_length"
+                  }
+                ]
+              }
+            },
+            {
+              "text_padding": {
+                "type": "panel",
+                "size": [ 2, "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#text_padding_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "text_panel": {
+                "type": "panel",
+                "size": [ "fill", "100%" ],
+                "controls": [
+                  {
+                    "text_stack_panel@toast_screen.text_stack_panel": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "formfitting_alpha_toast": {
+    "type": "panel",
+    "$display_time": 3.0,
+    "$transition_in_time": 0.15,
+    "$transition_out_time": 0.15,
+    "$toast_control": "formfitting_alpha_toast",
+    "$alpha_anims": [
+      "@toast_screen.fade_anim_wait"
+    ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [ 0, 10 ],
+          "size": [ "100%c + 6px", "100%c + 13px" ],
+          "color": "$global_toast_background_color",
+          "fill": true,
+          "alpha": "$global_toast_background_alpha",
+          "texture": "textures/ui/white_background",
+          "anims": "$alpha_anims",
+          "controls": [
+            {
+              "label@toast_screen.toast_label": {
+                "type": "label",
+                "size": [ 200, "default" ],
+                "offset": [ 0, 0 ],
+                "color": "$toast_text_color",
+                "text": "#toast_title",
+                "text_alignment": "center",
+                "$toast_font_type": "smooth",
+                "bindings": [
+                  {
+                    "binding_name": "#toast_title"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

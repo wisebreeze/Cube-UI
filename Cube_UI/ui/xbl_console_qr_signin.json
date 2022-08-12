@@ -1,0 +1,37 @@
+{
+  "gamepad_helpers/gamepad_helper_b": {
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ 5, -5 ]
+  },
+  
+  "xbl_console_qr_signin": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "xbl_console_qr_signin.xbl_console_qr_signin_screen_content"
+  },
+
+  "xbl_console_qr_signin_screen_content": {
+    "controls": [
+      { "gamepad_helpers@xbl_console_qr_signin.gamepad_helpers": {} },
+      {
+        "content@cube_ui_common.headbar_screen": {
+          "layer": 1,
+          "$title": "xbox.signin.qr",
+          "$screen_type": "stack_panel",
+          "$main_screen": "xbl_console_qr_signin.main_panel_qr"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "dialog_content": {
+    "type": "stack_panel",
+    "size": [ "100% - 4px", "100% - 20px" ],
+    "offset": [ 0, "20px" ],
+    "$offset": [ 0, "20px" ],
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ "100%", 1 ]
+        }
+      },
+      {
+        "dropdown_visibility_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c - 2px" ],
+          "controls": [
+            {
+              "friends_dropdown@settings_common.option_dropdown": {
+                "$button_type_panel": "xbl_report_user.report_dropdown_panel",
+                "$show_option_label": false,
+                "$option_label": "#report_reason_dropdown_toggle_label",
+                "$dropdown_content": "xbl_report_user.report_dropdown_content",
+                "$dropdown_area": "main_panel",
+                "$dropdown_name": "report_reason_dropdown",
+                "$options_dropdown_toggle_label_binding": "#report_reason_dropdown_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", 118 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text_edit_box@common.multiline_text_edit_box": {
+          "$text_box_name": "report_reason_text_box",
+          "$place_holder_text": "xbox.report.optionalText",
+          "$text_edit_box_label_anchor_point": "top_left",
+          "$text_edit_box_label_offset": [ 2, 2 ],
+          "$text_edit_box_label_size": [ "100% - 6px", "default" ],
+          "$place_holder_text_color": "$place_holder_text_color",
+          "max_length": "$text_box_max_length",
+          "size": [ "100%", "30%" ],
+          "property_bag": {
+            "#property_field": "#additional_report_notes"
+          }
+        }
+      }
+    ]
+  },
+
+  "xbl_report_user_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "xbl_report_user.xbl_report_user_screen_content"
+  },
+
+  "xbl_report_user_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "gamepad_helpers@xbl_report_user.gamepad_helpers": {} },
+      { "headbar@cube_ui_common.headbar": { "$title": "feed.reported_label","layer": 1 } },
+      { "main_panel@xbl_report_user.dialog_content": { "layer": 1 } },
+      {
+        "report_button@common_buttons.dark_content_button": {
+          "size": [ "100%", 20 ],
+          "offset": [ 0, -3 ],
+          "layer": 10,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$pressed_button_name": "button.report",
+          "$button_content": "xbl_report_user.report_button_content",
+          "bindings": [
+            {
+              "binding_name": "#reason_selected",
+              "binding_name_override": "#enabled"
+            }
+          ],
+          "animation_reset_name": "screen_animation_reset",
+          "anims": [
+            "@cube_ui_anim.headbar_screen_exit_animation_push",
+            "@cube_ui_anim.headbar_screen_exit_animation_pop",
+            "@cube_ui_anim.headbar_screen_entrance_animation_push",
+            "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+          ]
+        }
+      }
+    ]
+  },
+  
+  "report_button_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100% - 8px", "100%" ],
+    "controls": [
+      {
+        "hammer_icon_panel_l": {
+          "type": "panel",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {
+              "hammer@xbl_report_user.hammer_l_icon": {
+                "bindings": [
+                  {
+                    "binding_name": "#reason_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "hammer_disabled@xbl_report_user.hammer_l_disabled_icon": {
+                "bindings": [
+                  {
+                    "binding_name": "(not #reason_selected)",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "report_label": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            {
+              "report_label": {
+                "type": "label",
+                "size": [ "default", "default" ],
+                "color": "$body_text_color",
+                "text": "xbox.profile.report"
+              }
+            }
+          ]
+        }
+      } 
+    ]
+  }
+}

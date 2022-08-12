@@ -1,0 +1,68 @@
+{
+  "main_text_panel": {
+    "type": "panel",
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "controls": [
+      {
+        "label_wrapper@common.tts_label_focus_wrapper": {
+          "size": [ "100%", "100%" ],
+          "$focus_border_size": [ "100% + 8px", "100% + 4px" ],
+          "$tts_label_panel": "xbl_first_launch.message_label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "$focus_border_offset": [ 2, 0 ]
+        }
+      }
+    ]
+  },
+
+  "xbl_signin_button@common_buttons.light_content_button": {
+    "size": [ "100% - 4px", 20 ],
+    "$pressed_button_name": "button.xbl_signin",
+    "$button_content": "xbl_first_launch.xbl_signin_label",
+    "$button_focus_precedence": 10
+  },
+
+  "main_panel": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      { "main_text_panel@xbl_first_launch.main_text_panel": {} }
+    ]
+  },
+  
+  "screen_panel@cube_ui_common.headbar_button_screen": {
+    "$title": "xblLogin.LoginMessageTitle",
+    "$main_screen": "xbl_first_launch.main_panel",
+    "$button_panel": "xbl_first_launch.xbl_signin_button"
+  },
+
+  "xbl_first_launch_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "xbl_first_launch.xbl_first_launch_screen_content"
+  },
+
+  "xbl_first_launch_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "gamepad_helpers@gamepad_helpers": {} },
+      { "main_panel@screen_panel": { "layer": 1 } }
+    ]
+  }
+}

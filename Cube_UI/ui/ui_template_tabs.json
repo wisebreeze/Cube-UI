@@ -1,0 +1,70 @@
+{
+  "tab_panel": {
+    "$focus_anchor|default": "bottom_middle",
+    "$focus_size|default": ["100%",1],
+    "$tab_focus_visible|default": false,
+
+    "controls": [
+      {
+        "tab_focus": {
+          "type": "image",
+          "visible": "$tab_focus_visible",
+          "fill": true,
+          "offset": [0,-3],
+          "color": "$tab_focus_color",
+          "anchor_from": "$focus_anchor",
+          "anchor_to": "$focus_anchor",
+          "texture": "textures/ui/white_background",
+          "size": "$focus_size",
+          "layer": 2
+        }
+      },
+      {
+        "tab_content_sizer": {
+          "type": "panel",
+          "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+          "size": "$tab_content_size",
+          "controls": [
+            {"tab_content@$tab_content": {"layer": 3}}
+          ]
+        }
+      }
+    ]
+  },
+  "base_tab/$tab_view_binding_name/unchecked_hover": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_hover_color"
+  },
+  "base_tab/$tab_view_binding_name/unchecked_locked_hover": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_hover_color"
+  },
+  "base_tab/$tab_view_binding_name/checked": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_checked_color"
+  },
+  "base_tab/$tab_view_binding_name/checked_hover": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_checked_hover_color"
+  },
+  "base_tab/$tab_view_binding_name/checked_locked": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_checked_color"
+  },
+  "base_tab/$tab_view_binding_name/checked_locked_hover": {
+    "$tab_focus_visible": true,
+    "$tab_focus_color": "$global_tab_checked_hover_color"
+  },
+  "tab_top": {
+    "$focus_anchor": "bottom_middle",
+    "$focus_size": ["100%",1]
+  },
+  "tab_left": {
+    "$focus_anchor": "left_middle",
+    "$focus_size": [1,"100%"]
+  },
+  "tab_right": {
+    "$focus_anchor": "right_middle",
+    "$focus_size": [1,"100%"]
+  }
+}

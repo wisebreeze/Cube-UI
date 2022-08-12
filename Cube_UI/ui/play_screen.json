@@ -1,0 +1,738 @@
+{
+  "label_background": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color"
+  },
+
+  "server_scroll_content/feature_server_message_panel": {
+    "modifications": [
+      {
+        "control_name": "featured_servers_label",
+        "operation": "remove"
+      }
+    ]
+  },
+
+  "dark_label_background@label_background": {
+    "texture": "textures/ui/white_background"
+  },
+  "add_friend_and_invite_panel": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "orientation": "horizontal",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {
+        "add_friend_button@play.add_friend_button": {
+          "ignored": "((not $supports_add_friend) or $nx_os or $is_ps4)",
+          "size": [ "fill", 20 ],
+          "bindings": [
+            {
+              "binding_name": "#add_friend_button_visible",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            },
+            {
+              "binding_name": "#cross_platform_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 1, 0 ],
+          "ignored": "((not $supports_add_friend) or $nx_os or $is_ps4)"
+        }
+      },
+      {
+        "join_by_code_button@play.join_by_code_button": {
+          "size": [ "fill", 20 ]
+        }
+      },
+      {
+        "padding_2": {
+          "type": "panel",
+          "size": [ 1, 0 ]
+        }
+      },
+      {
+        "notification_button_panel": {
+          "type": "panel",
+          "size": [ "13%", 20 ],
+          "controls": [
+            {
+              "notification_button@play.notification_button": {
+                "$button_content": "play.notification_content",
+                "$button_tts_header": "realmsInvitationScreen.shareTitle",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "header_button_panel/buttons": {
+    "controls": [
+      {
+        "primary_panel": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            {
+              "primary@$primary_header_button": {
+                "size": [ "100% + 1px", "100%" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "size": [ 3, 0 ],
+          "ignored": "$is_ios"
+        }
+      },
+      {
+        "secondary@$secondary_header_button": {
+          "visible": "$secondary_visible",
+          "ignored": "$is_ios",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "layer": 1
+        }
+      }
+    ]
+  },
+  
+  "worlds_stack_panel/header_button": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", 20 ]
+  },
+  "worlds_stack_panel/header_button/quick_play": {
+    "size": [ "50%", 20 ],
+    "ignored": false
+  },
+  "worlds_stack_panel/header_button/buttons": {
+    "size": [ "50%", 20 ],
+    "$secondary_visible": "(not $osx_edition)"
+  },
+  "world_list_label_panel/list_label": {
+    "font_type": "$global_main_font"
+  },
+  "label_content_template/label_panel/label_panel_layout/label": {
+    "font_type": "$global_main_font"
+  },
+  "world_list_label_with_color_panel/list_label": {
+    "font_type": "$global_main_font"
+  },
+  "world_list_text": {
+    "font_type": "$global_main_font"
+  },
+  "crossplatform_disabled_panel/disable_text": {
+    "font_type": "$global_main_font"
+  },
+  "information_panel/background/label_panel_layout/label": {
+    "font_type": "$global_main_font"
+  },
+  "blocked_multiplayer_privileges_panel/background/label_panel_layout/label": {
+    "font_type": "$global_main_font"
+  },
+  "worlds_stack_panel/realms_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [{"panel_a@cube_ui_common.v_panel": {}}]
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Scroll panels
+  //---------------------------------------------------------------------------
+
+  "common_scrolling_panel@common.scrolling_panel": {
+    "layer": 1,
+    "$scrolling_pane_size": [ "100% - 1px", "100%" ],
+    "$scrolling_content": "$scrolling_content",
+    "$scroll_size": [ 5, "100% - 4px" ],
+    "$show_background": false,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right"
+  },
+
+  //---------------------------------------------------------------------------
+  // Scroll content
+  //---------------------------------------------------------------------------
+
+  "common_content": {
+    "type": "input_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "focus_container": true,
+    "use_last_focus": true,
+    "focus_nagivation_mode_down": "contained",
+    "focus_nagivation_mode_up": "contained",
+    "focus_nagivation_mode_right": "contained",
+    "focus_nagivation_mode_left": "contained"
+  },
+
+  "scrolling_offsets@play.common_scrolling_panel": {
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "offset": [ 2, 2 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left"
+  },
+
+  "friends_scroll_content@play.common_content": {
+    "controls": [
+      {
+        "scrolling_panel@play.scrolling_offsets": {
+          "layer": 1,
+          "$scrolling_content": "play.friends_scroll_panel"
+        }
+      }
+    ]
+  },
+
+  "show_servers_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "fill" ],
+    "bindings": [
+      {
+        "binding_name": "(not #feature_server_message_visible)",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "left_panel": {
+          "type": "image",
+          "alpha": "$global_background_alpha",
+          "fill": true,
+          "color": "$global_background_color",
+          "texture": "textures/ui/white_background",
+          "size": [ "50% - 1px", "100%" ],
+          "controls": [
+            {
+              "scrolling_panel@play.scrolling_offsets": {
+                "size": [ "100%", "100% - 4px" ],
+                "offset": [ 0, 2 ],
+                "layer": 1,
+                "$scrolling_content": "play.server_scroll_panel"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "right_panel@play.server_content_area": {}
+      }
+    ]
+  },
+
+  "server_content_area": {
+    "type": "panel",
+    "size": [ "50% - 4px", "100%" ],
+    "layer": 1,
+    "$focus_id": "right_side",
+    "bindings": [
+      {
+        "binding_name": "#is_network_available_and_multiplayer_visible",
+        "binding_name_override": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "third_party_scrolling_panel@play.scrolling_offsets": {
+          "size": [ "100%", "100% - 4px" ],
+          "offset": [ 0, 2 ],
+          "layer": 1,
+          "$scrolling_content": "play.third_party_server_info_panel",
+          "bindings": [
+            {
+              "binding_name": "#is_third_party_server_selected",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "additional_server_scrolling_panel@play.scrolling_offsets": {
+          "size": [ "100%", "100% - 4px" ],
+          "offset": [ 0, 2 ],
+          "layer": 1,
+          "$scrolling_content": "play.additional_server_info_panel",
+          "bindings": [
+            {
+              "binding_name": "#is_additional_server_selected",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "add_server_pane@play.add_server_info_panel": {
+          "bindings": [
+            {
+              "binding_name": "#add_server_info_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Toggle tab buttons
+  //---------------------------------------------------------------------------
+
+  "tab_text_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "fill", "100%" ],
+    "controls": [
+      {
+        "text_section": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "text@play.common_button_text": {
+                "layer": 3,
+                "font_type": "$global_toggle_text_font",
+                "text": "$tab_text_name",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "offset": [ -1, 5 ],
+                "color": "$text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "count_section": {
+          "type": "panel",
+          "size": [ "100%c", "100%c" ],
+          "variables": [
+            {
+              "requires": "$is_checked_state",
+              "$count_background_image": "textures/ui/numberBGFront",
+              "$count_text_color": "$secondary_text_color"
+            },
+            {
+              "requires": "($is_hover_state or not $is_checked_state)",
+              "$count_background_image": "textures/ui/numberBGBack",
+              "$count_text_color": "$text_color"
+            }
+          ],
+          "controls": [
+            {
+              "count_background_image": {
+                "type": "image",
+                "texture": "$count_background_image",
+                "size": [ "100%c + 3px", "100%c" ],
+                "offset": [ -20, 5 ],
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "layer": 3,
+                "controls": [
+                  {
+                    "count@common_button_text": {
+                      "layer": 1,
+                      "font_type": "$global_main_font",
+                      "text": "$count_text_name",
+                      "color": "$count_text_color",
+                      "bindings": [
+                        {"binding_name": "$count_text_name"}
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "common_navigation_tab_content": {
+    "type": "image",
+    "size": [ "100%-3px", "100% - 4px" ],
+    "texture": "textures/ui/white_background",
+    "alpha": 0.4,
+    "nineslice_size": 1,
+    "color": "$tab_color",
+    "variables": [
+      {
+        "requires": "$is_hover_state",
+        "$tab_color": "$tab_hover_color"
+      }
+    ],
+    "controls": [
+      {
+        "common_navigation_tab_panel": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%" ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ 2, "100%" ]
+              }
+            },
+            {
+              "icon_section": {
+                "type": "panel",
+                "size": [ "100%c", "100%" ],
+                "controls": [
+                  {
+                    "icon@$tab_icon": {
+                      "layer": 2
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ 2, "100%" ]
+              }
+            },
+            {
+              "count_text@play.tab_text_stack_panel": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Main navigation tabs
+  //---------------------------------------------------------------------------
+  "tab_top@common_tabs.base_tab": {
+    "$empty_image": "cube_ui/textures/sidebar/sidebar_button_background",
+    "controls": [
+      {
+        "$tab_view_binding_name@common.toggle": {
+          "controls": [
+            {
+              "unchecked@$tab_panel": {
+                "$text_color": "$unchecked_text_color",
+                "$secondary_text_color": "$unchecked_secondary_text_color",
+                "$glyph_color": "$unchecked_glyph_color",
+                "$tab_texture": "$empty_image",
+                "$tab_state": "unchecked",
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_hover@$tab_panel": {
+                "$text_color": "$unchecked_hover_text_color",
+                "$secondary_text_color": "$unchecked_hover_secondary_text_color",
+                "$glyph_color": "$unchecked_hover_glyph_color",
+                "$tab_texture": "$empty_image",
+                "$tab_state": "unchecked_hover",
+                "$is_hover_state": true,
+                "layer": 1
+              }
+            },
+            {
+              "unchecked_locked_hover@$tab_panel": {
+                "$text_color": "$unchecked_locked_hover_text_color",
+                "$secondary_text_color": "$unchecked_locked_hover_secondary_text_color",
+                "$glyph_color": "$unchecked_locked_hover_glyph_color",
+                "$tab_texture": "$empty_image",
+                "$tab_state": "unchecked_locked_hover",
+                "layer": 1
+              }
+            },
+            {
+              "checked@$tab_panel": {
+                "$text_color": "$checked_text_color",
+                "$secondary_text_color": "$checked_secondary_text_color",
+                "$glyph_color": "$checked_glyph_color",
+                "$tab_texture": "$empty_image",
+                "$tab_state": "checked",
+                "$is_checked_state": true,
+                "layer": 2
+              }
+            },
+            {
+              "checked_hover@$tab_panel": {
+                "$text_color": "$checked_hover_text_color",
+                "$secondary_text_color": "$checked_hover_secondary_text_color",
+                "$glyph_color": "$checked_hover_glyph_color",
+                "$tab_texture": "$empty_image",
+                "$tab_state": "checked_hover",
+                "$is_checked_state": true,
+                "$is_hover_state": true,
+                "layer": 2
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "top_tab@play.tab_top": {
+    "$toggle_tts_enabled_binding_type": "global",
+    "$radio_toggle_group": true,
+    "$toggle_name": "navigation_tab",
+    "$toggle_group_default_selected": "$default_tab",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "layer": 100,
+    "$toggle_tts_type_priority": 1001,
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": "",
+    "$toggle_tts_index_priority": 1002
+  },
+
+  "world_navigation_tab@play.top_tab": {
+    "$tab_view_binding_name": "world_navigation_tab_toggle",
+    "$tab_icon": "worlds_icon",
+    "$count_text_name": "#world_item_count",
+    "$tab_text_name": "selectWorld.tab.worlds",
+    "$toggle_group_forced_index": 0,
+    "$tab_content": "play.common_navigation_tab_content"
+  },
+
+  "friends_navigation_tab@play.top_tab": {
+    "$tab_view_binding_name": "friends_navigation_tab_toggle",
+    "$tab_icon": "friends_icon_2",
+    "$count_text_name": "#friend_world_item_count",
+    "$tab_text_name": "selectWorld.tab.friends",
+    "$toggle_group_forced_index": 1,
+    "$tab_content": "play.common_navigation_tab_content"
+  },
+
+  "server_navigation_tab@play.top_tab": {
+    "$tab_view_binding_name": "server_navigation_tab_toggle",
+    "$tab_icon": "server_tab_icon",
+    "$count_text_name": "#server_world_item_count",
+    "$tab_text_name": "selectWorld.tab.thirdParty",
+    "$toggle_group_forced_index": 2,
+    "$tab_content": "play.common_navigation_tab_content"
+  },
+
+  //---------------------------------------------------------------------------
+  // Content tabs panel
+  //---------------------------------------------------------------------------
+
+  "common_tab_content_panel": {
+    "type": "panel",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      {
+        "content@$scroll_tab_content": {
+          "layer": 2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%-12px", "100%-22px" ],
+          "offset": [ 6, 20 ],
+          "ttsSectionContainer": true
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_bind_toggle_source_control",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "worlds_tab_content_panel@play.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "world_navigation_tab_toggle",
+    "$scroll_tab_content": "play.worlds_scroll_content"
+  },
+
+  "friends_tab_content_panel@play.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "friends_navigation_tab_toggle",
+    "$scroll_tab_content": "play.friends_scroll_content"
+  },
+
+  "server_tab_content_panel@play.common_tab_content_panel": {
+    "$visible_bind_toggle_source_control": "server_navigation_tab_toggle",
+    "$scroll_tab_content": "play.server_scroll_content"
+  },
+
+  //---------------------------------------------------------------------------
+  // Content layout panels
+  //---------------------------------------------------------------------------
+
+  "common_tab_content_panel_type": {
+    "type": "input_panel",
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "size": [ "100%", "100%" ],
+    "ttsSectionContainer": true
+  },
+
+  "default_tab_content_panel_layout@play.common_tab_content_panel_type": {
+    "controls": [
+      { "worlds_tab_content@play.worlds_tab_content_panel": {} },
+      { "friends_tab_content@play.friends_tab_content_panel": {} },
+      { "server_tab_content_panel@play.server_tab_content_panel": {} }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Tabs layout panels
+  //---------------------------------------------------------------------------
+
+  "tab_navigation_panel_layout": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "size": [ "100%", 25 ],
+    "controls": [
+      {
+        "navigation_tabs": {
+          "type": "panel",
+          "size": [ "fill", "100%" ],
+          "controls": [
+            {
+              "content@$navigation_tab": {
+                "anchor_to": "top_left",
+                "anchor_from": "top_left"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "common_tab_navigation_panel_layout": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100% + 2px", "100%" ],
+    "ttsSectionContainer": true
+  },
+
+  "default_tab_navigation_panel_layout@play.common_tab_navigation_panel_layout": {
+    "controls": [
+      {
+        "world_navigation_tab@play.world_navigation_tab": {
+          "size": [ "33%", "100%" ]
+        }
+      },
+      {
+        "friends_navigation_tab@play.friends_navigation_tab": {
+          "size": [ "33%", "100%" ]
+        }
+      },
+      {
+        "server_navigation_tab@play.server_navigation_tab": {
+          "size": [ "33%", "100%" ]
+        }
+      }
+    ]
+  },
+
+  //---------------------------------------------------------------------------
+  // Default
+  //---------------------------------------------------------------------------
+
+  "default_play_screen_panel@play.play_screen_panel": {
+    "$navigation_tab": "play.default_tab_navigation_panel_layout",
+    "$tab_content_panel": "play.default_tab_content_panel_layout"
+  },
+  
+  //---------------------------------------------------------------------------
+  // Screen
+  //---------------------------------------------------------------------------
+
+  "play_screen_content": {
+    "type": "panel",
+    "$tab_color": "$global_toggle_checked_default_color",
+    "$tab_hover_color": "$global_toggle_checked_hover_color",
+    "controls": [
+      {
+        "main_control@cube_ui_common.headbar_screen": {
+          "$main_screen": "$main_panel",
+          "$title": "menu.play"
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "join_by_code": "@play.popup_dialog_join_by_code",
+            "high_ping_warning": "@play.popup_dialog_high_ping"
+          }
+        }
+      }
+    ]
+  },
+
+  "play_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    // 纠正界面动画
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "play.play_screen_content",
+    "$world_picker_screen": false
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "\u0073\u0074\u0061\u0072\u0074\u005f\u0073\u0063\u0072\u0065\u0065\u006e\u005f\u0063\u006f\u006e\u0074\u0065\u006e\u0074": {
+    "type": "panel",
+    "variables": [
+     {
+       "requires": "(not ($cube_author = \u004d\u0043\u005f\u0073\u0070\u0072\u0075\u0063\u0065))",
+       "$screen": "start_error_popup_dialog"
+     },
+     {
+       "requires": "($cube_author = \u004d\u0043\u005f\u0073\u0070\u0072\u0075\u0063\u0065)",
+       "$screen": "start_main_content"
+     }
+   ],
+   "controls": [{"screen@$screen": {"type": "panel"}}]
+  },
+
+  "start_error_popup_dialog": {
+    "type": "panel",
+    "size": ["60%","50%"],
+    "$button_text": "menu.settings",
+    "$popup_dialog_middle_button_name": "button.menu_settings",
+    "controls": [
+      {"background@common.common_panel": {"$show_close_button": false}},
+      {
+        "settings_button@common_buttons.light_text_button": {
+          "size": [ "100% - 2px", 20 ],
+          "offset": [0,-2],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "$pressed_button_name": "button.menu_settings",
+          "$button_text": "menu.settings",
+          "$focus_override_right": "profile_button"
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", 10 ],
+          "offset": [ 9, 9 ],
+          "text_alignment": "left",
+          "color": "$title_text_color",
+          "text": "gui.error"
+        }
+      },
+      {
+        "tip": {
+          "type": "label",
+          "size": [ "95%", "default" ],
+          "anchor_to": "top_middle",
+          "anchor_from": "top_middle",
+          "offset": [0,22],
+          "layer": 2,
+          "text": "cube.piracy",
+          "color": "$body_text_color",
+          "font_type": "smooth"
+        }
+      }
+    ]
+  },
+  
+  // 纸娃娃 //
+  "skin_viewer_panel": {
+    "type": "input_panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100%", 120 ],
+    "offset": [0,-10],
+    "gesture_tracking_button": "button.turn_doll",
+    "tts_ignore_count": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.turn_doll",
+        "mapping_type": "pressed",
+        "button_up_right_of_first_refusal": true
+      }
+    ],
+    "controls": [
+      {
+        "paper_doll_panel": {
+          "type": "panel",
+          "size": [ "100%", "100% - 10px" ],
+          "controls": [
+            {
+              "paper_doll": {
+                "type": "custom",
+                "renderer": "paper_doll_renderer",
+                "camera_tilt_degrees": -10,
+                "starting_rotation": 0,
+                "layer": 2,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "rotation": "gesture_x",
+                "size": [ "100%", "100%" ],
+                "offset": [ 0, -12 ],
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_delta_source",
+                    "target_property_name": "#gesture_delta_source"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "viewer_panel",
+                    "source_property_name": "#gesture_mouse_delta_x",
+                    "target_property_name": "#gesture_mouse_delta_x"
+                  },
+                  {
+                    "binding_name": "#is_appearance_visible",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "dressing_room_button@common.button": {
+                "$pressed_button_name": "button.to_profile_screen",
+                "$button_tts_header": "accessibility.start.profile",
+                "sound_name": "armor.equip_iron",
+                "layer": 3,
+                "size": [ 70, "80%" ],
+                "offset": [ 0, 10 ],
+                "controls": [
+                  { "empty@common.empty_panel": {} }
+                ]
+              }
+            },
+            {
+              "appearacne_loading_panel@common_store.progress_loading": {
+                "$hide_failure_text": true,
+                "$hide_progress_loading_outline": true,
+                "offset": [ 0, 10 ],
+                "$source_control_name": "paper_doll",
+                "$source_property_name": "(not #visible)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "paper_doll_name_tag": {
+          "type": "custom",
+          "renderer": "name_tag_renderer",
+          "layer": 2,
+          "anchor_from": "top_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ 8, 8 ],
+          "offset": [ 0, 15 ],
+          "bindings": [
+            { "binding_name": "#playername" }
+          ]
+        }
+      },
+      {"play_button@start_play_button.play_button": {}}
+    ]
+  },
+
+  "sidebar_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {"gamepic_and_name@cube_ui_common.gamepic_and_name": {}},
+      {"setting_button@start_button_panel.setting_button": {}},
+      {"about_button@start_button_panel.about_button": {}},
+      {"achievements_button@start_button_panel.achievements_button": {}},
+      {"store_button@start_button_panel.store_button": {}},
+      {"dressroom_button@start_button_panel.dressroom_button": {}}
+    ]
+  },
+  "sidebar_verbose_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {"gamepic_and_name@cube_ui_common.gamepic_and_name": {}},
+      {"setting_button@start_button_panel.setting_button": {}},
+      {"about_button@start_button_panel.about_button": {}},
+      {"achievements_button@start_button_panel.achievements_button": {}},
+      {"store_button@start_button_panel.store_button": {}},
+      {"dressroom_button@start_button_panel.dressroom_button": {}},
+      {"invite_button@start_button_panel.invite_button": {}},
+      {"feedback_button@start_button_panel.feedback_button": {}}
+    ]
+  },
+
+  // 屏幕 //
+  "start_screen": {
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$background_animations": [
+      "@common.screen_exit_animation_push_alpha",
+      "@common.screen_exit_animation_pop_alpha",
+      "@common.screen_entrance_animation_push_alpha",
+      "@common.screen_entrance_animation_pop_alpha"
+    ],
+    "$blur_animations": [
+      "@cube_ui_anim.blur_exit_push",
+      "@cube_ui_anim.blur_exit_pop",
+      "@cube_ui_anim.blur_entrance_push",
+      "@cube_ui_anim.blur_entrance_pop"
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $nx_os)",
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.menu_offline",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $can_swap_vr_mode)",
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.menu_swap_vr_mode",
+        "mapping_type": "global"
+      },
+      {
+        "ignored": "(not $can_swap_vr_mode)",
+        "from_button_id": "button.menu_swap_vr_mode",
+        "to_button_id": "button.menu_swap_vr_mode",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$empty_headbar_alpha": 0.6,
+    "$screen_content": "start.start_screen_content",
+    "$bg_content": [
+      {
+        "bottom_blur": {
+          "type": "panel",
+          "clips_children": true,
+          "size": ["100%","100%"],
+          "offset": [32,"100% - 10px"],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "cube_ui_common.default_toggle_control",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {"blur@cube_ui_background.screen_blur_background_content":{"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}},
+            {"white":{"type":"image","texture":"textures/ui/white_background","color":"$global_background_color","alpha":0.12,"fill":true,"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}}
+          ]
+        }
+      }
+    ],
+    "$screen_bg_content": "cube_ui_background.screen_background_content"
+  },
+  
+  "test_panel": {
+    "type": "panel",
+    "size": "$fill_size",
+    "ignored": "(not $start_screen_debug)",
+    "controls": []
+  },
+  
+  "main_contents": {
+    "type": "panel",
+    "size": "$fill_size",
+    "ignored": "$start_screen_debug",
+    "$default_sidebar_control": "start.sidebar_content",
+    "$verbose_sidebar_control": "start.sidebar_verbose_content",
+    "controls": [
+      { "text@start_text.new_bottom_text_panel": {}},
+      { "tip@start_tip.tip_panel": {}},
+      { "sidebar@cube_ui_common.sidebar": {"size":["100%","100% - 20px"],"offset":[0,20]}},
+      { "skin_viewer_panel@start.skin_viewer_panel": {}},
+      { "gamepad_helpers@start.gamepad_helpers": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
+      { "keyboard_helpers@start.keyboard_helper_vr_swap": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
+      { "headbar@cube_ui_common.headbar": {"alpha": 0.6,"layer": 2,"$title":"Minecraft","$back_button_ignored":"$is_ios"}},
+      { "popup_dialog_factory": {"type": "factory","control_ids": {"cloud_upload_prompt": "@start.cloud_upload_prompt"}}}
+    ]
+  },
+  
+  "start_main_content": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "test_panel@test_panel": {}},
+      { "main_contents@start.main_contents": {}}
+    ]
+  }
+}

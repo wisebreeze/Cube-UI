@@ -1,0 +1,1 @@
+{"mob_effect_screen":{"button_mappings":[{"from_button_id":"button.menu_cancel","to_button_id":"button.menu_continue","mapping_type":"global"},{"from_button_id":"button.mobeffects","to_button_id":"button.menu_continue","mapping_type":"global"}],"close_on_player_hurt":"$effect_close_on_player_hurt","$screen_content":"hud_effect.screen_bg"}}

@@ -1,0 +1,95 @@
+{
+  "main_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100% - 20px" ],
+    "offset": [ 0, "20px" ],
+    "$offset": [ 0, "20px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "vertical",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      { "padding_0@ugc_viewer.padding": { } },
+      {
+        "centerer_panel_0": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "controls": [
+            { "search_box@ugc_viewer.search_box": { } }
+          ]
+        }
+      },
+      { "padding_1@ugc_viewer.padding": { "$padding_size": [ 0, 3 ] } },
+      {
+        "header@cube_ui_common.image_header": {
+          "$cube_ui_header_text": "seed_picker.header",
+          "$header_image": "textures/items/map_locked"
+        }
+      },
+      { "padding_2@ugc_viewer.padding": { "$padding_size": [ 0, 3 ] } },
+      {
+        "centerer_panel_1": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            {
+              "scrolling_panel@common.scrolling_panel": {
+                "size": [ "100%", "100%" ],
+                "$scroll_size": [ 6, "100%-4px" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "$scrolling_content": "ugc_viewer.scrolling_content",
+                "$scrolling_content_anchor_from": "top_middle",
+                "$scrolling_content_anchor_to": "top_middle",
+                "$scroll_bar_left_padding_size": [ 0, 0 ],
+                "$scroll_bar_right_padding_size": [ 2, 0 ],
+                "$show_background": false
+              }
+            }
+          ]
+        }
+      },
+      { "padding_3@ugc_viewer.padding": { "$padding_size": [ 0, 1 ] } }
+    ]
+  },
+
+  //--------------------------------------------------------------------------------
+  // Screen
+  //--------------------------------------------------------------------------------
+
+  "ugc_viewer_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$default_text_color": [ 0.3, 0.3, 0.3 ],
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "ugc_viewer.screen_content"
+  },
+
+  "screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {
+          "$title": "seedPicker.title",
+          "layer": 1
+        }
+      },
+      {"main_panel@ugc_viewer.main_panel": {}}
+    ]
+  }
+}

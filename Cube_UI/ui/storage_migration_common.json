@@ -1,0 +1,93 @@
+{
+  "label":{"font_type":"$global_main_font"},
+  "progress_panel": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "$button_state_default_base": "common.button_state_default",
+    "$button_state_hover_base": "common.button_state_hover",
+    "$button_state_pressed_base": "common.button_state_pressed",
+    "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "progress_title_text@progress.progress_title_text": {
+                "color": "yellow",
+                "font_scale_factor": 1.5,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, "-18% + 10px" ]
+              }
+            },
+            {
+              "progress_bar_text@progress.progress_bar_text": {
+                "localize": false,
+                "size": [ "default", 40 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "max_size": [ "100%", 40 ],
+                "offset": [ 0, "-10% + 30px" ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "inside_content": {
+          "type": "stack_panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%-12px", "100%c" ],
+          "controls": [
+            {
+              "size_label": {
+                "type": "label",
+                "text_alignment": "right",
+                "size": [ "90%", "default" ],
+                "text": "#file_size_progress",
+                "color": "$body_text_color",
+                "bindings": [
+                  {
+                    "binding_name": "#file_size_progress"
+                  }
+                ]
+              }
+            },
+            {
+              "padding_1": {
+                "type": "panel",
+                "size": [ "100%", 3 ]
+              }
+            },
+            {
+              "loading_bar_panel": {
+                "type": "panel",
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                  {
+                    "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
+                  },
+                  {
+                    "progress_loading_bars@progress.progress_loading_bars": {
+                      "offset": [ 0, 0 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "padding_3": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

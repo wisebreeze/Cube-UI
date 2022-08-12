@@ -1,0 +1,169 @@
+{
+  "start_transfer_button@common_buttons.light_text_button": {
+    "size": [ "100% - 14px", 20 ],
+    "$pressed_button_name": "button.start_transfer",
+    "$button_text": "storage_migration.button.start"
+  },
+
+  "start_transfer_main_panel@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.start_transfer.generic.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_common.start_transfer_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_generic.start_transfer_button"
+  },
+  "start_transfer_main_out_of_space@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.resume_transfer.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_generic.resume_transfer_out_of_space_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_common.continue_out_of_space_button"
+  },
+  "resume_main_transfer@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.resume_transfer.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_common.resume_transfer_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_common.resume_transfer_button"
+  },
+  "resume_main_transfer_out_of_space@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.resume_transfer.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_generic.resume_transfer_out_of_space_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_common.continue_out_of_space_button"
+  },
+  "transfer_main_error@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.transfer_error.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_generic.transfer_error_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_common.retry_button"
+  },
+  "transfer_main_error_out_of_space@cube_ui_common.headbar_button_screen": {
+    "$title": "storage_migration.transfer_error_out_of_space.title",
+    "$back_button_ignored": false,
+
+    "$main_screen": "storage_migration_common.transfer_error_out_of_space_content",
+    "$screen_type": "stack_panel",
+    "$button_panel_size": [ "100% - 4px", "13%" ],
+    "$button_panel": "storage_migration_common.continue_out_of_space_button"
+  },
+////////////////////////////////////////////
+  "finished_panel": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "controls": [
+      {
+        "base_content": {
+          "type": "panel",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            {
+              "progress_title_text@progress.progress_title_text": {
+                "color": "yellow",
+                "text": "storage_migration.finished.generic.title",
+                "font_scale_factor": 1.5,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, "-18% + 10px" ]
+              }
+            },
+            {
+              "description@progress.progress_bar_text": {
+                "size": [ "default", 40 ],
+                "text": "storage_migration.finished.generic.description",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "max_size": [ "100%", 40 ],
+                "offset": [ 0, "-10% + 30px" ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "button_panel": {
+          "type": "panel",
+          "size": ["100%","15%"],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "exit_button@common_buttons.light_text_button": {
+                "size": [ "35%", 20 ],
+                "offset": [0,4],
+                "$pressed_button_name": "button.exit",
+                "$button_text": "gui.exit"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+////////////////////////////////////////////
+
+  "storage_migration_generic_screen": {
+    "button_mappings": [
+      {
+        "ignored": "(not $can_quit)",
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_bg_content": "cube_ui_background.progress_blur_bg",
+    "$screen_content": "storage_migration_generic.modal_screen_content"
+  },
+
+  "modal_screen_content": {
+    "type": "panel",
+    "$button_state_default_base": "progress.normal_stroke_button",
+    "$button_state_hover_base": "progress.normal_stroke_button",
+    "$button_state_pressed_base": "progress.normal_stroke_button",
+    "controls": [
+      {
+        "modal_progress_panel_no_cancel@storage_migration_common.progress_panel": {
+          "bindings": [
+            {
+              "binding_name": "#progress_panel_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "intro": "start_transfer@storage_migration_generic.start_transfer_main_panel",
+            "start_transfer_out_of_space": "start_transfer_out_of_space@storage_migration_generic.start_transfer_main_out_of_space",
+            "resume_transfer": "resume_transfer@storage_migration_generic.resume_main_transfer",
+            "resume_transfer_out_of_space": "resume_transfer_out_of_space@storage_migration_generic.resume_main_transfer_out_of_space",
+            "finished_transfered": "finished@storage_migration_generic.finished_panel",
+            "transfer_error": "transfer_error@storage_migration_generic.transfer_main_error",
+            "transfer_error_out_of_space": "transfer_error_out_of_space@storage_migration_generic.transfer_main_error_out_of_space",
+
+            // 这些不是传输流的显式状态。添加作为一个安全网，这样用户就不会卡在一个空白的屏幕上
+            "start_transfer": "start_transfer@storage_migration_generic.start_transfer_main_panel",
+            "finished_already_transfered": "finished@storage_migration_generic.finished_panel",
+            "finished_with_error": "transfer_error@storage_migration_generic.transfer_main_error"
+          }
+        }
+      }
+    ]
+  }
+}

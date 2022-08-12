@@ -1,0 +1,119 @@
+{
+  "store_empty_progress_bar_icon": {
+    "type": "image",
+    "texture": "textures/ui/experiencebarempty",
+    "color": "$global_experience_bar_empty_color",
+    "alpha": "$global_experience_bar_empty_alpha"
+  },
+
+  "store_full_progress_bar_icon": {
+    "type": "image",
+    "texture": "textures/ui/experiencebarempty",
+    "color": "$global_experience_bar_full_color",
+    "alpha": "$global_experience_bar_full_alpha"
+  },
+////////////////////
+  "store_top_bar": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "alpha": 0.4,
+    "color": "$global_headbar_color",
+    "size": [ "100%", 23 ]
+  },
+  "store_top_bar_filler": {
+    "alpha": 0
+  },
+////////////////////
+  "store_background": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_background_alpha",
+    "fill": true,
+    "color": "$global_background_color"
+  },
+  "ribbon_bar_text_background": {
+    "type": "image",
+    "alpha": 0.4,
+    "fill": true,
+    "color": "$background_hoverstate_color_swap",
+    "$background_hoverstate_color_swap|default": [],
+    "variables": [
+      {
+        "requires": "$default_state",
+        "$background_hoverstate_color_swap": "$global_button_default_color"
+      },
+      {
+        "requires": "$hover_state",
+        "$background_hoverstate_color_swap": "$global_button_hover_color"
+      },
+      {
+        "requires": "$pressed_state",
+        "$background_hoverstate_color_swap": "$global_button_pressed_color"
+      },
+      {
+        "requires": "$locked_state",
+        "$background_hoverstate_color_swap": "$global_button_default_red_color"
+      }
+    ],
+    "texture": "textures/ui/white_background"
+  },
+
+  "ribbon_bar_red_hover_text_background": {
+    "type": "image",
+    "alpha": 0.4,
+    "fill": true,
+    "color": "$background_hoverstate_color_swap",
+    "$background_hoverstate_color_swap|default": [],
+    "variables": [
+      {
+        "requires": "$default_state",
+        "$background_hoverstate_color_swap": "$global_button_default_color"
+      },
+      {
+        "requires": "$hover_state",
+        "$background_hoverstate_color_swap": "$global_button_hover_color"
+      },
+      {
+        "requires": "$pressed_state",
+        "$background_hoverstate_color_swap": "$global_button_pressed_color"
+      },
+      {
+        "requires": "$locked_state",
+        "$background_hoverstate_color_swap": "$global_button_default_red_color"
+      }
+    ],
+    "texture": "textures/ui/white_background"
+  },
+  
+  "spinner_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 4,
+    "frame_step": 26,
+    "fps": 5
+  },
+
+  "progress_loading_spinner": {
+    "type": "image",
+    "layer": 1,
+    "texture": "cube_ui/textures/common/progress/new_loading_spin",
+    "$progress_loading_spinner_anchor|default": "center",
+    "anchor_from": "$progress_loading_spinner_anchor",
+    "anchor_to": "$progress_loading_spinner_anchor",
+    "uv_size": [ 26, 26 ],
+    "size": [ 28, 28 ],
+    "uv": "@common_store.spinner_animation",
+    "disable_anim_fast_forward": true
+  },
+
+  "store_base_screen@common.base_screen": {
+    "$ratings_visible_after_x_reviews": 5,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$store_factory_clipping_event": "none",
+    "$store_factory_collection_details|default": "none",
+    "$store_factory_binding_type|default": "global",
+    "$store_factory_collection_prefix|default": "",
+    "$store_factory_collection_name|default": ""
+  }
+}

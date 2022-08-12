@@ -1,0 +1,88 @@
+{
+  "top_bar": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "alpha": "$global_headbar_alpha",
+    "color": "$global_headbar_color"
+  },
+
+  "dynamic_dialog_screen": {
+    "$screen_content": "how_to_play_common.how_to_play_headbar_content",
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+
+  "how_to_play_headbar_content@cube_ui_common.headbar_screen": {
+    "$title": "#section_title",
+    "$title_text_binding_type": "global",
+    "$main_screen": "how_to_play_common.dialog_content"
+  },
+  "toggle_button_control/tab_button_text": {"font_type": "$global_toggle_text_font","offset": [ 0, 0 ]},
+  "section_toggle_button": {
+    "size": [ "100%", 30 ]
+  },
+  "section_toggle_button/section_toggle_button": {
+    "size": [ "100%", 30 ]
+  },
+  "header_background": {
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "color": "$global_header_color",
+    "alpha": "$global_header_alpha"
+  },
+  "topic_category/category_text": {"font_type":"$global_main_font"},
+  "header_background/header_label": {
+    "font_type": "$global_header_label_font",
+    "color": "$global_header_label_color"
+  },
+  "action_button@how_to_play_common.light_text_button": {
+    "$pressed_button_name|default": "unset_button_name",
+    "$button_text|default": "unset $button_text",
+    "size": [ "100%", 20 ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle"
+  },
+  
+  "content_area_wrapper": {
+    "type": "panel",
+    "offset": [ "25%", 2 ],
+    "size": [ "100% - 25%", "100% - 4px" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 1,
+    "controls": [
+      { "content_area@how_to_play_common.content_area": {} }
+    ]
+  },
+
+  "section_divider": {"alpha": 0},
+  "content_area": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop",
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop"
+    ]
+  },
+  "selector_area": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "color": "$global_selector_area_background_color",
+    "alpha": "$global_selector_area_background_alpha",
+    "nineslice_size": 1,
+    "$anim_offset": [ 2, 2 ],
+    "offset": [ 2, 2 ],
+    "size": [ "25%", "100% - 4px" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 3,
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.set_entrance_push",
+      "@cube_ui_anim.set_entrance_pop",
+      "@cube_ui_anim.set_exit_push",
+      "@cube_ui_anim.set_exit_pop"
+    ]
+  }
+}

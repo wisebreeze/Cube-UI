@@ -1,0 +1,67 @@
+{
+  "namespace": "matreduce",
+
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "$bottom_padding": 10,
+          "size": [ 205, 200 ],
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  { "top_half@matreduce.top_half": {}},
+                  {
+                    "inventory@common.inventory_panel_bottom_half_with_label": {
+                      "size": [ 176, 93 ],
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "bottom_middle"
+                    }
+                  },
+                  { "hotbar@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "player_renderer@cube_ui_common.player_renderer": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} } // Gamepad tool tips
+    ]
+  },
+
+  "right_panel": {
+    "type": "panel",
+    "controls": [
+      { "title_label@matreduce_pocket.title_label": {} },
+      { "input@matreduce_pocket.input_slot": {} },
+      { "output@matreduce_pocket.output_slots": {} },
+      { "connectors@matreduce_pocket.connectors": {} }
+    ]
+  },
+
+  "material_reducer": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "$screen_bg_content": "common.screen_background",
+    "$title": "materialreducer.title",
+    "$container_image": "textures/blocks/material_reducer_front",
+    "$right_anchor": "top_right",
+    "$allow_exchange": false,
+    "$right_panel": "matreduce.right_panel",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "matreduce.content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

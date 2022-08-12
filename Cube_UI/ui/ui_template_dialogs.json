@@ -1,0 +1,67 @@
+{
+  "dialog_background_common": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_thin": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_opaque@common_dialogs.dialog_background_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_opaque_with_child@common_dialogs.dialog_background_hollow_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color",
+    "$fill_alpha": 0.0
+  },
+
+  "dialog_background_hollow_1@common_dialogs.dialog_background_hollow_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_hollow_2@common_dialogs.dialog_background_hollow_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_hollow_3@common_dialogs.dialog_background_hollow_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_hollow_4@common_dialogs.dialog_background_hollow_common": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },
+
+  "dialog_background_hollow_6@common_dialogs.dialog_background_hollow_common:": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  }
+}

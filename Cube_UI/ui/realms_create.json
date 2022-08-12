@@ -1,0 +1,62 @@
+{
+  "selected_option_checkbox_empty@realms_create.selected_option_checkbox": {
+    "texture": "$global_checkbox_off_locked_texture"
+  },
+
+  "selected_option_checkbox_filled@realms_create.selected_option_checkbox": {
+    "texture": "$global_checkbox_on_locked_texture"
+  },
+
+  "realms_create_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.coin_wallet",
+        "mapping_type": "global",
+        "ignored": "(not $allow_coin_purchase)"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "realms_create.realms_create_content_and_factory",
+    "$default_text_color": [ 0.3, 0.3, 0.3 ]
+  },
+  
+  "content": {
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ]
+  },
+
+  "realms_create_content_and_factory": {
+    "type": "panel",
+    "controls": [
+      {
+        "realms_create_content@cube_ui_common.headbar_screen": {
+          "$main_screen": "realms_create.content",
+          "$title": "createWorldUpsell.title.realm"
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "play_on_realm": "@realms_common.popup_dialog__play_on_realm"
+          }
+        }
+      }
+    ]
+  }
+}

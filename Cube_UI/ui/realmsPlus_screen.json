@@ -1,0 +1,63 @@
+{
+  "realms_plus_upgrade_notice_screen": {
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+  "realms_plus_pdp_screen@common.base_screen": {
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+
+  "buy_now_toggle@realmsPlus.toggle_base": {
+    "$default_texture": "textures/ui/white_background",
+    "$hover_texture": "textures/ui/white_background",
+    "$pressed_texture": "textures/ui/white_background",
+    "$pressed_no_hover_texture": "textures/ui/white_background",
+    
+    "$default_button_alpha": "$global_button_alpha",
+    "$hover_button_alpha": "$global_button_alpha",
+    
+    "$default_checked_text_color": "$global_button_default_color"
+  },
+
+  "gradient_image_stack": {
+    "controls": [
+      {
+        "solid_pink": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "tiled": true,
+          "texture": "textures/ui/postGradientSolid"
+        }
+      }
+    ]
+  },
+
+  "selector_area": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "color": "$global_selector_area_background_color",
+    "alpha": "$global_selector_area_background_alpha",
+    "fill": true,
+    "size": [ "30% - 3px", "100%" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 2,
+    "controls": [
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "$scrolling_content": "realmsPlus.scrollable_selector_area_content",
+          "$show_background": false,
+          "$scroll_size": [ "5px", "100% - 4px" ],
+          "$scroll_bar_left_padding_size": [ 1, 0 ]
+        }
+      }
+    ]
+  },
+  
+  "purple_background": {
+    "alpha": 0,
+    "controls": []
+  },
+  "left_right_pane_divider": {
+    "alpha": 0
+  }
+}

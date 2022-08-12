@@ -1,0 +1,16 @@
+{
+  "horizontal_divider/divider": {
+    "fill": true,
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_divider_alpha",
+    "color": "$global_divider_color"
+  },
+  
+  "manage_sharelink_body_content_stack/body_text_centering_panel1/body_text1":{"font_type":"$global_main_font"},
+  "manage_sharelink_body_content_stack/body_text_centering_panel2/body_text2":{"font_type":"$global_main_font"},
+  "manage_sharelink_body_content_stack/learn_more_button":{"$font_type":"$global_main_font"},
+  "manage_sharelink_body_content_stack/manage_access_button":{"$font_type":"$global_main_font"},
+  "manage_sharelink_body_content_stack/done_button":{"$font_type":"$global_main_font"},
+  "description_panel/description":{"font_type":"$global_main_font"},
+  "inline_notification/stack/warning_text":{"font_type":"$global_main_font"}
+}

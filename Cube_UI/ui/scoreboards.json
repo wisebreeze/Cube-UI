@@ -1,0 +1,28 @@
+{
+  "scoreboard_sidebar@hud_scoreboard.scoreboard_sidebar": {},
+  "player_name": {
+    "shadow": false,
+    "color": "$global_scoreboard_player_name_color"
+  },
+  "player_score": {
+    "color": "$player_list_score_color",
+    "shadow": false,
+    "font_type": "$global_scoreboard_player_score_font"
+  },
+  "scoreboard_sidebar_score": {
+    "color": "$global_scoreboard_player_score_color",
+    "font_type": "$global_scoreboard_player_score_font"
+  },
+  "scoreboard_sidebar_player": {
+    "color": "$global_scoreboard_player_name_color"
+  },
+  "player_rank_panel/player_rank_bg/player_rank": {
+    "color": "$player_list_rank_color"
+  },
+  "player_rank_panel/player_rank_bg": {
+    "texture": "textures/ui/white_background",
+    "color": "$global_background_color",
+    "fill": true,
+    "alpha": "$global_background_alpha"
+  }
+}

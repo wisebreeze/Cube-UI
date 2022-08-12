@@ -1,0 +1,72 @@
+{
+  "profile_screen_main_content@common.vertical_stack_panel": {
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "fill_padding@profile.vertical_fill_padding": {
+          "bindings": [
+            {
+              "binding_name": "(not #is_using_dressing_room_debugging)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      { "persona_preset_section@profile.persona_preset_section_panel": {} },
+      { "debug_view@profile.profile_screen_debug_view": {} },
+      { "mid_padding@profile.profile_screen_mid_padding": {} },
+      {
+        "padding_0": {
+          "type": "panel",
+          "size": [ 0, 25 ]
+        }
+      },
+      { "button_section@profile.lower_button_label_section": {} },
+      {
+        "padding_1": {
+          "type": "panel",
+          "size": [ 0, 10 ]
+        }
+      }
+    ]
+  },
+  "profile_screen": {
+    "gamepad_cursor_deflection_mode":false,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  },
+  
+  "popup_dialog_delete_persona_content": {
+    "controls": [
+      { "message@delete_popup_dialog_message": {} },
+      { "buttons@delete_persona_button_stack": {} }
+    ]
+  },
+  
+  "delete_popup_dialog_message@popup_dialog.popup_dialog_message": {
+    "font_type": "$global_main_font",
+    "font_scale_factor": 1,
+    "offset": [ 0, 0 ]
+  },
+  
+  "popup_dialog__delete_persona@popup_dialog.popup_dialog": {
+    "size": [ 260, 90 ],
+    "layer": 500,
+    "$left_button_press": "button.close_dialog",
+    "$right_button_press": "button.confirm_delete",
+    "$message_text": "dr.modal.persona_delete_confirm",
+    "$persona_popup_title_font_type": "$global_main_font",
+    "$persona_popup_title_offset": [0, -30],
+    "$persona_popup_title_text": "dr.modal.persona_delete_confirm_title",
+    "$left_button_text": "gui.cancel",
+    "$right_button_text": "gui.confirm",
+    "$section_content_size": [ "100% - 16px", "100% - 20px" ],
+    "$section_content_offset": [ 0, -30 ],
+    "controls": [
+      {
+        "popup_dialog_bg@persona.popup_dialog_bg": {
+          "$dialog_content": "profile.popup_dialog_delete_persona_content"
+        }
+      }
+    ]
+  }
+}

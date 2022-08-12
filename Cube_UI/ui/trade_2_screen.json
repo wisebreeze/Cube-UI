@@ -1,0 +1,199 @@
+{
+  // 查看所有交易
+  "tier_stack_panel": {"bindings": []},
+
+  // 强制显示
+  "hover_button": {
+    "bindings": []
+  },
+  
+  // 适配主题
+  "stack_count_label": {
+    "shadow": false,
+    "font_type": "$global_main_font"
+  },
+  "tier_label": {"font_type": "$global_main_font"},
+  "tier_label_locked": {"font_type": "$global_main_font"},
+
+  "red_cell_image": {
+    "type": "image",
+    "fill": true,
+    "color": "$global_cell_red_color",
+    "alpha": "$global_cell_alpha",
+    "texture": "textures/ui/white_background",
+    "layer": 1
+  },
+
+  "trade_toggle@common_toggles.light_image_toggle_collection": {
+    "$unchecked_control": "common_toggles.toggle_unchecked",
+    "$checked_control": "common_toggles.toggle_checked",
+    "$unchecked_hover_control": "common_toggles.toggle_unchecked_hover",
+    "$checked_hover_control": "common_toggles.toggle_checked_hover",
+    "$unchecked_locked_control": "common_toggles.toggle_locked",
+    "$unchecked_locked_hover_control": "common_toggles.toggle_locked",
+    "$checked_locked_control": "common_toggles.toggle_locked",
+    "$checked_locked_hover_control": "common_toggles.toggle_locked"
+  },
+
+  // 底部面板
+  "left_panel@common.root_panel": {
+    "controls": [
+      {
+        "bg@cube_ui_common.container_common_screen": {
+          "$is_left_panel": true
+        }
+      },
+      { "trade_scroll_panel@trade2.trade_scroll_panel": {} }
+    ]
+  },
+  
+  "right_panel@common.root_panel": {
+    "layer": 1,
+    "controls": [
+      {
+        "screen@cube_ui_common.container_common_screen": {
+          "$show_player_renderer": false,
+          "$inventory_controls": [
+            { "villager_name_label@trade2.villager_name_label": {} },
+            { "exp_progress_bar@trade2.exp_progress_bar": {} },
+            { "top_half_panel@trade2.top_half_panel": {} },
+            { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common.hotbar_grid_template": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "center_fold/center_bg": {"alpha": 0},
+  "screen_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", "100%cm" ],
+    "controls": [
+      { "left_panel@trade2.left_panel": {} },
+      { "center_fold@trade2.center_fold": {} },
+      { "right_panel@trade2.right_panel": {} }
+    ]
+  },
+  
+  "trade_screen": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "button_mappings": "$button_mappings",
+
+    "$title": "action.interact.trade",
+    "$container_image": "textures/ui/trade_icon",
+    "$two_left_panel": true,
+    "$inv_size": [ "100%", "100% - 24px" ],
+    "$left_panel_icon": "textures/ui/trade_icon",
+    "$right_panel": "trade2_pocket.name_and_trade_slots_stack_panel",
+    "$left_panel": "trade2.trade_scroll_panel",
+    "$right_anchor": "top_right",
+    "$help_panel": "trading_help.trading_help",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$left_hover_anchor": true,
+        "$screen_content": "trade2.screen_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$toggle_content_control": "trade2_pocket.toggle_content",
+        "$item_renderer_size": [ 24, 24 ],
+        "$toggle_size": [ "100%", 32 ],
+        "$screen_content": "cube_container_common.container_screen",
+        "$button_mappings": [
+          {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_inventory_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_up",
+            "to_button_id": "button.menu_up",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_down",
+            "to_button_id": "button.menu_down",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_left",
+            "to_button_id": "button.menu_left",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_right",
+            "to_button_id": "button.menu_right",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_secondary_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.menu_tab_right",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_left",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_right",
+            "to_button_id": "button.menu_alternate_tab_right",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_left",
+            "to_button_id": "button.focus_left",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_clear",
+            "to_button_id": "button.menu_clear",
+            "mapping_type": "focused"
+          }
+        ]
+      }
+    ]
+  }
+}

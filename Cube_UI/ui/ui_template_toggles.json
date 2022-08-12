@@ -1,0 +1,154 @@
+{
+  "content_toggle_label_panel/toggle_label": {
+    "$content_toggle_label_font_type|default": "$global_toggle_text_font"
+  },
+  "radio_off_icon": {
+    "texture": "$global_radio_off_texture"
+  },
+
+  "radio_off_hover_icon": {
+    "texture": "$global_radio_off_hover_texture"
+  },
+
+  "radio_on_icon": {
+    "texture": "$global_radio_on_texture"
+  },
+
+  "radio_on_hover_icon": {
+    "texture": "$global_radio_on_hover_texture"
+  },
+//////////////////////
+  "switch_toggle": {
+    "$default_texture": "$global_toggle_off_texture",
+    "$hover_texture": "$global_toggle_on_texture",
+    "$pressed_texture": "$global_toggle_off_hover_texture",
+    "$pressed_no_hover_texture": "$global_toggle_on_hover_texture",
+    "$unchecked_locked_texture": "$global_toggle_off_texture",
+    "$checked_locked_texture": "$global_toggle_on_texture",
+    "$global_toggle_default_color": [],
+    "$global_toggle_hover_color": [],
+    "$global_toggle_alpha": 1,
+    "$global_button_fill": false
+  },
+  "switch_toggle_collection": {
+    "$global_toggle_default_color": [],
+    "$global_toggle_hover_color": [],
+    "$global_toggle_alpha": 1,
+    "$global_button_fill": false,
+    "$default_texture": "$global_toggle_off_texture",
+    "$hover_texture": "$global_toggle_on_texture",
+    "$pressed_texture": "$global_toggle_off_hover_texture",
+    "$pressed_no_hover_texture": "$global_toggle_on_hover_texture",
+    "$unchecked_locked_texture": "$global_toggle_off_texture",
+    "$checked_locked_texture": "$global_toggle_on_texture"
+  },
+//////////////////////
+  "content_toggle_icon_panel": {
+    "$checked_toggle_icon|default": "$global_checkbox_on_texture",
+    "$checked_hover_toggle_icon|default": "$global_checkbox_on_hover_texture",
+    "$unchecked_toggle_icon|default": "$global_checkbox_off_texture",
+    "$unchecked_hover_toggle_icon|default": "$global_checkbox_off_hover_texture"
+  },
+  "checkbox_button_checked_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_on_texture"
+  },
+  "checkbox_button_unchecked_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_off_texture"
+  },
+  "checkbox_button_checked_hover_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_on_hover_texture"
+  },
+  "checkbox_button_unchecked_hover_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_off_hover_texture"
+  },
+  "checkbox_button_checked_locked_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_on_locked_texture"
+  },
+  "checkbox_button_unchecked_locked_state@common_toggles.check_box_button_toggle_image": {
+    "$toggle_texture": "$global_checkbox_off_locked_texture"
+  },
+//////////////////////
+  "light_template_toggle@common.toggle": {
+    "$default_texture|default": "textures/ui/white_background",
+    "$hover_texture|default": "textures/ui/white_background",
+    "$pressed_texture|default": "textures/ui/white_background",
+    "$pressed_no_hover_texture|default": "textures/ui/white_background",
+    "$locked_texture|default": "textures/ui/white_background",
+
+    "$button_image_size": ["100%","100%"],
+
+    "$default_button_alpha": "$global_toggle_alpha",
+    "$hover_button_alpha": "$global_toggle_alpha",
+    "$locked_alpha": "$global_toggle_locked_alpha",
+
+    "$default_texture_color|default": "$global_toggle_unchecked_default_color",
+    "$default_checked_texture_color|default": "$global_toggle_checked_default_color",
+    "$hover_texture_color|default": "$global_toggle_unchecked_hover_color",
+    "$hover_checked_texture_color|default": "$global_toggle_checked_hover_color",
+    "$looked_texture_color|default": "$global_toggle_locked_color",
+
+    "$default_border_visible|default": false,
+    "$hover_border_visible|default": false
+  },
+  "light_ui_toggle_collection": {
+    "$default_texture|default": "textures/ui/white_background",
+    "$hover_texture|default": "textures/ui/white_background",
+    "$pressed_texture|default": "textures/ui/white_background",
+    "$pressed_no_hover_texture|default": "textures/ui/white_background",
+    "$locked_texture|default": "textures/ui/white_background",
+
+    "$default_button_alpha": "$global_toggle_alpha",
+    "$hover_button_alpha": "$global_toggle_alpha",
+    "$default_texture_alpha|default": "$global_toggle_alpha",
+    "$default_checked_texture_alpha|default": "$global_toggle_alpha",
+    "$hover_texture_alpha|default": "$global_toggle_alpha",
+    "$hover_checked_texture_alpha|default": "$global_toggle_alpha",
+
+    "$default_texture_color|default": "$global_toggle_unchecked_default_color",
+    "$default_checked_texture_color|default": "$global_toggle_checked_default_color",
+    "$hover_texture_color|default": "$global_toggle_unchecked_hover_color",
+    "$hover_checked_texture_color|default": "$global_toggle_checked_hover_color"
+  },
+  
+  "toggle_unchecked@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_unchecked_default_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_unchecked_color"
+  },
+
+  "toggle_checked@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_checked_default_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_checked_color"
+  },
+
+  "toggle_unchecked_hover@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_unchecked_hover_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_unchecked_hover_color"
+  },
+
+  "toggle_checked_hover@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_checked_hover_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_checked_hover_color"
+  },
+
+  "toggle_locked@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_locked_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_checked_color"
+  },
+
+  "toggle_unchecked_locked@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_locked_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_unchecked_color"
+  },
+
+  "toggle_checked_locked@common_buttons.new_ui_button_panel": {
+    "$button_image_color": "$global_toggle_locked_color",
+    "$global_button_alpha": "$global_toggle_alpha",
+    "$text_color": "$global_toggle_text_checked_color"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "sidebar_bg": {
+    "texture": "textures/ui/white_background",
+    "color": "$global_sidebar_navigation_bg_color",
+    "fill": true,
+    "alpha": 0.4
+  },
+
+  "sidebar_divider": {
+    "alpha": 0
+  },
+  "content_view/content_view_stack": {
+    "modifications": [
+      {
+        "control_name": "divider",
+        "operation": "remove"
+      }
+    ]
+  },
+  "sidebar_section": {
+    "modifications": [
+      {
+        "control_name": "right_edge_bar",
+        "operation": "remove"
+      }
+    ]
+  },
+  "sidebar_toggle@common_toggles.dark_content_toggle": {
+    "$default_texture_alpha": "$global_sidebar_navigation_alpha",
+    "$hover_texture_alpha": "$global_sidebar_navigation_alpha",
+    "$default_checked_texture_alpha": "$global_sidebar_navigation_alpha",
+    "$hover_checked_texture_alpha": "$global_sidebar_navigation_alpha",
+    
+    "$unchecked_locked_texture": "textures/ui/white_background",
+    "$checked_locked_texture": "textures/ui/white_background",
+    "$default_texture": "textures/ui/white_background",
+    "$hover_texture": "textures/ui/white_background",
+    "$pressed_texture": "textures/ui/white_background",
+    "$pressed_no_hover_texture": "textures/ui/white_background",
+
+    "$default_texture_color": "$global_sidebar_navigation_default_color",
+    "$default_checked_texture_color": "$global_sidebar_navigation_default_color",
+    "$hover_texture_color": "$global_sidebar_navigation_hover_color",
+    "$hover_checked_texture_color": "$global_sidebar_navigation_hover_color"
+  }
+}
