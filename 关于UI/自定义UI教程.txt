@@ -1,0 +1,48 @@
+一、设置UI变量
+  全局变量文件在 "ui/_global_variables.json"
+  通过修改变量的值来改变UI外观及功能
+  
+  修改须知：
+    修改路径
+      例如  "$xxx": "textures/ui/test"
+      # 路径以资源包为根目录，文件名不需要带后缀
+      路径需要说明文件在哪个文件夹里面
+    修改布尔值
+      例如  "$xxx": true
+      真的(开启) true
+      假的(关闭) false
+    修改颜色
+      例如  "$xxx": [ R, G, B ]
+      R - 红色
+      G - 绿色
+      B - 蓝色
+      他们的值都必须为浮点数
+      数字的范围为0～1
+    修改数值
+      例如  "$xxx": 9
+      9 - 纯数字，不能是小数
+  修改后，千万不要忘记检查json格式！
+  
+  自定义UI索引: 
+  https://shimo.im/docs/aBAYVpyy24hdB73j/
+
+二、修改背景
+  背景图片格式最好为.png .jpg文件，.psd之类的文件需要进行转格式(改后缀名无效)
+    1. 将文件复制或剪切到Cube UI的cube_ui/textures/background/文件夹里
+    2. 删除该文件夹中的文件(main_background.jpg和main_blur_background.jpg文件)
+    3. 将新文件命名为main_background.(保留原有的后缀)
+    4. 准备一张模糊的图片，重复上述步骤并重命名为main_blur_background.(保留原有的后缀)
+    ＊ 你可以重复上述步骤修改容器界面的背景
+
+    main_background.jpg  普通的背景文件
+    main_blur_background.jpg  模糊的背景文件
+    container_background.png  经典ui档案的容器背景文件
+    container_pocket_background.png  pocket_ui档案的容器背景文件
+
+三、修改背景音乐
+  背景音乐格式最好为.fsb .ogg文件，.mp3之类的文件需要进行转格式(改后缀名无效)
+    1. 将文件复制或剪切到Cube UI的sounds/music/menu/文件夹里
+    2. 将新文件命名为menu1.(保留原有的后缀)
+    3. 复制该文件并粘贴在当前路径(出现提示选择保留原文件)
+    4. 将新文件重命名为menu2.(保留原有的后缀)
+    5. 重复以上两个步骤，依次重命名为menu3.(保留原有的后缀)、menu4.(保留原有的后缀)
