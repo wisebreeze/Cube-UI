@@ -1,0 +1,86 @@
+Language=English (US)
+## set up
+options.beta_text=beta version top text
+shortcut.setting=quick access
+
+## container help
+help.empty_help=oops, this interface doesn't help yet
+help.positive_effect=positive effect
+help.negative_effect=negative effect
+help.effect_water=potion of weakness must be a normal water bottle
+help.anvil.tool=tool
+help.anvil.tool2=equipment
+
+## common problem
+cube_ui.faq_t1=how to experience and use the educational ui?
+cube_ui.faq_1=enable cube ui in the world's §eresource pack options§f for the full ui experience
+cube_ui.faq_t2=how to set ui part content?
+cube_ui.faq_2=in the resource package, click ui/_global_variables.json in turn, please modify it according to the prompts in the file
+cube_ui.faq_t3=1.18.10, some screen has no effect?
+cube_ui.faq_3=currently the ui has been fully covered, it is recommended to use the old version of minecraft to experience the full coverage (part of the original ui may be covered by the original concept ui, so it has no effect)
+cube_ui.faq_t4=is ui open source?
+cube_ui.faq_4=currently the ui is open source, you can make two changes and use the source code (commercial use is prohibited to avoid unnecessary legal liability)
+cube_ui.faq_t5=how to report bugs?
+cube_ui.faq_5=tell the author in the comment area below the resource, please move to the feedback thread for feedback
+
+## about ui
+renewal.history=renewal content
+about.ui_pack=about ui
+about.sub_package=extension package
+update_time=update time
+about_ui.subpack_sorting=the subpack sorting needs to be higher than the cube ui sorting for the subpack to run completely
+about_ui.no_subpack=no subpack installed
+
+about_ui.ui_file=current ui file:
+about_ui.default_ui=classic
+about_ui.default_os=os:
+
+about_ui.precautions_1=● no reselling
+about_ui.precautions_2=● prohibited for commercial use
+about_ui.precautions_3=● reprinting is prohibited without permission
+about_ui.precautions_4=● allows to integrate any image or code in the resource pack into other resource packs or second-modified resource packs for personal use, but the author's consent is required for publishing
+
+subpack.no_name=this expansion pack has no name
+subpack.incompatibility=§cthis expansion pack is not compatible with the current version
+
+about_ui.access_channel=cube ui access channel:
+
+appearance.header_1=background
+appearance.header_2=button
+appearance.header_3=font
+appearance.header_4=switch
+appearance.header_5=slider
+
+cube.piracy=the current ui has been modified, please use the genuine version to fully experience the cube ui
+
+## focus panel
+hud.focus_menu.tab_1=shortcut button
+hud.focus_menu.tab_2=notification class
+hud.focus_menu.tab_3=other
+
+hud.personalization=personalization
+hud.personalization.title=focus menu
+hud.hide.player_position=coordinates
+hud.hide.title=title
+hud.hide.actionbar=activity bar title
+hud.switch=switch shortcut bar
+hud.boss=boss hp
+hud.chat=chat
+hud.note=note block hint
+hud.toggle.scb=scoreboard
+hud.toggle.effect=potion effect
+hud.toggle.hotbar=hotbar
+hud.toggle.item_name=item name
+
+hud.btn.hide_all=hide hud
+hud.btn.hide_doll=hide paper doll
+
+## chat
+tab.down=next content
+tab.back=previous content
+chat.up=next message
+chat.back=last message
+
+## other interface
+command_block.empty_command_text=enter your command here
+seed_picker.header=the picture is for reference only, the seed may change with the update of the version

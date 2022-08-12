@@ -1,0 +1,95 @@
+Language=Nederlands (Nederland)
+## opstelling
+options.beta_text=Bèta bovenste tekst
+shortcut.setting=Snelle toegang
+
+## containerhulp
+help.empty_help=Oeps, deze interface helpt nog niet
+help.positive_effect=Positief effect
+help.negative_effect=Negatief effect
+help.effect_water=Drank van Zwakte moet een normale waterfles zijn
+help.anvil.tool=Gereedschap
+help.anvil.tool2=Apparatuur
+
+## zweeftekst
+hover_text.all=alles
+hover_text.drop=Laat item vallen
+hover_text.destroy=Vernietig voorwerpen
+hover_text.help=Help/Recept
+hover_text.default_mode=Standaardmodus
+hover_text.auto_mode=Auto-modus
+hover_text.drop_mode=Drop-modus
+
+## vaak voorkomend probleem
+cube_ui.faq_t1=Hoe de educatieve gebruikersinterface ervaren en gebruiken?
+cube_ui.faq_1=Schakel Cube UI in 's werelds §eResource Pack Options§f in voor de volledige UI-ervaring
+cube_ui.faq_t2=Hoe stel ik de inhoud van het UI-gedeelte in?
+cube_ui.faq_2=Klik in het bronpakket om de beurt op ui/_global_variables.json, pas het aan volgens de aanwijzingen in het bestand
+cube_ui.faq_t3=1.18.10 heeft een bepaalde gebruikersinterface geen effect?
+cube_ui.faq_3=Momenteel is de gebruikersinterface volledig gedekt, het wordt aanbevolen om de oude versie van Minecraft te gebruiken om de volledige dekking te ervaren (een deel van de originele gebruikersinterface kan worden gedekt door de originele concept-UI, dus het heeft geen effect)
+cube_ui.faq_t4=Is UI open source?
+cube_ui.faq_4=Momenteel is de gebruikersinterface open source, u kunt twee wijzigingen aanbrengen en de broncode gebruiken (commercieel gebruik is verboden om onnodige wettelijke aansprakelijkheid te voorkomen)
+cube_ui.faq_t5=Hoe bugs melden?
+cube_ui.faq_5=Vertel de auteur in het commentaargebied onder de bron, ga naar de feedbackthread voor feedback
+
+## Over gebruikersinterface
+renewal.history=Vernieuwing inhoud
+about.ui_pack=Over UI
+about.sub_package=Uitbreidingspakket
+update_time=Update tijd
+about_ui.subpack_sorting=De subpack-sortering moet hoger zijn dan de Cube UI-sortering om het subpack volledig te laten werken
+about_ui.no_subpack=Geen subpakket geïnstalleerd
+
+about_ui.ui_file=Huidig ​​UI-bestand:
+about_ui.default_ui=Klassiek
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Geen doorverkoop
+about_ui.precautions_2=● Verboden voor commercieel gebruik
+about_ui.precautions_3=● Herdrukken is verboden zonder toestemming
+about_ui.precautions_4=● Maakt het mogelijk om elke afbeelding of code in het resource pack te integreren in andere resource packs of tweede aangepaste resource packs voor persoonlijk gebruik, maar de toestemming van de auteur is vereist voor publicatie
+
+subpack.no_name=Dit uitbreidingspakket heeft geen naam
+subpack.incompatibility=§cDit uitbreidingspakket is niet compatibel met de huidige versie
+
+about_ui.access_channel=Kubus UI-toegangskanaal:
+
+appearance.header_1=Achtergrond
+appearance.header_2=Knop
+appearance.header_3=Lettertype
+appearance.header_4=Overschakelen naar
+appearance.header_5=Slider
+
+cube.piracy=De huidige gebruikersinterface is gewijzigd, gebruik de originele versie om de gebruikersinterface van Cube volledig te ervaren
+
+## focuspaneel
+hud.focus_menu.tab_1=Sneltoets
+hud.focus_menu.tab_2=Meldingsklasse
+hud.focus_menu.tab_3=Overig
+
+hud.personalization=Personalisatie
+hud.personalization.title=Focusmenu
+hud.hide.player_position=Coördinaten
+hud.hide.title=Titel
+hud.hide.actionbar=Activiteitsbalk titel
+hud.switch=Schakel snelkoppelingsbalk in
+hud.boss=Baas HP
+hud.chat=chat
+hud.note=Opmerking blok Hint
+hud.toggle.scb=Scorebord
+hud.toggle.effect=Potion-effect
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Artikelnaam
+
+hud.btn.hide_all=Hud verbergen
+hud.btn.hide_doll=Verberg Paper Doll
+
+## om mee te chatten
+tab.down=Volgende inhoud
+tab.back=Vorige inhoud
+chat.up=Volgend bericht
+chat.back=Laatste bericht
+
+## Andere interface
+command_block.empty_command_text=Voer hier je commando in
+seed_picker.header=De afbeelding is alleen ter referentie, de seed kan veranderen met de update van de versie

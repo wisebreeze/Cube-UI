@@ -1,0 +1,95 @@
+Language=bahasa indonesia (indonesia)
+## mempersiapkan
+options.beta_text=Teks atas beta
+shortcut.setting=Akses Cepat
+
+## bantuan wadah
+help.empty_help=Ups, antarmuka ini belum membantu
+help.positive_effect=Efek Positif
+help.negative_effect=Efek Negatif
+help.effect_water=Ramuan Kelemahan harus botol air biasa
+help.anvil.tool=Alat
+help.anvil.tool2=Peralatan
+
+## arahkan teks
+hover_text.all=semua
+hover_text.drop=Lepaskan item
+hover_text.destroy=Hancurkan item
+hover_text.help=Bantuan/Resep
+hover_text.default_mode=Mode default
+hover_text.auto_mode=Mode Otomatis
+hover_text.drop_mode=Mode Jatuhkan
+
+## masalah umum
+cube_ui.faq_t1=Bagaimana cara merasakan dan menggunakan UI pendidikan?
+cube_ui.faq_1=Aktifkan Cube UI di eResource Pack Options§f dunia untuk pengalaman UI penuh
+cube_ui.faq_t2=Bagaimana cara menyetel konten bagian UI?
+cube_ui.faq_2=Dalam paket sumber daya, klik ui/_global_variables.json secara bergantian, harap ubah sesuai dengan petunjuk dalam file
+cube_ui.faq_t3=1.18.10, beberapa UI tidak berpengaruh?
+cube_ui.faq_3=Saat ini UI telah sepenuhnya tercakup, disarankan untuk menggunakan versi lama Minecraft untuk mengalami cakupan penuh (bagian dari UI asli mungkin tercakup oleh konsep UI asli, sehingga tidak berpengaruh)
+cube_ui.faq_t4=Apakah UI open source?
+cube_ui.faq_4=Saat ini UI adalah open source, Anda dapat membuat dua perubahan dan menggunakan kode sumber (penggunaan komersial dilarang untuk menghindari kewajiban hukum yang tidak perlu)
+cube_ui.faq_t5=Bagaimana cara melaporkan bug?
+cube_ui.faq_5=Beri tahu penulis di area komentar di bawah sumber, silakan pindah ke utas umpan balik untuk umpan balik
+
+## Tentang UI
+pembaharuan.history=Perbarui konten
+about.ui_pack=Tentang UI
+about.sub_package=Paket Ekstensi
+update_time=Waktu pembaruan
+about_ui.subpack_sorting=Penyortiran sub-paket harus lebih tinggi daripada pengurutan UI Kubus agar sub-paket dapat berjalan sepenuhnya
+about_ui.no_subpack=Tidak ada subpaket yang terpasang
+
+about_ui.ui_file=Berkas UI saat ini:
+about_ui.default_ui=Klasik
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Tidak ada penjualan kembali
+about_ui.precautions_2=● Dilarang untuk penggunaan komersial
+about_ui.precautions_3=● Dilarang mencetak ulang tanpa izin
+about_ui.precautions_4=● Memungkinkan untuk mengintegrasikan gambar atau kode apa pun dalam paket sumber daya ke dalam paket sumber daya lain atau paket sumber daya yang dimodifikasi kedua untuk penggunaan pribadi, tetapi persetujuan penulis diperlukan untuk penerbitan
+
+subpack.no_name=Paket ekspansi ini tidak memiliki nama
+subpack.incompatibility=§cPaket ekspansi ini tidak kompatibel dengan versi saat ini
+
+about_ui.access_channel=Saluran akses UI Cube:
+
+penampilan.header_1=Latar Belakang
+penampilan.header_2=Tombol
+penampilan.header_3=Font
+penampilan.header_4=Beralih
+penampilan.header_5=Penggeser
+
+cube.piracy=UI saat ini telah dimodifikasi, harap gunakan versi asli untuk sepenuhnya merasakan UI Cube
+
+## panel fokus
+hud.focus_menu.tab_1=Tombol Pintasan
+hud.focus_menu.tab_2=Kelas pemberitahuan
+hud.focus_menu.tab_3=Lainnya
+
+hud.personalization=Personalisasi
+hud.personalization.title=Menu Fokus
+hud.hide.player_position=Koordinat
+hud.hide.title=Judul
+hud.hide.actionbar=Judul bilah aktivitas
+hud.switch=Ganti bilah pintasan
+hud.boss=HP bos
+hud.chat=obrolan
+hud.note=Catatan Petunjuk Blok
+hud.toggle.scb=Papan Skor
+hud.toggle.effect=Efek Ramuan
+hud.toggle.hotbar=Bilah panas
+hud.toggle.item_name=Nama Barang
+
+hud.btn.hide_all=Sembunyikan hud
+hud.btn.hide_doll=Sembunyikan Boneka Kertas
+
+## untuk mengobrol dengan
+tab.down=Konten berikutnya
+tab.back=Konten sebelumnya
+chat.up=Pesan berikutnya
+chat.back=Pesan terakhir
+
+## Antarmuka lainnya
+command_block.empty_command_text=Masukkan perintah Anda di sini
+seed_picker.header=Gambar hanya untuk referensi, seed dapat berubah dengan pembaruan versi

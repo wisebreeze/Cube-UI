@@ -1,0 +1,86 @@
+Language=Dansk (DA)
+## Opsætning
+options.beta_text=Beta version toptekst
+shortcut.setting=Hurtig adgang
+
+## containerhjælp
+help.empty_help=Ups, denne grænseflade hjælper ikke endnu
+help.positive_effect=Positiv effekt
+help.negative_effect=Negativ effekt
+help.effect_water=Svaghedsdrik skal være en normal vandflaske
+help.anvil.tool=Værktøj
+help.anvil.tool2=Udstyr
+
+## almindeligt problem
+cube_ui.faq_t1=Hvordan oplever og bruger man den pædagogiske brugergrænseflade?
+cube_ui.faq_1=Aktiver Cube UI i verdens §eResource Pack Options§f for den fulde UI-oplevelse
+cube_ui.faq_t2=Hvordan indstilles UI-delens indhold?
+cube_ui.faq_2=I ressourcepakken skal du klikke på ui/_global_variables.json på skift. Rediger det i henhold til anvisningerne i filen
+cube_ui.faq_t3=1.18.10, har nogle brugergrænseflader ingen effekt?
+cube_ui.faq_3=I øjeblikket er brugergrænsefladen fuldt dækket, det anbefales at bruge den gamle version af Minecraft for at opleve den fulde dækning (en del af den originale brugergrænseflade kan være dækket af det originale konceptbrugergrænseflade, så det har ingen effekt)
+cube_ui.faq_t4=Er UI open source?
+cube_ui.faq_4=I øjeblikket er brugergrænsefladen open source, du kan foretage to ændringer og bruge kildekoden (kommerciel brug er forbudt for at undgå unødvendigt juridisk ansvar)
+cube_ui.faq_t5=Hvordan rapporterer man fejl?
+cube_ui.faq_5=Fortæl forfatteren i kommentarfeltet under ressourcen, flyt venligst til feedbacktråden for feedback
+
+## Om UI
+renewal.history=Fornyelsesindhold
+about.ui_pack=Om UI
+about.sub_package=Udvidelsespakke
+update_time=Opdater tid
+about_ui.subpack_sorting=Underpakkesorteringen skal være højere end Cube UI-sorteringen, for at underpakken kan køre helt
+about_ui.no_subpack=Ingen underpakke installeret
+
+about_ui.ui_file=Aktuel UI-fil:
+about_ui.default_ui=Klassisk
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Ingen videresalg
+about_ui.precautions_2=● Forbudt til kommerciel brug
+about_ui.precautions_3=● Genudskrivning er forbudt uden tilladelse
+about_ui.precautions_4=● Giver mulighed for at integrere ethvert billede eller kode i ressourcepakken i andre ressourcepakker eller anden ændrede ressourcepakker til personlig brug, men forfatterens samtykke er påkrævet for udgivelse
+
+subpack.no_name=Denne udvidelsespakke har intet navn
+subpack.incompatibility=§cDenne udvidelsespakke er ikke kompatibel med den aktuelle version
+
+about_ui.access_channel=Cube UI adgangskanal:
+
+appearance.header_1=Baggrund
+appearance.header_2=Knap
+appearance.header_3=Skrifttype
+appearance.header_4=Skift
+appearance.header_5=Slider
+
+cube.piracy=Den nuværende brugergrænseflade er blevet ændret, brug venligst den ægte version for fuldt ud at opleve Cube-brugergrænsefladen
+
+## fokuspanel
+hud.focus_menu.tab_1=Genvejsknap
+hud.focus_menu.tab_2=Meddelelsesklasse
+hud.focus_menu.tab_3=Andet
+
+hud.personalization=Tilpasning
+hud.personalization.title=Fokusmenu
+hud.hide.player_position=Koordinater
+hud.hide.title=Titel
+hud.hide.actionbar=Aktivitetslinjens titel
+hud.switch=Skift genvejslinje
+hud.boss=Boss HP
+hud.chat=chat
+hud.note=Notebloktip
+hud.toggle.scb=Scoreboard
+hud.toggle.effect=Potion Effekt
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Varenavn
+
+hud.btn.hide_all=Skjul hud
+hud.btn.hide_doll=Skjul papirdukke
+
+## at chatte med
+tab.down=Næste indhold
+tab.back=Tidligere indhold
+chat.up=Næste besked
+chat.back=Sidste besked
+
+## Anden grænseflade
+command_block.empty_command_text=Indtast din kommando her
+seed_picker.header=Billedet er kun til reference, frøet kan ændre sig med opdateringen af ​​versionen

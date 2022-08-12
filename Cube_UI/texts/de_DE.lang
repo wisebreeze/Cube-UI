@@ -1,0 +1,86 @@
+Language=Deutsch (Deutschland)
+## Konfiguration
+options.beta_text=Beta Versions Obertext
+shortcut.setting=Schnellzugriff
+
+## Containerhilfe
+help.empty_help=Oops, diese Schnittstelle hilft noch nicht
+help.positive_effect=Positiver Effekt
+help.negative_effect=Negativer Effekt
+help.effect_water=Potion of Weakness muss eine normale Wasserflasche sein
+help.anvil.tool=Werkzeug
+help.anvil.tool2=Ausrüstung
+
+## häufiges Problem
+cube_ui.faq_t1=Wie erlebe und verwende ich die pädagogische Benutzeroberfläche?
+cube_ui.faq_1=Aktiviere die Cube-Benutzeroberfläche in den weltweiten §eRessourcenpaket-Optionen§f für das volle UI-Erlebnis
+cube_ui.faq_t2=Wie lege ich den Inhalt des UI-Teils fest?
+cube_ui.faq_2=Klicken Sie im Ressourcenpaket wiederum auf ui/_global_variables.json, bitte ändern Sie es gemäß den Eingabeaufforderungen in der Datei
+cube_ui.faq_t3=1.18.10 haben einige Benutzeroberflächen keine Wirkung?
+cube_ui.faq_3=Derzeit ist die Benutzeroberfläche vollständig abgedeckt. Es wird empfohlen, die alte Version von Minecraft zu verwenden, um die vollständige Abdeckung zu erleben (ein Teil der ursprünglichen Benutzeroberfläche kann von der ursprünglichen Konzept-Benutzeroberfläche abgedeckt werden, sodass dies keine Auswirkungen hat).
+cube_ui.faq_t4=Ist die Benutzeroberfläche Open Source?
+cube_ui.faq_4=Derzeit ist die Benutzeroberfläche Open Source, Sie können zwei Änderungen vornehmen und den Quellcode verwenden (kommerzielle Nutzung ist verboten, um unnötige rechtliche Haftung zu vermeiden)
+cube_ui.faq_t5=Wie melde ich Fehler?
+cube_ui.faq_5=Sagen Sie dem Autor im Kommentarbereich unter der Ressource, bitte gehen Sie für Feedback zum Feedback-Thread
+
+## Über die Benutzeroberfläche
+renewal.history=Erneuerungsinhalt
+about.ui_pack=Über die Benutzeroberfläche
+about.sub_package=Erweiterungspaket
+update_time=Aktualisierungszeit
+about_ui.subpack_sorting=Die Subpack-Sortierung muss höher sein als die Cube-UI-Sortierung, damit das Subpack vollständig ausgeführt wird
+about_ui.no_subpack=Kein Unterpaket installiert
+
+about_ui.ui_file=Aktuelle UI-Datei:
+about_ui.default_ui=Klassisch
+about_ui.default_os=Betriebssystem:
+
+about_ui.precautions_1=● Kein Weiterverkauf
+about_ui.precautions_2=● Für kommerzielle Nutzung verboten
+about_ui.precautions_3=● Nachdruck ohne Genehmigung verboten
+about_ui.precautions_4=● Erlaubt die Integration jedes Bildes oder Codes im Ressourcenpaket in andere Ressourcenpakete oder zweitmodifizierte Ressourcenpakete für den persönlichen Gebrauch, aber die Zustimmung des Autors ist für die Veröffentlichung erforderlich
+
+subpack.no_name=Dieses Erweiterungspaket hat keinen Namen
+subpack.incompatibility=§cDieses Erweiterungspaket ist nicht mit der aktuellen Version kompatibel
+
+about_ui.access_channel=Cube-UI-Zugriffskanal:
+
+Aussehen.header_1=Hintergrund
+Aussehen.header_2=Schaltfläche
+Aussehen.header_3=Schriftart
+Aussehen.header_4=Wechseln
+Aussehen.header_5=Schieberegler
+
+cube.piracy=Die aktuelle Benutzeroberfläche wurde geändert, bitte verwenden Sie die Originalversion, um die Cube-Benutzeroberfläche vollständig zu erleben
+
+## Fokusbereich
+hud.focus_menu.tab_1=Schnelltaste
+hud.focus_menu.tab_2=Benachrichtigungsklasse
+hud.focus_menu.tab_3=Sonstiges
+
+hud.personalization=Personalisierung
+hud.personalization.title=Fokusmenü
+hud.hide.player_position=Koordinaten
+hud.hide.title=Titel
+hud.hide.actionbar=Titel der Aktivitätsleiste
+hud.switch=Verknüpfungsleiste wechseln
+hud.boss=Boss-HP
+hud.chat=chatten
+hud.note=Notizblock-Hinweis
+hud.toggle.scb=Ergebnistafel
+hud.toggle.effect=Trank-Effekt
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Gegenstandsname
+
+hud.btn.hide_all=Hud ausblenden
+hud.btn.hide_doll=Papierpuppe verstecken
+
+## zum Chatten
+tab.down=Nächster Inhalt
+tab.back=Vorheriger Inhalt
+chat.up=Nächste Nachricht
+chat.back=Letzte Nachricht
+
+## Andere Schnittstelle
+command_block.empty_command_text=Geben Sie hier Ihren Befehl ein
+seed_picker.header=Das Bild dient nur als Referenz, der Seed kann sich mit dem Update der Version ändern

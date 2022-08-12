@@ -1,0 +1,95 @@
+Language=Türkçe (Türkiye)
+## kurmak
+options.beta_text=Beta üst metni
+shortcut.setting=Hızlı Erişim
+
+## konteyner yardımı
+help.empty_help=Hata, bu arayüz henüz yardımcı olmuyor
+help.positive_effect=Olumlu Etki
+help.negative_effect=Olumsuz Etki
+help.effect_water=Zayıflık İksiri normal bir su şişesi olmalı
+help.anvil.tool=Araç
+help.anvil.tool2=Ekipman
+
+## metnin üzerine gelin
+hover_text.all=tümü
+hover_text.drop=Öğeyi bırak
+hover_text.destroy=Öğeleri yok et
+hover_text.help=Yardım/Tarif
+hover_text.default_mode=Varsayılan mod
+hover_text.auto_mode=Otomatik Mod
+hover_text.drop_mode=Bırakma Modu
+
+## ortak sorun
+cube_ui.faq_t1=Eğitim kullanıcı arayüzü nasıl deneyimlenir ve kullanılır?
+cube_ui.faq_1=Tam kullanıcı arayüzü deneyimi için dünyanın §eKaynak Paketi Seçenekleri§f'nde Küp Kullanıcı Arayüzü'nü etkinleştirin
+cube_ui.faq_t2=UI bölüm içeriği nasıl ayarlanır?
+cube_ui.faq_2=Kaynak paketinde, sırayla ui/_global_variables.json'a tıklayın, lütfen dosyadaki istemlere göre değiştirin
+cube_ui.faq_t3=1.18.10'dan sonra, bazı UI'ların etkisi yok mu?
+cube_ui.faq_3=Şu anda kullanıcı arayüzü tamamen kapsanmıştır, tam kapsamı deneyimlemek için Minecraft'ın eski sürümünün kullanılması önerilir (orijinal kullanıcı arayüzünün bir kısmı orijinal konsept kullanıcı arayüzü tarafından kapsanabilir, bu nedenle hiçbir etkisi yoktur)
+cube_ui.faq_t4=UI açık kaynak mı?
+cube_ui.faq_4=Şu anda kullanıcı arayüzü açık kaynak, iki değişiklik yapabilir ve kaynak kodunu kullanabilirsiniz (gereksiz yasal sorumluluktan kaçınmak için ticari kullanım yasaktır)
+cube_ui.faq_t5=Hatalar nasıl bildirilir?
+cube_ui.faq_5=Kaynağın altındaki yorum alanında yazara söyleyin, geri bildirim için lütfen geri bildirim başlığına gidin
+
+## Kullanıcı Arayüzü Hakkında
+renewal.history=Yenileme içeriği
+about.ui_pack=Kullanıcı Arayüzü Hakkında
+about.sub_package=Uzantı Paketi
+update_time=Güncelleme zamanı
+about_ui.subpack_sorting=Alt paketin tamamen çalışması için alt paket sıralamasının Küp UI sıralamasından daha yüksek olması gerekir
+about_ui.no_subpack=Yüklü alt paket yok
+
+about_ui.ui_file=Geçerli UI dosyası:
+about_ui.default_ui=Klasik
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Yeniden satış yok
+about_ui.precautions_2=● Ticari kullanım için yasaktır
+about_ui.precautions_3=● İzinsiz yeniden yazdırma yasaktır
+about_ui.precautions_4=● Kaynak paketindeki herhangi bir resmin veya kodun diğer kaynak paketlerine veya kişisel kullanım için ikinci değiştirilmiş kaynak paketlerine entegre edilmesine izin verir, ancak yayınlamak için yazarın onayı gerekir
+
+subpack.no_name=Bu genişleme paketinin adı yok
+subpack.incommunication=§cBu genişleme paketi mevcut sürümle uyumlu değil
+
+about_ui.access_channel=Küp UI erişim kanalı:
+
+appearance.header_1=Arka Plan
+appearance.header_2=Düğme
+appearance.header_3=Yazı tipi
+appearance.header_4=Geçiş
+appearance.header_5=Kaydırıcı
+
+cube.piracy=Mevcut UI değiştirildi, lütfen Cube UI'yi tam olarak deneyimlemek için orijinal sürümü kullanın
+
+## odak paneli
+hud.focus_menu.tab_1=Kısayol Düğmesi
+hud.focus_menu.tab_2=Bildirim sınıfı
+hud.focus_menu.tab_3=Diğer
+
+hud.personalization=Kişiselleştirme
+hud.personalization.title=Odak Menüsü
+hud.hide.player_position=Koordinatlar
+hud.hide.title=Başlık
+hud.hide.actionbar=Etkinlik çubuğu başlığı
+hud.switch=Kısayol çubuğunu değiştir
+hud.boss=Patron HP
+hud.chat=sohbet
+hud.note=Not Blok İpucu
+hud.toggle.scb=Skorbord
+hud.toggle.effect=İksir Etkisi
+hud.toggle.hotbar=Sıcak çubuk
+hud.toggle.item_name=Öğe Adı
+
+hud.btn.hide_all=hud'u gizle
+hud.btn.hide_doll=Kağıt Bebeği Gizle
+
+## sohbet etmek için
+tab.down=Sonraki içerik
+tab.back=Önceki içerik
+chat.up=Sonraki mesaj
+chat.back=Son mesaj
+
+## Diğer arayüz
+command_block.empty_command_text=Komutunuzu buraya girin
+seed_picker.header=Resim sadece referans içindir, sürüm güncellemesi ile tohum değişebilir

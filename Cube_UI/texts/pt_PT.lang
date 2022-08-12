@@ -1,0 +1,95 @@
+Language=Português (Portugal)
+## configurar
+options.beta_text=Texto superior beta
+shortcut.setting=Acesso Rápido
+
+## ajuda do contêiner
+help.empty_help=Opa, esta interface ainda não ajuda
+help.positive_effect=Efeito Positivo
+help.negative_effect=Efeito negativo
+help.effect_water=Poção de Fraqueza deve ser uma garrafa de água normal
+help.anvil.tool=Ferramenta
+help.anvil.tool2=Equipamento
+
+## texto em foco
+hover_text.all=todos
+hover_text.drop=Soltar item
+hover_text.destroy=Destruir itens
+hover_text.help=Ajuda/Receita
+hover_text.default_mode=Modo padrão
+hover_text.auto_mode=Modo Automático
+hover_text.drop_mode=Modo Soltar
+
+## problema comum
+cube_ui.faq_t1=Como experimentar e usar a UI educacional?
+cube_ui.faq_1=Ative Cube UI nas §eResource Pack Options§f para a experiência completa da UI
+cube_ui.faq_t2=Como definir o conteúdo da parte da interface do usuário?
+cube_ui.faq_2=No pacote de recursos, clique em ui/_global_variables.json, modifique-o de acordo com as instruções do arquivo
+cube_ui.faq_t3=1.18.10, alguma interface do usuário não tem efeito?
+cube_ui.faq_3=Atualmente, a interface do usuário foi totalmente coberta, é recomendável usar a versão antiga do Minecraft para experimentar a cobertura completa (parte da interface original pode ser coberta pela interface do conceito original, portanto, não tem efeito)
+cube_ui.faq_t4=A interface do usuário é de código aberto?
+cube_ui.faq_4=Atualmente a interface do usuário é de código aberto, você pode fazer duas alterações e usar o código-fonte (o uso comercial é proibido para evitar responsabilidade legal desnecessária)
+cube_ui.faq_t5=Como reportar bugs?
+cube_ui.faq_5=Diga ao autor na área de comentários abaixo do recurso, por favor, vá para o tópico de feedback para feedback
+
+## Sobre a IU
+renewal.history=Conteúdo de renovação
+about.ui_pack=Sobre a interface do usuário
+about.sub_package=Pacote de Extensão
+update_time=Atualizar hora
+about_ui.subpack_sorting=A classificação do subpacote precisa ser maior que a classificação do Cube UI para que o subpacote seja executado completamente
+about_ui.no_subpack=Nenhum subpacote instalado
+
+about_ui.ui_file=Arquivo de IU atual:
+about_ui.default_ui=Clássico
+about_ui.default_os=SO:
+
+about_ui.precautions_1=● Sem revenda
+about_ui.precautions_2=● Proibido para uso comercial
+about_ui.precautions_3=● A reimpressão é proibida sem permissão
+about_ui.precautions_4=● Permite integrar qualquer imagem ou código no pacote de recursos em outros pacotes de recursos ou pacotes de recursos modificados para uso pessoal, mas é necessário o consentimento do autor para publicação
+
+subpack.no_name=Este pacote de expansão não tem nome
+subpack.incompatibility=§cEste pacote de expansão não é compatível com a versão atual
+
+about_ui.access_channel=Canal de acesso da IU do Cubo:
+
+appearance.header_1=Fundo
+appearance.header_2=Botão
+appearance.header_3=Fonte
+appearance.header_4=Alternar
+appearance.header_5=Slider
+
+cube.piracy=A UI atual foi modificada, por favor use a versão genuína para experimentar completamente a UI do Cube
+
+## painel de foco
+hud.focus_menu.tab_1=Botão de Atalho
+hud.focus_menu.tab_2=Classe de notificação
+hud.focus_menu.tab_3=Outro
+
+hud.personalization=Personalização
+hud.personalization.title=Menu Foco
+hud.hide.player_position=Coordenadas
+hud.hide.title=Título
+hud.hide.actionbar=Título da barra de atividades
+hud.switch=Mudar barra de atalhos
+hud.boss=HP do chefe
+hud.chat=chat
+hud.note=Observar Dica de Bloco
+hud.toggle.scb=Placar
+hud.toggle.effect=Efeito de poção
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Nome do Item
+
+hud.btn.hide_all=Ocultar hud
+hud.btn.hide_doll=Ocultar Boneca de Papel
+
+## para conversar com
+tab.down=Próximo conteúdo
+tab.back=Conteúdo anterior
+chat.up=Próxima mensagem
+chat.back=Última mensagem
+
+## Outra interface
+command_block.empty_command_text=Digite seu comando aqui
+seed_picker.header=A imagem é apenas para referência, a semente pode mudar com a atualização da versão

@@ -1,0 +1,95 @@
+Language=Italiano (Italia)
+## impostare
+options.beta_text=Testo in versione beta
+shortcut.setting=Accesso rapido
+
+## aiuto contenitore
+help.empty_help=Oops, questa interfaccia non aiuta ancora
+help.positive_effect=Effetto positivo
+help.negative_effect=Effetto negativo
+help.effect_water=Pozione della debolezza deve essere una normale bottiglia d'acqua
+help.anvil.tool=Strumento
+help.anvil.tool2=Attrezzatura
+
+## testo al passaggio del mouse
+hover_text.all=tutto
+hover_text.drop=Rilascia elemento
+hover_text.destroy=Distruggi oggetti
+hover_text.help=Aiuto/Ricetta
+hover_text.default_mode=Modalità predefinita
+hover_text.auto_mode=Modalità automatica
+hover_text.drop_mode=Modalità di rilascio
+
+## problema comune
+cube_ui.faq_t1=Come sperimentare e utilizzare l'interfaccia utente didattica?
+cube_ui.faq_1=Abilita l'interfaccia utente del cubo nelle §Opzioni del pacchetto eResource§f del mondo per un'esperienza completa dell'interfaccia utente
+cube_ui.faq_t2=Come impostare il contenuto della parte dell'interfaccia utente?
+cube_ui.faq_2=Nel pacchetto di risorse, fai clic su ui/_global_variables.json a sua volta, modificalo in base alle istruzioni nel file
+Dopo cube_ui.faq_t3=1.18.10, qualche interfaccia utente non ha effetto?
+cube_ui.faq_3=Attualmente l'interfaccia utente è stata completamente coperta, si consiglia di utilizzare la vecchia versione di Minecraft per provare la copertura completa (parte dell'interfaccia utente originale potrebbe essere coperta dall'interfaccia utente originale, quindi non ha alcun effetto)
+cube_ui.faq_t4=L'interfaccia utente è open source?
+cube_ui.faq_4=Attualmente l'interfaccia utente è open source, puoi apportare due modifiche e utilizzare il codice sorgente (l'uso commerciale è vietato per evitare inutili responsabilità legali)
+cube_ui.faq_t5=Come segnalare i bug?
+cube_ui.faq_5=Di' all'autore nell'area commenti sotto la risorsa, per favore passa al thread di feedback per un feedback
+
+## Informazioni sull'interfaccia utente
+rinnovo.history=Rinnovo contenuto
+about.ui_pack=Informazioni sull'interfaccia utente
+about.sub_package=Pacchetto Estensione
+update_time=Ora di aggiornamento
+about_ui.subpack_sorting=L'ordinamento del sottopack deve essere superiore all'ordinamento dell'interfaccia utente del cubo affinché il sottopack venga eseguito completamente
+about_ui.no_subpack=Nessun sottopacchetto installato
+
+about_ui.ui_file=File dell'interfaccia utente corrente:
+about_ui.default_ui=Classico
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Nessuna rivendita
+about_ui.precautions_2=● Vietato per uso commerciale
+about_ui.precautions_3=● La ristampa è vietata senza autorizzazione
+about_ui.precautions_4=● Consente di integrare qualsiasi immagine o codice nel pacchetto di risorse in altri pacchetti di risorse o pacchetti di risorse di seconda modifica per uso personale, ma per la pubblicazione è richiesto il consenso dell'autore
+
+subpack.no_name=Questo pacchetto di espansione non ha nome
+subpack.incompatibility=§cQuesto pacchetto di espansione non è compatibile con la versione corrente
+
+about_ui.access_channel=Canale di accesso all'interfaccia utente del cubo:
+
+aspetto.header_1=Sfondo
+aspetto.header_2=Pulsante
+aspetto.header_3=Carattere
+aspetto.header_4=Cambia
+aspetto.header_5=Cursore
+
+cube.piracy=L'interfaccia utente attuale è stata modificata, utilizza la versione originale per provare l'interfaccia utente di Cube
+
+## pannello di messa a fuoco
+hud.focus_menu.tab_1=Pulsante di scelta rapida
+hud.focus_menu.tab_2=Classe di notifica
+hud.focus_menu.tab_3=Altro
+
+hud.personalization=Personalizzazione
+hud.personalization.title=Menu di messa a fuoco
+hud.hide.player_position=Coordinate
+hud.hide.title=Titolo
+hud.hide.actionbar=Titolo della barra delle attività
+hud.switch=Cambia barra di scelta rapida
+hud.boss=Boss HP
+hud.chat=chat
+hud.note=Suggerimento blocco note
+hud.toggle.scb=Tabellone segnapunti
+hud.toggle.effect=Effetto pozione
+hud.toggle.hotbar=Barra calda
+hud.toggle.item_name=Nome oggetto
+
+hud.btn.hide_all=Nascondi hud
+hud.btn.hide_doll=Nascondi bambola di carta
+
+## con cui chattare
+tab.down=Contenuto successivo
+tab.back=Contenuto precedente
+chat.up=Messaggio successivo
+chat.back=Ultimo messaggio
+
+## Altra interfaccia
+command_block.empty_command_text=Inserisci il tuo comando qui
+seed_picker.header=L'immagine è solo di riferimento, il seme potrebbe cambiare con l'aggiornamento della versione

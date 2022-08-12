@@ -1,0 +1,84 @@
+Language=Suomi (Suomi)
+## perustaa
+options.beta_text=test version ylä teksti
+shortcut.setting=nopea vierailu
+
+## Kontianohjeet
+help.empty_help=Voi, tämä käyttöliittymä ei ole vielä hyödyllinen
+help.positiivinen_effect=positiivinen vaikutus
+help.negative_effect=negatiivinen vaikutus
+help.effect_water=heikon juoman on oltava tavallinen vesipullo
+help.anvil.tool=työkalu
+help.anvil.tool2=laitteet
+
+## Yleinen ongelma
+cube_ui.faq_t1=Kuinka kokea ja käyttää koulutusversion käyttöliittymää?
+cube_ui.faq_1=Cube -käyttöliittymä voidaan ottaa käyttöön maailman §E -resurssipaketin vaihtoehdoissa §f saadaksesi täydellisen käyttöliittymäkokemuksen
+cube_ui.faq_t2=miten käyttöliittymän sisällön asettaminen?
+cube_ui.faq_2=Resurssipaketissa napsauta UI/_global_variables.json vuorostaan, muokkaa sitä IN -FILE -kehotuksen mukaisesti
+cube_ui.faq_t3=1,18.10, joillakin käyttöliittymällä ei ole vaikutusta?
+cube_ui.faq_3=Nykyinen käyttöliittymä on katettu kokonaan. On suositeltavaa käyttää Minecraftin vanhaa versiota täydellisen kattavuuden kokemiseen (alkuperäinen käyttöliittymä voi kattaa joitain alkuperäisiä käyttöliittymiä, joten sillä ei ole vaikutusta)
+cube_ui.faq_t4=ui avoimen lähdekoodin?
+cube_ui.faq_4=Nykyinen käyttöliittymän avoimen lähdekoodin koodi, voit tehdä kaksi muutosta ja käyttää lähdekoodia (kaupalliset tarkoitukset tarpeettoman oikeudellisen vastuun välttämiseksi)
+cube_ui.faq_t5=miten palautetta vika?
+cube_ui.faq_5=Resurssin alapuolella oleva kommenttialue kertoo tekijälle, siirry palautteeseen palautetta
+
+## Tietoja käyttöliittymästä
+renewal.history=päivitys sisältö
+about.ui_pack=noin käyttöliittymästä
+about.sub_package=laajennettu paketti
+update_time=päivitysaika
+cube_ui.subpack_sorting=Laajennuspaketin lajittelu on lajiteltava korkeampi kuin kuutioliitti.
+cube_ui.no_subpack=pakkaus laajennuspaketti
+
+cube_ui.ui_file=nykyinen UI -tiedosto:
+cube_ui.default_ui=klassikko
+cube_ui.default_os=käyttöjärjestelmä:
+
+cube_ui.precations_1=● Kielletty myyminen
+cube_ui.precations_2=● Kielletty kaupalliselle käyttöön
+
+subpack.no_name=laajennuspaketille ei ole nimeä
+subpack.compatibility=§c Tämä laajennus ei ole yhteensopiva nykyisen version kanssa
+
+about_ui.access_channel=cube -käyttöliittymän hankintakanava:
+
+appearance.header_1=tausta
+appearance.header_2=Button
+appearance.header_3=fontti
+appearance.header_4=kytkin
+appearance.header_5=liukusäädin
+
+Cube.piracy=nykyistä käyttöliittymää on muokattu, käytä aitoa täydellistä kokemusta kuutioliittymää
+
+## Keskity paneeliin
+hud.focus_menu.tab_1=pikavalintapainike
+hud.focus_menu.tab_2=ilmoitusluokka
+hud.focus_menu.tab_3=muut
+
+hud.personalisointi=personointi
+hud.personalisaatio.title=keskity valikkoon
+hud.hide.player_position=koordinaatit
+hud.hide.title=otsikko
+hud.hide.actionbar=aktiviteettipalkin otsikko
+hud.switch=kytkin nopea sarake
+hud.boss=boms bloodin tilavuus
+hud.chat=chat
+hud.hunote=huomautuskohto
+hud.toggle.scb=pisteytyslauta
+hud.toggle.effect=juomavaikutus
+hud.toggle.hotbar=nopea baari
+hud.toggle.item_name=tuotteen nimi
+
+Hud.btn.hide_all=piilotettu HUD
+hud.btn.hide_dol=piilotettu paperinukke
+
+## keskustella
+Tab.down=seuraava sisältö
+Tab.back=Edellinen sisältö
+Chat.up=seuraava tieto
+Chat.back=Aikaisemmat tiedot
+
+# Kaikki muut rajapinnat
+Command_block.empty_command_text=kirjoita komento tähän
+Seed_picker.Header=Kuva on vain viitteelliselle, siemenet voivat muuttua version päivityksen myötä

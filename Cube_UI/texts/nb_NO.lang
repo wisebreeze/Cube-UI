@@ -1,0 +1,95 @@
+Language=Norsk bokmål (Norge)
+## satt opp
+options.beta_text=Beta topptekst
+shortcut.setting=Rask tilgang
+
+## containerhjelp
+help.empty_help=Beklager, dette grensesnittet hjelper ikke ennå
+help.positive_effect=Positiv effekt
+help.negative_effect=Negativ effekt
+help.effect_water=Svakhetsdrikk må være en vanlig vannflaske
+help.anvil.tool=Verktøy
+help.anvil.tool2=Utstyr
+
+## pekertekst
+hover_text.all=alle
+hover_text.drop=Slipp element
+hover_text.destroy=Ødelegg elementer
+hover_text.help=Hjelp/oppskrift
+hover_text.default_mode=Standardmodus
+hover_text.auto_mode=Automodus
+hover_text.drop_mode=Slippmodus
+
+## vanlig problem
+cube_ui.faq_t1=Hvordan oppleve og bruke det pedagogiske brukergrensesnittet?
+cube_ui.faq_1=Aktiver Cube UI i verdens §eResource Pack Options§f for full UI-opplevelse
+cube_ui.faq_t2=Hvordan angi UI-delinnhold?
+cube_ui.faq_2=I ressurspakken, klikk på ui/_global_variables.json etter tur, vennligst endre den i henhold til ledetekstene i filen
+cube_ui.faq_t3=1.18.10, har noen brukergrensesnitt ingen effekt?
+cube_ui.faq_3=For øyeblikket er brukergrensesnittet fullt dekket, det anbefales å bruke den gamle versjonen av Minecraft for å oppleve full dekning (en del av det originale brukergrensesnittet kan være dekket av det originale konsept-grensesnittet, så det har ingen effekt)
+cube_ui.faq_t4=Er UI åpen kildekode?
+cube_ui.faq_4=For øyeblikket er brukergrensesnittet åpen kildekode, du kan gjøre to endringer og bruke kildekoden (kommersiell bruk er forbudt for å unngå unødvendig juridisk ansvar)
+cube_ui.faq_t5=Hvordan rapportere feil?
+cube_ui.faq_5=Fortell forfatteren i kommentarfeltet under ressursen, vennligst flytt til tilbakemeldingstråden for tilbakemelding
+
+## Om UI
+renewal.history=Fornyelsesinnhold
+about.ui_pack=Om brukergrensesnittet
+about.sub_package=Utvidelsespakke
+update_time=Oppdater tid
+about_ui.subpack_sorting=Underpakkesorteringen må være høyere enn Cube UI-sorteringen for at underpakken skal kjøre fullstendig
+about_ui.no_subpack=Ingen underpakke installert
+
+about_ui.ui_file=Gjeldende UI-fil:
+about_ui.default_ui=Klassisk
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Ingen videresalg
+about_ui.precautions_2=● Forbudt for kommersiell bruk
+about_ui.precautions_3=● Gjentrykk er forbudt uten tillatelse
+about_ui.precautions_4=● Gjør det mulig å integrere alle bilder eller koder i ressurspakken i andre ressurspakker eller andre modifiserte ressurspakker for personlig bruk, men forfatterens samtykke kreves for publisering
+
+subpack.no_name=Denne utvidelsespakken har ikke noe navn
+subpack.incompatibility=§cDenne utvidelsespakken er ikke kompatibel med gjeldende versjon
+
+about_ui.access_channel=Cube UI tilgangskanal:
+
+appearance.header_1=Bakgrunn
+appearance.header_2=Knapp
+appearance.header_3=Skrift
+appearance.header_4=Bytt
+appearance.header_5=Slider
+
+cube.piracy=Gjeldende brukergrensesnitt har blitt endret, vennligst bruk den ekte versjonen for å oppleve Cube-grensesnittet fullt ut
+
+## fokuspanel
+hud.focus_menu.tab_1=Snarveiknapp
+hud.focus_menu.tab_2=Varslingsklasse
+hud.focus_menu.tab_3=Annet
+
+hud.personalization=Personliggjøring
+hud.personalization.title=Fokusmeny
+hud.hide.player_position=Koordinater
+hud.hide.title=Tittel
+hud.hide.actionbar=Aktivitetslinjetittel
+hud.switch=Bytt snarveilinje
+hud.boss=Sjef HP
+hud.chat=chat
+hud.note=Hint for notatblokk
+hud.toggle.scb=Resultattavle
+hud.toggle.effect=Potion Effekt
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Varenavn
+
+hud.btn.hide_all=Skjul hud
+hud.btn.hide_doll=Skjul papirdukke
+
+## å chatte med
+tab.down=Neste innhold
+tab.back=Tidligere innhold
+chat.up=Neste melding
+chat.back=Siste melding
+
+## Annet grensesnitt
+command_block.empty_command_text=Skriv inn kommandoen din her
+seed_picker.header=Bildet er kun for referanse, frøet kan endres med oppdateringen av versjonen

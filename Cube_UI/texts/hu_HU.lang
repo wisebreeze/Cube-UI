@@ -1,0 +1,95 @@
+Language=Magyar (HU)
+## beállít
+options.beta_text=Béta felső szöveg
+shortcut.setting=Gyors hozzáférés
+
+## konténer súgó
+help.empty_help=Hoppá, ez a felület még nem segít
+help.positive_effect=Pozitív hatás
+help.negative_effect=Negatív hatás
+help.effect_water=A gyengeség italának normál vizes palacknak ​​kell lennie
+help.anvil.tool=Eszköz
+help.anvil.tool2=Berendezés
+
+## mutató szöveg
+hover_text.all=all
+hover_text.drop=Elem eldobása
+hover_text.destroy=Elemek megsemmisítése
+hover_text.help=Súgó/Recept
+hover_text.default_mode=Alapértelmezett mód
+hover_text.auto_mode=Automatikus mód
+hover_text.drop_mode=Eldobási mód
+
+## gyakori probléma
+cube_ui.faq_t1=Hogyan ismerheti meg és használhatja az oktatási felhasználói felületet?
+cube_ui.faq_1=Engedélyezze a Cube felhasználói felületet a világ §eResource Pack Options§f részében a teljes felhasználói felület élmény érdekében
+cube_ui.faq_t2=Hogyan kell beállítani a felhasználói felület tartalmát?
+cube_ui.faq_2=Az erőforráscsomagban kattintson egymás után az ui/_global_variables.json fájlra, és módosítsa a fájlban megjelenő utasításoknak megfelelően
+cube_ui.faq_t3=1.18.10 után néhány felhasználói felületnek nincs hatása?
+cube_ui.faq_3=Jelenleg a felhasználói felületet teljesen lefedték, a teljes lefedettség megéléséhez ajánlott a Minecraft régi verzióját használni (az eredeti felhasználói felület egy részét lefedheti az eredeti felhasználói felület, így nincs hatása)
+cube_ui.faq_t4=Nyílt forráskódú a felhasználói felület?
+cube_ui.faq_4=Jelenleg a felhasználói felület nyílt forráskódú, két változtatást végezhet, és használhatja a forráskódot (a szükségtelen jogi felelősség elkerülése érdekében a kereskedelmi felhasználás tilos)
+cube_ui.faq_t5=Hogyan jelenthetjük be a hibákat?
+cube_ui.faq_5=Mondja el a szerzőt az erőforrás alatti megjegyzés területen, kérem, lépjen a visszajelzési szálra visszajelzésért
+
+## A felhasználói felületről
+renewal.history=Tartalom megújítása
+about.ui_pack=A felhasználói felületről
+about.sub_package=Bővítménycsomag
+update_time=Frissítés ideje
+about_ui.subpack_sorting=Az alcsomag rendezésnek magasabbnak kell lennie, mint a Cube UI rendezésnek, hogy az alcsomag teljes mértékben futhasson
+about_ui.no_subpack=Nincs telepített alcsomag
+
+about_ui.ui_file=Jelenlegi felhasználói felület fájl:
+about_ui.default_ui=Klasszikus
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Nincs viszonteladás
+about_ui.precautions_2=● Kereskedelmi használatra tilos
+about_ui.precautions_3=● Az újranyomtatás engedély nélkül tilos
+about_ui.precautions_4=● Lehetővé teszi az erőforráscsomagban lévő bármely kép vagy kód integrálását más erőforráscsomagokba vagy másodszor módosított erőforráscsomagokba személyes használatra, de a közzétételhez a szerző beleegyezése szükséges
+
+subpack.no_name=Ennek a bővítőcsomagnak nincs neve
+subpack.incompatibility=§cEz a bővítőcsomag nem kompatibilis a jelenlegi verzióval
+
+about_ui.access_channel=Cube UI hozzáférési csatorna:
+
+välimus.header_1=Háttér
+välimus.header_2=Gomb
+välimus.header_3=Betűtípus
+välimus.header_4=Váltás
+välimus.header_5=Csúszka
+
+cube.piracy=A jelenlegi felhasználói felület módosult, kérjük, használja az eredeti verziót, hogy teljes mértékben megtapasztalhassa a Cube felhasználói felületet
+
+## fókuszpanel
+hud.focus_menu.tab_1=Gyorsbillentyű
+hud.focus_menu.tab_2=Értesítési osztály
+hud.focus_menu.tab_3=Egyéb
+
+hud.personalization=Személyre szabás
+hud.personalization.title=Fókusz menü
+hud.hide.player_position=Koordináták
+hud.hide.title=Cím
+hud.hide.actionbar=A tevékenységsáv címe
+hud.switch=Parancsikonsáv váltása
+hud.boss=HP főnök
+hud.chat=csevegés
+hud.note=Megjegyzésblokk-tipp
+hud.toggle.scb=Eredménytábla
+hud.toggle.effect=Bájital effektus
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Elem neve
+
+hud.btn.hide_all=Hud elrejtése
+hud.btn.hide_doll=Papírbaba elrejtése
+
+## csevegni
+tab.down=Következő tartalom
+tab.back=Korábbi tartalom
+chat.up=Következő üzenet
+chat.back=Utolsó üzenet
+
+## Egyéb felület
+command_block.empty_command_text=Írja be ide a parancsot
+seed_picker.header=A kép csak tájékoztató jellegű, a verzió frissítésével a seed változhat

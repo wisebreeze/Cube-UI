@@ -1,0 +1,86 @@
+Language=Français (Canada)
+## mettre en place
+options.beta_text=Test Version Text Text
+shortcut.setting=visite rapide
+
+## Aide au conteneur
+help.empty_help=oh, cette interface n'est pas encore utile
+help.positive_effected=effet positif
+help.negative_effic=effet négatif
+help.effect_water=Potion faible doit être une bouteille d'eau ordinaire
+help.anvil.tool=outil
+help.anvil.tool2=équipement
+
+## Problème commun
+cube_ui.faq_t1=comment vivre et utiliser l'interface utilisateur de la version éducative?
+cube_ui.faq_1=ui cube peut être activé dans l'option de package de ressources §e au monde §f pour obtenir l'expérience complète de l'interface utilisateur
+cube_ui.faq_t2=comment définir le contenu de l'interface utilisateur?
+cube_ui.faq_2=Dans le package de ressources, cliquez sur UI / _Global_variables.json à son tour, veuillez le modifier en fonction de l'invite en -file
+cube_ui.faq_t3=1.18.10, une interface utilisateur n'a aucun effet?
+cube_ui.faq_3=L'interface utilisateur actuelle a été entièrement couverte. Il est recommandé d'utiliser l'ancienne version de Minecraft pour ressentir une couverture complète (une interface utilisateur originale peut être couverte par l'interface utilisateur du concept d'origine, donc elle n'a aucun effet)
+cube_ui.faq_t4=code source open ui?
+cube_ui.faq_4=le code open source de l'interface utilisateur actuel, vous pouvez apporter deux modifications et utiliser le code source (interdisant les objectifs commerciaux pour éviter une responsabilité juridique inutile)
+cube_ui.faq_t5=comment comment faire un bug de rétroaction?
+cube_ui.faq_5=La zone de commentaire sous la ressource indique à l'auteur, veuillez passer aux commentaires de commentaires
+
+## sur l'interface utilisateur
+renewal.history=Mettre à jour le contenu
+about.ui_pack=À propos de l'interface utilisateur
+about.sub_package=package étendu
+update_time=Temps de mise à jour
+cube_ui.subpack_sorting=Le tri du package d'extension doit être trié plus haut que l'interface utilisateur du cube.
+cube_ui.no_subpack=Package d'extension de déballage
+
+cube_ui.ui_file=fichier d'interface utilisateur actuel:
+cube_ui.default_ui=classique
+cube_ui.default_os=Système d'exploitation:
+
+cube_ui.precautions_1=● Interdit de vendre
+cube_ui.precautions_2=● Interdit à usage commercial
+cube_ui.precautions_3=● Impossible de réimprimer sans autorisation
+cube_ui.precautions_4=● Permet toutes les images ou code dans le package de ressources sur d'autres packages de ressources ou les packages de ressources à la seconde, qui peuvent être utilisés pour un usage personnel
+
+subpack.no_name=il n'y a pas de nom pour le package d'extension
+subpack.incompatibilité=§c Cette extension n'est pas compatible avec la version actuelle
+
+cube_ui.access_channel=cube ui consimitation chanse:
+
+apparence.header_1=arrière-plan
+apparence.header_2=bouton
+apparence.header_3=font
+apparence.header_4=commutateur
+apparence.header_5=curseur
+
+cube.piracy=l'interface utilisateur actuelle est modifiée, veuillez utiliser la véritable expérience complète Cube UI
+
+## Focus sur le panneau
+hud.focus_menu.tab_1=bouton de raccourci
+hud.focus_menu.tab_2=Classe de notification
+hud.focus_menu.tab_3=autres
+
+hud.sersonalisation=Personnalisation
+hud.espersonalisation.title=se concentrer sur le menu
+hud.hide.player_position=coordonnées
+hud.hide.title=title
+hud.hide.actionbar=Titre de la barre d'activité
+hud.switch=Switch Fast Colonne
+hud.boss=volume sanguin de boss
+hud.chat=chat
+hud.note=note box implusion
+hud.toggle.scb=carte de notation
+hud.toggle.effect=effet de potion
+hud.toggle.hotbar=barre rapide
+hud.toggle.item_name=nom de l'article
+
+hud.btn.hide_all=Hidden Hud
+hud.btn.hide_dol=poupée de papier cachée
+
+## pour discuter avec
+tab.down=contenu suivant
+tab.back=contenu précédent
+chat.up=Informations suivantes
+chat.back=informations précédentes
+
+## Toutes les autres interfaces
+command_block.empty_command_text=entrez votre commande ici
+seed_picker.header=l'image est pour référence uniquement, les graines peuvent changer avec la mise à jour de la version

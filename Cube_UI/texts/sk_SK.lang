@@ -1,0 +1,95 @@
+Language=Slovensky (SK)
+## nastaviť
+options.beta_text=Horný text beta
+shortcut.setting=Rýchly prístup
+
+## pomoc s kontajnerom
+help.empty_help=Ojoj, toto rozhranie zatiaľ nepomáha
+help.positive_effect=Pozitívny efekt
+help.negative_effect=Negatívny efekt
+help.effect_water=Lektvar slabosti musí byť normálna fľaša s vodou
+help.anvil.tool=Nástroj
+help.anvil.tool2=Zariadenie
+
+## text po umiestnení kurzora myši
+hover_text.all=all
+hover_text.drop=Zrušiť položku
+hover_text.destroy=Zničte položky
+hover_text.help=Pomocník/recept
+hover_text.default_mode=Predvolený režim
+hover_text.auto_mode=Automatický režim
+hover_text.drop_mode=Drop Mode
+
+## bežný problém
+cube_ui.faq_t1=Ako zažiť a používať vzdelávacie používateľské rozhranie?
+cube_ui.faq_1=Povoľte používateľské rozhranie Cube vo svetových §eResource Pack Options§f pre úplné používateľské rozhranie
+cube_ui.faq_t2=Ako nastaviť obsah časti používateľského rozhrania?
+cube_ui.faq_2=V balíku zdrojov postupne kliknite na ui/_global_variables.json, upravte ho podľa pokynov v súbore
+cube_ui.faq_t3=1.18.10 nemá niektoré používateľské rozhranie žiadny účinok?
+cube_ui.faq_3=Užívateľské rozhranie je momentálne plne pokryté, na plné pokrytie sa odporúča použiť starú verziu Minecraftu (časť pôvodného používateľského rozhrania môže byť pokrytá pôvodným používateľským rozhraním konceptu, takže to nemá žiadny vplyv)
+cube_ui.faq_t4=Je používateľské rozhranie open source?
+cube_ui.faq_4=V súčasnosti je používateľské rozhranie open source, môžete vykonať dve zmeny a použiť zdrojový kód (komerčné použitie je zakázané, aby ste sa vyhli zbytočnej právnej zodpovednosti)
+cube_ui.faq_t5=Ako nahlásiť chyby?
+cube_ui.faq_5=Povedzte to autorovi v oblasti komentárov pod zdrojom, presuňte sa do vlákna spätnej väzby pre spätnú väzbu
+
+## O používateľskom rozhraní
+renewal.history=Obsah obnovenia
+about.ui_pack=O používateľskom rozhraní
+about.sub_package=Rozširujúci balík
+update_time=Čas aktualizácie
+about_ui.subpack_sorting=Triedenie podbalíkov musí byť vyššie ako triedenie používateľského rozhrania kocky, aby sa podbalík úplne spustil
+about_ui.no_subpack=Nie je nainštalovaný žiadny subpack
+
+about_ui.ui_file=Aktuálny súbor používateľského rozhrania:
+about_ui.default_ui=Klasické
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Žiadny ďalší predaj
+about_ui.precautions_2=● Zakázané na komerčné použitie
+about_ui.precautions_3=● Opätovná tlač je bez povolenia zakázaná
+about_ui.precautions_4=● Umožňuje integrovať akýkoľvek obrázok alebo kód v balíku zdrojov do iných balíkov zdrojov alebo druhých upravených balíkov zdrojov na osobné použitie, ale na publikovanie je potrebný súhlas autora
+
+subpack.no_name=Tento rozširujúci balík nemá názov
+subpack.incompatibility=§cTento rozširujúci balík nie je kompatibilný s aktuálnou verziou
+
+about_ui.access_channel=Prístupový kanál používateľského rozhrania kocky:
+
+appearance.header_1=Pozadie
+appearance.header_2=Tlačidlo
+appearance.header_3=Písmo
+appearance.header_4=Prepnúť
+appearance.header_5=Posuvník
+
+cube.piracy=Aktuálne používateľské rozhranie bolo upravené, použite prosím originálnu verziu, aby ste mohli naplno využívať používateľské rozhranie Cube
+
+## panel zaostrenia
+hud.focus_menu.tab_1=Tlačidlo skratky
+hud.focus_menu.tab_2=Trieda upozornení
+hud.focus_menu.tab_3=Iné
+
+hud.personalization=Prispôsobenie
+hud.personalization.title=Ponuka zamerania
+hud.hide.player_position=Súradnice
+hud.hide.title=Názov
+hud.hide.actionbar=Názov panela aktivít
+hud.switch=Prepnúť lištu skratiek
+hud.boss=Šéf HP
+hud.chat=chat
+hud.note=Poznámka Bloková rada
+hud.toggle.scb=Výsledková tabuľka
+hud.toggle.effect=Efekt elixíru
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Názov položky
+
+hud.btn.hide_all=Skryť hud
+hud.btn.hide_doll=Skryť papierovú bábiku
+
+## na rozhovor
+tab.down=Ďalší obsah
+tab.back=Predchádzajúci obsah
+chat.up=Ďalšia správa
+chat.back=Posledná správa
+
+## Iné rozhranie
+command_block.empty_command_text=Sem zadajte svoj príkaz
+seed_picker.header=Obrázok je len orientačný, seed sa môže zmeniť s aktualizáciou verzie

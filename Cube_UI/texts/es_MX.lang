@@ -1,0 +1,86 @@
+Language=Español (México)
+## configuración
+options.beta_text=Beta texto superior de la versión
+atajo.setting=Acceso rápido
+
+## ayuda del contenedor
+help.empty_help=Vaya, esta interfaz aún no ayuda
+help.positive_effect=Efecto positivo
+help.negative_effect=Efecto negativo
+help.effect_water=La poción de debilidad debe ser una botella de agua normal
+help.anvil.tool=Herramienta
+help.anvil.tool2=Equipo
+
+## problema comun
+cube_ui.faq_t1=¿Cómo experimentar y usar la IU educativa?
+cube_ui.faq_1=Habilite Cube UI en las §eResource Pack Options§f del mundo para disfrutar de la experiencia completa de UI
+cube_ui.faq_t2=¿Cómo configurar el contenido de la parte de la interfaz de usuario?
+cube_ui.faq_2=En el paquete de recursos, haga clic en ui/_global_variables.json a su vez, modifíquelo de acuerdo con las indicaciones del archivo
+cube_ui.faq_t3=1.18.10, ¿alguna interfaz de usuario no tiene efecto?
+cube_ui.faq_3=Actualmente, la interfaz de usuario se ha cubierto por completo, se recomienda usar la versión anterior de Minecraft para experimentar la cobertura completa (parte de la interfaz de usuario original puede estar cubierta por el concepto de interfaz de usuario original, por lo que no tiene ningún efecto)
+cube_ui.faq_t4=¿La interfaz de usuario es de código abierto?
+cube_ui.faq_4=Actualmente, la interfaz de usuario es de código abierto, puede realizar dos cambios y usar el código fuente (el uso comercial está prohibido para evitar responsabilidades legales innecesarias)
+cube_ui.faq_t5=¿Cómo reportar errores?
+cube_ui.faq_5=Dígale al autor en el área de comentarios debajo del recurso, vaya al hilo de comentarios para recibir comentarios
+
+## Acerca de la interfaz de usuario
+renewal.history=Contenido de renovación
+about.ui_pack=Acerca de la interfaz de usuario
+about.sub_package=Paquete de extensión
+update_time=Hora de actualización
+about_ui.subpack_sorting=La clasificación de los subpaquetes debe ser más alta que la clasificación de la interfaz de usuario del cubo para que el subpaquete se ejecute por completo
+about_ui.no_subpack=No hay subpaquete instalado
+
+about_ui.ui_file=Archivo de interfaz de usuario actual:
+about_ui.default_ui=Clásico
+about_ui.default_os=SO:
+
+about_ui.precautions_1=● Sin reventa
+about_ui.precautions_2=● Prohibido para uso comercial
+about_ui.precautions_3=● Está prohibida la reimpresión sin permiso
+about_ui.precautions_4=● Permite integrar cualquier imagen o código en el paquete de recursos en otros paquetes de recursos o paquetes de recursos modificados en segundo lugar para uso personal, pero se requiere el consentimiento del autor para publicar
+
+subpack.no_name=Este paquete de expansión no tiene nombre
+subpack.incompatibility=§cEste paquete de expansión no es compatible con la versión actual
+
+about_ui.access_channel=Canal de acceso a la interfaz de usuario del cubo:
+
+apariencia.header_1=Fondo
+apariencia.header_2=Botón
+apariencia.header_3=Fuente
+apariencia.header_4=Cambiar
+apariencia.header_5=Control deslizante
+
+cube.piracy=La interfaz de usuario actual ha sido modificada, utilice la versión genuina para experimentar completamente la interfaz de usuario de Cube
+
+## panel de enfoque
+hud.focus_menu.tab_1=Botón de acceso directo
+hud.focus_menu.tab_2=Clase de notificación
+hud.focus_menu.tab_3=Otro
+
+hud.personalization=Personalización
+hud.personalization.title=Menú de enfoque
+hud.hide.player_position=Coordenadas
+hud.hide.title=Título
+hud.hide.actionbar=Título de la barra de actividades
+hud.switch=Cambiar barra de atajos
+hud.boss=HP del jefe
+hud.chat=chat
+hud.note=Sugerencia de bloque de notas
+hud.toggle.scb=Marcador
+hud.toggle.effect=Efecto de poción
+hud.toggle.hotbar=Barra de acceso rápido
+hud.toggle.item_name=Nombre del elemento
+
+hud.btn.hide_all=Ocultar hud
+hud.btn.hide_doll=Ocultar muñeca de papel
+
+## para chatear con
+tab.down=Siguiente contenido
+tab.back=Contenido anterior
+chat.up=Siguiente mensaje
+chat.back=Último mensaje
+
+## Otra interfaz
+command_block.empty_command_text=Ingrese su comando aquí
+seed_picker.header=La imagen es solo para referencia, la semilla puede cambiar con la actualización de la versión

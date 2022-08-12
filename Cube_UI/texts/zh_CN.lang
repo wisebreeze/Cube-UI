@@ -1,0 +1,207 @@
+Language=简体中文
+
+## 设置
+options.beta_text=测试版顶部文字
+shortcut.setting=快捷访问
+
+## 容器帮助
+help.empty_help=哎呀，这个界面还没有帮助呢
+help.positive_effect=正面效果
+help.negative_effect=负面效果
+help.effect_water=虚弱药水必须是普通水瓶
+help.anvil.tool=工具
+help.anvil.tool2=装备
+
+## 悬停文字
+hover_text.all=全部
+hover_text.drop=丢弃物品
+hover_text.destroy=摧毁物品
+hover_text.help=帮助/配方
+hover_text.default_mode=默认模式
+hover_text.auto_mode=自动模式
+hover_text.drop_mode=丢弃模式
+
+## 常见问题
+cube_ui.faq_t1=如何体验和使用教育版UI？
+cube_ui.faq_1=在世界的§e资源包选项§f中启用Cube UI即可获得完整UI体验
+cube_ui.faq_t2=如何设置UI部分内容?
+cube_ui.faq_2=在资源包内，依次点击ui/_global_variables.json，请根据文件内提示进行修改
+cube_ui.faq_t3=1.18.10后，部分UI没有效果?
+cube_ui.faq_3=目前UI已经全覆盖，建议使用旧版本Minecraft体验全覆盖（部分原版UI可能被原版概念UI覆盖所以没有效果）
+cube_ui.faq_t4=UI开放源代码吗?
+cube_ui.faq_4=目前UI开放源代码，你可以进行二改和使用源码(禁止商业用途，以免承担不必要的法律责任)
+cube_ui.faq_t5=如何反馈Bug?
+cube_ui.faq_5=资源下方评论区告诉作者，论坛请移步至反馈贴反馈
+
+## 关于UI
+renewal.history=更新内容
+about.ui_pack=关于 UI
+about.sub_package=扩展包
+update_time=更新时间
+about_ui.subpack_sorting=扩展包排序需要比Cube UI排序高，扩展包才能完整运行
+about_ui.no_subpack=未安装扩展包
+
+about_ui.ui_file=目前UI档案: 
+about_ui.default_ui=经典
+about_ui.default_os=操作系统: 
+
+about_ui.precautions_1=● 禁止倒卖
+about_ui.precautions_2=● 禁止作为商业用途
+about_ui.precautions_3=● 未经允许，禁止转载
+about_ui.precautions_4=● 允许将资源包里的任何图片或代码整合到其他资源包或二改资源包，可以供个人使用，但是发布需要作者同意
+
+subpack.no_name=该扩展包没有名字
+subpack.incompatibility=§c该扩展包不兼容目前版本
+
+about_ui.access_channel=Cube UI获取渠道: 
+
+appearance.header_1=背景
+appearance.header_2=按钮
+appearance.header_3=字体
+appearance.header_4=开关
+appearance.header_5=滑块
+
+cube.piracy=当前的UI被修改，请使用正版完整体验Cube UI
+
+## 专注面板
+hud.focus_menu.tab_1=快捷按钮
+hud.focus_menu.tab_2=通知类
+hud.focus_menu.tab_3=其他
+
+hud.personalization=个性化
+hud.personalization.title=专注菜单
+hud.hide.player_position=坐标
+hud.hide.title=标题
+hud.hide.actionbar=活动栏标题
+hud.switch=切换快捷栏
+hud.boss=Boss 血量
+hud.chat=聊天
+hud.note=音符盒提示
+hud.toggle.scb=记分板
+hud.toggle.effect=药水效果
+hud.toggle.hotbar=快捷栏
+hud.toggle.item_name=物品名
+
+hud.btn.hide_all=隐藏 hud
+hud.btn.hide_doll=隐藏纸娃娃
+
+## 聊天
+tab.down=下个内容
+tab.back=上个内容
+chat.up=下个信息
+chat.back=上个信息
+
+## 其他界面
+command_block.empty_command_text=在此输入你的命令
+seed_picker.header=图片仅供参考，种子可能会随着版本的更新而变化
+
+## 设置
+options.video=显示
+options.sounds=音量
+options.developer=开发者
+
+## 资源/行为包设置
+resourcePack.subpackResolution=%s
+resourcePack.packSettingsTitle=%s 设置
+
+## 新翻译
+store.offerDescription.genre=分类：	#
+sidebar.myContent=已购资源	#
+store.inventory.button=已购资源	#
+store.inventory.title=已购资源	#
+store.mypacks=已购资源	#
+gui.warning.exitGameWarning=确定要退出《我的世界》？	#
+createWorldScreen.createOnRealms=创建 Realms 服务器	#
+hbui.CreateNewWorldSideMenu.createOnRealm=创建 Realm 服务器	#
+options.enableEducation.message=会启用教育版化学功能。教育版玩法可能会破坏你的世界。如果继续将复制你的世界。	#
+selectWorld.newWorld.educationCopyOf=%s	#
+selectWorld.newWorld.copyOf=[拷贝]%s	#
+storage_migration.start_transfer.description=我们需要将您的文件移动到新的存储位置，移动后你的数据会随着游戏卸载而丢失。	#
+resourcePack.description.bottom.global=资源包中的任何资源都会由更高排序的资源包覆盖。无论您进入哪个世界都会应用这资源包。这些资源仅供您能看到，别人无法看到您的全局资源	#
+resourcePack.description.bottom.behaviorPacks=行为包中的任何行为都会由更高排序的行为包覆盖	#
+resourcePack.description.bottom.level=资源包中的任何资源都会由更高排序的资源包覆盖。您世界中的这些资源包会应用于您的全局包上方	#
+generator.flat=超平坦
+options.usetouchpad=准星瞄准
+
+xbox.signinFree=注册或登录
+xbox.signOutLong=退出登录
+xbox.signInLong=注册或登录！
+
+## 新版成就UI （中文翻译）
+hbui.AchievementDetails.anotherPlatform=在另一个平台上完成
+hbui.AchievementDetails.completed=完成
+hbui.AchievementDetails.gamerscore=游戏分数
+hbui.AchievementDetails.locked=锁定
+hbui.AchievementDetails.yes=是的
+hbui.AchievementDetailsRoute.errorMessage=成就无法加载。请再试一次或检查您的Internet连接
+hbui.AchievementDetailsRoute.narration.completed=完成
+hbui.AchievementDetailsRoute.narration.gamerscore=游戏分数
+hbui.AchievementDetailsRoute.narration.loadingMessage=加载中
+hbui.AchievementDetailsRoute.narration.locked=锁定
+hbui.AchievementDetailsRoute.narration.percentage=已完成%1$s个 还有%2$s个待完成
+hbui.AchievementDetailsRoute.narration.progress=进度
+hbui.AchievementDetailsRoute.narration.rewardLocked=奖励锁定
+hbui.AchievementDetailsRoute.narration.rewardUnlocked=奖励解锁
+hbui.AchievementDetailsRoute.narration.title=成就细节
+hbui.AchievementDetailsRoute.reward=奖励
+hbui.AchievementDetailsRoute.title=成就细节
+hbui.AchievementDetailsRoute.titleNarration=成就细节屏幕
+hbui.AchievementDetailsRoute.viewReward=查看奖励
+hbui.AchievementListItem.completed=完成
+hbui.AchievementListItem.gamerscoreNarration=游戏分数 %1$s
+hbui.AchievementListItem.groupNarration=组 %1$s 还有 %2$s 个待完成
+hbui.AchievementListItem.inProgress=进行中
+hbui.AchievementListItem.locked=未解锁
+hbui.AchievementListItem.narrationCompleted=已完成%1$s个 还有%2$s个待完成, 开锁, %3$s 游戏分数
+hbui.AchievementListItem.narrationLocked=已完成%1$s个 还有 %2$s个待完成, 开锁, %3$s 游戏分数 
+hbui.AchievementListItem.percentageNarration=进度 %1$s%
+hbui.AchievementListItem.rewardLockedNarration=奖励锁定
+hbui.AchievementListItem.rewardUnlockedNarration=奖励解锁
+hbui.AchievementListItem.siblingNarration=按钮 %1$s 还有 %2$s个
+hbui.AchievementListItem.view=查看详细信息
+hbui.AchievementReward.reward=奖励
+hbui.AchievementReward.viewReward=查看奖励
+hbui.Achievements.all=全部
+hbui.Achievements.completed=完成
+hbui.Achievements.completedEmptyText=完整的成就！
+hbui.Achievements.completedEmptyTitle=这里没什么可看的.还没有！
+hbui.Achievements.errorMessage=请再试一次或检查您的Internet连接。
+hbui.Achievements.errorMessageTitle=哦哦！成就无法加载。
+hbui.Achievements.inProgress=进行中
+hbui.Achievements.loading=吸引人的成就…
+hbui.Achievements.loadingMessage=加载中
+hbui.Achievements.locked=未解锁
+hbui.Achievements.lockedEmptyText=你已经完成了所有的成就。
+hbui.Achievements.lockedEmptyTitle=哇，你太棒了！
+hbui.Achievements.title=成就
+hbui.Achievements.titleMessage=成就筛选
+hbui.AchievementsSummary.gamerscore=游戏分数
+hbui.AchievementsSummary.hoursPlayed=%1$s 小时
+hbui.AchievementsSummary.narratorCompletedAchievements=完成 %2$s个 还有%2$s个待完成
+hbui.AchievementsSummary.narratorCompletedRewards=奖励 %1$s 还有%2$s个待奖励
+hbui.AchievementsSummary.narratorGamerscore=游戏分数 %1$s 还有%2$s
+hbui.AchievementsSummary.narratorIndex=完成%1$s个 还有%2$s个待完成
+hbui.AchievementsSummary.narratorInProgress=%1$s个进行中
+hbui.AchievementsSummary.narratorPercentage=%1$s 进度百分比
+hbui.AchievementsSummary.narratorTimePlayed=游玩时间 %1$s 小时
+hbui.AchievementsSummary.percentage=已完成%1$s个 还有 %2$s 个待完成
+hbui.AchievementsSummary.progress=进行中
+hbui.AchievementsSummary.rewards=奖励
+hbui.AchievementsSummary.summary=成就摘要
+hbui.AchievementsSummary.time=游戏时间
+hbui.BackButton.back=返回
+hbui.BackButton.narration.backButton=退出按钮
+hbui.Button.button=按钮
+hbui.CreateNewWorld.title=创造新世界
+hbui.ErrorModal.goBack=返回
+hbui.ErrorModal.goingBack=回到上一个屏幕…
+hbui.ErrorModal.title=发生错误
+hbui.MenuButton.menu=菜单
+hbui.MenuButton.toggle=切换菜单
+hbui.Modal.close=关闭模态框
+hbui.TabBar.open=开启
+hbui.TabBar.selected=选定
+hbui.TabBar.selectedTab=%1$s 中的 %2$s
+hbui.TabBar.tab=选项
+hbui.TextField.deselect=取消选定
+hbui.TextField.select=选择

@@ -1,0 +1,95 @@
+Language=Polski (PL)
+## organizować coś
+options.beta_text=Beta górny tekst
+short.setting=Szybki dostęp
+
+## pomoc do kontenera
+help.empty_help=Ups, ten interfejs jeszcze nie pomaga
+help.positive_effect=Pozytywny efekt
+help.negative_effect=Efekt negatywny
+help.effect_water=Mikstura osłabienia musi być zwykłą butelką na wodę
+help.anvil.tool=Narzędzie
+help.anvil.tool2=Sprzęt
+
+## tekst po najechaniu kursorem
+hover_text.all=all
+hover_text.drop=Upuść przedmiot
+hover_text.destroy=Zniszcz przedmioty
+hover_text.help=Pomoc/Przepis
+hover_text.default_mode=Tryb domyślny
+hover_text.auto_mode=Tryb automatyczny
+hover_text.drop_mode=Tryb upuszczania
+
+## powszechny problem
+cube_ui.faq_t1=Jak doświadczyć i korzystać z edukacyjnego interfejsu użytkownika?
+cube_ui.faq_1=Włącz interfejs kostki w światowych §Opcjach pakietu eResource§f, aby w pełni korzystać z interfejsu użytkownika
+cube_ui.faq_t2=Jak ustawić zawartość części interfejsu użytkownika?
+cube_ui.faq_2=W pakiecie zasobów kliknij kolejno ui/_global_variables.json, zmodyfikuj go zgodnie z monitami w pliku
+cube_ui.faq_t3=1.18.10 jakiś interfejs użytkownika nie działa?
+cube_ui.faq_3=Obecnie interfejs użytkownika jest w pełni objęty, zaleca się używanie starej wersji Minecrafta, aby doświadczyć pełnego zasięgu (część oryginalnego interfejsu użytkownika może być objęta oryginalnym interfejsem użytkownika, więc nie ma to żadnego efektu)
+cube_ui.faq_t4=Czy interfejs użytkownika jest open source?
+cube_ui.faq_4=Obecnie interfejs użytkownika jest open source, możesz dokonać dwóch zmian i użyć kodu źródłowego (zabronione jest komercyjne wykorzystanie, aby uniknąć niepotrzebnej odpowiedzialności prawnej)
+cube_ui.faq_t5=Jak zgłaszać błędy?
+cube_ui.faq_5=Powiedz autorowi w obszarze komentarzy pod zasobem, proszę przejść do wątku opinii w celu uzyskania opinii
+
+## Informacje o interfejsie użytkownika
+renewal.history=Zawartość odnowienia
+about.ui_pack=O interfejsie użytkownika
+about.sub_package=Pakiet rozszerzenia
+update_time=Czas aktualizacji
+about_ui.subpack_sorting=Sortowanie pakietów podrzędnych musi być wyższe niż sortowanie w interfejsie kostki, aby pakiet podrzędny działał całkowicie
+about_ui.no_subpack=Nie zainstalowano pakietu dodatkowego
+
+about_ui.ui_file=Bieżący plik interfejsu użytkownika:
+about_ui.default_ui=Klasyczny
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Brak odsprzedaży
+about_ui.precautions_2=● Zabronione do użytku komercyjnego
+about_ui.precautions_3=● Ponowne drukowanie jest zabronione bez pozwolenia
+about_ui.precautions_4=● Pozwala zintegrować dowolny obraz lub kod z pakietu zasobów z innymi paczkami zasobów lub paczkami ponownie zmodyfikowanymi do użytku osobistego, ale do publikacji wymagana jest zgoda autora
+
+subpack.no_name=Ten dodatek nie ma nazwy
+subpack.incompatibility=§cTen dodatek nie jest kompatybilny z obecną wersją
+
+about_ui.access_channel=Kanał dostępu do kostki UI:
+
+appearance.header_1=Tło
+appearance.header_2=Przycisk
+appearance.header_3=Czcionka
+appearance.header_4=Przełącznik
+appearance.header_5=Suwak
+
+cube.piracy=Aktualny interfejs użytkownika został zmodyfikowany, użyj oryginalnej wersji, aby w pełni korzystać z interfejsu Cube
+
+## panel ostrości
+hud.focus_menu.tab_1=Przycisk skrótu
+hud.focus_menu.tab_2=Klasa powiadomień
+hud.focus_menu.tab_3=Inne
+
+hud.personalization=Personalizacja
+hud.personalization.title=Menu ostrości
+hud.hide.player_position=Współrzędne
+hud.hide.title=Tytuł
+hud.hide.actionbar=Tytuł paska aktywności
+hud.switch=Przełącz pasek skrótów
+hud.boss=PŻ bossa
+hud.chat=czat
+hud.note=Wskazówka dotycząca bloku notatek
+hud.toggle.scb=Tablica wyników
+hud.toggle.effect=Efekt mikstury
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Nazwa przedmiotu
+
+hud.btn.hide_all=Ukryj hud
+hud.btn.hide_doll=Ukryj papierową lalkę
+
+## do czatowania
+tab.down=Następna treść
+tab.back=Poprzednia treść
+chat.up=Następna wiadomość
+chat.back=Ostatnia wiadomość
+
+## Inny interfejs
+command_block.empty_command_text=Wprowadź tutaj swoje polecenie
+seed_picker.header=Zdjęcie ma charakter poglądowy, nasiona mogą ulec zmianie wraz z aktualizacją wersji

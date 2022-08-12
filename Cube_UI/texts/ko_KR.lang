@@ -1,0 +1,95 @@
+Language=한국어 (대한민국)
+## 설정
+options.beta_text=베타 상단 텍스트
+바로 가기.setting=빠른 액세스
+
+## 컨테이너 도움말
+help.empty_help=아, 이 인터페이스는 아직 도움이 되지 않습니다
+help.positive_effect=긍정적인 효과
+help.negative_effect=부정 효과
+help.effect_water=약함의 물약은 일반 물병이어야 합니다.
+help.anvil.tool=도구
+help.anvil.tool2=장비
+
+## 호버 텍스트
+hover_text.all=모두
+hover_text.drop=드롭 아이템
+hover_text.destroy=아이템 파괴
+hover_text.help=도움말/레시피
+hover_text.default_mode=기본 모드
+hover_text.auto_mode=자동 모드
+hover_text.drop_mode=드롭 모드
+
+## 일반적인 문제
+cube_ui.faq_t1=교육용 UI를 어떻게 체험하고 사용하나요?
+cube_ui.faq_1=전체 UI 경험을 위해 세계 §eResource Pack Options§f에서 Cube UI 활성화
+cube_ui.faq_t2=UI 부분 콘텐츠 설정은 어떻게 하나요?
+cube_ui.faq_2=리소스 패키지에서 ui/_global_variables.json을 차례로 클릭하고 파일의 프롬프트에 따라 수정하십시오.
+cube_ui.faq_t3=1.18.10 이후 일부 UI가 효과가 없나요?
+cube_ui.faq_3=현재 UI가 완전히 가려져 있으므로 전체 적용을 경험하려면 이전 버전의 Minecraft를 사용하는 것이 좋습니다(원래 UI의 일부가 원래 컨셉 UI로 가려질 수 있으므로 효과가 없습니다)
+cube_ui.faq_t4=UI가 오픈 소스입니까?
+cube_ui.faq_4=현재 UI는 오픈 소스이므로 두 가지 변경 및 소스 코드 사용 가능(불필요한 법적 책임을 피하기 위해 상업적 사용 금지)
+cube_ui.faq_t5=버그 신고는 어떻게 하나요?
+cube_ui.faq_5=리소스 아래의 댓글 영역에 작성자에게 알려주십시오. 피드백을 위해 피드백 스레드로 이동하십시오.
+
+## UI 정보
+Renewal.history=리뉴얼 콘텐츠
+about.ui_pack=UI 정보
+about.sub_package=확장 패키지
+update_time=업데이트 시간
+about_ui.subpack_sorting=서브팩이 완전히 실행되려면 서브팩 정렬이 큐브 UI 정렬보다 높아야 합니다.
+about_ui.no_subpack=설치된 서브팩 없음
+
+about_ui.ui_file=현재 UI 파일:
+about_ui.default_ui=클래식
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● 재판매 금지
+about_ui.precautions_2=● 상업적 이용 금지
+about_ui.precautions_3=● 무단 전재 금지
+about_ui.precautions_4=● 리소스 팩의 모든 이미지 또는 코드를 다른 리소스 팩이나 개인 용도로 두 번째 수정된 리소스 팩에 통합할 수 있지만 게시하려면 작성자의 동의가 필요합니다.
+
+subpack.no_name=이 확장팩에는 이름이 없습니다
+subpack.incompatibility=§c이 확장 팩은 현재 버전과 호환되지 않습니다.
+
+about_ui.access_channel=큐브 UI 액세스 채널:
+
+appearance.header_1=배경
+appearance.header_2=버튼
+appearance.header_3=글꼴
+appearance.header_4=전환
+appearance.header_5=슬라이더
+
+cube.piracy=현재 UI가 수정되었습니다. Cube UI를 완벽하게 경험하시려면 정품을 사용하시기 바랍니다.
+
+## 포커스 패널
+hud.focus_menu.tab_1=단축키 버튼
+hud.focus_menu.tab_2=알림 클래스
+hud.focus_menu.tab_3=기타
+
+hud.personalization=개인화
+hud.personalization.title=포커스 메뉴
+hud.hide.player_position=좌표
+hud.hide.title=제목
+hud.hide.actionbar=활동 표시줄 제목
+hud.switch=단축바 전환
+hud.boss=보스 HP
+hud.chat=채팅
+hud.note=노트 블록 힌트
+hud.toggle.scb=스코어보드
+hud.toggle.effect=물약 효과
+hud.toggle.hotbar=핫바
+hud.toggle.item_name=아이템 이름
+
+hud.btn.hide_all=허드 숨기기
+hud.btn.hide_doll=종이 인형 숨기기
+
+## 채팅
+tab.down=다음 콘텐츠
+tab.back=이전 내용
+chat.up=다음 메시지
+chat.back=마지막 메시지
+
+## 기타 인터페이스
+command_block.empty_command_text=여기에 명령을 입력하십시오
+seed_picker.header=사진은 참고용이며 버전 업데이트에 따라 시드가 변경될 수 있습니다.

@@ -1,0 +1,95 @@
+Language=日本語 (日本)
+## 設定
+options.beta_text=ベータトップテキスト
+ショートカット.setting=クイックアクセス
+
+##コンテナヘルプ
+help.empty_help =おっと、このインターフェースはまだ役に立ちません
+help.positive_effect=正の効果
+help.negative_effect=負の効果
+help.effect_water=弱点のポーションは通常のウォーターボトルでなければなりません
+help.anvil.tool=ツール
+help.anvil.tool2=機器
+
+##ホバーテキスト
+hover_text.all = all
+hover_text.drop=ドロップアイテム
+hover_text.destroy=アイテムを破棄します
+hover_text.help=ヘルプ/レシピ
+hover_text.default_mode=デフォルトモード
+hover_text.auto_mode=自動モード
+hover_text.drop_mode=ドロップモード
+
+##一般的な問題
+cube_ui.faq_t1 =教育用UIを体験して使用する方法は？
+cube_ui.faq_1 =完全なUIエクスペリエンスのために、世界の§eResourcePackOptions§fでCubeUIを有効にします
+cube_ui.faq_t2 = UIパーツのコンテンツを設定する方法は？
+cube_ui.faq_2 =リソースパッケージで、ui / _global_variables.jsonを順番にクリックし、ファイルのプロンプトに従って変更してください
+cube_ui.faq_t3 = 1.18.10の後、一部のUIは効果がありませんか？
+cube_ui.faq_3 =現在UIは完全にカバーされていますが、古いバージョンのMinecraftを使用して完全にカバーすることをお勧めします（元のUIの一部は元のコンセプトUIでカバーされている可能性があるため、効果はありません）
+cube_ui.faq_t4 = UIはオープンソースですか？
+cube_ui.faq_4 =現在、UIはオープンソースです。2つの変更を加えてソースコードを使用できます（不必要な法的責任を回避するために商用利用は禁止されています）
+cube_ui.faq_t5 =バグを報告する方法は？
+cube_ui.faq_5 =リソースの下のコメント領域で作成者に伝えてください。フィードバックについては、フィードバックスレッドに移動してください。
+
+##UIについて
+renewal.history=更新コンテンツ
+about.ui_pack=UIについて
+about.sub_package=拡張パッケージ
+update_time=更新時間
+about_ui.subpack_sorting =サブパックを完全に実行するには、サブパックの並べ替えをキューブUIの並べ替えよりも高くする必要があります。
+about_ui.no_subpack=サブパックがインストールされていません
+
+about_ui.ui_file =現在のUIファイル：
+about_ui.default_ui=クラシック
+about_ui.default_os = OS：
+
+about_ui.precautions_1=●再販なし
+about_ui.precautions_2=●商用利用は禁止されています
+about_ui.precautions_3=●無断転載を禁じます
+about_ui.precautions_4 =●リソースパック内の任意の画像またはコードを、個人使用のために他のリソースパックまたは2番目に変更されたリソースパックに統合できますが、公開するには作成者の同意が必要です
+
+subpack.no_name=この拡張パックには名前がありません
+subpack.incompatibility=§cこの拡張パックは現在のバージョンと互換性がありません
+
+about_ui.access_channel =キューブUIアクセスチャネル：
+
+appearance.header_1=背景
+appearance.header_2=ボタン
+appearance.header_3=フォント
+appearance.header_4=スイッチ
+appearance.header_5=スライダー
+
+cube.piracy =現在のUIが変更されました。本物のバージョンを使用して、CubeUIを十分に体験してください。
+
+##フォーカスパネル
+hud.focus_menu.tab_1=ショートカットボタン
+hud.focus_menu.tab_2=通知クラス
+hud.focus_menu.tab_3=その他
+
+hud.personalization=パーソナライゼーション
+hud.personalization.title=フォーカスメニュー
+hud.hide.player_position=座標
+hud.hide.title=タイトル
+hud.hide.actionbar=アクティビティバーのタイトル
+hud.switch=スイッチショートカットバー
+hud.boss=ボスHP
+hud.chat = chat
+hud.note=ノートブロックヒント
+hud.toggle.scb=スコアボード
+hud.toggle.effect=ポーション効果
+hud.toggle.hotbar = Hotbar
+hud.toggle.item_name=アイテム名
+
+hud.btn.hide_all=hudを非表示にする
+hud.btn.hide_doll=紙人形を隠す
+
+##チャットする
+tab.down=次のコンテンツ
+tab.back=前のコンテンツ
+chat.up=次のメッセージ
+chat.back=最後のメッセージ
+
+##その他のインターフェース
+command_block.empty_command_text=ここにコマンドを入力してください
+seed_picker.header =画像は参照用であり、シードはバージョンの更新に伴って変更される可能性があります

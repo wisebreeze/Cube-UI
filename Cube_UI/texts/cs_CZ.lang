@@ -1,0 +1,86 @@
+Language=Čeština (Česká republika)
+## založit
+options.beta_text=Beta verze horní text
+shortcut.setting=Rychlý přístup
+
+## kontejneru
+help.empty_help=Jejda, toto rozhraní zatím nepomáhá
+help.positive_effect=Pozitivní efekt
+help.negative_effect=Negativní efekt
+help.effect_water=Lektvar slabosti musí být normální láhev s vodou
+help.anvil.tool=Nástroj
+help.anvil.tool2=Zařízení
+
+## běžný problém
+cube_ui.faq_t1=Jak zažít a používat výukové uživatelské rozhraní?
+cube_ui.faq_1=Povolte uživatelské rozhraní Cube ve světových §eResource Pack Options§f pro plné využití uživatelského rozhraní
+cube_ui.faq_t2=Jak nastavit obsah části uživatelského rozhraní?
+cube_ui.faq_2=V balíčku zdrojů postupně klikněte na ui/_global_variables.json, upravte jej prosím podle pokynů v souboru
+cube_ui.faq_t3=1.18.10 nemá některé uživatelské rozhraní žádný účinek?
+cube_ui.faq_3=V současné době je uživatelské rozhraní plně pokryto, pro plné pokrytí se doporučuje používat starou verzi Minecraftu (část původního uživatelského rozhraní může být pokryta původním uživatelským rozhraním konceptu, takže to nemá žádný vliv)
+cube_ui.faq_t4=Je uživatelské rozhraní open source?
+cube_ui.faq_4=V současné době je uživatelské rozhraní open source, můžete provést dvě změny a použít zdrojový kód (komerční použití je zakázáno, aby se předešlo zbytečné právní odpovědnosti)
+cube_ui.faq_t5=Jak hlásit chyby?
+cube_ui.faq_5=Sdělte to autorovi v oblasti komentáře pod zdrojem, přejděte prosím do vlákna zpětné vazby pro zpětnou vazbu
+
+## O uživatelském rozhraní
+renewal.history=Obnovení obsahu
+about.ui_pack=O uživatelském rozhraní
+about.sub_package=Rozšiřující balíček
+update_time=Čas aktualizace
+about_ui.subpack_sorting=Řazení dílčích balíčků musí být vyšší než třídění uživatelského rozhraní Cube, aby dílčí balíček zcela běžel
+about_ui.no_subpack=Není nainstalován žádný dílčí balíček
+
+about_ui.ui_file=Aktuální soubor uživatelského rozhraní:
+about_ui.default_ui=Klasické
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Žádný další prodej
+about_ui.precautions_2=● Zakázáno pro komerční použití
+about_ui.precautions_3=● Opakovaný tisk je bez povolení zakázán
+about_ui.precautions_4=● Umožňuje integrovat jakýkoli obrázek nebo kód v balíčku zdrojů do jiných balíčků zdrojů nebo druhých upravených balíčků zdrojů pro osobní použití, ale pro publikování je vyžadován souhlas autora
+
+subpack.no_name=Tento rozšiřující balíček nemá žádné jméno
+subpack.incompatibility=§cTento rozšiřující balíček není kompatibilní s aktuální verzí
+
+about_ui.access_channel=Přístupový kanál uživatelského rozhraní Cube:
+
+vzhled.header_1=Pozadí
+vzhled.header_2=Tlačítko
+vzhled.header_3=Písmo
+vzhled.header_4=Přepnout
+vzhled.header_5=Posuvník
+
+cube.piracy=Aktuální uživatelské rozhraní bylo upraveno, pro plné využití uživatelského rozhraní Cube použijte prosím originální verzi
+
+## panel zaostření
+hud.focus_menu.tab_1=Tlačítko zástupce
+hud.focus_menu.tab_2=Třída oznámení
+hud.focus_menu.tab_3=Jiné
+
+hud.personalization=Personalizace
+hud.personalization.title=Nabídka zaměření
+hud.hide.player_position=Souřadnice
+hud.hide.title=Titul
+hud.hide.actionbar=Název panelu aktivity
+hud.switch=Přepnout panel zástupců
+hud.boss=Šéf HP
+hud.chat=chat
+hud.note=Poznámka Bloková rada
+hud.toggle.scb=Výsledková tabulka
+hud.toggle.effect=Efekt lektvaru
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Název položky
+
+hud.btn.hide_all=Skrýt hud
+hud.btn.hide_doll=Skrýt papírovou panenku
+
+## chatovat
+tab.down=Další obsah
+tab.back=Předchozí obsah
+chat.up=Další zpráva
+chat.back=Poslední zpráva
+
+## Jiné rozhraní
+command_block.empty_command_text=Sem zadejte svůj příkaz
+seed_picker.header=Obrázek je pouze orientační, seed se může s aktualizací verze změnit

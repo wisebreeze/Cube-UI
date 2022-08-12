@@ -1,0 +1,95 @@
+Language=Svenska (Sverige)
+## uppstart
+options.beta_text=Beta-topptext
+shortcut.setting=Snabb åtkomst
+
+## containerhjälp
+help.empty_help=Hoppsan, det här gränssnittet hjälper inte än
+help.positive_effect=Positiv effekt
+help.negative_effect=Negativ effekt
+help.effect_water=Potion of Weakness måste vara en vanlig vattenflaska
+help.anvil.tool=Verktyg
+help.anvil.tool2=Utrustning
+
+## sväva text
+hover_text.all=alla
+hover_text.drop=Släpp objekt
+hover_text.destroy=Förstör objekt
+hover_text.help=Hjälp/recept
+hover_text.default_mode=Standardläge
+hover_text.auto_mode=Autoläge
+hover_text.drop_mode=Släppläge
+
+## vanligt problem
+cube_ui.faq_t1=Hur man upplever och använder det pedagogiska användargränssnittet?
+cube_ui.faq_1=Aktivera Cube UI i världens §eResource Pack Options§f för den fullständiga UI-upplevelsen
+cube_ui.faq_t2=Hur ställer jag in UI-delens innehåll?
+cube_ui.faq_2=I resurspaketet, klicka på ui/_global_variables.json i tur och ordning, vänligen ändra det enligt uppmaningarna i filen
+cube_ui.faq_t3=1.18.10, har vissa användargränssnitt ingen effekt?
+cube_ui.faq_3=För närvarande är gränssnittet helt täckt, det rekommenderas att använda den gamla versionen av Minecraft för att uppleva den fullständiga täckningen (en del av det ursprungliga gränssnittet kan täckas av det ursprungliga konceptets gränssnitt, så det har ingen effekt)
+cube_ui.faq_t4=Är UI öppen källkod?
+cube_ui.faq_4=För närvarande är gränssnittet öppen källkod, du kan göra två ändringar och använda källkoden (kommersiell användning är förbjuden för att undvika onödigt juridiskt ansvar)
+cube_ui.faq_t5=Hur rapporterar jag fel?
+cube_ui.faq_5=Berätta för författaren i kommentarsfältet under resursen, flytta till feedbacktråden för feedback
+
+## Om UI
+renewal.history=Förnyelseinnehåll
+about.ui_pack=Om UI
+about.sub_package=Tilläggspaket
+update_time=Uppdateringstid
+about_ui.subpack_sorting=Sorteringen av underpaketet måste vara högre än sorteringen i Cube UI för att underpaketet ska köras helt
+about_ui.no_subpack=Inget underpaket installerat
+
+about_ui.ui_file=Aktuell UI-fil:
+about_ui.default_ui=Klassisk
+about_ui.default_os=OS:
+
+about_ui.precautions_1=● Ingen återförsäljning
+about_ui.precautions_2=● Förbjudet för kommersiellt bruk
+about_ui.precautions_3=● Omtryckning är förbjuden utan tillstånd
+about_ui.precautions_4=● Tillåter att alla bilder eller koder i resurspaketet integreras i andra resurspaket eller andra modifierade resurspaket för personligt bruk, men författarens samtycke krävs för publicering
+
+subpack.no_name=Detta expansionspaket har inget namn
+subpack.incompatibility=§cDetta expansionspaket är inte kompatibelt med den aktuella versionen
+
+about_ui.access_channel=Cube UI åtkomstkanal:
+
+appearance.header_1=Bakgrund
+appearance.header_2=Knapp
+appearance.header_3=Teckensnitt
+appearance.header_4=Byt
+appearance.header_5=Slider
+
+cube.piracy=Det aktuella användargränssnittet har ändrats, använd den äkta versionen för att uppleva Cube-gränssnittet fullt ut
+
+## fokuspanel
+hud.focus_menu.tab_1=Genvägsknapp
+hud.focus_menu.tab_2=Meddelandeklass
+hud.focus_menu.tab_3=Annat
+
+hud.personalization=Anpassning
+hud.personalization.title=Fokusmeny
+hud.hide.player_position=Koordinater
+hud.hide.title=Titel
+hud.hide.actionbar=Aktivitetsfältets titel
+hud.switch=Byt genvägsfält
+hud.boss=Boss HP
+hud.chat=chatt
+hud.note=Tips för anteckningsblock
+hud.toggle.scb=Resultattavla
+hud.toggle.effect=Potioneffekt
+hud.toggle.hotbar=Hotbar
+hud.toggle.item_name=Artikelnamn
+
+hud.btn.hide_all=Göm hud
+hud.btn.hide_doll=Göm pappersdocka
+
+## att chatta med
+tab.down=Nästa innehåll
+tab.back=Tidigare innehåll
+chat.up=Nästa meddelande
+chat.back=Sista meddelande
+
+## Annat gränssnitt
+command_block.empty_command_text=Ange ditt kommando här
+seed_picker.header=Bilden är endast för referens, fröet kan ändras med uppdateringen av versionen
