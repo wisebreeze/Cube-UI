@@ -1,0 +1,70 @@
+{
+  "namespace": "compcreate",
+
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 184, 166 ],
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  { "top_half@compcreate.top_half": {} },
+                  { "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "player_renderer@cube_ui_common.player_renderer": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} } // Gamepad tool tips
+    ]
+  },
+
+  "right_panel": {
+    "type": "panel",
+    "controls": [
+      { "title_label@compcreate_pocket.title_label": {} },
+      { "input@compcreate_pocket.input_grid": {} },
+      { "output@compcreate_pocket.output_slot": {} },
+      {
+        "output_label@compcreate.output_label": {
+          "layer": 100,
+          "offset": [ 0, 0 ],
+          "$text_alignment": "center",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      { "arrow@compcreate_pocket.arrow": {} },
+      { "background@compcreate_pocket.input_background": {} }
+    ]
+  },
+
+  "compound_creator": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "$screen_bg_content": "common.screen_background",
+    "$title": "compoundcreator.title",
+    "$right_panel": "compcreate.right_panel",
+    "$right_anchor": "top_right",
+    "$allow_exchange": false,
+    "$container_image": "textures/blocks/compound_creator_side_a",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "compcreate.content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

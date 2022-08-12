@@ -1,0 +1,154 @@
+{
+  "furnace_content": {
+    "type": "panel",
+    "controls": [
+      {"furnace_main_content@furnace_main_content": {}}
+    ]
+  },
+
+  "furnace_main_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "vertical_panel": {
+          "type": "panel",
+          "size": [ 32, "100%" ],
+          "controls": [
+            {
+              "vertical_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [ 32, "100%c" ],
+                "controls": [
+                  {
+                    "input_panel": {
+                      "type": "panel",
+                      "size": [ 32, 45 ],
+                      "controls": [
+                        {
+                          "input_label@furnace_pocket.input_label": {
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                          }
+                        },
+                        {
+                          "ingredient_item@common.pocket_ui_large_container_item": {
+                            "anchor_from": "bottom_middle",
+                            "anchor_to": "bottom_middle",
+                            "$item_collection_name": "furnace_ingredient_items"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {"panel@cube_ui_common.v_panel":{}},
+                  {
+                    "flame_panel": {
+                      "type": "panel",
+                      "size": [13, 13],
+                      "controls": [
+                        {
+                          "flame_empty@furnace.flame_empty_image": {
+                            "offset": [ 8, 0 ],
+                            "size": [ 13, 13 ]
+                          }
+                        },
+                        {
+                          "flame_full@furnace.flame_full_image": {
+                            "offset": [ 8, 0 ],
+                            "layer": 3,
+                            "size": [ 13, 13 ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {"panel_1@cube_ui_common.v_panel":{}},
+                  {
+                    "fuel_panel": {
+                      "type": "panel",
+                      "size": [ 32, 45 ],
+                      "controls": [
+                        {
+                          "fuel_label@furnace_pocket.fuel_label": {
+                            "anchor_from": "bottom_middle",
+                            "anchor_to": "bottom_middle"
+                          }
+                        },
+                        {
+                          "fuel_item@common.pocket_ui_large_container_item": {
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle",
+                            "$item_collection_name": "furnace_fuel_items"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {"panel_1@cube_ui_common.h_panel":{}},
+      {
+        "arrow_panel": {
+          "type": "panel",
+          "size": [ 22, "100%" ],
+          "controls": [
+            { "empty_arrow@furnace_pocket.empty_arrow": {} },
+            { "full_arrow@furnace_pocket.full_arrow": { "layer": 2 } }
+          ]
+        }
+      },
+      {"panel_2@cube_ui_common.h_panel":{}},
+      {
+        "output_input_panel": {
+          "type": "panel",
+          "size": [ 32, "100%" ],
+          "controls": [
+            {
+              "output_panel": {
+                "type": "panel",
+                "size": [ 32, 54 ],
+                "controls": [
+                  {
+                    "result_label@furnace_pocket.result_label": {
+                      "anchor_from": "top_middle",
+                      "anchor_to": "top_middle"
+                    }
+                  },
+                  {
+                    "result_name_label@furnace_pocket.result_name_label": {
+                      "anchor_from": "bottom_middle",
+                      "anchor_to": "top_middle",
+                      "text": "#text",
+                      "text_alignment": "center",
+                      "size": [ "200%", "default" ],
+                      "offset": [ 0, "default-10px" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#output_name",
+                          "binding_name_override": "#text"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "output_item@common.pocket_ui_large_container_item": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "$item_collection_name": "furnace_output_items"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "generic_label": {
+    "shadow": false
+  },
+  "enchanting_book_contents_panel/player_level_label": {"font_type": "$global_main_font"},
+  "error_text_panel/item_text_label": {
+    "layer": 100
+  },
+  "enchant_button_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "33% - 5px" ],
+    "controls": [
+      {
+        "unselectable_button@enchanting_pocket.unselectable_button": {
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      },
+      {
+        "selectable_button@enchanting_pocket.selectable_button": {
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      },
+      {
+        "dust@enchanting.dust_template": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [ 13, 11 ],
+          "offset": [ 1, 0 ],
+          "layer": 2
+        }
+      },
+      {
+        "rune_text@enchanting_pocket.enchant_text_runes": {
+          "layer": 2,
+          "offset": [ 20, 2 ]
+        }
+      },
+      { "highlight@enchanting_pocket.show_highlighted_slot_control": { "layer": 3 } }
+    ]
+  },
+  "show_highlighted_slot_control": {
+    "type": "image",
+    "texture": "textures/ui/white_background",
+    "alpha": 0.4,
+    "fill": true,
+    "color": "$global_button_pressed_color"
+  },
+  "new_enchanting_confirm_button@common.button": {
+    "size": [
+      "100%",
+      30
+    ],
+    "focus_enabled": false,
+    "$pressed_button_name": "button.enchant",
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "alpha": 0.4,
+          "fill": true,
+          "color": "$global_button_default_color"
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "alpha": 0.4,
+          "fill": true,
+          "color": "$global_button_hover_color"
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "texture": "textures/ui/white_background",
+          "alpha": 0.4,
+          "fill": true,
+          "color": "$global_button_pressed_color"
+        }
+      },
+      {
+        "arrow_active": {
+          "type": "image",
+          "texture": "textures/ui/arrow_active",
+          "size": [
+            22,
+            15
+          ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#active_enchant",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "arrow_inactive": {
+          "type": "image",
+          "texture": "textures/ui/arrow_inactive",
+          "size": [
+            22,
+            15
+          ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#inactive_enchant",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "input_item_renderer@enchanting_pocket.item_renderer": {
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "offset": [
+            5,
+            0
+          ],
+          "property_bag": {
+            "#filtered_light_multiplier": 0.5
+          },
+          "bindings": [
+            {
+              "binding_name": "#input_item_id",
+              "binding_name_override": "#item_id_aux"
+            },
+            {
+              "binding_name": "#inactive_enchant",
+              "binding_name_override": "#disabled_filter_visible"
+            }
+          ]
+        }
+      },
+      {
+        "output_item_renderer@enchanting_pocket.item_renderer": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [
+            -5,
+            0
+          ],
+          "layer": 1,
+          "bindings": [
+            {
+              "binding_name": "#output_item_id",
+              "binding_name_override": "#item_id_aux"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "enchanting_contents_panel": {
+    "type": "stack_panel",
+    "size": [
+      "85%",
+      "95%"
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "fill1": {
+          "type": "panel",
+          "size": [
+            0,
+            "fill"
+          ]
+        }
+      },
+      {
+        "enchanting_book_panel@enchanting_pocket.enchanting_book_panel": {}
+      },
+      {
+        "pad1": {
+          "type": "panel",
+          "size": [
+            0,
+            4
+          ]
+        }
+      },
+      {
+        "enchanting_slots_and_selection@enchanting_pocket.enchanting_slots_and_selection": {}
+      },
+      {
+        "pad2": {
+          "type": "panel",
+          "size": [
+            0,
+            4
+          ]
+        }
+      },
+      {
+        "enchanting_confirm_panel@enchanting_pocket.enchanting_confirm_panel": {}
+      },
+      {
+        "fill2": {
+          "type": "panel",
+          "size": [
+            0,
+            "fill"
+          ]
+        }
+      }
+    ]
+  },
+  "enchanting_bottom_contents": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "offset": [
+      0,
+      "-3%"
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "enchanting_book_panel@enchanting_book_panel": {}
+      },
+      {
+        "enchanting_confirm_panel@confirm_panels": {}
+      }
+    ]
+  },
+  "confirm_panels": {
+    "type": "panel",
+    "size": [
+      "100%c",
+      44
+    ],
+    "controls": [
+      {
+        "panel@enchanting_confirm_panel": {}
+      }
+    ]
+  },
+  "enchanting_confirm_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      30
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "confirm@enchanting_pocket.new_enchanting_confirm_button": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      },
+      {
+        "enchantment_hint_text@enchanting_pocket.generic_label": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "text": "#text",
+          "bindings": [
+            {
+              "binding_name": "#enchant_hint",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "enchanting_book_panel": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      0
+    ]
+  }
+}

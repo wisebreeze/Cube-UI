@@ -1,0 +1,38 @@
+{
+  "clipboard_button@common_buttons.light_content_button": {
+    "size": [ 30, 20 ],
+    "$pressed_button_name": "button.copy_to_clipboard",
+    "$button_content": "content_log_history.clipboard_icon_wrapper"
+  },
+
+  "content_log_history_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "content_log_history_dialog@cube_ui_common.headbar_button_screen": {
+          "$title": "contentlog.history.title",
+          
+          "$main_screen": "content_log_history.main_stack_panel",
+          "$screen_type": "stack_panel",
+          "$button_panel": "content_log_history.clipboard_button"
+        }
+      }
+    ]
+  },
+
+  "content_log_history_screen": {
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "content_log_history.content_log_history_panel",
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

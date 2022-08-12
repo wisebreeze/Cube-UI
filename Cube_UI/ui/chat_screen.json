@@ -1,0 +1,43 @@
+{
+  "chat_screen": {
+    "close_on_player_hurt": "$chat_close_on_player_hurt",
+    "$screen_content": "chat.chat_screen_content",
+    "$screen_bg_content": "common.empty_panel",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "chat_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "messages_panel@chat_messages.messages_scrolling_panel": {} },// 聊天信息
+      { "bottom_panel@chat_bottom_bar.chat_bottom_panel": { "layer": 2 } },// 底部面板
+      { "headbar@cube_ui_common.headbar": {"$title": "#chat_title_text","layer": 1} },// 顶部面板
+      { "headbar_content@chat_headbar.chat_header_content_area": {} },// 顶部面板内容
+      { "autocomplete_commands_panel@chat_commands.commands_panel": { "layer": 3 } },// 命令显示
+      { "host_main_panel@chat_host_options.host_panel": { "layer": 4 } },// 命令填充
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "toast_message": "@chat_headbar.popup_toast"
+          }
+        }
+      },
+      { "popup_factory@chat_set.popup_factory": {} },// 聊天设置
+      // 网易独有特性
+      { "message_button@netease_chat.message_button": {} },// 消息按钮
+      { "player_tips_factory": {"type": "factory","control_ids": {"player_tips": "@player_tips.player_panel"}}}// 聊天管理
+    ]
+  }
+}

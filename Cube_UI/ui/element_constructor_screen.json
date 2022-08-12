@@ -1,0 +1,82 @@
+{
+  "namespace": "elemconstruct",
+
+  "slider_background": {
+    "texture": "textures/ui/white_background",
+    "color": "$global_slider_background_color",
+    "alpha": 0,
+    "fill": true
+  },
+
+  "slider_background_hover@elemconstruct.slider_background": {
+    "texture": "textures/ui/white_background",
+    "color": "$global_slider_background_hover_color",
+    "alpha": 0,
+    "fill": true
+  },
+
+  "slider_progress": {
+    "texture": "textures/ui/white_background",
+    "alpha": "$global_slider_background_alpha",
+    "fill": true,
+    "color": "$slider_progress_color"
+  },
+
+  "chemistry_slider_button_hover_layout@common.slider_button_hover_layout": {
+    "texture": "textures/ui/white_background"
+  },
+
+  "content": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 250, 220 ],
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  {"inventory@elemconstruct.inventory_panel": {}},
+                  {"result_panel@elemconstruct.result_panel": {}},
+                  {"particle_panel@elemconstruct.particle_panel": {} }
+                ]
+              }
+            },
+            { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
+          ]
+        }
+      },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} } // Gamepad tool tips
+    ]
+  },
+
+  "right_panel": {
+    "type": "panel",
+    "controls": [
+      { "particle_panel@elemconstruct_pocket.particle_panel": {"offset": [ 2, 25 ]} },
+      { "result_panel@elemconstruct_pocket.result_panel": {"offset": [ -4, -5 ]} }
+    ]
+  },
+
+  "element_constructor": {
+    "close_on_player_hurt": "$ui_close_on_player_hurt",
+    "$screen_bg_content": "common.screen_background",
+    "$title": "elementconstructor.title",
+    "$container_image": "textures/blocks/element_constructor_front",
+    "$right_anchor": "top_right",
+    "$allow_exchange": false,
+    "$right_panel": "elemconstruct.right_panel",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "elemconstruct.content"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

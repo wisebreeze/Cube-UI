@@ -1,0 +1,76 @@
+{
+  "furnace_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50% - 12px" ],
+    "offset": [ 0, 7 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "input@furnace_input_panel": {} },
+      {
+        "furnace_arrow_empty_image@furnace_arrow_empty_image": {
+          "anchor_to": "center",
+          "anchor_from": "center"
+        }
+      },
+      {
+        "furnace_arrow_full_image@furnace_arrow_full_image": {
+          "anchor_to": "center",
+          "anchor_from": "center"
+        }
+      },
+      { "output@furnace_output_panel": {} }
+    ]
+  },
+
+  "furnace_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 11
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "screen@cube_ui_common.container_common_screen": {
+                "$inventory_controls": [
+                  { "furnace_panel_top_half@furnace.furnace_panel_top_half": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+  "furnace_screen": {
+    "$close_on_player_hurt|default": true,
+    "$container_image": "textures/blocks/furnace_front_off",
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$right_panel": "furnace_pocket.furnace_content",
+    "$help_panel": "furnace_help.furnace_help",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnace.furnace_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "cube_container_common.container_screen"
+      }
+    ]
+  }
+}

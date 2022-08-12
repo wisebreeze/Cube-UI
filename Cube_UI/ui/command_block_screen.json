@@ -1,0 +1,564 @@
+{
+  ////////////////////////////
+  //// dropdown Content
+  ////////////////////////////
+  "blocktype_dropdown_content": {
+    "controls": [
+      {
+        "command_impulse_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_impulse_mode",
+          "$radio_text": "commandBlockScreen.blockType.impulse",
+          "$main_texture": "textures/blocks/command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_unconditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_chain_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_chain_mode",
+          "$radio_text": "commandBlockScreen.blockType.chain",
+          "$main_texture": "textures/blocks/chain_command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_unconditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_repeat_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_repeat_mode",
+          "$radio_text": "commandBlockScreen.blockType.repeat",
+          "$main_texture": "textures/blocks/repeating_command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_unconditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_impulse_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_impulse_mode",
+          "$radio_text": "commandBlockScreen.blockType.impulse",
+          "$main_texture": "textures/blocks/command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_conditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_chain_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_chain_mode",
+          "$radio_text": "commandBlockScreen.blockType.chain",
+          "$main_texture": "textures/blocks/chain_command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_conditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_repeat_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["33.3%","100%"],
+          "$toggle_state_binding_name": "#command_repeat_mode",
+          "$radio_text": "commandBlockScreen.blockType.repeat",
+          "$main_texture": "textures/blocks/repeating_command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_conditional_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "block_type_panel@settings_common.option_dropdown": {
+    "$focus_override_right": "command_block_commands_text",
+    "$button_content": "command_block.icon_dropdown_toggle_button_state_content",
+    "$options_dropdown_label_color_binding_type": "global",
+    "$options_dropdown_label_color_binding": "#block_type_dropdown_label_color_binding",
+    "$option_label": "commandBlockScreen.blockType",
+    "$dropdown_main_controls": "command_block.blocktype_dropdown_content",
+    "$dropdown_area": "left_scrolling_panel",
+    "$dropdown_name": "block_type_dropdown",
+    "$option_enabled_binding_name": "#block_type_dropdown_enabled",
+    "$options_dropdown_toggle_label_binding": "#block_type_dropdown_toggle_label",
+    "$dropdown_scroll_content_size": [ "100%", "230%" ],
+    "$dropdown_mode": "all_type_button"
+  },
+
+  "condition_dropdown_content": {
+    "controls": [
+      {
+        "command_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_conditional_mode",
+          "$radio_text": "commandBlockScreen.condition.conditional",
+          "$main_texture": "textures/blocks/command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_impulse_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "command_unconditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_unconditional_mode",
+          "$radio_text": "commandBlockScreen.condition.unconditional",
+          "$main_texture": "textures/blocks/command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_impulse_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chain_command_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_conditional_mode",
+          "$radio_text": "commandBlockScreen.condition.conditional",
+          "$main_texture": "textures/blocks/chain_command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_chain_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "chain_command_unconditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_unconditional_mode",
+          "$radio_text": "commandBlockScreen.condition.unconditional",
+          "$main_texture": "textures/blocks/chain_command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_chain_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "repeat_command_conditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_conditional_mode",
+          "$radio_text": "commandBlockScreen.condition.conditional",
+          "$main_texture": "textures/blocks/repeating_command_block_conditional_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_repeat_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "repeat_command_unconditional_mode@cube_ui_common.radio_with_label": {
+          "size": ["50%","100%"],
+          "$toggle_state_binding_name": "#command_unconditional_mode",
+          "$radio_text": "commandBlockScreen.condition.unconditional",
+          "$main_texture": "textures/blocks/repeating_command_block_side_mipmap",
+          "bindings": [
+            {
+              "binding_name": "#command_repeat_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "condition_mode_panel@settings_common.option_dropdown": {
+    "$focus_override_right":  "show_output_toggle",
+    "$option_label": "commandBlockScreen.condition",
+    "$dropdown_mode": "all_type_button",
+    "$dropdown_main_controls": "command_block.condition_dropdown_content",
+    "$dropdown_area": "left_scrolling_panel",
+    "$dropdown_name": "condition_dropdown",
+    "$option_enabled_binding_name": "#condition_dropdown_enabled",
+    "$options_dropdown_toggle_label_binding": "#condition_dropdown_toggle_label",
+    "$dropdown_scroll_content_size": [ "100%", "200%" ]
+  },
+
+  "redstone_dropdown_content": {
+    "controls": [
+      {
+        "command_always_on_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#command_always_on_mode",
+          "$radio_text": "commandBlockScreen.redstone.always_on"
+        }
+      },
+      {
+        "command_needs_redstone_mode@cube_ui_common.radio_with_label": {
+          "$toggle_state_binding_name": "#command_needs_redstone_mode",
+          "$radio_text": "commandBlockScreen.redstone.needs_redstone"
+        }
+      }
+    ]
+  },
+
+  "redstone_mode_panel@settings_common.option_dropdown": {
+    "$focus_override_right":  "show_output_toggle",
+    "$dropdown_mode": "text_button",
+    "$option_label": "commandBlockScreen.redstone",
+    "$dropdown_main_controls": "command_block.redstone_dropdown_content",
+    "$dropdown_area": "left_scrolling_panel",
+    "$dropdown_name": "redstone_dropdown",
+    "$option_enabled_binding_name": "#redstone_dropdown_enabled"
+  },
+////////////////
+  "right_scroll_panel_content": {
+    "modifications": [
+      {
+        "control_name": "self_label",
+        "operation": "remove"
+      },
+      {
+        "control_name": "nearest_player_label",
+        "operation": "remove"
+      },
+      {
+        "control_name": "nearest_player_label_offset",
+        "operation": "remove"
+      },
+      {
+        "control_name": "random_player_label",
+        "operation": "remove"
+      },
+      {
+        "control_name": "random_player_label_offset",
+        "operation": "remove"
+      },
+      {
+        "control_name": "all_players_label",
+        "operation": "remove"
+      },
+      {
+        "control_name": "all_players_label_offset",
+        "operation": "remove"
+      },
+      {
+        "control_name": "all_entities_label",
+        "operation": "remove"
+      },
+      {
+        "control_name": "all_entities_label_offset",
+        "operation": "remove"
+      }
+    ]
+  },
+
+  "left_scroll_panel_content/content_stack_panel/offset2/hover_note_text": {
+    "max_length": "$text_box_max_length",
+    "enabled_newline": true
+  },
+
+  "headbar": {
+    "type": "image",
+    "layer": 20,
+    "alpha": 0.8,
+    "size": [ "100%", 20 ],
+    "color": "$global_headbar_color",
+    "texture": "textures/ui/white_background",
+    "fill": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$title|default": "$container_title",
+    "controls": [
+      {
+        "container_image": {
+          "type": "image",
+          "size": [ 16, 16 ],
+          "offset": [ 2, 0 ],
+          "layer": 21,
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_name": "#block_type_icon_texture",
+              "binding_name_override": "#texture",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "mode1_title@command_block.headbar_title": {"$visible_binding": "#command_impulse_mode","$title": "tile.command_block.name"}
+      },
+      {
+        "mode2_title@command_block.headbar_title": {"$visible_binding": "#command_chain_mode","$title": "tile.chain_command_block.name"}
+      },
+      {
+        "mode3_title@command_block.headbar_title": {"$visible_binding": "#command_repeat_mode","$title": "tile.repeating_command_block.name"}
+      },
+      {
+        "close_button_holder": {
+          "type": "panel",
+          "controls": [
+            {
+              "close@common.close_button": {
+                "layer": 2,
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [0,0],
+                "bindings": [
+                  {
+                    "binding_name": "#close_button_visible_binding_name",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            {
+              "minimze@common.close_button": {
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
+                "offset": [0,0],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "command_block.input_minimize",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "command_block.input_minimize",
+                    "mapping_type": "focused"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@close_button_panel": {
+                      "$close_button_texture": "textures/ui/minimize"
+                    }
+                  },
+                  {
+                    "hover@close_button_panel": {
+                      "$close_button_texture": "textures/ui/minimizeHover"
+                    }
+                  },
+                  {
+                    "pressed@close_button_panel": {
+                      "$close_button_texture": "textures/ui/minimizePress"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#minimize_button_visible_binding_name",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "autocomplete_button@common.button": {
+          "size": [ 16, 16 ],
+          "$pressed_button_name": "button.chat_autocomplete",
+          "layer": 20,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -22, 0 ],
+          "controls": [
+            {"default@command_block.tab_image":{}},
+            {"hover@command_block.tab_image":{"color": [0.35, 0.5, 1.0]}},
+            {"pressed@command_block.tab_image":{}}
+          ]
+        }
+      },
+      {
+        "autocomplete_back_button@common.button": {
+          "size": [ 16, 16 ],
+          "$pressed_button_name": "button.chat_autocomplete_back",
+          "layer": 20,
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -40, 0 ],
+          "controls": [
+            {"default@command_block.tab_back_image":{}},
+            {"hover@command_block.tab_back_image":{"color": [0.35, 0.5, 1.0]}},
+            {"pressed@command_block.tab_back_image":{}}
+          ]
+        }
+      }
+    ]
+  },
+
+  "tab_image": {
+    "type": "image",
+    "layer": 21,
+    "texture": "cube_ui/textures/common/icons/tab",
+    "size": [ 14, 14 ],
+    "color": [0.5,0.5,0.5]
+  },
+
+  "tab_back_image": {
+    "type": "image",
+    "layer": 21,
+    "texture": "cube_ui/textures/common/icons/tab_back",
+    "size": [ 14, 14 ],
+    "color": [0.5,0.5,0.5]
+  },
+
+  "headbar_title": {
+    "type": "label",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 20, 0 ],
+    "size": [ "default", 10 ],
+    "layer": 21,
+    "text": "$title",
+    "font_type": "$global_headbar_title_font",
+    "font_scale_factor": 1.1,
+    "bindings": [
+      {
+        "binding_name": "$visible_binding",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#block_type_dropdown_label_color_binding",
+        "binding_type": "global",
+        "binding_name_override": "#color"
+      }
+    ]
+  },
+
+  "divider_content": {
+    "type": "panel",
+    "size": ["100% - 4px","100% - 20px"],
+    "offset": [2,0],
+    "bindings": [
+      {
+        "binding_name": "(not #maximized_input_visible)",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "left_side@command_block.left_divider_content": {
+          "size": [ "40% - 6px", "100% - 4px" ],
+          "offset": [ 4, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "right_side@command_block.right_divider_content": {
+          "size": [ "60% - 6px", "100% - 4px" ],
+          "offset": [ -4, 2 ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ]
+  },
+  
+  "max_view_content": {
+    "type": "panel",
+    "size": ["100%","fill"],
+    "bindings": [
+      {
+        "binding_name": "#maximized_input_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {
+        "command_block_text@common.multiline_text_edit_box": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 17,
+          "size": [ "100% - 4px", "100% - 4px" ],
+          "offset": [ 2, 2 ],
+          "max_length": "$text_box_max_length",
+          "$text_box_name": "command_block.command_text",
+          "$text_edit_box_content_binding_name": "#command_text_edit",
+          "$place_holder_text": "command_block.empty_command_text",
+          "$cancel_button_id": "command_block.input_minimize",
+          "bindings": []
+        }
+      }
+    ]
+  },
+
+  "command_main_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%","100%"],
+    "controls": [
+      {"headbar@command_block.headbar": {}},
+      {"divider_content@command_block.divider_content": {}},
+      {"max_view_content@command_block.max_view_content": {}}
+    ]
+  },
+
+  "command_screen_content": {
+    "type": "panel",
+    "layer": -2,
+    "size": "$screen_size",
+    "$screen_size|default": [ "85%", "90%" ],
+    "controls": [
+      {"background@cube_ui_common.container_pocket_background": {}},
+      {"stack_panel@command_main_panel": {}}
+    ]
+  },
+
+  ///////////////////////////
+  // Screen
+  ///////////////////////////
+  "command_block_screen": {
+    "$screen_content": "command_block.command_screen_content",
+    "$screen_animations": [
+      "@cube_ui_anim.container_screen_exit_animation_push",
+      "@cube_ui_anim.container_screen_exit_animation_pop",
+      "@cube_ui_anim.container_screen_entrance_animation_push",
+      "@cube_ui_anim.container_screen_entrance_animation_pop",
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "headbar@cube_ui_common.headbar": {
+          "$title": "#title_text",
+          "$title_binding_condition": "once"
+        }
+      },
+      {
+        "main_content@add_external_server.content_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%-21px", "100%-52px" ],
+          "offset": [ 10, 24 ],
+          "$offset": [ 10, 24 ]
+        }
+      },
+      {
+        "play@add_external_server.play_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ],
+          "$offset": [ 7, -7 ]
+        }
+      },
+      {
+        "play_disabled@add_external_server.play_disabled_button": {
+          "ignored": "$edit_mode",
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ],
+          "$offset": [ 7, -7 ],
+          "layer": 5
+        }
+      },
+      {
+        "remove@add_external_server.remove_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 7, -7 ],
+          "$offset": [ 7, -7 ]
+        }
+      },
+      {
+        "save@add_external_server.save_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -7, -7 ],
+          "$offset": [ -7, -7 ]
+        }
+      },
+      {
+        "save_disabled@add_external_server.save_disabled_button": {
+          "size": [ "50%-8px", 20 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [ -7, -7 ],
+          "$offset": [ -7, -7 ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //    screen
+  // -----------------------------------------------
+  "add_external_server_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }      
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "add_external_server.add_external_server_screen_content"
+  },
+
+  "add_external_server_screen_content": {
+    "type": "panel",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop",
+      "@cube_ui_anim.headbar_screen_entrance_animation_push",
+      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+    ],
+    "controls": [
+      {
+        "root_panel": {
+          "type": "panel",
+          "controls": [
+            { "gamepad_helpers@add_external_server.gamepad_helpers": {} },
+            { "main_panel@add_external_server.main_panel": { "layer": 1 } }
+          ]
+        }
+      }
+    ]
+  }
+}

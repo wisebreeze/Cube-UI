@@ -1,0 +1,99 @@
+{
+  "ui_defs": [
+    // about UI //
+    "cube_ui/screens/about_ui/main_screen.json_ui",//主要屏幕
+    "cube_ui/screens/about_ui/pack_info.json_ui",//包信息
+    "cube_ui/screens/about_ui/version.json_ui",//更新日志
+    "cube_ui/screens/about_ui/subpack.json_ui",//扩展包
+    "cube_ui/screens/about_ui/appearance.json_ui",//外观
+    "cube_ui/screens/about_ui/faq.json_ui",//常见问题
+
+    // chat //
+    "cube_ui/screens/chat/commands.json_ui",//显示命令
+    "cube_ui/screens/chat/set.json_ui",//聊天设置
+    "cube_ui/screens/chat/messages.json_ui",//聊天信息
+    "cube_ui/screens/chat/headbar.json_ui",//顶部面板
+    "cube_ui/screens/chat/bottom_bar.json_ui",//底部面板
+    "cube_ui/screens/chat/host_options.json_ui",//自动填充面板
+
+    // common //
+    "cube_ui/common/cube_ui_background.json_ui",//背景
+    "cube_ui/common/cube_ui_common.json_ui",//共同控件
+    "cube_ui/common/cube_ui_container_common.json_ui",//共同容器界面
+    "cube_ui/common/cube_ui_anim.json_ui",//动画
+
+    // education //
+    "ui/compound_creator_screen.json",// 元素创造器
+    "ui/element_constructor_screen.json",// 元素构造台
+    "ui/lab_table_screen.json",// 实验台
+    "ui/material_reducer_screen.json",// 分解台
+
+    // help //
+    "cube_ui/screens/help/brewing/main.json_ui",// 炼药台
+    "cube_ui/screens/help/brewing/arrow.json_ui",// 箭头
+    "cube_ui/screens/help/brewing/common.json_ui",// 共同
+    "cube_ui/screens/help/brewing/list.json_ui",// 列表
+    
+    "cube_ui/screens/help/furnace/main.json_ui",// 熔炉
+    "cube_ui/screens/help/furnace/common.json_ui",// 共同
+    "cube_ui/screens/help/furnace/fuel.json_ui",// 燃料
+    "cube_ui/screens/help/furnace/recipe_ore.json_ui",// 配方 - 矿石
+    "cube_ui/screens/help/furnace/recipe_food.json_ui",// 配方 - 食物
+    "cube_ui/screens/help/furnace/recipe_other.json_ui",// 配方 - 其他
+
+    "cube_ui/screens/help/anvil.json_ui",// 铁砧
+    "cube_ui/screens/help/beacon.json_ui",// 信标
+    "cube_ui/screens/help/cartography.json_ui",// 制图台
+    "cube_ui/screens/help/chest.json_ui",// 箱子
+    "cube_ui/screens/help/dispenser.json_ui",// 发射器
+    "cube_ui/screens/help/dropper.json_ui",// 投掷器
+    "cube_ui/screens/help/enchanting.json_ui",// 附魔台
+    "cube_ui/screens/help/ender_chest.json_ui",// 末影箱
+    "cube_ui/screens/help/empty.json_ui",// 无帮助
+    "cube_ui/screens/help/hopper.json_ui",// 漏斗
+    "cube_ui/screens/help/loom.json_ui",// 织布机
+    "cube_ui/screens/help/shulker_box.json_ui",// 潜影盒
+    "cube_ui/screens/help/trading.json_ui",// 交易
+
+    // hud //
+    "cube_ui/screens/hud/focus_panel.json_ui",//专注面板
+    "cube_ui/screens/hud/scoreboard.json_ui",//记分板
+    "cube_ui/screens/hud/cross_hair.json",//虚拟准星
+
+    // manifest_validation //
+    "cube_ui/screens/manifest_validation/content.json_ui",//清单验证内容
+    "cube_ui/screens/manifest_validation/manifest_main_content.json_ui",//清单主要内容
+    "cube_ui/screens/manifest_validation/pack_secondary_info.json_ui",//包信息
+    "cube_ui/screens/manifest_validation/error_content.json_ui",//错误内容
+
+    // netease //
+    "ui/netease/warn_anti_addiction.json",// 防沉迷
+
+    // other screen //
+    "cube_ui/screens/death_screen.json_ui",// 失败
+    "cube_ui/screens/effect_screen.json_ui",//药水效果
+    "cube_ui/screens/inventory_screen.json_ui",// 背包
+    "cube_ui/screens/loading.json_ui",// 加载
+
+    // pause //
+    "cube_ui/screens/pause_sidebar.json_ui",//侧边栏
+
+    // setting //
+    "cube_ui/screens/settings/shortcut_section.json_ui",//快捷设置
+    "cube_ui/screens/settings/world_section.json_ui",//世界设置
+    "cube_ui/screens/settings/info_background.json_ui",//账号信息
+
+    // start //
+    "cube_ui/screens/start/button_panel.json_ui",//按钮面板
+    "cube_ui/screens/start/text.json_ui",//底部文字
+    "cube_ui/screens/start/tip.json_ui",//提示
+    "cube_ui/screens/start/data/play_button.json_ui",//开始按钮
+    "cube_ui/screens/start/data/invite_button.json_ui",//邀请按钮
+
+    // structure //
+    "cube_ui/screens/structure/main_screen.json_ui",// 主要界面
+    "cube_ui/screens/structure/preview.json_ui",// 预览内容
+    "cube_ui/screens/structure/left_panel.json_ui",// 左边面板
+    "cube_ui/screens/structure/right_panel.json_ui"// 右边面板
+  ] 
+}

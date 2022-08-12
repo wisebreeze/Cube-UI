@@ -1,0 +1,1 @@
+{"death_screen":{"$screen_content":"death_screen.death_screen_content","$screen_bg_content":"death_screen.background_gradient","load_screen_immediately":true}}

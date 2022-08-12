@@ -1,0 +1,221 @@
+{
+  "realms_scroll_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%-4px", "100%c" ],
+    "offset": [ 2, 0 ],
+    "controls": [
+      {
+        "realms_stack_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "realms_world_item_grid@choose_realm.realms_world_item_grid": {}
+            },
+            {
+              "padding_0": {
+                "type": "panel",
+                "size": [ "100%", 2 ]
+              }
+            },
+            {
+              "add_button": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", 20 ],
+                "controls": [
+                  {
+                    "ten_player_button@choose_realm.ten_player_button": {}
+                  },
+                  {
+                     "button_panel": { "type": "panel", "size": [ 2, 0 ] }
+                  },
+                  {
+                    "two_player_button@choose_realm.two_player_button": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "ten_player_button@settings_common.action_button": {
+    "size": [ "50% - 2px", 20 ],
+    "$default_button_texture": "textures/ui/realmsContent",
+    "$hover_button_texture": "textures/ui/realmsContentHover",
+    "$pressed_button_texture": "textures/ui/realmsContentPressed",
+    "$button_text": "chooseRealmScreen.realmsplusbuttontext",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "default_focus_precedence": 2,
+    "$pressed_button_name": "button.ten_player",
+    "bindings": [
+      {
+        "binding_name": "#ten_player_button_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "two_player_button@common_buttons.light_text_button": {
+    "$pressed_button_name": "button.two_player",
+    "$button_text": "chooseRealmScreen.realmsbuttontext",
+    "size": [ "50% - 2px", 20 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "bindings": [
+      {
+        "binding_name": "#two_player_button_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ "100%", "100% - 20px" ],
+    "offset": [ 0, "20px" ],
+    "$offset": [ 0, "20px" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop"
+    ],
+    "controls": [
+      {
+        "progress_loading_bars@progress.progress_loading_bars": {
+          "size": [ "100% - 14px", 10 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "bindings": [
+            {
+              "binding_name": "#progress_loading_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "realms_scroll_content@choose_realm.realms_scroll_content": {
+          "bindings": [
+            {
+              "binding_name": "(not #progress_loading_visible)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "slot_panel": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ "100%", "100% - 20px" ],
+    "offset": [ 0, "20px" ],
+    "$offset": [ 0, "20px" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_ui_anim.headbar_screen_exit_animation_push",
+      "@cube_ui_anim.headbar_screen_exit_animation_pop"
+    ],
+    "controls": [
+      {
+        "slots_scroll_content": {
+          "type": "input_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "size": [ "100%", "100%" ],
+          "focus_container": true,
+          "use_last_focus": true,
+          "focus_nagivation_mode_down": "contained",
+          "focus_nagivation_mode_up": "contained",
+          "focus_nagivation_mode_right": "contained",
+          "focus_nagivation_mode_left": "contained",
+          "controls": [
+            {
+              "scrolling_panel@common.scrolling_panel": {
+                "size": [ "100%-4px", "100% - 4px" ],
+                "offset": [ 2, 2 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 1,
+                "$scrolling_pane_size": [ "100% - 1px", "100%" ],
+                "$scrolling_content": "choose_realm.slots_scroll_panel",
+                "$scroll_size": [ 5, "100% - 4px" ],
+                "$show_background": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "choose_realm_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    "$background_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "force_render_below": true,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "choose_realm.choose_realm_screen_content"
+  },
+
+  "choose_realm_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "headbar@cube_ui_common.headbar": { "$title": "#window_title_text","$title_text_binding_type":"global","layer": 1 } },
+      {
+        "realm@choose_realm.main_panel": {
+          "bindings": [
+            {
+              "binding_name": "(not #slots_view_toggle)",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "slot_dialog@choose_realm.slot_panel": {
+          "bindings": [
+            {
+              "binding_name": "#slots_view_toggle",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

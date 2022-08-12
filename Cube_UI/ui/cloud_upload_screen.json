@@ -1,0 +1,76 @@
+{
+  "cloud_upload_screen@progress.progress_screen": {
+    "$screen_content": "cloud_upload.screen_content",
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$cloud_upload_progress_screen_size": [ 290, 200 ],
+    "force_render_below": false,
+    "should_be_skipped_during_automation": true
+  },
+
+  "screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "main_content": {
+          "type": "panel",
+          "size": "$fill_size",
+          "controls": [
+            {
+              "progress_title_text@progress.progress_title_text": {
+                "color": "yellow",
+                "font_scale_factor": 1.5,
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ 0, "-18% - 10px" ]
+              }
+            },
+            {
+              "cancel@cloud_upload.cancel_button": {
+                "size": [ "20%", 30 ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [ -10, "-7% + 12px" ]
+              }
+            },
+            {
+              "inner_content": {
+                "type": "stack_panel",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "100%-12px", "100%-12px" ],
+                "offset": [ 0, "-10% + 10px" ],
+                "controls": [
+                  {
+                    "description_stack@common.tts_label_focus_wrapper": {
+                      "$tts_label_panel": "cloud_upload.description_stack"
+                    }
+                  },
+                  {
+                    "progress_loading_bars@progress.progress_loading_bars": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#upload_in_progress",
+              "binding_name_override": "#visible",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "popup_dialog_factory": {
+          "type": "factory",
+          "control_ids": {
+            "terms_and_conditions": "terms_and_conditions@cloud_upload.terms_and_conditions",
+            "upload_failed": "upload_failed@cloud_upload.upload_failed",
+            "upload_succeeded": "upload_succeeded@cloud_upload.upload_succeeded"
+          }
+        }
+      }
+    ]
+  }
+}

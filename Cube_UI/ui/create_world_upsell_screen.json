@@ -1,0 +1,53 @@
+{
+  "create_world_upsell": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    // 空的顶部面板 - 填充安全角
+    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_content": "create_world_upsell.variable_screen_size_panel",
+    "should_be_skipped_during_automation": true
+  },
+  "variable_screen_size_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "dialog_0@create_world_upsell.main_panel_realms": {
+          "ignored": "(not $show_button)",
+          "size": "$fill_size"
+        }
+      },
+      {
+        "dialog_1@create_world_upsell.main_panel_realms": {
+          "ignored": "$show_button",
+          "size": "$fill_size"
+        }
+      }
+    ]
+  },
+  
+  "main_panel_realms@cube_ui_common.headbar_screen": {
+    "$main_screen": "create_world_upsell.new_realm_scroll",
+    "$title": "createWorldUpsell.title.realm",
+    "$scroll_bar_right_padding_size": [ 0, 0 ]
+  }
+}
