@@ -112,17 +112,65 @@
     "alpha": 0.4
   },
 ////////////////////
+  "option_toggle_state_template": {
+    "type": "panel",
+    "$image_color|default": [1,1,1],
+    "$image_anchor|default": "right_middle",
+    "$image_offset|default": ["-75%",0],
+    "size": [ 30, 16 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {"bg@cube_ui_common.half_circle":{}}
+    ],
+    "$center_controls": [
+      {
+        "circle": {
+          "type": "image",
+          "layer": 2,
+          "texture": "cube_ui/textures/start/button",
+          "color": "$image_color",
+          "size": ["100%y","65%"],
+          "offset": "$image_offset",
+          "anchor_from": "$image_anchor",
+          "anchor_to": "$image_anchor"
+        }
+      }
+    ]
+  },
+
   "option_toggle_on@settings_common.option_toggle_state_template": {
-    "texture": "$global_toggle_on_texture"
+    "$image_anchor|default": "left_middle",
+    "$image_offset|default": ["75%",0],
+    "$image_color": [0.6,0.6,0.6],
+    "$circle_color": "$global_toggle_checked_default_color"
   },
+
   "option_toggle_off@settings_common.option_toggle_state_template": {
-    "texture": "$global_toggle_off_texture"
+    "$circle_color": "$global_toggle_unchecked_default_color",
+    "$image_color": [0.6,0.6,0.6]
   },
+
   "option_toggle_on_hover@settings_common.option_toggle_state_template": {
-    "texture": "$global_toggle_on_hover_texture"
+    "$image_anchor|default": "left_middle",
+    "$image_offset|default": ["75%",0],
+    "$circle_color": "$global_toggle_checked_hover_color"
   },
+
   "option_toggle_off_hover@settings_common.option_toggle_state_template": {
-    "texture": "$global_toggle_off_hover_texture"
+    "$circle_color": "$global_toggle_unchecked_hover_color"
+  },
+
+  "option_toggle_on_locked@settings_common.option_toggle_on": {
+    "$image_anchor|default": "left_middle",
+    "$image_offset|default": ["75%",0],
+    "$image_color": [1,1,1],
+    "$circle_color": "$global_toggle_locked_color"
+  },
+
+  "option_toggle_off_locked@settings_common.option_toggle_off": {
+    "$circle_color": "$global_toggle_locked_color",
+    "$image_color": [1,1,1]
   },
 ////////////////////
   "radio_visuals_unchecked@radio_visuals": {
@@ -301,7 +349,7 @@
   "dialog_titles": {"controls": []},
   "settings_content": {"type": "panel","controls": [{"stack_panel": {"type":"stack_panel","size":["100%","100%"],"controls": [{"content_panel": {"type": "panel","size": ["100%","fill"],"controls": [{"common_panel@common.fullscreen_header":{"$dialog_background":"dialog_background_hollow_3"}},{"container": {"type":"panel","size":["100%","100% - 4px"],"controls":[{"$dialog_content@$dialog_content":{}}]}}]}}]}},{"popup_dialog_factory": {"type":"factory","control_ids":{"purchase_failed":"@realms_create.popup_dialog__purchase_failed","purchase_in_progress":"@realms_create.popup_dialog__purchase_in_progress","share_by_link":"@realms_allowlist.popup_dialog__share_by_link","options_modal":"@realms_allowlist.popup_dialog__options","backups_modal":"@realms_settings.popup_dialog__backups"}}}]},
   "headbar_title_panel": {
-  "type": "stack_panel",
+    "type": "stack_panel",
     "orientation": "horizontal",
     "size": ["100%c",10],
     "anchor_from": "left_middle",
