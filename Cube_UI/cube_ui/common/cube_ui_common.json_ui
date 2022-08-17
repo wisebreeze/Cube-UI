@@ -1843,7 +1843,7 @@
   "hover_text_background": {
     "type": "image",
     "allow_clipping": false,
-    "layer": 8,
+    "layer": 10,
     "size": ["100%c + 8px","100%c + 8px"],
     "texture": "textures/ui/purpleBorder",
     "$hover_text_anchor|default": "top_left",
@@ -1920,7 +1920,7 @@
   
   "multiline_text_box@common.multiline_text_edit_box": {
     "max_length": "$text_box_max_length",
-    "enabled": true,
+    "$enabled": true,
     "size": [ "100%", "100%cm" ],
     "enabled": "$enabled",
     "anchor_from": "top_left",
@@ -2073,6 +2073,60 @@
           ]
         }
       }
+    ]
+  },
+  
+  "left_circle": {
+    "type": "panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "size": ["50%c","100%"],
+    "offset": ["-50%c",0],
+    "clips_children": true,
+    "$circle_offset|default": ["50%",0],
+    "controls": [
+      {
+        "circle": {
+          "type": "image",
+          "size": ["100%y","100%"],
+          "offset": "$circle_offset",
+          "color": "$circle_color",
+          "alpha": "$circle_alpha",
+          "texture": "cube_ui/textures/start/button"
+        }
+      }
+    ]
+  },
+  
+  "right_circle@cube_ui_common.left_circle": {
+    "offset": ["50%c",0],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "$circle_offset": ["-50%",0]
+  },
+  
+  "half_circle": {
+    "type": "panel",
+    "size": "$circle_size",
+    "$center_controls|default": [],
+    "$circle_size|default": ["50%","100%"],
+    "$main_circle_size|default": ["100%+0.5px","100%"],
+    "$circle_color|default": [1,1,1],
+    "$circle_alpha|default": 1,
+    "controls": [
+      {"left@cube_ui_common.left_circle":{}},
+      {
+        "center": {
+          "type": "image",
+          "fill": true,
+          "texture": "textures/ui/white_background",
+          "size": "$main_circle_size",
+          "alpha": "$circle_alpha",
+          "color": "$circle_color",
+          "controls": "$center_controls"
+        }
+      },
+      {"right@cube_ui_common.right_circle":{}}
     ]
   }
 }
