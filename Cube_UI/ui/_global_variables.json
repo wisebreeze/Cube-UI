@@ -42,7 +42,7 @@
      "$fill_size": [ "100%", "100%" ],
      
      // 全局字体
-     "$global_main_font": "OldSmoothFont",
+     "$global_main_font": "smooth",
 
      // 调试屏幕UI
      "$start_screen_debug": false,
@@ -172,7 +172,7 @@
   "$global_selector_area_background_alpha": 0.2,
   // 按钮
   "$global_button_fill": true,
-  "$global_button_text_font": "OldSmoothFont",
+  "$global_button_text_font": "smooth",
   "$global_button_alpha": 0.4,
 
   "$global_button_default_color": [1,1,1],
@@ -203,8 +203,8 @@
 
   "$global_toggle_checked_default_color": [1,1,1],
   "$global_toggle_checked_hover_color": [0.1686,0.5664,0.9765],
-  "$global_toggle_unchecked_default_color": [1,1,1],
-  "$global_toggle_unchecked_hover_color": [0.1686,0.5664,0.9765],
+  "$global_toggle_unchecked_default_color": [0.9,0.9,0.9],
+  "$global_toggle_unchecked_hover_color": [0.2289,0.4096,0.8265],
   "$global_toggle_locked_color": [1,0.1875,0.1875],
 
   "$global_toggle_sound_name": "random.click",
@@ -214,7 +214,7 @@
   "$global_toggle_alpha": 0.4,
   "$global_toggle_locked_alpha": 0.4,
 
-  "$global_toggle_text_font": "OldSmoothFont",
+  "$global_toggle_text_font": "smooth",
   "$global_toggle_text_unchecked_color": [0.4,0.4,0.4],
   "$global_toggle_text_checked_color": [0.55,0.55,0.55],
   "$global_toggle_text_unchecked_hover_color": [0.85,0.85,0.85],
@@ -242,7 +242,7 @@
   "$global_slider_border_hover_color": [0.1686,0.5664,0.9765],
   "$global_slider_border_alpha": 0.4,
 
-  "$global_slider_step_default_color": [0.5,0.5,0.5],
+  "$global_slider_step_default_color": [1,1,1],
   "$global_slider_step_hover_color": [0.1686,0.5664,0.9765],
   "$global_slider_step_progress_default_color": [1,1,1],
   "$global_slider_step_progress_hover_color": [0.1686,0.5664,0.9765],
@@ -250,15 +250,15 @@
   // 顶栏
   "$global_headbar_color": [1,1,1],
   "$global_headbar_alpha": 0.8,
-  "$global_headbar_title_font": "OldSmoothFont",
+  "$global_headbar_title_font": "smooth",
   "$global_headbar_title_color": [0.5,0.5,0.5],
   // 分段栏
   "$global_header_alpha": 0.4,
   "$global_header_color": [1,1,1],
   "$global_header_label_color": [1,1,1],
-  "$global_header_label_font": "OldSmoothFont",
+  "$global_header_label_font": "smooth",
   // 输入框
-  "$global_text_box_font": "OldSmoothFont",
+  "$global_text_box_font": "smooth",
   "$global_text_box_alpha": 0.4,
   "$global_text_box_default_color": [1,1,1],
   "$global_text_box_hover_color": [0.1686,0.5664,0.9765],
@@ -275,7 +275,7 @@
   "$global_experience_bar_full_color": [0.1686,0.5664,0.9765],
   "$global_experience_bar_full_alpha": 1,
   "$global_experience_bar_number_color": [0.333,1,1],
-  "$global_experience_bar_number_font": "OldSmoothFont",
+  "$global_experience_bar_number_font": "smooth",
   // 下拉面板
   "$global_dropdown_background_color": [1,1,1],
   "$global_dropdown_background_alpha": 0.2,
@@ -293,7 +293,7 @@
   "$global_radio_off_hover_texture": "cube_ui/textures/radio/radio_off_hover",
   "$global_radio_text_color": [1,1,1],
   "$global_radio_text_hover_color": [0.5,0.5,0.5],
-  "$global_radio_text_font": "OldSmoothFont",
+  "$global_radio_text_font": "smooth",
   
   "$global_radio_sound_name": "random.click",
   "$global_radio_sound_volume": 1.0,
@@ -318,7 +318,7 @@
   "$global_start_tip_background_color": [1,1,1],
   "$global_start_tip_background_alpha": 0.4,
   "$global_start_tip_title_color": [1,1,1],
-  "$global_start_tip_title_font": "OldSmoothFont",
+  "$global_start_tip_title_font": "smooth",
   // 下划线
   "$global_underline_color": [1,1,1],
   "$global_underline_alpha": 0.4,
@@ -343,7 +343,7 @@
   "$global_sidebar_focus_right_color": [0.1686,0.5664,0.9765],
   "$global_sidebar_focus_alpha": 1,
   // 记分板
-  "$global_scoreboard_player_score_font": "OldSmoothFont",
+  "$global_scoreboard_player_score_font": "smooth",
   "$global_scoreboard_player_name_color": [ 1, 1, 1 ],
   "$global_scoreboard_objective_title_color": [ 1, 1, 1 ],
   "$global_scoreboard_player_score_color": [ 0.2, 0.6, 1.0 ],
@@ -352,11 +352,10 @@
 
   // UI 信息 //
   "$cube_UI_enabled": true,//Cube UI是否启用
-  "$cube_UI_preview": false,//Cube UI测试预览版
   "$cube_dev": false,//Cube UI开发者
   "$cube_netease": false,//Cube UI中国版
   "$cube_ui_dark_mode|default": false,//Cube UI深色外观
-  "$cube_patch_version": "1.0",//补丁版本
+  "$cube_patch_version": "1.1",//补丁版本
   "$cube_main_version": "2.0",//版本
   "$cube_version_prefix": "V",//版本前缀
   "$cube_access_channel": "klpbbs",//获取渠道

@@ -273,49 +273,51 @@
     "color": "$global_underline_color"
   },
 ////////////////////////////////
+  "slider": {
+    "$slider_box_size": [16,16],
+    "$main_circle_size": ["100%+0.2px","100%"],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {"bg@cube_ui_common.half_circle":{"ignored":"($slider_direction = 'vertical')","$circle_size":["100%","100%"],"$circle_alpha":"$global_slider_border_alpha","$circle_color":"$global_slider_border_default_color"}}
+        ]
+      }
+    ]
+  },
   "slider_button_state": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_default_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_default_color"
   },
 
   "slider_button_layout@common.slider_button_state": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_default_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_default_color"
   },
 
   "slider_button_hover_layout@common.slider_button_state": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_hover_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_hover_color"
   },
 
   "slider_button_locked_layout@common.slider_button_state": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_locked_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_locked_color"
   },
 
   "slider_button_indent_layout@common.slider_button_state": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_indent_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_indent_color"
   },
   
   "slider_box/locked": {
-    "texture": "textures/ui/white_background",
-    "color": "$global_slider_button_locked_color",
-    "alpha": "$global_slider_button_alpha",
-    "fill": true
+    "texture": "cube_ui/textures/start/button",
+    "color": "$global_slider_button_locked_color"
   },
   
   "slider_background": {
+    "size": ["100%",1],
     "texture": "textures/ui/white_background",
     "color": "$global_slider_background_color",
     "alpha": "$global_slider_background_alpha",
@@ -323,6 +325,7 @@
   },
 
   "slider_background_hover": {
+    "size": ["100%",1],
     "texture": "textures/ui/white_background",
     "color": "$global_slider_background_hover_color",
     "alpha": "$global_slider_background_alpha",
@@ -330,6 +333,7 @@
   },
 
   "slider_progress": {
+    "size": ["100%",1],
     "texture": "textures/ui/white_background",
     "color": "$global_slider_progress_default_color",
     "alpha": "$global_slider_progress_alpha",
@@ -337,31 +341,17 @@
   },
 
   "slider_progress_hover": {
+    "size": ["100%",1],
     "texture": "textures/ui/white_background",
     "color": "$global_slider_progress_hover_color",
     "alpha": "$global_slider_progress_alpha",
     "fill": true
   },
-
-  "slider_border": {
-    "texture": "cube_ui/textures/common/focus_border",
-    "alpha": "$global_slider_border_alpha",
-    "fill": true
-  },
-  
-  "slider_bar_default@common.slider_border": {
-    "color": "$global_slider_border_default_color"
-  },
-  
-  "slider_bar_hover@common.slider_bar_default": {
-    "color": "$global_slider_border_hover_color"
-  },
-  
-  "slider_bar_default/transparent_grey": {
-    "alpha": 0
-  },
+  "slider_border": {"alpha": 0},
+  "slider_bar_default/transparent_grey": {"alpha": 0},
 
   "slider_step": {
+    "size": [1,8],
     "texture": "textures/ui/white_background",
     "color": "$global_slider_step_default_color",
     "alpha": "$global_slider_step_alpha",

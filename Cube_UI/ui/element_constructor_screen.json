@@ -1,6 +1,8 @@
 {
   "namespace": "elemconstruct",
 
+  "particle_slider/slider/slider_box": {"$slider_box_size": [14,14]},
+
   "slider_background": {
     "texture": "textures/ui/white_background",
     "color": "$global_slider_background_color",
@@ -16,6 +18,12 @@
   },
 
   "slider_progress": {
+    "size": "$progress_size",
+    "$progress_size|default": ["100%",1],
+    "variables": {
+      "requires": "($slider_direction = 'vertical')",
+      "$progress_size": [1,"100%"]
+    },
     "texture": "textures/ui/white_background",
     "alpha": "$global_slider_background_alpha",
     "fill": true,
@@ -23,7 +31,7 @@
   },
 
   "chemistry_slider_button_hover_layout@common.slider_button_hover_layout": {
-    "texture": "textures/ui/white_background"
+    "texture": "cube_ui/textures/start/button"
   },
 
   "content": {
