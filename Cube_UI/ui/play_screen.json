@@ -241,9 +241,7 @@
           ]
         }
       },
-      {
-        "right_panel@play.server_content_area": {}
-      }
+      {"right_panel@play.server_content_area": {}}
     ]
   },
 
@@ -350,9 +348,9 @@
                 "type": "image",
                 "texture": "$count_background_image",
                 "size": [ "100%c + 3px", "100%c" ],
-                "offset": [ -20, 5 ],
-                "anchor_from": "bottom_right",
-                "anchor_to": "bottom_right",
+                "offset": [ -10, 5 ],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle",
                 "layer": 3,
                 "controls": [
                   {
@@ -377,10 +375,10 @@
 
   "common_navigation_tab_content": {
     "type": "image",
-    "size": [ "100%-3px", "100% - 4px" ],
+    "size": [ "100%", "100%" ],
     "texture": "textures/ui/white_background",
     "alpha": 0.4,
-    "nineslice_size": 1,
+    "fill": true,
     "color": "$tab_color",
     "variables": [
       {
@@ -506,6 +504,7 @@
     "anchor_to": "top_left",
     "anchor_from": "top_left",
     "layer": 100,
+    "$tab_content": "play.common_navigation_tab_content",
     "$toggle_tts_type_priority": 1001,
     "$toggle_tts_toggle_on_text": "",
     "$toggle_tts_toggle_off_text": "",
@@ -517,8 +516,7 @@
     "$tab_icon": "worlds_icon",
     "$count_text_name": "#world_item_count",
     "$tab_text_name": "selectWorld.tab.worlds",
-    "$toggle_group_forced_index": 0,
-    "$tab_content": "play.common_navigation_tab_content"
+    "$toggle_group_forced_index": 0
   },
 
   "friends_navigation_tab@play.top_tab": {
@@ -535,8 +533,7 @@
     "$tab_icon": "server_tab_icon",
     "$count_text_name": "#server_world_item_count",
     "$tab_text_name": "selectWorld.tab.thirdParty",
-    "$toggle_group_forced_index": 2,
-    "$tab_content": "play.common_navigation_tab_content"
+    "$toggle_group_forced_index": 2
   },
 
   //---------------------------------------------------------------------------
@@ -558,8 +555,8 @@
           "layer": 2,
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "size": [ "100%-12px", "100%-22px" ],
-          "offset": [ 6, 20 ],
+          "size": [ "100%-8px", "100%-27px" ],
+          "offset": [ 2, 25 ],
           "ttsSectionContainer": true
         }
       }
@@ -677,6 +674,7 @@
   // Screen
   //---------------------------------------------------------------------------
 
+  "common_play_screen_panel": {"size": ["100%","100%"]},
   "play_screen_content": {
     "type": "panel",
     "$tab_color": "$global_toggle_checked_default_color",

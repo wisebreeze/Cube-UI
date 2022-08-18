@@ -230,7 +230,6 @@
   },
 
   "emote_wheel_screen@common.base_screen": {
-    "$screen_bg_content": "common.empty_panel",
     "gamepad_cursor_deflection_mode":false
   }
 }
