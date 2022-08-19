@@ -32,6 +32,10 @@
   "skin_viewer_panel/paper_doll_name_tag": {
     "ignored": false
   },
+  "pause_screen": {
+    "force_render_below": true,
+    "render_game_behind": true
+  },
 
   "info_panel@pause.pause_screen_border": {
     "size": [ 150, "100%" ],
@@ -138,6 +142,22 @@
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "layer": 1,
+    "controls": [
+      { "toggle@hud.togge_pause_panel": {"ignored": "(not $focus_on_enable)"}},
+      { "main@pause.pause_main_content": {}}
+    ]
+  },
+  "pause_main_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "focus_pause_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
     "controls": [
       { "pause_sidebar@pause_sidebar.pause_sidebar": {} },
       { "trialtime@pause.trialTime": {} },

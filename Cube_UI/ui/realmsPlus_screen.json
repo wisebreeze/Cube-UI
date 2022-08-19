@@ -6,6 +6,7 @@
     "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
   },
 
+  "section_toggle_base": {"$anchor":"left_middle","$new_ui_label_offset":[3,0],"$button_type_panel":"common_buttons.new_ui_binding_button_label"},
   "buy_now_toggle@realmsPlus.toggle_base": {
     "$default_texture": "textures/ui/white_background",
     "$hover_texture": "textures/ui/white_background",

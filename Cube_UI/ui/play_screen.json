@@ -81,43 +81,6 @@
     ]
   },
   
-  "header_button_panel/buttons": {
-    "controls": [
-      {
-        "primary_panel": {
-          "type": "panel",
-          "size": [ "fill", "100%" ],
-          "controls": [
-            {
-              "primary@$primary_header_button": {
-                "size": [ "100% + 1px", "100%" ],
-                "anchor_from": "top_left",
-                "anchor_to": "top_left",
-                "layer": 1
-              }
-            }
-          ]
-        }
-      },
-      {
-        "panel": {
-          "type": "panel",
-          "size": [ 3, 0 ],
-          "ignored": "$is_ios"
-        }
-      },
-      {
-        "secondary@$secondary_header_button": {
-          "visible": "$secondary_visible",
-          "ignored": "$is_ios",
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "layer": 1
-        }
-      }
-    ]
-  },
-  
   "worlds_stack_panel/header_button": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -129,7 +92,7 @@
   },
   "worlds_stack_panel/header_button/buttons": {
     "size": [ "50%", 20 ],
-    "$secondary_visible": "(not $osx_edition)"
+    "$secondary_visible": "(not $is_ios)"
   },
   "world_list_label_panel/list_label": {
     "font_type": "$global_main_font"

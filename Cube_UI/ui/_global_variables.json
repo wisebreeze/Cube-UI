@@ -164,9 +164,11 @@
   "$global_container_background_texture": "cube_ui/textures/background/container_background",
   "$global_container_background_fill": true,
   "$global_container_background_alpha": 0.4,
+  "$global_container_background_color": [0.8,0.8,0.8],
   "$global_container_pocket_background_texture": "cube_ui/textures/background/container_pocket_background",
   "$global_container_pocket_background_fill": true,
   "$global_container_pocket_background_alpha": 0.4,
+  "$global_container_pocket_background_color": [0.8,0.8,0.8],
   
   "$global_selector_area_background_color": [1,1,1],
   "$global_selector_area_background_alpha": 0.2,
@@ -277,8 +279,8 @@
   "$global_experience_bar_number_color": [0.333,1,1],
   "$global_experience_bar_number_font": "smooth",
   // 下拉面板
-  "$global_dropdown_background_color": [1,1,1],
-  "$global_dropdown_background_alpha": 0.2,
+  "$global_dropdown_background_color": [0.6,0.6,0.6],
+  "$global_dropdown_background_alpha": 0.55,
   
   "$global_dropdown_sound_name": "random.click",
   "$global_dropdown_sound_volume": 1.0,
@@ -355,8 +357,8 @@
   "$cube_dev": false,//Cube UI开发者
   "$cube_netease": false,//Cube UI中国版
   "$cube_ui_dark_mode|default": false,//Cube UI深色外观
-  "$cube_patch_version": "1.1",//补丁版本
-  "$cube_main_version": "2.0",//版本
+  "$cube_patch_version": "1.2",//补丁版本
+  "$cube_main_version": "2.0.2",//版本
   "$cube_version_prefix": "V",//版本前缀
   "$cube_access_channel": "klpbbs",//获取渠道
   "$cube_author": "MC_spruce"//作者

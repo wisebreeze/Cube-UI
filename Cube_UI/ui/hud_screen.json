@@ -425,35 +425,56 @@
   },
   
   // 专注菜单
+  "togge_pause_panel": {
+    "type": "panel",
+    "size": [ 16, 16 ],
+    "offset": [ 0, 3 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {"focus_pause_toggle@hud.focus_on_pause_toggle":{}}
+    ]
+  },
   "togge_panel": {
     "type": "panel",
     "size": [ 16, 16 ],
-    "offset": [ -4, -4 ],
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right",
+    "offset": [ 0, 3 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
     "controls": [
-      {"toggle@hud.focus_on_toggle":{}}
-    ],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "focus_on_toggle",
-        "source_property_name": "(not #toggle_state)",
-        "target_property_name": "#visible"
-      }
+      {"focus_toggle@hud.focus_on_toggle":{}}
     ]
   },
   
-  "focus_on_toggle@cube_ui_common.group_toggle": {
-    "$toggle_size": [ 16, 16 ],
-    "$toggle_name": "focus_toggle",
-    "$group_name": "focus_on_toggle",
-    "$toggle_group_forced_index": 1,
-    "$toggle_tts_header": "hud.personalization.title",
+  "focus_on_toggle@hud.focus_on_toggle_common": {
+    "size": [ 16, 16 ],
+    "$unchecked_control": "common.empty_panel",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel",
+    "$checked_hover_control": "common.empty_panel"
+  },
+
+  "focus_on_pause_toggle@hud.focus_on_toggle_common": {
+    "size": [ 16, 16 ],
     "$unchecked_control": "hud.focus_on_toggle_off",
     "$checked_control": "hud.focus_on_toggle_on",
     "$unchecked_hover_control": "hud.focus_on_toggle_off_hover",
     "$checked_hover_control": "hud.focus_on_toggle_on_hover"
+  },
+  
+  "focus_on_toggle_common@common.toggle": {
+    "enabled": true,
+    "$toggle_name": "focus_on_toggle",
+    "$toggle_tts_header": "hud.personalization.title",
+    "layer": 2,
+    "size": "$toggle_size",
+    "$radio_toggle_group": false,
+    "$toggle_state_binding_name|default": "$option_binding_name",
+    "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+    "$toggle_enabled_binding_type|default": "global",
+    "$binding_type": "global",
+    "$binding_condition": "once",
+    "$enable_directional_toggling": false
   },
   
   "focus_on_toggle_on@focus_on_toggle_state_template": {},
@@ -762,6 +783,7 @@
     "$chat_offset|default": [ 0, 0 ]
   },
 
+  "hud_screen": {"always_accepts_input":true},
   "hud_content": {
     "type": "panel",
     "$hud_size|default": [ "100%", "100%" ],
