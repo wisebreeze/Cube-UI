@@ -20,8 +20,8 @@
     ]
   },
 
-  "down@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/down"},
-  "right@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right"},
-  "right_plus@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right_plus"},
-  "right_to@arrow_common": {"$arrow_icon": "cube_ui/textures/arrow/right_to"}
+  "down@arrow_common": {"$arrow_icon": "cube_ui/textures/help/arrow/down"},
+  "right@arrow_common": {"$arrow_icon": "cube_ui/textures/help/arrow/right"},
+  "right_plus@arrow_common": {"$arrow_icon": "cube_ui/textures/help/arrow/right_plus"},
+  "right_to@arrow_common": {"$arrow_icon": "cube_ui/textures/help/arrow/right_to"}
 }

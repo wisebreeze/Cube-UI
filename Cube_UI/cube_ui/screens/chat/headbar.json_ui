@@ -76,7 +76,13 @@
     "$pressed_button_name": "paste_button",
     "$focus_id": "paste_button_focus_id",
     "$focus_override_left": "coordinate_copy_button_focus_id",
-    "$focus_override_down": "text_edit_box_focus_id"
+    "$focus_override_down": "text_edit_box_focus_id",
+    "bindings": [
+      {
+        "binding_name": "#copy_button_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ]
   },
 
 ////////////////////

@@ -389,8 +389,7 @@
                 "controls": [
                   {"button_panel@button_panel": {}},
                   {"notice_panel@notice_panel": {}},
-                  {"other_panel@other_panel": {}},
-                  {"close@close_toggle": {}}
+                  {"other_panel@other_panel": {}}
                 ]
               }
             }
@@ -401,7 +400,7 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "focus_on_toggle",
+        "source_control_name": "focus_toggle",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }

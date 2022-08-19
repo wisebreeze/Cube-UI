@@ -18,7 +18,14 @@
       {
         "present@version.version_common": {
           "$version": "($cube_version_prefix + $cube_main_version)",
-          "$update_time": "2022.8.1",
+          "$update_time": "2022.8.19",
+          "$description": "§l§6(更改)§r\n§f> 更改部分细节\n§l§b(修复)§r\n§f✔ 修复游戏界面世界编辑按钮显示问题"
+        }
+      },
+      {
+        "V2.0@version.version_common": {
+          "$version": "V2.0",
+          "$update_time": "2022.8.17",
           "$description": "§l§a(增加)§r\n§f+ 新的背景\n+ 新的命令方块界面\n+ 开始界面断网提示\n+ 关于UI界面加入外观浏览和常见问题选项\n+ 新的背包界面和容器界面\n+ HUD快捷栏快速切换\n+ 更多可供用户修改的变量\n§l§6(更改)§r\n§f> 关于UI界面顶部选项栏更改为侧边栏\n> 更好的Cube UI版本描述排版\n> 新的加载等待提示\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复加载界面背景显示问题\n✔ 修复一些问题"
         }
       },
@@ -69,20 +76,6 @@
           "$version": "V1.9",
           "$update_time": "2022.3.5",
           "$description": "§l§a(增加)§r\n§f+ 对物品栏和容器增加了快捷按钮(丢出和销毁物品操作)\n§l§6(更改)§r\n§f> 重新布局的加载界面\n§l§b(修复)§r\n§f✔ 在经典档案UI下，容器的关闭按钮位置偏移修正\n✔ 部分icon修改"
-        }
-      },
-      {
-        "V1.8.1@version.version_common": {
-          "$version": "V1.8.1",
-          "$update_time": "2022.2.22",
-          "$description": "§l§b(修复)§r\n§f✔ 修复打开容器无法使用返回问题"
-        }
-      },
-      {
-        "V1.8@version.version_common": {
-          "$version": "V1.8",
-          "$update_time": "2022.2.16",
-          "$description": "§l§6(更改)§r\n§f> 支持1.18.10版本\n§l§b(修复)§r\n§f✔ 更正部分翻译"
         }
       },
       { "dividers@cube_ui_common.divider": {"ignored": "(not $subpacks_ignored)"} },
