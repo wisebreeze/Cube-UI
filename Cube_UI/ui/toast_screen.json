@@ -53,6 +53,7 @@
       {
         "background": {
           "type": "image",
+          "size": ["100% + 1px","100%"],
           "color": "$global_toast_background_color",
           "fill": true,
           "alpha": "$global_toast_background_alpha",
