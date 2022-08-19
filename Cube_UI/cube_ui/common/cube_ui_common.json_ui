@@ -182,9 +182,12 @@
     "controls": [
       {
         "$group_name@common.toggle": {
+          "property_bag": {
+            "#toggle_state": true
+          },
           "layer": 2,
           "size": "$toggle_size",
-          "$radio_toggle_group": true,
+          "$radio_toggle_group|default": true,
           "$toggle_state_binding_name|default": "$option_binding_name",
           "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
           "$toggle_enabled_binding_type|default": "global",
@@ -1863,6 +1866,7 @@
     "texture": "$global_container_background_texture",
     "fill": "$global_container_background_fill",
     "alpha": "$global_container_background_alpha",
+    "color": "$global_container_background_color",
     "layer": -10,
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle"
@@ -1874,6 +1878,7 @@
     "texture": "$global_container_pocket_background_texture",
     "fill": "$global_container_pocket_background_fill",
     "alpha": "$global_container_pocket_background_alpha",
+    "color": "$global_container_pocket_background_color",
     "layer": -10,
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle"
@@ -1920,7 +1925,7 @@
   
   "multiline_text_box@common.multiline_text_edit_box": {
     "max_length": "$text_box_max_length",
-    "$enabled": true,
+    "enabled": true,
     "size": [ "100%", "100%cm" ],
     "enabled": "$enabled",
     "anchor_from": "top_left",
@@ -2110,7 +2115,7 @@
     "size": "$circle_size",
     "$center_controls|default": [],
     "$circle_size|default": ["50%","100%"],
-    "$main_circle_size|default": ["100%+0.5px","100%"],
+    "$main_circle_size|default": ["100%+1.5%","100%"],
     "$circle_color|default": [1,1,1],
     "$circle_alpha|default": 1,
     "controls": [
