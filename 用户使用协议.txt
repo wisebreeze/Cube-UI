@@ -1,0 +1,53 @@
+﻿用户使用协议 / User Protocol
+
+// 中文 / Chinese //
+以下内容是您与Cube UI（以下简称为“资源包”）的使用协议
+
+一、适用范围
+1.1 此协议长期适用于任何版本的Cube UI(包括其中的扩展包)
+1.2 此协议遵守GPL V3.0协议，查看GPL V3.0协议内容请前往互联网进行搜索
+
+二、主要规定
+2.1  用户使用该资源包即为同意本协议
+2.2  如果您未满十八岁，请在以监护人陪同下阅读本协议
+2.3  作者保留并享有该协议的所有解释权
+
+三、常规规定
+3.2  用户有权遵守协议情况下进行使用，进行拍摄关于该资源的音视频媒体文件
+3.3  禁止作为任何商业用途，不得将其进行转让、出售或者其他商业用途
+3.4  允许使用资源包内的任何源代码或者媒体文件进行修改、引用、洐生代码，但必须在明显的区域标注其中的来源
+
+四、转载规定
+4.1 允许未经过作者的情况下转载资源的任何版本(Cube UI以及其中的扩展包)
+4.2 转载必须标注原作者
+4.3 不能声明这个资源包是你的资源包
+4.4 未经作者同意转载需要标注为"转载"，经过作者同意后可以标注为"授权转载"
+4.5 转载后，资源包介绍内容可以将其重新排版，但是言语不能含有敏感词
+
+// 英文 / English //
+The following is your agreement with the Cube UI ("Resource Pack").
+Please use the Chinese version protocol as the mainstay.
+
+1. Scope of application
+1.1 This protocol is available for any version of the Cube UI (including expansion packs) for a long time
+1.2 This protocol complies with the GPL V3.0 protocol, please go to the Internet to search for the contents of the GPL V3.0 protocol
+
+2. Main provisions
+2.1 By using the Resource Pack, the User agrees to this Agreement
+2.2 If you are under the age of eighteen, please read this Agreement accompanied by a guardian
+2.3 The author reserves and reserves all rights of interpretation of this Agreement
+
+3. General provisions
+3.2 The User has the right to use and shoot audio and video media files about the Resource in compliance with the Agreement
+3.3 Any commercial use is prohibited, transferred, sold or otherwise commercially exploited
+3.4 Any source code or media files in the Resource Kit are permitted to be modified, referenced, or generated using the source code, provided that the source thereof is noted in a conspicuous area
+
+4. Provisions on Reprinting
+4.1 Allow reprinting of any version of the asset without going through the author (Cube UI and the extension pack in it)
+4.2 Reprints must be labeled with the original author
+4.3 You cannot declare this resource bundle to be your resource bundle
+4.4 Reproduction without the author's consent needs to be marked as "reprinted", and can be marked as "authorized reprint" with the consent of the author.
+4.5 After reprinting, the content of the resource pack description can be reformatted, but the language cannot contain sensitive words
+
+协议版本/Protocol version: V1.1
+协议更新时间/Protocol date: 2022/10/14 (第二版)
