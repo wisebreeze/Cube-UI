@@ -50,7 +50,7 @@
 
   "auto_complete_panel": {
     "type": "panel",
-    "size": [ "100%", "100%" ],
+    "size": [ "100%", 1500 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
     "controls": [
@@ -58,7 +58,6 @@
         "panel": {
           "type": "panel",
           "size": [ "100%", "100%" ],
-          "max_size": [ "100%", "100%" ],
           "min_size": [ 0, 0 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
@@ -96,8 +95,21 @@
     "controls": [
       {
         "auto_complete_panel@chat_commands.auto_complete_panel": {
+          "size": [ "100%", "100%" ],
+          "visible": "(not $show_more_command)"
+        }
+      },
+      {
+        "cmd_scroll@common.scrolling_panel": {
+          "visible": "$show_more_command",
+          "size": [ "100%", "100%" ],
           "anchor_from": "bottom_left",
-          "anchor_to": "bottom_left"
+          "anchor_to": "bottom_left",
+          "$scrolling_content": "chat_commands.auto_complete_panel",
+          "$scroll_size": [ 5, "100%-4px" ],
+          "$jump_to_bottom_on_update": true,
+          "$show_background": false,
+          "$always_handle_scrolling": true
         }
       }
     ]

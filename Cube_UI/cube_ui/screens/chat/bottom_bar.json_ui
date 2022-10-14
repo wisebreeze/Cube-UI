@@ -291,7 +291,7 @@
   },
 
   // Chat Text Edit //
-  "text_edit_box@common.multiline_text_edit_box": {
+  "multiline_text_edit_box@common.multiline_text_edit_box": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100% - 54px", 27 ],
@@ -451,9 +451,165 @@
       }
     ]
   },
+  "text_edit_box@common.text_edit_box": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100% - 54px", 27 ],
+    "max_length": "$text_box_max_length",
+
+    "always_listening": true,
+
+    "$text_box_name": "#message_text_box",
+    "$text_edit_box_content_binding_name": "#message_text_box_content",
+
+    "default_focus_precedence": 1,
+    "$focus_id": "text_edit_box_focus_id",
+    "$focus_override_left": "chat_settings_button_focus_id",
+    "$text_box_tts_header": "accessibility.chat.tts.textboxTitle",
+    "bindings": [
+      {
+        "binding_type": "$text_edit_box_enabled_binding_type",
+        "binding_collection_name": "$text_edit_box_grid_collection_name",
+        "binding_name": "$text_box_enabled_binding_name",
+        "binding_name_override": "#enabled"
+      },
+      {
+        "binding_name": "#text_edit_box_focus_override_up",
+        "binding_name_override": "#focus_change_up"
+      },
+      {
+        "binding_name": "#text_edit_box_focus_override_down",
+        "binding_name_override": "#focus_change_down"
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global",
+        // Deselect textbox and allow selection of another UI control with same mouse press
+        "consume_event": false
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": true,
+        "handle_deselect": true,
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$text_edit_box_selected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$text_edit_box_deselected_to_button_id",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      },
+      {
+        "to_button_id": "$text_edit_box_hovered_button_id",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "$text_edit_box_clear_from_button_id",
+        "to_button_id": "$text_edit_box_clear_to_button_id",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+
+      // Extra Mappings //
+      {
+        "from_button_id": "button.menu_autocomplete",
+        "to_button_id": "button.chat_autocomplete",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_autocomplete_back",
+        "to_button_id": "button.chat_autocomplete_back",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_textedit_up",
+        "to_button_id": "button.chat_previous_message",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.menu_textedit_down",
+        "to_button_id": "button.chat_next_message",
+        "handle_select": true,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+
+      // Controller Mappings //
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.send",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": false
+      },
+      {
+        "from_button_id": "button.controller_start",
+        "to_button_id": "button.send",
+        "mapping_type": "global",
+        "handle_select": false,
+        "handle_deselect": false
+      },
+      {
+        "from_button_id": "button.controller_autocomplete",
+        "to_button_id": "button.chat_autocomplete",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_autocomplete_back",
+        "to_button_id": "button.chat_autocomplete_back",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.controller_textedit_up",
+        "to_button_id": "button.chat_previous_message",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      },
+      {
+        "from_button_id": "button.controller_textedit_down",
+        "to_button_id": "button.chat_next_message",
+        "handle_select": false,
+        "handle_deselect": false,
+        "mapping_type": "focused"
+      }
+    ]
+  },
 
   // Chat Bottom Panel //
-  "chat_bottom_panel": {
+  "chat_bottom_panel@common.text_edit_box": {
     "type": "stack_panel",
     "orientation": "vertical",
     "anchor_from": "bottom_middle",
@@ -548,7 +704,8 @@
           "orientation": "horizontal",
           "size": [ "100%", 27 ],
           "controls": [
-            { "text_box@chat_bottom_bar.text_edit_box": {} },
+            { "text_box@chat_bottom_bar.text_edit_box": {"visible":"(not $use_multiline_input)"} },
+            { "multiline_text_box@chat_bottom_bar.multiline_text_edit_box": {"visible":"$use_multiline_input"} },
             { "send_button@chat_bottom_bar.send_button": { "offset": [ -20, 0 ] } }
           ]
         }

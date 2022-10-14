@@ -8,7 +8,7 @@
     "$button_tts_header": "menu.settings",
     "$toggle_text": "menu.settings",
     "$toggle_left_image": "cube_ui/textures/start/setting_icon",
-    "sound_name": "random.anvil_use"
+    "sound_name": "lodestone_compass.link_compass_to_lodestone"
   },
   
   "about_button@start_button_panel.start_button": {
@@ -82,7 +82,7 @@
     "$focus_override_right": "play_focus",
     "$pressed_button_name": "$button_name",
     "size": [ "100%", 20 ],
-    "sound_volume": 1.0,
+    "sound_volume": 0.8,
     "controls": [
       {"default@cube_ui_common.sidebar_tab_base": {}},
       {"hover@cube_ui_common.sidebar_tab_hover_base": {"$checked":true}},

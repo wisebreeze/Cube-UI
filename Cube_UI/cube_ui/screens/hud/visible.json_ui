@@ -1,0 +1,60 @@
+{
+  "namespace": "hud_visible",
+  "visible_panel": {
+    "type": "panel",
+    "size": ["50%",25],
+    "offset": [0,-3],
+    "ignored": "$always_visible_hotbar",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "bindings": [
+      {
+        "binding_name": "(not #hud_visible)",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ],
+    "controls": [
+      {"board_ana_text@board_ana_text": {}},
+      {"button@button": {}}
+    ]
+  },
+  
+  "button@common.button": {
+    "$pressed_button_name": "button.hide_gui_all",
+    "size": [ "100%", "100%" ],
+    "sound_volume": 0.1
+  },
+  
+  "board_ana_text": {
+    "type": "image",
+    "texture": "cube_ui/textures/common/focus_border",
+    "size": ["100%","100%"],
+    "alpha": "@hud_visible.hide_anim_1",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "hide_hud.tip"
+        }
+      }
+    ]
+  },
+  
+  "hide_anim_1": {
+    "anim_type": "wait",
+    "duration": 5.5,
+    "next": "@hud_visible.hide_anim_2",
+    "play_event": "button.hide"
+  },
+  
+  "hide_anim_2": {
+    "anim_type": "alpha",
+    "from": 1,
+    "to": 0,
+    "duration": 1.5,
+    "easing": "linear",
+    "destroy_at_end": "board_ana_text"
+  }
+}

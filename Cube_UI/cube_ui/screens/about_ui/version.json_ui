@@ -14,68 +14,54 @@
           "$text_font_scale_factor": 1.6
         }
       },
-      // §6 > 更改 // §a + 增加 // §b ✔ 修复 // §c - 移除 //
+      // §6 > 更改 // §a + 增加 // §b ✔ 修复 // §c - 移除 // §5 * 扩展包 //
       {
-        "present@version.version_common": {
-          "$version": "($cube_version_prefix + $cube_main_version)",
-          "$update_time": "2022.8.19",
+        "2.5@version.version_common": {
+          "$version": "V2.5",
+          "$update_time": "2022.10.14",
+          "$description": "§l§a(增加)§r\n§f+ 为hud屏幕添加了隐藏hud按钮 (仅触屏)\n§l§6(更改)§r\n§f> 专注菜单Toggle在Hud显示\n> 稍微调整了hud屏幕部分细节\n> 设置按钮点击音效更改\n> 在聊天栏输入命令时，允许查看所有命令\n§l§5(扩展包)\n§f* 不再支持黑暗模式扩展包（使用黎明主题扩展包代替）"
+        }
+      },
+      {
+        "2.4@version.version_common": {
+          "$version": "V2.4",
+          "$update_time": "2022.10.1",
+          "$description": "§l§b(修复)§r\n§f✔ 修复在HUD屏幕追溯指针显示问题\n§l§a(增加)§r\n§f+ 在全局资源、行为包、资源包页面可以搜索资源了\n+ 暂停屏幕点击空白区域即可返回游戏\n+ 点击'保存并退出'时需要再次点击才能退出\n§l§c(移除)§r\n§f- 在start屏幕点击纸娃娃不会打开更衣室屏幕了"
+        }
+      },
+      {
+        "2.3@version.version_common": {
+          "$version": "V2.3",
+          "$update_time": "2022.9.18",
+          "$description": "§l§6(更改)§r\n§f> 对于专注面板进行了一些优化\n> 专注面板入口改为点击hud右上角打开\n(手柄、新触摸方式以及Window玩家需修改RP/ui/_setting.json文件以代替专注面板)\n> 兼容v1.18.0 - beta1.19.40版本\n§l§a(增加)§r\n§f+ 允许在未解锁的交易项目情况下进行交易"
+        }
+      },
+      {
+        "2.2.1@version.version_common": {
+          "$version": "V2.2.1",
+          "$update_time": "2022.7.22",
+          "$description": "§l§6(更改)§r\n§f> 专注菜单移动至暂停屏幕\n> 调整消息弹出时间\n§l§a(增加)§r\n§f+ 增加UI设置文件"
+        }
+      },
+      {
+        "2.1@version.version_common": {
+          "$version": "V2.1",
+          "$update_time": "2022.7.20",
+          "$description": "§l§6(更改)§r\n§f> 调整暂停界面动画\n> 现在在聊天界面换行即可发送信息\n> 在_global_variables.json修改$use_multiline_input为true即可换行\n> 部分细节优化"
+        }
+      },
+      {
+        "2.0.2@version.version_common": {
+          "$version": "V2.0.2",
+          "$update_time": "2022.7.19",
           "$description": "§l§6(更改)§r\n§f> 更改部分细节\n§l§b(修复)§r\n§f✔ 修复游戏界面世界编辑按钮显示问题"
         }
       },
       {
-        "V2.0@version.version_common": {
+        "2.0@version.version_common": {
           "$version": "V2.0",
-          "$update_time": "2022.8.17",
-          "$description": "§l§a(增加)§r\n§f+ 新的背景\n+ 新的命令方块界面\n+ 开始界面断网提示\n+ 关于UI界面加入外观浏览和常见问题选项\n+ 新的背包界面和容器界面\n+ HUD快捷栏快速切换\n+ 更多可供用户修改的变量\n§l§6(更改)§r\n§f> 关于UI界面顶部选项栏更改为侧边栏\n> 更好的Cube UI版本描述排版\n> 新的加载等待提示\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复加载界面背景显示问题\n✔ 修复一些问题"
-        }
-      },
-      {
-        "V1.13@version.version_common": {
-          "$version": "V1.13",
           "$update_time": "2022.7.17",
-          "$description": "§l§6(更改)§r\n§f> 适配1.19.10版本"
-        }
-      },
-      {
-        "V1.12.1@version.version_common": {
-          "$version": "V1.12.1",
-          "$update_time": "2022.6.28",
-          "$description": "§l§6(更改)§r\n§f> 适配1.19.0版本"
-        }
-      },
-      {
-        "V1.11@version.version_common": {
-          "$version": "V1.11",
-          "$update_time": "2022.4.30",
-          "$description": "§l§6(更改)§r\n§f> 适配1.18.30版本"
-        }
-      },
-      {
-        "V1.10_plus@version.version_common": {
-          "$version": "V1.10 - 1.10.2",
-          "$update_time": "2022.3.17",
-          "$description": "§l§b(修复)§r\n§f✔ 修复一些已知问题"
-        }
-      },
-      {
-        "V1.9.2@version.version_common": {
-          "$version": "V1.9.2",
-          "$update_time": "2022.3.13",
-          "$description": "§l§b(修复)§r\n§f✔ 修复手柄光标无法显示问题"
-        }
-      },
-      {
-        "V1.9.1@version.version_common": {
-          "$version": "V1.9.1",
-          "$update_time": "2022.3.5",
-          "$description": "§l§b(修复)§r\n§f✔ 修复上个版本的问题"
-        }
-      },
-      {
-        "V1.9@version.version_common": {
-          "$version": "V1.9",
-          "$update_time": "2022.3.5",
-          "$description": "§l§a(增加)§r\n§f+ 对物品栏和容器增加了快捷按钮(丢出和销毁物品操作)\n§l§6(更改)§r\n§f> 重新布局的加载界面\n§l§b(修复)§r\n§f✔ 在经典档案UI下，容器的关闭按钮位置偏移修正\n✔ 部分icon修改"
+          "$description": "§l§a(增加)§r\n§f+ 新的背景\n+ 新的命令方块界面\n+ 开始界面断网提示\n+ 关于UI界面加入外观浏览和常见问题选项\n+ 新的背包界面和容器界面\n+ HUD快捷栏快速切换\n+ 更多可供用户修改的变量\n§l§6(更改)§r\n§f> 关于UI界面顶部选项栏更改为侧边栏\n> 更好的Cube UI版本描述排版\n> 新的加载等待提示\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复加载界面背景显示问题\n✔ 修复一些问题"
         }
       },
       { "dividers@cube_ui_common.divider": {"ignored": "(not $subpacks_ignored)"} },
