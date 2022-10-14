@@ -24,7 +24,7 @@
    
   "loading_panel@cube_ui_background.screen_blur_background_content": {
     "visible": "$use_loading_bars",
-    "ignored": "(not $is_pregame)",
+    "ignored": true,
     "propagate_alpha": true,
     "layer": 100,
     "animation_reset_name": "screen_animation_reset",

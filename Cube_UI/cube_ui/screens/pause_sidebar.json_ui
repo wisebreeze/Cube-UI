@@ -30,7 +30,6 @@
       "@cube_ui_anim.left_offset_entrance_pop"
     ],
     "controls": [
-      //{ "toggle@pause_sidebar.bottom_toggle_panel": {}},
       { "topbar@pause_sidebar.topbar_panel": {}},
       { "button@pause_sidebar.scroll_button_panel": {}}
     ]
@@ -170,6 +169,7 @@
       { "empty_panel_5@pause_sidebar.empty_panel": {"visible": "(not $cube_netease)"}},
       { "feed_button@pause_sidebar.feed_button": {}},
       { "empty_panel_6@pause_sidebar.empty_panel": {"visible": "(not $cube_netease)"}},
+      { "quit_toggle@pause_sidebar.quit_toggle": {}},
       { "quit_button@pause_sidebar.quit_button": {}}
     ]
   },
@@ -186,7 +186,7 @@
   },
   
   "set_button@sidebar_button": {
-    "$button_sound": "random.anvil_use",
+    "$button_sound": "lodestone_compass.link_compass_to_lodestone",
     "$pressed_button_name": "button.menu_settings",
     "$sidebar_button_text": "menu.settings",
     "$sidebar_button_image": "cube_ui/textures/pause/icon_set",
@@ -232,28 +232,48 @@
   "quit_button@sidebar_button": {
     "$button_sound": "random.door_close",
     "$pressed_button_name": "button.menu_quit",
-    "$sidebar_button_text": "pauseScreen.quit",
+    "$sidebar_button_text": "playscreen.confirmLeaveTitle",
     "$sidebar_button_image": "cube_ui/textures/pause/icon_quit",
     "$sidebar_hover_button_image": "cube_ui/textures/pause/icon_quit_hover",
-    "variables": [
+    "bindings": [
       {
-        "requires": "$is_secondary_client",
-        "$sidebar_button_text": "pauseScreen.secondaryClientLeave"
-      },
+        "binding_type": "view",
+        "source_control_name": "quitbtn_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  
+  "quit_toggle@common_toggles.light_text_toggle": {
+    "$toggle_view_binding_name": "quitbtn_toggle",
+    "$button_text": "pauseScreen.quit",
+    /*"$tab_panel": "pause_sidebar.sidebar_button_common",
+    "$sidebar_button_text_color": "$text_color",
+    "$sidebar_button_image": "$tab_texture",
+    "$checked_default_image": "cube_ui/textures/pause/icon_quit",
+    "$unchecked_default_image": "cube_ui/textures/pause/icon_quit",
+    "$checked_hover_image": "cube_ui/textures/pause/icon_quit_hover",
+    "$unchecked_hover_image": "cube_ui/textures/pause/icon_quit_hover",*/
+    "size": [ "100%", 20 ],
+    "bindings": [
       {
-        "requires": "$education_edition",
-        "$sidebar_button_text": "menu.quit.edu"
+        "binding_type": "view",
+        "source_control_name": "quitbtn_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
       }
     ]
   },
   
   "sidebar_button@common.button": {
     "sound_name": "$button_sound",
+    "sound_volume": 0.8,
     "$button_sound|default": "random.click",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "$button_tts_header": "$sidebar_button_text",
-    "size": [ "100%", 15 ],
+    "size": [ "100%", 20 ],
     "controls": [
       {"default@pause_sidebar.sidebar_button_common": {}},
       {"hover@pause_sidebar.sidebar_button_common": {"$sidebar_button_image": "$sidebar_hover_button_image","$sidebar_button_text_color": [ 1,1,1 ]}},
@@ -272,7 +292,8 @@
       {
         "base_image": {
           "type": "image",
-          "size": [ 15, 15 ],
+          "size": [ 18, 18 ],
+          "offset": [1,0],
           "layer": 3,
           "texture": "$sidebar_button_image",
           "anchor_from": "left_middle",
@@ -283,10 +304,11 @@
         "text": {
           "type": "label",
           "layer": 3,
+          "font_scale_factor": 1.1,
           "color": "$sidebar_button_text_color",
           "text": "$sidebar_button_text",
           "size": [ "default", "default" ],
-          "offset": [ 18, 0 ],
+          "offset": [ 20, 0 ],
           "anchor_from": "left_middle",
           "anchor_to": "left_middle"
         }
