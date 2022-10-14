@@ -1,4 +1,5 @@
 {
+"global_texture_pack_section": {"$search_name": "global_search"},
   "language_section": {
     "modifications": [
       {
@@ -131,6 +132,8 @@
     ]
   },
 //////////////////////////
+"general_button":{"$glyph_size":[16,16],"$toggle_icon":"cube_ui/textures/setting/shortcut_icon"},
+"account_button":{"$glyph_size":[16,16],"$toggle_icon":"cube_ui/textures/setting/profile_icon"},
 "profile_button":{"$toggle_icon":"cube_ui/textures/setting/profile_icon"},
 "storage_management_button":{"$toggle_icon":"cube_ui/textures/setting/storage_icon"},
 "creator_button":{"$toggle_icon":"cube_ui/textures/setting/creator_icon"},
@@ -147,7 +150,7 @@
 "how_to_play_button":{"$toggle_icon":"cube_ui/textures/setting/howtoplay_icon"},
 //////////////////////////
   "video_section/max_framerate_slider": {"ignored":false},
-  "profile_section/licenses_label_header": {"font_type":"$global_main_font"},
+/*  "profile_section/licenses_label_header": {"font_type":"$global_main_font"},
   "profile_section/third_party_copyright_info_label_panel/copyright_label": {"font_type":"$global_main_font"},
   "profile_section/build_info_label_panel/build_id_label": {"font_type":"$global_main_font"},
   "profile_section/build_info_label_panel/protocol_version_label": {"font_type":"$global_main_font"},
@@ -186,7 +189,7 @@
       }
     ],
     "$hide_login_button": "($win10_edition or not $is_xboxlive_enabled)"
-  },
+  },*/
   
   "gamertag_controls": {
     "type": "panel",

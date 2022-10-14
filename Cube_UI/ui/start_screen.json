@@ -125,19 +125,6 @@
               }
             },
             {
-              "dressing_room_button@common.button": {
-                "$pressed_button_name": "button.to_profile_screen",
-                "$button_tts_header": "accessibility.start.profile",
-                "sound_name": "armor.equip_iron",
-                "layer": 3,
-                "size": [ 70, "80%" ],
-                "offset": [ 0, 10 ],
-                "controls": [
-                  { "empty@common.empty_panel": {} }
-                ]
-              }
-            },
-            {
               "appearacne_loading_panel@common_store.progress_loading": {
                 "$hide_failure_text": true,
                 "$hide_progress_loading_outline": true,
@@ -180,10 +167,7 @@
       {"dressroom_button@start_button_panel.dressroom_button": {}}
     ]
   },
-  "sidebar_verbose_content": {
-    "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ "100%", "100%c" ],
+  "sidebar_verbose_content@sidebar_content": {
     "controls": [
       {"gamepic_and_name@cube_ui_common.gamepic_and_name": {}},
       {"setting_button@start_button_panel.setting_button": {}},
@@ -198,48 +182,11 @@
 
   // 屏幕 //
   "start_screen": {
-    "$screen_animations": [
-      "@common.screen_exit_animation_push_fade",
-      "@common.screen_exit_animation_pop_fade",
-      "@common.screen_entrance_animation_push_fade",
-      "@common.screen_entrance_animation_pop_fade"
-    ],
-    "$background_animations": [
-      "@common.screen_exit_animation_push_alpha",
-      "@common.screen_exit_animation_pop_alpha",
-      "@common.screen_entrance_animation_push_alpha",
-      "@common.screen_entrance_animation_pop_alpha"
-    ],
     "$blur_animations": [
       "@cube_ui_anim.blur_exit_push",
       "@cube_ui_anim.blur_exit_pop",
       "@cube_ui_anim.blur_entrance_push",
       "@cube_ui_anim.blur_entrance_pop"
-    ],
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $nx_os)",
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.menu_offline",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $can_swap_vr_mode)",
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.menu_swap_vr_mode",
-        "mapping_type": "global"
-      },
-      {
-        "ignored": "(not $can_swap_vr_mode)",
-        "from_button_id": "button.menu_swap_vr_mode",
-        "to_button_id": "button.menu_swap_vr_mode",
-        "mapping_type": "global"
-      }
     ],
     // 空的顶部面板 - 填充安全角
     "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
@@ -271,17 +218,9 @@
     "$screen_bg_content": "cube_ui_background.screen_background_content"
   },
   
-  "test_panel": {
+  "start_main_content": {
     "type": "panel",
-    "size": "$fill_size",
-    "ignored": "(not $start_screen_debug)",
-    "controls": []
-  },
-  
-  "main_contents": {
-    "type": "panel",
-    "size": "$fill_size",
-    "ignored": "$start_screen_debug",
+    "size": [ "100%", "100%" ],
     "$default_sidebar_control": "start.sidebar_content",
     "$verbose_sidebar_control": "start.sidebar_verbose_content",
     "controls": [
@@ -293,14 +232,6 @@
       { "keyboard_helpers@start.keyboard_helper_vr_swap": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
       { "headbar@cube_ui_common.headbar": {"alpha": 0.6,"layer": 2,"$title":"Minecraft","$back_button_ignored":"$is_ios"}},
       { "popup_dialog_factory": {"type": "factory","control_ids": {"cloud_upload_prompt": "@start.cloud_upload_prompt"}}}
-    ]
-  },
-  
-  "start_main_content": {
-    "size": [ "100%", "100%" ],
-    "controls": [
-      { "test_panel@test_panel": {}},
-      { "main_contents@start.main_contents": {}}
     ]
   }
 }

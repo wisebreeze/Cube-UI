@@ -228,27 +228,6 @@
     ]
   },
 // -----------------------
-  "no_coalesce_container_slot_button@crafting.inventory_container_slot_button": {
-    "modifications": [
-      {
-        "array_name": "button_mappings",
-        "operation": "insert_back",
-        "value": [
-          {
-            "from_button_id": "button.menu_ok",
-            "to_button_id": "$button_auto_place",
-            "mapping_type": "double_pressed"
-          },
-          {
-            "from_button_id": "button.menu_select",
-            "to_button_id": "$button_auto_place",
-            "mapping_type": "double_pressed"
-          }
-        ]
-      }
-    ]
-  },
-// -----------------------
 "crafting_arrow": {"alpha":0,"controls": [{"button@cube_ui_common.fast_hc_button":{}}]},
 "crafting_arrow_large": {"alpha":0,"controls": [{"button@cube_ui_common.fast_hc_button":{}}]},
 // -----------------------
@@ -674,7 +653,7 @@
                       "anchor_from": "top_right",
                       "anchor_to": "top_right",
                       "size": [16,"100%c"],
-                      "offset": [ 20, 4 ],
+                      "offset": [ 20, 0 ],
                       "ignored": "$is_left_panel",
                       "controls": [
                         {
@@ -686,7 +665,7 @@
                                 "close@common.close_button": {
                                   "size": [16,16],
                                   "layer": "$close_button_layer",
-                                  "offset": "$close_button_offset",
+                                  "offset": [0,0],
                                   "controls": [
                                     {
                                       "default@cube_ui_common.button_image_base": {

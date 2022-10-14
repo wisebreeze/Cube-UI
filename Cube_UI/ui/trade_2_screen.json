@@ -3,9 +3,7 @@
   "tier_stack_panel": {"bindings": []},
 
   // 强制显示
-  "hover_button": {
-    "bindings": []
-  },
+  "hover_button": {"bindings": []},
   
   // 适配主题
   "stack_count_label": {
@@ -24,7 +22,8 @@
     "layer": 1
   },
 
-  "trade_toggle@common_toggles.light_image_toggle_collection": {
+  "trade_toggle": {
+    "$toggle_enabled_binding_name": "none",
     "$unchecked_control": "common_toggles.toggle_unchecked",
     "$checked_control": "common_toggles.toggle_checked",
     "$unchecked_hover_control": "common_toggles.toggle_unchecked_hover",

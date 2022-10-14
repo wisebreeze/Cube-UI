@@ -1,1 +1,11 @@
-{"persona_screen":{"gamepad_cursor_deflection_mode":false,"$screen_bg_content":"cube_ui_background.screen_blur_background_content"}}
+{
+  "dialog_background_object_content": {"alpha": 0},
+  "popup_frame_background": {"alpha": 0},
+  "modal_window_input_blocker": {"alpha": 0},
+  "switch_persona_and_classic_message": {"color": "$global_text_color"},
+  "switch_persona_and_classic_repeat_check_text": {"color": "$global_text_color"},
+  "persona_screen": {
+    "gamepad_cursor_deflection_mode": false,
+    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+  }
+}

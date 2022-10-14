@@ -58,6 +58,7 @@
     // hud //
     "cube_ui/screens/hud/focus_panel.json_ui",//专注面板
     "cube_ui/screens/hud/scoreboard.json_ui",//记分板
+    "cube_ui/screens/hud/visible.json_ui",//显示Hud
     "cube_ui/screens/hud/cross_hair.json",//虚拟准星
 
     // manifest_validation //
@@ -65,9 +66,6 @@
     "cube_ui/screens/manifest_validation/manifest_main_content.json_ui",//清单主要内容
     "cube_ui/screens/manifest_validation/pack_secondary_info.json_ui",//包信息
     "cube_ui/screens/manifest_validation/error_content.json_ui",//错误内容
-
-    // netease //
-    "ui/netease/warn_anti_addiction.json",// 防沉迷
 
     // other screen //
     "cube_ui/screens/death_screen.json_ui",// 失败
@@ -77,6 +75,9 @@
 
     // pause //
     "cube_ui/screens/pause_sidebar.json_ui",//侧边栏
+
+    // ui setting //
+    "ui/_setting.json",//设置
 
     // setting //
     "cube_ui/screens/settings/shortcut_section.json_ui",//快捷设置

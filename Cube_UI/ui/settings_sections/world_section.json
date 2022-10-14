@@ -1,4 +1,6 @@
 {
+"addon_section": {"$search_name": "addon_search"},
+"level_texture_pack_section": {"$search_name": "texture_search"},
   "game_button": {
     "type": "stack_panel",
     "size": ["100%","100%c"],

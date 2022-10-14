@@ -34,7 +34,7 @@
     "gamepad_cursor_deflection_mode":false,
     "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
   },
-  
+  "selected_persona_skin_background": {"alpha": "$global_background_alpha","color": "$global_background_color"},
   "popup_dialog_delete_persona_content": {
     "controls": [
       { "message@delete_popup_dialog_message": {} },

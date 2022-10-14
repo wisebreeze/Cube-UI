@@ -26,28 +26,22 @@
 //     "$xxx": 9
 //     9 - 纯数字，不能添加小数点
 //  修改后，千万不要忘记检查json格式！
-//
-//  自定义UI索引: 
-//  https://shimo.im/docs/aBAYVpyy24hdB73j/
 ////////////////////////////////
 
   // UI界面 //
      // 背景
-       /* 普通背景 */"$default_bg": "cube_ui/textures/background/main",
-       /* 黑暗背景 */"$dark_bg": "cube_ui/textures/background/dark_main",
-       /* 普通模糊背景 */"$default_blur_bg": "cube_ui/textures/background/blur",
-       /* 黑暗模糊背景 */"$dark_blur_bg": "cube_ui/textures/background/dark_blur",
+       /* 普通 */"$default_bg": "cube_ui/textures/background/main",
+       /* 黑暗 */"$dark_bg": "cube_ui/textures/background/dark_main",
+       /* 普通模糊 */"$default_blur_bg": "cube_ui/textures/background/blur",
+       /* 黑暗模糊 */"$dark_blur_bg": "cube_ui/textures/background/dark_blur",
 
-     // 全屏大小
+     // 预设默认大小(不要更改)
      "$fill_size": [ "100%", "100%" ],
      
      // 全局字体
      "$global_main_font": "smooth",
 
-     // 调试屏幕UI
-     "$start_screen_debug": false,
-
-     // 输入框最大字数限制
+     // 输入框字数限制
      "$text_box_max_length": 999999,
 
      // 快速抢箱
@@ -90,7 +84,13 @@
  
   // 聊天界面 //
     // 玩家受到伤害时是否自动关闭界面
-    "$chat_close_on_player_hurt": true,
+    "$chat_close_on_player_hurt": false,
+
+    // 启用换行输入
+    "$use_multiline_input": false,
+
+    // 增强命令显示
+    "$show_more_command": true,
 
     // 是否使用全局字体
     // (启用后，会忽视聊天设置的字体)
@@ -116,13 +116,6 @@
     // 启用快捷栏选定改变颜色动画
     "$hotbar_selected_anim": false,
 
-    // 显示指南针和时钟
-      // hide 隐藏全部 | all 显示所有(包括恢复指南针)
-      // old 显示所有(不包括恢复指南针)
-      // only_clock 仅显示时钟
-      // only_compass 仅显示指南针
-      "$use_compass_and_clock": "hide",
-
     // 聊天栏大小
     "$hud_chat_size": [ "100%", "100%c" ],
     // 聊天栏最大大小
@@ -130,6 +123,8 @@
 
     // 专注模式和菜单启用
     "$focus_on_enable": true,
+    // 启用隐藏hud
+    "$hide_hud_enable": true,
 ////////////////////
 // 以下本文禁止修改
 ////////////////////
@@ -139,6 +134,7 @@
   "$nested_default_alpha": 0.4,
   // 按钮
   "$dark_button_secondary_default_text_color": [ 0.95, 0.95, 0.95 ],
+  "$light_button_locked_text_color": [ 0.8, 0.8, 0.8 ],
   // 更衣室
   "$dark_panel_color": [],
   "$dressing_room_dark_bg_color": [],
@@ -172,9 +168,10 @@
   
   "$global_selector_area_background_color": [1,1,1],
   "$global_selector_area_background_alpha": 0.2,
+  // 文字
+  "$global_text_color": [0,0,0],
   // 按钮
   "$global_button_fill": true,
-  "$global_button_text_font": "smooth",
   "$global_button_alpha": 0.4,
 
   "$global_button_default_color": [1,1,1],
@@ -188,7 +185,7 @@
   "$global_button_sound_volume": 1.0,
   "$global_button_sound_pitch": 1.0,
 
-  "$global_button_text_font": "OldSmoothFont",
+  "$global_button_text_font": "smooth",
   "$global_button_text_default_color": [0.4,0.4,0.4],
   "$global_button_text_hover_color": [1,1,1],
   "$global_button_text_pressed_color": [1,1,1],
@@ -277,6 +274,7 @@
   "$global_experience_bar_full_color": [0.1686,0.5664,0.9765],
   "$global_experience_bar_full_alpha": 1,
   "$global_experience_bar_number_color": [0.333,1,1],
+  "$global_experience_bar_number_border_color": [0.2941,0.5921,1],
   "$global_experience_bar_number_font": "smooth",
   // 下拉面板
   "$global_dropdown_background_color": [0.6,0.6,0.6],
@@ -357,8 +355,8 @@
   "$cube_dev": false,//Cube UI开发者
   "$cube_netease": false,//Cube UI中国版
   "$cube_ui_dark_mode|default": false,//Cube UI深色外观
-  "$cube_patch_version": "1.2",//补丁版本
-  "$cube_main_version": "2.0.2",//版本
+  "$cube_patch_version": "1.5",//补丁版本
+  "$cube_main_version": "2.4.0",//版本
   "$cube_version_prefix": "V",//版本前缀
   "$cube_access_channel": "klpbbs",//获取渠道
   "$cube_author": "MC_spruce"//作者

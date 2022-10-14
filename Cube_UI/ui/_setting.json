@@ -1,0 +1,45 @@
+{
+  "namespace": "cube_setting",
+  
+  // focus_state 专注状态
+  // true => on ; false => off
+  "focus_panel": {
+    // scoreboard 计分板
+    "$scb_state": true,
+    // item_name 物品名
+    "$item_name_state": true,
+    // effect 药水效果
+    "$effect_state": true,
+    // switch 切换快捷栏
+    "$switch_state": true,
+    // boss boss血条
+    "$boss_state": true,
+    // chat 聊天状态
+    "$chat_state": true,
+    // note 播放音乐提示
+    "$note_state": true,
+    // actionbar 活动栏标题
+    "$actionbar_state": true,
+    // title 标题
+    "$title_state": true,
+    // subtitle 副标题
+    "$subtitle_state": true,
+    // position 位置
+    "$position_state": true,
+    // clock 指南针
+    "$compass_state": true,
+    // clock 钟
+    "$clock_state": true,
+    // recovery_compass 恢复指南针
+    "$recovery_compass_state": false,
+    
+    // export code(don't touch)
+    // 导出代码(不要动)
+    "type": "input_panel",
+    "prevent_touch_input": true,
+    "ignored": "(not $touch)",
+    "size": [ "60%", "55%" ],
+    "bindings": [{"binding_type": "view","source_control_name": "focus_toggle","source_property_name": "#toggle_state","target_property_name": "#visible"}],
+    "controls": [{"export@hud_focus.personalization_panel_bg":{}}]
+  }
+}

@@ -311,7 +311,7 @@
                 "type": "image",
                 "texture": "$count_background_image",
                 "size": [ "100%c + 3px", "100%c" ],
-                "offset": [ -10, 5 ],
+                "offset": [ -15, 5 ],
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
                 "layer": 3,
