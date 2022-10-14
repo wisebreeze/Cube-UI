@@ -179,12 +179,39 @@
     "size": "$toggle_size",
     "$toggle_group_default_selected": 0,
     "$toggle_enabled|default": true,
+    "$toggle_mappings|default": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_left",
+        "to_button_id": "$toggle_off_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad_and_not_gaze"
+      },
+      {
+        "ignored": "(not $enable_directional_toggling)",
+        "from_button_id": "button.menu_right",
+        "to_button_id": "$toggle_on_button",
+        "mapping_type": "pressed",
+        "input_mode_condition": "gamepad_and_not_gaze"
+      }
+    ],
     "controls": [
       {
         "$group_name@common.toggle": {
           "property_bag": {
             "#toggle_state": true
           },
+          "button_mappings": "$toggle_mappings",
           "layer": 2,
           "size": "$toggle_size",
           "$radio_toggle_group|default": true,
@@ -195,6 +222,16 @@
           "$binding_condition": "once",
           "$enable_directional_toggling": false,
           "enabled": "$toggle_enabled",
+          "controls": [
+            { "unchecked@$unchecked_control": {"$tab_state": "unchecked"} },
+            { "checked@$checked_control": {"$tab_state": "checked"} },
+            { "unchecked_hover@$unchecked_hover_control": {"$tab_state": "unchecked_hover"} },
+            { "checked_hover@$checked_hover_control": {"$tab_state": "checked_hover"} },
+            { "unchecked_locked@$unchecked_locked_control": {} },
+            { "checked_locked@$checked_locked_control": {} },
+            { "unchecked_locked_hover@$unchecked_locked_hover_control": {} },
+            { "checked_locked_hover@$checked_locked_hover_control": {} }
+          ],
           // 指向的外观控件
           "$unchecked_control|default": "settings_common.option_toggle_off",
           "$checked_control|default": "settings_common.option_toggle_on",
@@ -557,19 +594,23 @@
   },
   
   "hide_toggle_on@hide_common": {
+    "$toggle_controls": "settings_common.option_toggle_on",
     "$bg_color": "$global_toggle_checked_default_color"
   },
   
   "hide_toggle_on_hover@hide_common": {
+    "$toggle_controls": "settings_common.option_toggle_on_hover",
     "$bg_color": "$global_toggle_checked_hover_color"
   },
   
   "hide_toggle_off@hide_toggle_on": {
+    "$toggle_controls": "settings_common.option_toggle_off",
     "$status_color": [ 0, 0.494, 0.133 ],
     "$status_text": "on"
   },
   
   "hide_toggle_off_hover@hide_toggle_on_hover": {
+    "$toggle_controls": "settings_common.option_toggle_off_hover",
     "$status_color": [ 0, 0.494, 0.133 ],
     "$status_text": "on"
   },
@@ -618,6 +659,14 @@
               }
             },
             {
+              "toggle@$toggle_controls": {
+                "layer": 5,
+                "offset": ["-2%",0],
+                "anchor_from": "right_middle",
+                "anchor_to": "right_middle"
+              }
+            }
+            /*{
               "status": {
                 "type": "label",
                 "$status_color|default": [ 1, 0.266, 0.266 ],
@@ -631,7 +680,7 @@
                 "text_alignment": "right",
                 "size": [ "default", 10 ]
               }
-            }
+            }*/
           ]
         }
       }
@@ -1747,7 +1796,7 @@
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "size": [16,"100%c"],
-          "offset": [ 20, 4 ],
+          "offset": [ 20, 0 ],
           "$left_hover_anchor|default": false,
           "variables": {
             "requires": "$left_hover_anchor",
@@ -2086,7 +2135,7 @@
     "anchor_from": "left_middle",
     "anchor_to": "left_middle",
     "size": ["50%c","100%"],
-    "offset": ["-50%c",0],
+    "offset": ["-50%c + 0.211%",0],
     "clips_children": true,
     "$circle_offset|default": ["50%",0],
     "controls": [
@@ -2115,7 +2164,7 @@
     "size": "$circle_size",
     "$center_controls|default": [],
     "$circle_size|default": ["50%","100%"],
-    "$main_circle_size|default": ["100%+1.5%","100%"],
+    "$main_circle_size|default": ["100%","100%"],
     "$circle_color|default": [1,1,1],
     "$circle_alpha|default": 1,
     "controls": [
@@ -2132,6 +2181,21 @@
         }
       },
       {"right@cube_ui_common.right_circle":{}}
+    ]
+  },
+  
+  "db_button@common.button": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$db_pressed_name",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_name",
+        "mapping_type": "pressed"
+      }
     ]
   }
 }

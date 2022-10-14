@@ -341,10 +341,10 @@
   // 聊天动画 //
   "chat_push": {
     "anim_type": "offset",
-    "from": [ "-100%", 0 ],
+    "from": [ "-50%", 0 ],
     "to": [ 0, 0 ],
-    "duration": 0.8,
-    "easing": "in_bounce"
+    "duration": 0.65,
+    "easing": "in_back"
   },
 ////////////////////////
   // effect动画 //
@@ -538,16 +538,16 @@
     "anim_type": "offset",
     "from": [ "-30%", 0 ],
     "to": [ 0, 0 ],
-    "duration": 2.0,
-    "easing": "in_bounce"
+    "duration": 0.8,
+    "easing": "in_cubic"
   },
   
   "left_offset_entrance_pop@entrance_pop_anim_base": {
     "anim_type": "offset",
     "from": [ "-30%", 0 ],
     "to": [ 0, 0 ],
-    "duration": 2.0,
-    "easing": "in_bounce"
+    "duration": 0.8,
+    "easing": "in_cubic"
   },
  
   "left_offset_exit_push@exit_push_anim_base": {
@@ -568,16 +568,16 @@
     "anim_type": "offset",
     "from": [ "30%", 0 ],
     "to": [ 0, 0 ],
-    "duration": 2,
-    "easing": "in_back"
+    "duration": 0.8,
+    "easing": "in_cubic"
   },
   
   "right_offset_entrance_pop@entrance_pop_anim_base": {
     "anim_type": "offset",
     "from": [ "30%", 0 ],
     "to": [ 0, 0 ],
-    "duration": 2,
-    "easing": "in_back"
+    "duration": 0.8,
+    "easing": "in_cubic"
   },
  
   "right_offset_exit_push@exit_push_anim_base": {
