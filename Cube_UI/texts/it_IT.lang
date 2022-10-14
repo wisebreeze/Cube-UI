@@ -71,6 +71,7 @@ hud.personalization=Personalizzazione
 hud.personalization.title=Menu di messa a fuoco
 hud.hide.player_position=Coordinate
 hud.hide.title=Titolo
+hud.hide.subtitle=Sottotitoli
 hud.hide.actionbar=Titolo della barra delle attività
 hud.switch=Cambia barra di scelta rapida
 hud.boss=Boss HP
@@ -91,5 +92,7 @@ chat.up=Messaggio successivo
 chat.back=Ultimo messaggio
 
 ## Altra interfaccia
+search.item=| con distinzione tra maiuscole e minuscole Cerca contenuti...
+hide_hud.tip=Clicca qui per visualizzare l'HUD
 command_block.empty_command_text=Inserisci il tuo comando qui
 seed_picker.header=L'immagine è solo di riferimento, il seme potrebbe cambiare con l'aggiornamento della versione

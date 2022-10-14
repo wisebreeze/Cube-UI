@@ -20,7 +20,7 @@ hover_text.default_mode=デフォルトモード
 hover_text.auto_mode=自動モード
 hover_text.drop_mode=ドロップモード
 
-##一般的な問題
+## 一般的な問題
 cube_ui.faq_t1 =教育用UIを体験して使用する方法は？
 cube_ui.faq_1 =完全なUIエクスペリエンスのために、世界の§eResourcePackOptions§fでCubeUIを有効にします
 cube_ui.faq_t2 = UIパーツのコンテンツを設定する方法は？
@@ -32,7 +32,7 @@ cube_ui.faq_4 =現在、UIはオープンソースです。2つの変更を加�
 cube_ui.faq_t5 =バグを報告する方法は？
 cube_ui.faq_5 =リソースの下のコメント領域で作成者に伝えてください。フィードバックについては、フィードバックスレッドに移動してください。
 
-##UIについて
+## UIについて
 renewal.history=更新コンテンツ
 about.ui_pack=UIについて
 about.sub_package=拡張パッケージ
@@ -62,7 +62,7 @@ appearance.header_5=スライダー
 
 cube.piracy =現在のUIが変更されました。本物のバージョンを使用して、CubeUIを十分に体験してください。
 
-##フォーカスパネル
+## フォーカスパネル
 hud.focus_menu.tab_1=ショートカットボタン
 hud.focus_menu.tab_2=通知クラス
 hud.focus_menu.tab_3=その他
@@ -71,6 +71,7 @@ hud.personalization=パーソナライゼーション
 hud.personalization.title=フォーカスメニュー
 hud.hide.player_position=座標
 hud.hide.title=タイトル
+hud.hide.subtitle=字幕
 hud.hide.actionbar=アクティビティバーのタイトル
 hud.switch=スイッチショートカットバー
 hud.boss=ボスHP
@@ -84,12 +85,14 @@ hud.toggle.item_name=アイテム名
 hud.btn.hide_all=hudを非表示にする
 hud.btn.hide_doll=紙人形を隠す
 
-##チャットする
+## チャットする
 tab.down=次のコンテンツ
 tab.back=前のコンテンツ
 chat.up=次のメッセージ
 chat.back=最後のメッセージ
 
-##その他のインターフェース
+## その他のインターフェース
+search.item=大文字と小文字を区別する | コンテンツの検索...
+hide_hud.tip=HUD を表示するには、ここをクリックしてください
 command_block.empty_command_text=ここにコマンドを入力してください
 seed_picker.header =画像は参照用であり、シードはバージョンの更新に伴って変更される可能性があります

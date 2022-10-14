@@ -62,6 +62,7 @@ hud.personalization=Εξατομίκευση
 hud.personalization.title=Μενού εστίασης
 hud.hide.player_position=Συντεταγμένες
 hud.hide.title=Τίτλος
+hud.hide.subtitle=Υπότιτλος
 hud.hide.actionbar=Τίτλος γραμμής δραστηριότητας
 hud.switch=Αλλαγή γραμμής συντομεύσεων
 hud.boss=Αφεντικό HP
@@ -82,5 +83,7 @@ chat.up=Επόμενο μήνυμα
 chat.back=Τελευταίο μήνυμα
 
 ## Άλλη διεπαφή
+search.item=διάκριση πεζών-κεφαλαίων | Αναζήτηση περιεχομένου...
+hide_hud.tip=Κάντε κλικ εδώ για να εμφανίσετε το HUD
 command_block.empty_command_text=Εισαγάγετε την εντολή σας εδώ
 seed_picker.header=Η εικόνα είναι μόνο για αναφορά, ο σπόρος μπορεί να αλλάξει με την ενημέρωση της έκδοσης

@@ -62,6 +62,7 @@ hud.personalization=Tilpasning
 hud.personalization.title=Fokusmenu
 hud.hide.player_position=Koordinater
 hud.hide.title=Titel
+hud.hide.subtitle=Undertekst
 hud.hide.actionbar=Aktivitetslinjens titel
 hud.switch=Skift genvejslinje
 hud.boss=Boss HP
@@ -82,5 +83,7 @@ chat.up=Næste besked
 chat.back=Sidste besked
 
 ## Anden grænseflade
+search.item=|, der skelner mellem store og små bogstaver Søg efter indhold...
+hide_hud.tip=Klik her for at få vist HUD
 command_block.empty_command_text=Indtast din kommando her
 seed_picker.header=Billedet er kun til reference, frøet kan ændre sig med opdateringen af ​​versionen

@@ -71,6 +71,7 @@ hud.personalization=個性化
 hud.personalization.title=專注菜單
 hud.hide.player_position=坐標
 hud.hide.title=標題
+hud.hide.subtitle=副標題
 hud.hide.actionbar=活動欄標題
 hud.switch=切換快捷欄
 hud.boss=Boss 血量
@@ -91,5 +92,7 @@ chat.up=下個信息
 chat.back=上個信息
 
 ## 其他界面
+search.item=區分大小寫 | 搜尋內容...
+hide_hud.tip=點擊此處顯示 HUD
 command_block.empty_command_text=在此輸入你的命令
 seed_picker.header=圖片僅供參考，種子可能會隨著版本的更新而變化

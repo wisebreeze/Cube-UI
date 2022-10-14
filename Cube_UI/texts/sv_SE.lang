@@ -71,6 +71,7 @@ hud.personalization=Anpassning
 hud.personalization.title=Fokusmeny
 hud.hide.player_position=Koordinater
 hud.hide.title=Titel
+hud.hide.subtitle=Underrubrik
 hud.hide.actionbar=Aktivitetsfältets titel
 hud.switch=Byt genvägsfält
 hud.boss=Boss HP
@@ -91,5 +92,7 @@ chat.up=Nästa meddelande
 chat.back=Sista meddelande
 
 ## Annat gränssnitt
+search.item=skiftlägeskänslig | Sök efter innehåll...
+hide_hud.tip=Klicka här för att visa HUD
 command_block.empty_command_text=Ange ditt kommando här
 seed_picker.header=Bilden är endast för referens, fröet kan ändras med uppdateringen av versionen

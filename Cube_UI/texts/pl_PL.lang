@@ -71,6 +71,7 @@ hud.personalization=Personalizacja
 hud.personalization.title=Menu ostrości
 hud.hide.player_position=Współrzędne
 hud.hide.title=Tytuł
+hud.hide.subtitle=Napisy
 hud.hide.actionbar=Tytuł paska aktywności
 hud.switch=Przełącz pasek skrótów
 hud.boss=PŻ bossa
@@ -91,5 +92,7 @@ chat.up=Następna wiadomość
 chat.back=Ostatnia wiadomość
 
 ## Inny interfejs
+search.item=| z uwzględnieniem wielkości liter Wyszukiwanie treści...
+hide_hud.tip=Kliknij tutaj, aby wyświetlić HUD
 command_block.empty_command_text=Wprowadź tutaj swoje polecenie
 seed_picker.header=Zdjęcie ma charakter poglądowy, nasiona mogą ulec zmianie wraz z aktualizacją wersji

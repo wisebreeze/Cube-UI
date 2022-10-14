@@ -71,6 +71,7 @@ hud.personalization=Személyre szabás
 hud.personalization.title=Fókusz menü
 hud.hide.player_position=Koordináták
 hud.hide.title=Cím
+hud.hide.subtitle=Felirat
 hud.hide.actionbar=A tevékenységsáv címe
 hud.switch=Parancsikonsáv váltása
 hud.boss=HP főnök
@@ -91,5 +92,7 @@ chat.up=Következő üzenet
 chat.back=Utolsó üzenet
 
 ## Egyéb felület
+search.item=kis- és nagybetűkre érzékeny | Tartalom keresése...
+hide_hud.tip=Kattintson ide a HUD megjelenítéséhez
 command_block.empty_command_text=Írja be ide a parancsot
 seed_picker.header=A kép csak tájékoztató jellegű, a verzió frissítésével a seed változhat

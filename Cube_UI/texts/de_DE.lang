@@ -62,6 +62,7 @@ hud.personalization=Personalisierung
 hud.personalization.title=Fokusmenü
 hud.hide.player_position=Koordinaten
 hud.hide.title=Titel
+hud.hide.subtitle=Untertitel
 hud.hide.actionbar=Titel der Aktivitätsleiste
 hud.switch=Verknüpfungsleiste wechseln
 hud.boss=Boss-HP
@@ -82,5 +83,7 @@ chat.up=Nächste Nachricht
 chat.back=Letzte Nachricht
 
 ## Andere Schnittstelle
+search.item=Groß-/Kleinschreibung beachten| Suche nach Inhalten...
+hide_hud.tip=Klicken Sie hier, um das HUD anzuzeigen
 command_block.empty_command_text=Geben Sie hier Ihren Befehl ein
 seed_picker.header=Das Bild dient nur als Referenz, der Seed kann sich mit dem Update der Version ändern

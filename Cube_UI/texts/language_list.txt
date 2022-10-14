@@ -1,29 +1,30 @@
-en_US  English (US)   英语
-en_GB  English (UK)   英语
-de_DE  Deutsch (Deutschland)   德语
-es_ES   Español (España)   西班牙语
-es_MX  Español (México)   西班牙语
-fr_FR   Français (France)   法语
-fr_CA   Français (Canada)   法语
-it_IT    Italiano (Italia)   意大利语
-ja_JP   日本語 (日本)   日语
-ko_KR  한국어 (대한민국)   韩语
-pt_BR   Português (Brasil)   葡萄牙语
-pt_PT   Português (Portugal)   葡萄牙语
-ru_RU   Русский (Россия)   俄语
-zh_CN  简体中文   中文
-zh_TW  繁體中文   中文
-nl_NL   Nederlands (Nederland)   荷兰语
+# 这是原版的语言，用于参考翻译
 bg_BG  Български (BG)   保加利亚语
 cs_CZ  Čeština (Česká republika)   捷克语
 da_DK  Dansk (DA)   丹麦语
+de_DE  Deutsch (Deutschland)   德语
 el_GR   Ελληνικά (Ελλάδα)   希腊语
+en_GB  English (UK)   英语
+en_US  English (US)   英语
+es_ES   Español (España)   西班牙语
+es_MX  Español (México)   西班牙语
 fi_FI    Suomi (Suomi)   芬兰语
+fr_CA   Français (Canada)   法语
+fr_FR   Français (France)   法语
 hu_HU  Magyar (HU)   匈牙利语
-id_ID   Bahasa Indonesia (Indonesia)   印尼语
+id_ID Bahasa Indonesia (Indonesia)   印尼语
+it_IT    Italiano (Italia)   意大利语
+ja_JP   日本語 (日本)   日语
+ko_KR  한국어 (대한민국)   韩语
 nb_NO  Norsk bokmål (Norge)   挪威语
+nl_NL   Nederlands (Nederland)   荷兰语
 pl_PL   Polski (PL)   波兰语
+pt_BR   Português (Brasil)   葡萄牙语
+pt_PT   Português (Portugal)   葡萄牙语
+ru_RU   Русский (Россия)   俄语
 sk_SK  Slovensky (SK)   斯洛伐克语
 sv_SE  Svenska (Sverige)   瑞典语
 tr_TR   Türkçe (Türkiye)   土耳其语
 uk_UA  Українська (Україна)   乌克兰语
+zh_CN  简体中文   中文
+zh_TW  繁體中文   中文

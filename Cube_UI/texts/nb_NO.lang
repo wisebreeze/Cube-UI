@@ -71,6 +71,7 @@ hud.personalization=Personliggjøring
 hud.personalization.title=Fokusmeny
 hud.hide.player_position=Koordinater
 hud.hide.title=Tittel
+hud.hide.subtitle=Undertittel
 hud.hide.actionbar=Aktivitetslinjetittel
 hud.switch=Bytt snarveilinje
 hud.boss=Sjef HP
@@ -91,5 +92,7 @@ chat.up=Neste melding
 chat.back=Siste melding
 
 ## Annet grensesnitt
+search.item=skiller mellom store og små bokstaver | Søk etter innhold...
+hide_hud.tip = Klikk her for å vise HUD
 command_block.empty_command_text=Skriv inn kommandoen din her
 seed_picker.header=Bildet er kun for referanse, frøet kan endres med oppdateringen av versjonen

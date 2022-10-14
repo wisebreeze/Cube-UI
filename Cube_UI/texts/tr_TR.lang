@@ -71,6 +71,7 @@ hud.personalization=Kişiselleştirme
 hud.personalization.title=Odak Menüsü
 hud.hide.player_position=Koordinatlar
 hud.hide.title=Başlık
+hud.hide.subtitle=Altyazı
 hud.hide.actionbar=Etkinlik çubuğu başlığı
 hud.switch=Kısayol çubuğunu değiştir
 hud.boss=Patron HP
@@ -91,5 +92,7 @@ chat.up=Sonraki mesaj
 chat.back=Son mesaj
 
 ## Diğer arayüz
+search.item=büyük/küçük harfe duyarlı | İçerik arayın...
+hide_hud.tip=HUD'yi görüntülemek için buraya tıklayın
 command_block.empty_command_text=Komutunuzu buraya girin
 seed_picker.header=Resim sadece referans içindir, sürüm güncellemesi ile tohum değişebilir

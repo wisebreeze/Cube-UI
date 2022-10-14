@@ -62,6 +62,7 @@ hud.personalization=Персонализиране
 hud.personalization.title=Меню за фокусиране
 hud.hide.player_position=Координати
 hud.hide.title=Заглавие
+hud.hide.subtitle=Подзаглавие
 hud.hide.actionbar=Заглавие на лентата на активността
 hud.switch=Превключване на лентата за бърз достъп
 hud.boss=Шеф HP
@@ -82,5 +83,7 @@ chat.up=Следващо съобщение
 chat.back=Последно съобщение
 
 ## Друг интерфейс
+search.item=случай чувствителен | Търсене на съдържание...
+hide_hud.tip=Кликнете тук, за да покажете HUD
 command_block.empty_command_text=Въведете вашата команда тук
 seed_picker.header=Картината е само за справка, семето може да се промени с актуализацията на версията

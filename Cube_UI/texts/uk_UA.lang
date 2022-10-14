@@ -71,6 +71,7 @@ hud.personalization=Персоналізація
 hud.personalization.title=Меню фокусу
 hud.hide.player_position=Координати
 hud.hide.title=Назва
+hud.hide.subtitle=Підзаголовок
 hud.hide.actionbar=Заголовок панелі активності
 hud.switch=Переключити панель швидкого доступу
 hud.boss=Бос HP
@@ -91,5 +92,7 @@ chat.up=Наступне повідомлення
 chat.back=Останнє повідомлення
 
 ## Інший інтерфейс
+search.item=| з урахуванням регістру Пошук вмісту...
+hide_hud.tip=Натисніть тут, щоб відобразити HUD
 command_block.empty_command_text=Введіть свою команду тут
 seed_picker.header=Зображення лише для довідки, насіння може змінитися з оновленням версії

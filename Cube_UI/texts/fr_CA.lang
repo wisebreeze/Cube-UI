@@ -62,6 +62,7 @@ hud.sersonalisation=Personnalisation
 hud.espersonalisation.title=se concentrer sur le menu
 hud.hide.player_position=coordonnées
 hud.hide.title=title
+hud.hide.subtitle=Sous-titre
 hud.hide.actionbar=Titre de la barre d'activité
 hud.switch=Switch Fast Colonne
 hud.boss=volume sanguin de boss
@@ -82,5 +83,7 @@ chat.up=Informations suivantes
 chat.back=informations précédentes
 
 ## Toutes les autres interfaces
+search.item=| sensible à la casse Rechercher du contenu...
+hide_hud.tip=Cliquez ici pour afficher le HUD
 command_block.empty_command_text=entrez votre commande ici
 seed_picker.header=l'image est pour référence uniquement, les graines peuvent changer avec la mise à jour de la version

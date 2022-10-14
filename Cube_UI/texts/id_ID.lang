@@ -71,6 +71,7 @@ hud.personalization=Personalisasi
 hud.personalization.title=Menu Fokus
 hud.hide.player_position=Koordinat
 hud.hide.title=Judul
+hud.hide.subtitle=Subjudul
 hud.hide.actionbar=Judul bilah aktivitas
 hud.switch=Ganti bilah pintasan
 hud.boss=HP bos
@@ -91,5 +92,7 @@ chat.up=Pesan berikutnya
 chat.back=Pesan terakhir
 
 ## Antarmuka lainnya
+search.item=| peka huruf besar/kecil Cari konten...
+hide_hud.tip=Klik di sini untuk menampilkan HUD
 command_block.empty_command_text=Masukkan perintah Anda di sini
 seed_picker.header=Gambar hanya untuk referensi, seed dapat berubah dengan pembaruan versi

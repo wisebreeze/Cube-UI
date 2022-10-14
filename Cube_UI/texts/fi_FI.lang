@@ -60,6 +60,7 @@ hud.personalisointi=personointi
 hud.personalisaatio.title=keskity valikkoon
 hud.hide.player_position=koordinaatit
 hud.hide.title=otsikko
+hud.hide.subtitle=Tekstitys
 hud.hide.actionbar=aktiviteettipalkin otsikko
 hud.switch=kytkin nopea sarake
 hud.boss=boms bloodin tilavuus
@@ -79,6 +80,8 @@ Tab.back=Edellinen sisältö
 Chat.up=seuraava tieto
 Chat.back=Aikaisemmat tiedot
 
-# Kaikki muut rajapinnat
+## Kaikki muut rajapinnat
+search.item=kirjainkoolla on merkitystä | Hae sisältöä...
+hide_hud.tip=Klikkaa tästä näyttääksesi HUD:n
 Command_block.empty_command_text=kirjoita komento tähän
 Seed_picker.Header=Kuva on vain viitteelliselle, siemenet voivat muuttua version päivityksen myötä

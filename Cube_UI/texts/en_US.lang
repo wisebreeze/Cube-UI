@@ -62,6 +62,8 @@ hud.personalization=personalization
 hud.personalization.title=focus menu
 hud.hide.player_position=coordinates
 hud.hide.title=title
+hud.hide.subtitle=subtitle
+hud.hide.subtitle=subtitle
 hud.hide.actionbar=activity bar title
 hud.switch=switch shortcut bar
 hud.boss=boss hp
@@ -82,5 +84,7 @@ chat.up=next message
 chat.back=last message
 
 ## other interface
+search.item=case sensitive | Search for content...
+hide_hud.tip=Click here to display the HUD
 command_block.empty_command_text=enter your command here
 seed_picker.header=the picture is for reference only, the seed may change with the update of the version

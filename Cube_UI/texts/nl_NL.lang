@@ -71,6 +71,7 @@ hud.personalization=Personalisatie
 hud.personalization.title=Focusmenu
 hud.hide.player_position=Coördinaten
 hud.hide.title=Titel
+hud.hide.subtitle=Ondertitel
 hud.hide.actionbar=Activiteitsbalk titel
 hud.switch=Schakel snelkoppelingsbalk in
 hud.boss=Baas HP
@@ -91,5 +92,7 @@ chat.up=Volgend bericht
 chat.back=Laatste bericht
 
 ## Andere interface
+search.item=hoofdlettergevoelig | Zoeken naar inhoud...
+hide_hud.tip=Klik hier om de HUD weer te geven
 command_block.empty_command_text=Voer hier je commando in
 seed_picker.header=De afbeelding is alleen ter referentie, de seed kan veranderen met de update van de versie

@@ -71,6 +71,7 @@ hud.personalization=Prispôsobenie
 hud.personalization.title=Ponuka zamerania
 hud.hide.player_position=Súradnice
 hud.hide.title=Názov
+hud.hide.subtitle=Titulky
 hud.hide.actionbar=Názov panela aktivít
 hud.switch=Prepnúť lištu skratiek
 hud.boss=Šéf HP
@@ -91,5 +92,7 @@ chat.up=Ďalšia správa
 chat.back=Posledná správa
 
 ## Iné rozhranie
+search.item=| rozlišujúca veľké a malé písmená Vyhľadávanie obsahu...
+hide_hud.tip=Kliknutím sem zobrazíte HUD
 command_block.empty_command_text=Sem zadajte svoj príkaz
 seed_picker.header=Obrázok je len orientačný, seed sa môže zmeniť s aktualizáciou verzie

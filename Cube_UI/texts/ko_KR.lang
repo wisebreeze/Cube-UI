@@ -71,6 +71,7 @@ hud.personalization=개인화
 hud.personalization.title=포커스 메뉴
 hud.hide.player_position=좌표
 hud.hide.title=제목
+hud.hide.subtitle=자막
 hud.hide.actionbar=활동 표시줄 제목
 hud.switch=단축바 전환
 hud.boss=보스 HP
@@ -91,5 +92,7 @@ chat.up=다음 메시지
 chat.back=마지막 메시지
 
 ## 기타 인터페이스
+search.item=대소문자 구분 | 콘텐츠 검색...
+hide_hud.tip=HUD를 표시하려면 여기를 클릭하십시오
 command_block.empty_command_text=여기에 명령을 입력하십시오
 seed_picker.header=사진은 참고용이며 버전 업데이트에 따라 시드가 변경될 수 있습니다.
