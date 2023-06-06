@@ -1,3 +1,4 @@
+## 保加利亚语
 Language=Български (BG)
 ## настройвам
 options.beta_text=Бета версия горен текст
@@ -11,6 +12,18 @@ help.effect_water=Отварата на слабостта трябва да е 
 help.anvil.tool=Инструмент
 help.anvil.tool2=Оборудване
 
+## Текст при преминаване
+hover_text.all=Всички
+hover_text.drop=Отхвърлете елемента
+hover_text.destroy=Унищожаване на елемента
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=fast drop
+quick.trade=Всички сделки
+quick.craft=Изработете всички
+quick.cut=изрежете всички
+
 ## често срещан проблем
 cube_ui.faq_t1=Как да опитате и използвате образователния потребителски интерфейс?
 cube_ui.faq_1=Активирайте Cube UI в световните §eResource Pack Options§f за пълно изживяване на UI
@@ -18,8 +31,6 @@ cube_ui.faq_t2=Как да задам съдържание на част от п
 cube_ui.faq_2=В пакета с ресурси щракнете последователно върху ui/_global_variables.json, моля, променете го според подканите във файла
 cube_ui.faq_t3=1.18.10 някой потребителски интерфейс няма ефект?
 cube_ui.faq_3=В момента потребителският интерфейс е напълно покрит, препоръчително е да използвате старата версия на Minecraft, за да изпитате пълното покритие (част от оригиналния потребителски интерфейс може да бъде покрит от оригиналния концептуален потребителски интерфейс, така че няма ефект)
-cube_ui.faq_t4=Потребителският интерфейс с отворен код ли е?
-cube_ui.faq_4=В момента потребителският интерфейс е с отворен код, можете да направите две промени и да използвате изходния код (комерсиалната употреба е забранена, за да се избегне ненужна правна отговорност)
 cube_ui.faq_t5=Как да докладвам грешки?
 cube_ui.faq_5=Кажете на автора в областта за коментари под ресурса, моля, преминете към нишката за обратна връзка за обратна връзка
 
@@ -30,15 +41,11 @@ about.sub_package=Пакет за разширение
 update_time=Час на актуализация
 about_ui.subpack_sorting=Сортирането на подпакета трябва да е по-високо от сортирането на потребителския интерфейс на Cube, за да може подпакетът да работи напълно
 about_ui.no_subpack=Няма инсталиран подпакет
+cube.coming_soon=Какво да очакваме
 
 about_ui.ui_file=Текущ UI файл:
 about_ui.default_ui=Класически
 about_ui.default_os=ОС:
-
-about_ui.precautions_1=● Без препродажба
-about_ui.precautions_2=● Забранено за търговска употреба
-about_ui.precautions_3=● Препечатването е забранено без разрешение
-about_ui.precautions_4=● Позволява интегриране на всяко изображение или код в пакета с ресурси в други пакети с ресурси или вторично модифицирани пакети с ресурси за лична употреба, но за публикуване е необходимо съгласието на автора
 
 subpack.no_name=Този разширителен пакет няма име
 subpack.incompatibility=§cТози разширителен пакет не е съвместим с текущата версия
@@ -53,13 +60,16 @@ izgled.header_5=Плъзгач
 
 cube.piracy=Текущият потребителски интерфейс е променен, моля, използвайте оригиналната версия, за да изпитате напълно потребителския интерфейс на Cube
 
-## панел за фокусиране
-hud.focus_menu.tab_1=Бутон за бърз достъп
-hud.focus_menu.tab_2=Клас за уведомяване
-hud.focus_menu.tab_3=Друго
+## Променливи
+cube.variables.title=променливи
+cube.variables.subtitle=Тези променливи могат да се променят във файла ui/_global_variables.json на потребителския интерфейс на Cube.
+cube.variables.more=Тук са изброени само важните променливи, други променливи не са показани тук
 
-hud.personalization=Персонализиране
-hud.personalization.title=Меню за фокусиране
+## панел за фокусиране
+hud.focus_menu.tab1=extension
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Other
+
 hud.hide.player_position=Координати
 hud.hide.title=Заглавие
 hud.hide.subtitle=Подзаглавие
@@ -72,6 +82,20 @@ hud.toggle.scb=Табло с резултати
 hud.toggle.effect=Ефект на отвара
 hud.toggle.hotbar=Гореща лента
 hud.toggle.item_name=Име на елемент
+hud.toggle.paper_doll=хартиена кукла
+hud.focus_menu.hand=Ръчен дисплей
+hud.focus_menu.light=brightness
+hud.focus_menu.rc=Възстановяване на компаса
+hud.focus_menu.tc=Кръг на прогреса на сензорния екран
+hud.focus_menu.crosshair=Кръстоса
+hud.focus_menu.dt=Напомняне за ниска издръжливост
+hud.focus_menu.vignette=Изобразяване на среда
+hud.focus_menu.mini_map=Мини карта
+
+hud.focus_menu.set.hand_info=Информация за ръчния елемент
+hud.focus_menu.set.2d_paper=2D хартиена кукла
+hud.focus_menu.set.old_rc=Активиране на стар възстановен компас
+hud.focus_menu.set.map_size=Размер на миникарта
 
 hud.btn.hide_all=Скриване на hud
 hud.btn.hide_doll=Скрий хартиената кукла
@@ -81,9 +105,74 @@ tab.down=Следващо съдържание
 tab.back=Предишно съдържание
 chat.up=Следващо съобщение
 chat.back=Последно съобщение
+chat.to_down=Връщане към дъното
 
 ## Друг интерфейс
+search.form=търсене на менюто...
 search.item=случай чувствителен | Търсене на съдържание...
-hide_hud.tip=Кликнете тук, за да покажете HUD
 command_block.empty_command_text=Въведете вашата команда тук
 seed_picker.header=Картината е само за справка, семето може да се промени с актуализацията на версията
+cube_ui.author=Автор: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Намек: Моля, кликнете върху "x" в горния десен ъгъл, за да се върнете към екрана за пауза!
+screenshot.locationButton=Показване на местоположението на снимката на екрана
+screenshot.location=Място за правене на снимки на екрана: 
+createWorldScreen.gameMode.spectator=Спектър
+gui.empty_back=Щракнете два пъти върху празното място, за да се върнете към играта
+gui.one_empty_back=Кликнете върху празното място, за да се върнете към играта
+
+## търговия
+trade.unlock=Отключи всички сделки
+
+## игра
+play_screen.lately_first=Напоследък първа игра
+play_screen.db_click_start=Кликнете два пъти отново, за да влезете
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Скриване на HUD чрез двойно щракване върху бутона "H"
+hide_hud.tip=Натиснете тук, за да покажете HUD
+
+## Пауза
+pause.quit_tip.title=Запазване и излизане
+pause.quit_tip.content=Записва ли се и излиза ли?
+pause.quit_tip.yes=Запазване и излизане
+pause.quit_tip.no=Забравено кликване...
+
+## колимация
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Искате още колиматори? Моля, инсталирайте и активирайте пакета за колиматор Cube UI!
+focus.cross_hair.tip.setting=Колимацията се нулира, когато излезете от играта, за да я използвате постоянно, моля, модифицирайте файла ui/_setting.json за потребителския интерфейс на куба.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=скриване на колиматора
+focus.cross_hair.title.default=по подразбиране
+focus.cross_hair.description.default=Вградената колимация на потребителския интерфейс на куба
+
+## Музика
+cube_music.title=музика
+cube_music.tip=Поради проблеми с авторските права потребителският интерфейс на Cube извиква за възпроизвеждане само оригиналната музика. За да добавите допълнителна музика, инсталирайте пакет с музикални разширения от трети страни или изтеглете персонализирания пакет с музикални разширения на Cube UI!
+
+## забележка кутия
+cube_note.title=Количка за бележки
+cube_note.sound=volume
+
+## настройвам
+options.sounds=Сила на звука
+options.developer=Програмист
+setting.file_storage.tip=Когато промените пътя за съхранение, ще загубите потребителския интерфейс на Cube! (След като промените пътя, моля, опитайте да импортирате отново и активирате потребителския интерфейс на Cube)
+
+setting.sound.description.all=Настройва общата сила на звука на играта
+setting.sound.description.music=Регулирайте силата на звука на музиката на играта
+setting.sound.description.sound=Регулира силата на звука на звуковите ефекти на играта
+setting.sound.description.ambient=Регулира силата на звука на подводни, долни, пещерни околни звуци и фойерверк ракети
+setting.sound.description.block=Регулира силата на звука на блокове като наковални, сандъци и врати
+setting.sound.description.hostile=Регулира силата на звука на враждебните тълпи
+setting.sound.description.neutral=Настройва силата на звука на приятелските тълпи
+setting.sound.description.player=Регулирайте силата на звука на плейъра (като изпуснати предмети, наранени звукови ефекти и т.н.)
+setting.sound.description.record=Регулира силата на звука на музиката, произведена от грамофонни плейъри и блокове за ноти
+setting.sound.description.whether=Регулира силата на звука на дъжд и гръмотевични бури
+setting.sound.description.tts=Коригиране на силата на звука на текст към говор
+
+setting.gm.description.c=Неограничени ресурси, летете свободно и разбивайте блоковете моментално
+setting.gm.description.s=Изследвайте света, събирайте ресурси, синтезирайте реквизити, подобрявайте нивата, попълвайте издръжливост и здраве
+setting.gm.description.a=Играчите не могат да чупят и поставят каквито и да е блокове, за да избегнат повреда на приключенската карта или вандализъм на сървъра
+setting.gm.description.sp=Позволява на играча да прелети и да наблюдава света без препятствия

@@ -1,3 +1,4 @@
+## 丹麦语
 Language=Dansk (DA)
 ## Opsætning
 options.beta_text=Beta version toptekst
@@ -11,6 +12,18 @@ help.effect_water=Svaghedsdrik skal være en normal vandflaske
 help.anvil.tool=Værktøj
 help.anvil.tool2=Udstyr
 
+## Hover-tekst
+hover_text.all=Alle
+hover_text.drop=Fald ned fra emnet
+hover_text.destroy=Destroy item
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=hurtigt drop
+quick.trade=Alle handler
+quick.craft=Lav alt
+quick.cut=klipp alle
+
 ## almindeligt problem
 cube_ui.faq_t1=Hvordan oplever og bruger man den pædagogiske brugergrænseflade?
 cube_ui.faq_1=Aktiver Cube UI i verdens §eResource Pack Options§f for den fulde UI-oplevelse
@@ -18,8 +31,6 @@ cube_ui.faq_t2=Hvordan indstilles UI-delens indhold?
 cube_ui.faq_2=I ressourcepakken skal du klikke på ui/_global_variables.json på skift. Rediger det i henhold til anvisningerne i filen
 cube_ui.faq_t3=1.18.10, har nogle brugergrænseflader ingen effekt?
 cube_ui.faq_3=I øjeblikket er brugergrænsefladen fuldt dækket, det anbefales at bruge den gamle version af Minecraft for at opleve den fulde dækning (en del af den originale brugergrænseflade kan være dækket af det originale konceptbrugergrænseflade, så det har ingen effekt)
-cube_ui.faq_t4=Er UI open source?
-cube_ui.faq_4=I øjeblikket er brugergrænsefladen open source, du kan foretage to ændringer og bruge kildekoden (kommerciel brug er forbudt for at undgå unødvendigt juridisk ansvar)
 cube_ui.faq_t5=Hvordan rapporterer man fejl?
 cube_ui.faq_5=Fortæl forfatteren i kommentarfeltet under ressourcen, flyt venligst til feedbacktråden for feedback
 
@@ -30,15 +41,11 @@ about.sub_package=Udvidelsespakke
 update_time=Opdater tid
 about_ui.subpack_sorting=Underpakkesorteringen skal være højere end Cube UI-sorteringen, for at underpakken kan køre helt
 about_ui.no_subpack=Ingen underpakke installeret
+cube.coming_soon=Hvad du kan forvente
 
 about_ui.ui_file=Aktuel UI-fil:
 about_ui.default_ui=Klassisk
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Ingen videresalg
-about_ui.precautions_2=● Forbudt til kommerciel brug
-about_ui.precautions_3=● Genudskrivning er forbudt uden tilladelse
-about_ui.precautions_4=● Giver mulighed for at integrere ethvert billede eller kode i ressourcepakken i andre ressourcepakker eller anden ændrede ressourcepakker til personlig brug, men forfatterens samtykke er påkrævet for udgivelse
 
 subpack.no_name=Denne udvidelsespakke har intet navn
 subpack.incompatibility=§cDenne udvidelsespakke er ikke kompatibel med den aktuelle version
@@ -53,13 +60,16 @@ appearance.header_5=Slider
 
 cube.piracy=Den nuværende brugergrænseflade er blevet ændret, brug venligst den ægte version for fuldt ud at opleve Cube-brugergrænsefladen
 
-## fokuspanel
-hud.focus_menu.tab_1=Genvejsknap
-hud.focus_menu.tab_2=Meddelelsesklasse
-hud.focus_menu.tab_3=Andet
+## Variabler
+cube.variables.title=variables
+cube.variables.subtitle=Disse variabler kan ændres i Cube UI's ui/_global_variables.json-fil.
+cube.variables.more=Kun de vigtige variabler er anført her, andre variabler vises ikke her.
 
-hud.personalization=Tilpasning
-hud.personalization.title=Fokusmenu
+## fokuspanel
+hud.focus_menu.tab1=udvidelse
+hud.focus_menu.tab2=Meddelelse
+hud.focus_menu.tab3=Other
+
 hud.hide.player_position=Koordinater
 hud.hide.title=Titel
 hud.hide.subtitle=Undertekst
@@ -72,6 +82,20 @@ hud.toggle.scb=Scoreboard
 hud.toggle.effect=Potion Effekt
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Varenavn
+hud.toggle.paper_doll=paperdukke
+hud.focus_menu.hand=Håndholdt display
+hud.focus_menu.light=højde
+hud.focus_menu.rc=Gendan kompas
+hud.focus_menu.tc=Berøringsskærmens fremskridtscirkel
+hud.focus_menu.crosshair=Kryds
+hud.focus_menu.dt=Påmindelse om lav holdbarhed
+hud.focus_menu.vignette=Miljøgengivelse
+hud.focus_menu.mini_map=Minikort
+
+hud.focus_menu.set.hand_info=Information om håndholdt genstand
+hud.focus_menu.set.2d_paper=2D-papirdukke
+hud.focus_menu.set.old_rc=Aktiver gammelt gendannet kompas
+hud.focus_menu.set.map_size=Minikortstørrelse
 
 hud.btn.hide_all=Skjul hud
 hud.btn.hide_doll=Skjul papirdukke
@@ -81,9 +105,76 @@ tab.down=Næste indhold
 tab.back=Tidligere indhold
 chat.up=Næste besked
 chat.back=Sidste besked
+chat.to_down=Tilbage til bunden
 
 ## Anden grænseflade
+search.form=søgningsmenu...
 search.item=|, der skelner mellem store og små bogstaver Søg efter indhold...
-hide_hud.tip=Klik her for at få vist HUD
 command_block.empty_command_text=Indtast din kommando her
 seed_picker.header=Billedet er kun til reference, frøet kan ændre sig med opdateringen af ​​versionen
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Author: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Hinvis: Klik på "x" i øverste højre hjørne for at vende tilbage til pauseskærmen!
+screenshot.locationButton=Se placering af skærmbillede
+screenshot.location=Skærmbillets placering: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Dobbeltklik på det tomme felt for at vende tilbage til spillet
+gui.one_empty_back=Klik på det tomme felt for at vende tilbage til spillet
+
+## handel
+trade.unlock=Lås op for alle handler
+
+## spil
+play_screen.lately_first=Senest første spil
+play_screen.db_click_start=Dobbeltklik igen for at komme ind
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Skjul HUD'et ved at dobbeltklikke på "H"-knappen
+hide_hud.tip=Klik her for at vise HUD'en
+
+## Pause
+pause.quit_tip.title=Save and exit
+pause.quit_tip.content=Sparer og afslutter dette?
+pause.quit_tip.yes=Sparer og afslutter
+pause.quit_tip.no=Missed click...
+
+## kollimering
+hud.focus_menu.tab_4=kollimering
+focus.cross_hair.tip.subpack=Vil du have flere kollimatorer? Installer og aktiver venligst Cube UI-kollimatorpakken!
+focus.cross_hair.tip.setting=Kollimationen nulstilles, når du afslutter spillet, for at bruge den permanent skal du ændre filen ui/_setting.json for Cube UI.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=skjul kollimator
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Cube UI's indbyggede kollimation
+
+## Musik
+cube_music.title=musik
+cube_music.tip=På grund af ophavsretlige problemer kalder Cube UI kun den originale musik til afspilning. Hvis du vil tilføje yderligere musik, skal du installere en tredjeparts musikudvidelsespakke eller downloade Cube UI's brugerdefinerede musikudvidelsespakke!
+
+## note box
+cube_note.title=Noteboks
+cube_note.sound=volume
+
+## Opsætning
+options.sounds=Lydstyrke
+options.developer=Udvikler
+setting.file_storage.tip=Når du ændrer lagerstien, vil du miste Cube UI! (Når du har ændret stien, prøv venligst at genimportere og aktivere Cube UI)
+
+setting.sound.description.all=Justerer spillets overordnede lydstyrke
+setting.sound.description.music=Juster lydstyrken på spilmusikken
+setting.sound.description.sound=Justerer lydstyrken af ​​spillets lydeffekter
+setting.sound.description.ambient=Justerer lydstyrken af ​​undervands-, under-, hulomgivelseslyde og fyrværkeriraketter
+setting.sound.description.block=Justerer volumen af ​​blokke såsom ambolte, kister og døre
+setting.sound.description.hostile=Justerer lydstyrken af ​​fjendtlige mobs
+setting.sound.description.neutral=Justerer lydstyrken for venlige pøbler
+setting.sound.description.player=Juster afspillerens lydstyrke (såsom tabte genstande, skadede lydeffekter osv.)
+setting.sound.description.record=Justerer lydstyrken af ​​musik produceret af pladespillere og nodeblokke
+setting.sound.description.whether=Justerer mængden af ​​regn og tordenvejr
+setting.sound.description.tts=Juster tekst-til-tale lydstyrke
+
+setting.gm.description.c=Ubegrænsede ressourcer, flyv frit og bryd blokke med det samme
+setting.gm.description.s=Udforsk verden, saml ressourcer, syntetisere rekvisitter, forbedre niveauer, genopbygge udholdenhed og sundhed
+setting.gm.description.a=Spillere kan ikke bryde og placere blokke for at undgå at beskadige eventyrkortet eller vandalisere serveren
+setting.gm.description.sp=Tillader spilleren at flyve igennem og observere verden uden forhindringer

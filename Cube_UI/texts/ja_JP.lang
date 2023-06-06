@@ -1,3 +1,4 @@
+## 日语
 Language=日本語 (日本)
 ## 設定
 options.beta_text=ベータトップテキスト
@@ -12,42 +13,39 @@ help.anvil.tool=ツール
 help.anvil.tool2=機器
 
 ##ホバーテキスト
-hover_text.all = all
+hover_text.all=all
 hover_text.drop=ドロップアイテム
 hover_text.destroy=アイテムを破棄します
 hover_text.help=ヘルプ/レシピ
-hover_text.default_mode=デフォルトモード
-hover_text.auto_mode=自動モード
-hover_text.drop_mode=ドロップモード
+hover_text.default=デフォルト
+hover_text.autoモード=高速移動
+hover_text.dropモード=クイックドロップ
+quick.trade=すべての取引
+quick.craft=すべてクラフト
+quick.cut=すべてカット
 
 ## 一般的な問題
-cube_ui.faq_t1 =教育用UIを体験して使用する方法は？
-cube_ui.faq_1 =完全なUIエクスペリエンスのために、世界の§eResourcePackOptions§fでCubeUIを有効にします
-cube_ui.faq_t2 = UIパーツのコンテンツを設定する方法は？
-cube_ui.faq_2 =リソースパッケージで、ui / _global_variables.jsonを順番にクリックし、ファイルのプロンプトに従って変更してください
-cube_ui.faq_t3 = 1.18.10の後、一部のUIは効果がありませんか？
-cube_ui.faq_3 =現在UIは完全にカバーされていますが、古いバージョンのMinecraftを使用して完全にカバーすることをお勧めします（元のUIの一部は元のコンセプトUIでカバーされている可能性があるため、効果はありません）
-cube_ui.faq_t4 = UIはオープンソースですか？
-cube_ui.faq_4 =現在、UIはオープンソースです。2つの変更を加えてソースコードを使用できます（不必要な法的責任を回避するために商用利用は禁止されています）
-cube_ui.faq_t5 =バグを報告する方法は？
-cube_ui.faq_5 =リソースの下のコメント領域で作成者に伝えてください。フィードバックについては、フィードバックスレッドに移動してください。
+cube_ui.faq_t1=教育用UIを体験して使用する方法は？
+cube_ui.faq_1=完全なUIエクスペリエンスのために、世界の§eResourcePackOptions§fでCubeUIを有効にします
+cube_ui.faq_t2=UIパーツのコンテンツを設定する方法は？
+cube_ui.faq_2=リソースパッケージで、ui / _global_variables.jsonを順番にクリックし、ファイルのプロンプトに従って変更してください
+cube_ui.faq_t3=1.18.10の後、一部のUIは効果がありませんか？
+cube_ui.faq_3=現在UIは完全にカバーされていますが、古いバージョンのMinecraftを使用して完全にカバーすることをお勧めします（元のUIの一部は元のコンセプトUIでカバーされている可能性があるため、効果はありません）
+cube_ui.faq_t5=バグを報告する方法は？
+cube_ui.faq_5=リソースの下のコメント領域で作成者に伝えてください。フィードバックについては、フィードバックスレッドに移動してください。
 
 ## UIについて
 renewal.history=更新コンテンツ
 about.ui_pack=UIについて
 about.sub_package=拡張パッケージ
 update_time=更新時間
-about_ui.subpack_sorting =サブパックを完全に実行するには、サブパックの並べ替えをキューブUIの並べ替えよりも高くする必要があります。
+about_ui.subpack_sorting=サブパックを完全に実行するには、サブパックの並べ替えをキューブUIの並べ替えよりも高くする必要があります。
 about_ui.no_subpack=サブパックがインストールされていません
+cube.coming_soon=期待すること
 
 about_ui.ui_file =現在のUIファイル：
 about_ui.default_ui=クラシック
-about_ui.default_os = OS：
-
-about_ui.precautions_1=●再販なし
-about_ui.precautions_2=●商用利用は禁止されています
-about_ui.precautions_3=●無断転載を禁じます
-about_ui.precautions_4 =●リソースパック内の任意の画像またはコードを、個人使用のために他のリソースパックまたは2番目に変更されたリソースパックに統合できますが、公開するには作成者の同意が必要です
+about_ui.default_os=OS：
 
 subpack.no_name=この拡張パックには名前がありません
 subpack.incompatibility=§cこの拡張パックは現在のバージョンと互換性がありません
@@ -60,27 +58,44 @@ appearance.header_3=フォント
 appearance.header_4=スイッチ
 appearance.header_5=スライダー
 
-cube.piracy =現在のUIが変更されました。本物のバージョンを使用して、CubeUIを十分に体験してください。
+cube.piracy=現在のUIが変更されました。本物のバージョンを使用して、CubeUIを十分に体験してください。
+
+## 変数
+cube.variables.title=variables
+cube.variables.subtitle=Cube UI の ui/_global_variables.json ファイルで変更可能です。
+cube.variables.more=重要な変数のみここに表示され、その他の変数はここに表示されない
 
 ## フォーカスパネル
-hud.focus_menu.tab_1=ショートカットボタン
-hud.focus_menu.tab_2=通知クラス
-hud.focus_menu.tab_3=その他
+hud.focus_menu.tab1=extension。
+hud.focus_menu.tab2=Notification。
+hud.focus_menu.tab3=その他
 
-hud.personalization=パーソナライゼーション
-hud.personalization.title=フォーカスメニュー
 hud.hide.player_position=座標
 hud.hide.title=タイトル
 hud.hide.subtitle=字幕
 hud.hide.actionbar=アクティビティバーのタイトル
 hud.switch=スイッチショートカットバー
 hud.boss=ボスHP
-hud.chat = chat
+hud.chat=chat
 hud.note=ノートブロックヒント
 hud.toggle.scb=スコアボード
 hud.toggle.effect=ポーション効果
-hud.toggle.hotbar = Hotbar
+hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=アイテム名
+hud.toggle.paper_doll=紙人形
+hud.focus_menu.hand=ハンドヘルドディスプレイ
+hud.focus_menu.light=明るさ
+hud.focus_menu.rc=コンパスを復元
+hud.focus_menu.tc=タッチスクリーンプログレスサークル
+hud.focus_menu.crosshair=十字線
+hud.focus_menu.dt=低耐久性リマインダー
+hud.focus_menu.vignette=環境レンダリング
+hud.focus_menu.mini_map=ミニマップ
+
+hud.focus_menu.set.hand_info=HANDHOLD アイテム情報
+hud.focus_menu.set.2d_paper=2D ペーパードール
+hud.focus_menu.set.old_rc=復元された古いコンパスを有効にする
+hud.focus_menu.set.map_size=ミニマップサイズ
 
 hud.btn.hide_all=hudを非表示にする
 hud.btn.hide_doll=紙人形を隠す
@@ -90,9 +105,76 @@ tab.down=次のコンテンツ
 tab.back=前のコンテンツ
 chat.up=次のメッセージ
 chat.back=最後のメッセージ
+chat.to_down=下に戻る
 
 ## その他のインターフェース
+search.form=検索メニュー...
 search.item=大文字と小文字を区別する | コンテンツの検索...
-hide_hud.tip=HUD を表示するには、ここをクリックしてください
 command_block.empty_command_text=ここにコマンドを入力してください
 seed_picker.header =画像は参照用であり、シードはバージョンの更新に伴って変更される可能性があります
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Author: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=ヒント：右上の「x」をクリックするとポーズ画面に戻りますよ。
+screenshot.locationButton=スクリーンショットの位置を表示します。
+screenshot.location=スクリーンショットの場所です。
+createWorldScreen.gameMode.spectator=観客
+gui.empty_back=空のスペースをダブルクリックしてゲームに戻ります
+gui.one_empty_back=空のスペースをクリックしてゲームに戻ります
+
+## トレード
+trade.unlock=すべての取引のロックを解除
+
+## ゲーム
+play_screen.lately_first=最近の最初のゲーム
+play_screen.db_click_start=もう一度ダブルクリックして入ります
+
+## HUD
+low_durability.tip=low_durability。
+hide_hud.db.tip=「H」ボタンのダブルクリックでHUDを隠します。
+hide_hud.tip=ここをクリックするとHUDが表示されます。
+
+## ♪ ポーズ
+pause.quit_tip.title=保存して終了する
+pause.quit_tip.content=保存して終了しますか？
+pause.quit_tip.yes=保存して終了する
+pause.quit_tip.no=Missed click...
+
+## コリメーション
+hud.focus_menu.tab_4=collimation（コリメーション
+focus.cross_hair.tip.subpack=Want more collimators? Cube UIコリメーターパックをインストールし、有効化してください。
+focus.cross_hair.tip.setting=コリメーションはゲームを終了するとリセットされますので、永続的に使用するにはCube UI用のui/_setting.jsonファイルを修正してください。
+focus.cross_hair.title.default=none。
+focus.cross_hair.description.default=コリメータを隠す
+focus.cross_hair.title.default=default。
+focus.cross_hair.description.default=Cube UI の内蔵コリメーション
+
+## ♪ 音楽
+cube_music.title=music
+cube_music.tip=著作権上の問題から、Cube UIではオリジナルの音楽のみを呼び出して再生しています。 音楽を追加するには、サードパーティの音楽拡張パックをインストールするか、Cube UIカスタム音楽拡張パックをダウンロードしてください。
+
+## ノートボックス
+cube_note.title=ノートボックス
+cube_note.sound=volume
+
+## 設定
+options.sounds=音量
+options.developer=開発者
+setting.file_storage.tip=ストレージ パスを変更すると、Cube UI が失われます! (パスを変更した後、Cube UI の再インポートと有効化をお試しください)
+
+setting.sound.description.all=ゲーム全体の音量を調整します
+setting.sound.description.music=ゲーム音楽の音量を調整する
+setting.sound.description.sound=ゲーム効果音の音量を調整します
+setting.sound.description.ambient=水中、ネザー、洞窟の環境音、ロケット花火の音量を調整します
+setting.sound.description.block=金床、チェスト、ドアなどのブロックの音量を調整します
+setting.sound.description.hostile=敵対Mobの音量を調整します
+setting.sound.description.neutral=味方Mobの音量を調整します
+setting.sound.description.player=プレーヤーの音量を調整します (落としたアイテム、負傷した効果音など)
+setting.sound.description.record=レコード プレーヤーとノート ブロックによって生成される音楽の音量を調整します
+setting.sound.description.whether=雨と雷雨の音量を調整します
+setting.sound.description.tts=テキスト読み上げの音量を調整する
+
+setting.gm.description.c=無制限のリソース、自由に飛び回り、ブロックを即座に壊す
+setting.gm.description.s=世界を探索し、リソースを収集し、小道具を合成し、レベルを上げ、スタミナと健康を補充します
+setting.gm.description.a=アドベンチャーマップの損傷やサーバーの破壊を避けるために、プレイヤーはブロックを壊して配置することはできません
+setting.gm.description.sp=プレイヤーが障害物なしで飛行して世界を観察できるようにします

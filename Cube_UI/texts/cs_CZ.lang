@@ -1,3 +1,4 @@
+## 捷克语
 Language=Čeština (Česká republika)
 ## založit
 options.beta_text=Beta verze horní text
@@ -11,6 +12,18 @@ help.effect_water=Lektvar slabosti musí být normální láhev s vodou
 help.anvil.tool=Nástroj
 help.anvil.tool2=Zařízení
 
+## Hover text
+hover_text.all=All
+hover_text.drop=Pustit položku
+hover_text.destroy=Zničit položku
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=fast drop
+quick.trade=Všechny obchody
+quick.craft=Vyrobit vše
+quick.cut=vystřihnout vše
+
 ## běžný problém
 cube_ui.faq_t1=Jak zažít a používat výukové uživatelské rozhraní?
 cube_ui.faq_1=Povolte uživatelské rozhraní Cube ve světových §eResource Pack Options§f pro plné využití uživatelského rozhraní
@@ -18,8 +31,6 @@ cube_ui.faq_t2=Jak nastavit obsah části uživatelského rozhraní?
 cube_ui.faq_2=V balíčku zdrojů postupně klikněte na ui/_global_variables.json, upravte jej prosím podle pokynů v souboru
 cube_ui.faq_t3=1.18.10 nemá některé uživatelské rozhraní žádný účinek?
 cube_ui.faq_3=V současné době je uživatelské rozhraní plně pokryto, pro plné pokrytí se doporučuje používat starou verzi Minecraftu (část původního uživatelského rozhraní může být pokryta původním uživatelským rozhraním konceptu, takže to nemá žádný vliv)
-cube_ui.faq_t4=Je uživatelské rozhraní open source?
-cube_ui.faq_4=V současné době je uživatelské rozhraní open source, můžete provést dvě změny a použít zdrojový kód (komerční použití je zakázáno, aby se předešlo zbytečné právní odpovědnosti)
 cube_ui.faq_t5=Jak hlásit chyby?
 cube_ui.faq_5=Sdělte to autorovi v oblasti komentáře pod zdrojem, přejděte prosím do vlákna zpětné vazby pro zpětnou vazbu
 
@@ -30,36 +41,35 @@ about.sub_package=Rozšiřující balíček
 update_time=Čas aktualizace
 about_ui.subpack_sorting=Řazení dílčích balíčků musí být vyšší než třídění uživatelského rozhraní Cube, aby dílčí balíček zcela běžel
 about_ui.no_subpack=Není nainstalován žádný dílčí balíček
+cube.coming_soon=Co očekávat
 
 about_ui.ui_file=Aktuální soubor uživatelského rozhraní:
 about_ui.default_ui=Klasické
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Žádný další prodej
-about_ui.precautions_2=● Zakázáno pro komerční použití
-about_ui.precautions_3=● Opakovaný tisk je bez povolení zakázán
-about_ui.precautions_4=● Umožňuje integrovat jakýkoli obrázek nebo kód v balíčku zdrojů do jiných balíčků zdrojů nebo druhých upravených balíčků zdrojů pro osobní použití, ale pro publikování je vyžadován souhlas autora
 
 subpack.no_name=Tento rozšiřující balíček nemá žádné jméno
 subpack.incompatibility=§cTento rozšiřující balíček není kompatibilní s aktuální verzí
 
 about_ui.access_channel=Přístupový kanál uživatelského rozhraní Cube:
 
-vzhled.header_1=Pozadí
-vzhled.header_2=Tlačítko
-vzhled.header_3=Písmo
-vzhled.header_4=Přepnout
-vzhled.header_5=Posuvník
+appearance.header_1=Pozadí
+appearance.header_2=Tlačítko
+appearance.header_3=Písmo
+appearance.header_4=Přepnout
+appearance.header_5=Posuvník
 
 cube.piracy=Aktuální uživatelské rozhraní bylo upraveno, pro plné využití uživatelského rozhraní Cube použijte prosím originální verzi
 
-## panel zaostření
-hud.focus_menu.tab_1=Tlačítko zástupce
-hud.focus_menu.tab_2=Třída oznámení
-hud.focus_menu.tab_3=Jiné
+## Proměnné
+cube.variables.title=proměnné
+cube.variables.subtitle=Tyto proměnné lze upravit v souboru ui/_global_variables.json uživatelského rozhraní kostky.
+cube.variables.more=Zde jsou uvedeny pouze důležité proměnné, ostatní proměnné se zde nezobrazují.
 
-hud.personalization=Personalizace
-hud.personalization.title=Nabídka zaměření
+## panel zaostření
+hud.focus_menu.tab1=extension
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Other
+
 hud.hide.player_position=Souřadnice
 hud.hide.title=Titul
 hud.hide.subtitle=Titulky
@@ -72,6 +82,20 @@ hud.toggle.scb=Výsledková tabulka
 hud.toggle.effect=Efekt lektvaru
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Název položky
+hud.toggle.paper_doll=papírová panenka
+hud.focus_menu.hand=Ruční displej
+hud.focus_menu.light=světlo
+hud.focus_menu.rc=Obnovit kompas
+hud.focus_menu.tc=Kruh průběhu dotykové obrazovky
+hud.focus_menu.crosshair=Křížový kříž
+hud.focus_menu.dt=Připomenutí nízké životnosti
+hud.focus_menu.vignette=Vykreslování prostředí
+hud.focus_menu.mini_map=Mini mapa
+
+hud.focus_menu.set.hand_info=Informace o položce držené v ruce
+hud.focus_menu.set.2d_paper=2D papírová panenka
+hud.focus_menu.set.old_rc=Povolit starý obnovený kompas
+hud.focus_menu.set.map_size=Velikost minimapy
 
 hud.btn.hide_all=Skrýt hud
 hud.btn.hide_doll=Skrýt papírovou panenku
@@ -81,9 +105,76 @@ tab.down=Další obsah
 tab.back=Předchozí obsah
 chat.up=Další zpráva
 chat.back=Poslední zpráva
+chat.to_down=Zpět na konec stránky
 
 ## Jiné rozhraní
+search.form=vyhledávací menu...
 search.item=| rozlišují malá a velká písmena Hledání obsahu...
-hide_hud.tip=Kliknutím sem zobrazíte HUD
 command_block.empty_command_text=Sem zadejte svůj příkaz
 seed_picker.header=Obrázek je pouze orientační, seed se může s aktualizací verze změnit
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Autor: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Nápověda: Kliknutím na "x" v pravém horním rohu se vrátíte na obrazovku pauzy!
+screenshot.locationButton=Zobrazit umístění snímku obrazovky
+screenshot.location=Umístění snímku obrazovky: 
+createWorldScreen.gameMode.spectator=Divák
+gui.empty_back=Dvakrát klikněte na prázdné místo pro návrat do hry
+gui.one_empty_back=Kliknutím na prázdné místo se vrátíte do hry
+
+## obchod
+trade.unlock=Odemkněte všechny obchody
+
+## hra
+play_screen.lately_first=Poslední první hra
+play_screen.db_click_start=Pro vstup znovu dvakrát klikněte
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Skryjete HUD dvojitým kliknutím na tlačítko "H".
+hide_hud.tip=Kliknutím sem zobrazíte HUD
+
+## Pause
+pause.quit_tip.title=Uložení a ukončení
+pause.quit_tip.content=Uloží se a ukončí?
+pause.quit_tip.yes=Uložení a ukončení
+pause.quit_tip.no=Zmeškané kliknutí...
+
+## kolimace
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Chcete více kolimátorů? Nainstalujte a aktivujte balíček kolimátoru Cube UI!
+focus.cross_hair.tip.setting=Kolimace se resetuje při ukončení hry, chcete-li ji používat trvale, upravte prosím soubor ui/_setting.json pro uživatelské rozhraní kostky.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=skrýt kolimátor
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Vestavěná kolimace uživatelského rozhraní kostky
+
+## Hudba
+cube_music.title=hudba
+cube_music.tip=Vzhledem k autorským právům volá uživatelské rozhraní kostky pro přehrávání pouze originální hudbu. Chcete-li přidat další hudbu, nainstalujte si balíček hudebních rozšíření třetích stran nebo si stáhněte balíček vlastních hudebních rozšíření Cube UI!
+
+## poznámkový rámeček
+cube_note.title=Pole pro poznámky
+cube_note.sound=volume
+
+## založit
+options.sounds=Hlasitost
+options.developer=Vývojář
+setting.file_storage.tip=Když změníte cestu úložiště, ztratíte uživatelské rozhraní Cube! (Po změně cesty zkuste znovu importovat a povolit uživatelské rozhraní Cube)
+
+setting.sound.description.all=Upravuje celkovou hlasitost hry
+setting.sound.description.music=Upravte hlasitost herní hudby
+setting.sound.description.sound=Upravuje hlasitost herních zvukových efektů
+setting.sound.description.ambient=Upravuje hlasitost podvodních, podmořských, jeskynních okolních zvuků a ohňostrojových raket
+setting.sound.description.block=Upravuje hlasitost bloků, jako jsou kovadliny, truhly a dveře
+setting.sound.description.hostile=Upravuje hlasitost nepřátelských mobů
+setting.sound.description.neutral=Upravuje hlasitost zvuku přátelských mobů
+setting.sound.description.player=Upravte hlasitost přehrávače (jako jsou upuštěné předměty, zraněné zvukové efekty atd.)
+setting.sound.description.record=Upravuje hlasitost hudby produkované gramofony a bloky not
+setting.sound.description.with=Upraví hlasitost deště a bouřek
+setting.sound.description.tts=Upravte hlasitost převodu textu na řeč
+
+setting.gm.description.c=Neomezené zdroje, volně létat a okamžitě rozbíjet bloky
+setting.gm.description.s=Prozkoumávejte svět, sbírejte zdroje, syntetizujte rekvizity, vylepšujte úrovně, doplňujte výdrž a zdraví
+setting.gm.description.a=Hráči nemohou rozbít a umístit žádné bloky, aby nedošlo k poškození mapy dobrodružství nebo vandalismu serveru
+setting.gm.description.sp=Umožňuje hráči proletět a pozorovat svět bez překážek

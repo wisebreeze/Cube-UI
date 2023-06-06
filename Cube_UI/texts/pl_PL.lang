@@ -1,3 +1,4 @@
+## 波兰语
 Language=Polski (PL)
 ## organizować coś
 options.beta_text=Beta górny tekst
@@ -16,9 +17,12 @@ hover_text.all=all
 hover_text.drop=Upuść przedmiot
 hover_text.destroy=Zniszcz przedmioty
 hover_text.help=Pomoc/Przepis
-hover_text.default_mode=Tryb domyślny
-hover_text.auto_mode=Tryb automatyczny
-hover_text.drop_mode=Tryb upuszczania
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=szybkie opadanie
+quick.trade=Wszystkie transakcje
+quick.craft=Stwórz wszystko
+quick.cut=wytnij wszystko
 
 ## powszechny problem
 cube_ui.faq_t1=Jak doświadczyć i korzystać z edukacyjnego interfejsu użytkownika?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Jak ustawić zawartość części interfejsu użytkownika?
 cube_ui.faq_2=W pakiecie zasobów kliknij kolejno ui/_global_variables.json, zmodyfikuj go zgodnie z monitami w pliku
 cube_ui.faq_t3=1.18.10 jakiś interfejs użytkownika nie działa?
 cube_ui.faq_3=Obecnie interfejs użytkownika jest w pełni objęty, zaleca się używanie starej wersji Minecrafta, aby doświadczyć pełnego zasięgu (część oryginalnego interfejsu użytkownika może być objęta oryginalnym interfejsem użytkownika, więc nie ma to żadnego efektu)
-cube_ui.faq_t4=Czy interfejs użytkownika jest open source?
-cube_ui.faq_4=Obecnie interfejs użytkownika jest open source, możesz dokonać dwóch zmian i użyć kodu źródłowego (zabronione jest komercyjne wykorzystanie, aby uniknąć niepotrzebnej odpowiedzialności prawnej)
 cube_ui.faq_t5=Jak zgłaszać błędy?
 cube_ui.faq_5=Powiedz autorowi w obszarze komentarzy pod zasobem, proszę przejść do wątku opinii w celu uzyskania opinii
 
@@ -39,15 +41,11 @@ about.sub_package=Pakiet rozszerzenia
 update_time=Czas aktualizacji
 about_ui.subpack_sorting=Sortowanie pakietów podrzędnych musi być wyższe niż sortowanie w interfejsie kostki, aby pakiet podrzędny działał całkowicie
 about_ui.no_subpack=Nie zainstalowano pakietu dodatkowego
+cube.coming_soon=Czego się spodziewać
 
 about_ui.ui_file=Bieżący plik interfejsu użytkownika:
 about_ui.default_ui=Klasyczny
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Brak odsprzedaży
-about_ui.precautions_2=● Zabronione do użytku komercyjnego
-about_ui.precautions_3=● Ponowne drukowanie jest zabronione bez pozwolenia
-about_ui.precautions_4=● Pozwala zintegrować dowolny obraz lub kod z pakietu zasobów z innymi paczkami zasobów lub paczkami ponownie zmodyfikowanymi do użytku osobistego, ale do publikacji wymagana jest zgoda autora
 
 subpack.no_name=Ten dodatek nie ma nazwy
 subpack.incompatibility=§cTen dodatek nie jest kompatybilny z obecną wersją
@@ -62,13 +60,16 @@ appearance.header_5=Suwak
 
 cube.piracy=Aktualny interfejs użytkownika został zmodyfikowany, użyj oryginalnej wersji, aby w pełni korzystać z interfejsu Cube
 
-## panel ostrości
-hud.focus_menu.tab_1=Przycisk skrótu
-hud.focus_menu.tab_2=Klasa powiadomień
-hud.focus_menu.tab_3=Inne
+## Zmienne
+cube.variables.title=zmienne
+cube.variables.subtitle=Te zmienne mogą być modyfikowane w pliku ui/_global_variables.json Cube UI.
+cube.variables.more=Tylko ważne zmienne są tu wymienione, inne zmienne nie są tu pokazane
 
-hud.personalization=Personalizacja
-hud.personalization.title=Menu ostrości
+## panel ostrości
+hud.focus_menu.tab1=rozszerzenie
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Inne
+
 hud.hide.player_position=Współrzędne
 hud.hide.title=Tytuł
 hud.hide.subtitle=Napisy
@@ -81,6 +82,20 @@ hud.toggle.scb=Tablica wyników
 hud.toggle.effect=Efekt mikstury
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Nazwa przedmiotu
+hud.toggle.paper_doll=paper doll
+hud.focus_menu.hand=Wyświetlacz ręczny
+hud.focus_menu.light=jasnoś
+hud.focus_menu.rc=Przywróć kompas
+hud.focus_menu.tc=Krąg postępu na ekranie dotykowym
+hud.focus_menu.crosshair=Celownik
+hud.focus_menu.dt=Przypomnienie o niskiej trwałości
+hud.focus_menu.vignette=Renderowanie środowiska
+hud.focus_menu.mini_map=Miniamapa
+
+hud.focus_menu.set.hand_info=Informacje o elementach trzymanych w ręku
+hud.focus_menu.set.2d_paper=2D papierowa lalka
+hud.focus_menu.set.old_rc=Włącz stary, przywrócony kompas
+hud.focus_menu.set.map_size=Rozmiar minimapy
 
 hud.btn.hide_all=Ukryj hud
 hud.btn.hide_doll=Ukryj papierową lalkę
@@ -90,9 +105,76 @@ tab.down=Następna treść
 tab.back=Poprzednia treść
 chat.up=Następna wiadomość
 chat.back=Ostatnia wiadomość
+chat.to_down=Powrót na dół
 
 ## Inny interfejs
+search.form=menu wyszukiwania...
 search.item=| z uwzględnieniem wielkości liter Wyszukiwanie treści...
-hide_hud.tip=Kliknij tutaj, aby wyświetlić HUD
 command_block.empty_command_text=Wprowadź tutaj swoje polecenie
 seed_picker.header=Zdjęcie ma charakter poglądowy, nasiona mogą ulec zmianie wraz z aktualizacją wersji
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Autor: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Podpowiedź: Proszę kliknąć na "x" w prawym górnym rogu, aby powrócić do ekranu pauzy!
+screenshot.locationButton=Pokaż lokalizację zrzutu ekranu
+screenshot.location=Lokalizacja zrzutu ekranu: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Kliknij dwukrotnie puste miejsce, aby powrócić do gry
+gui.one_empty_back=Kliknij puste miejsce, aby wrócić do gry
+
+## handel
+trade.unlock=Odblokuj wszystkie transakcje
+
+## gra
+play_screen.lately_first=Ostatnio pierwsza gra
+play_screen.db_click_start=Kliknij dwukrotnie ponownie, aby wejść
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Ukryj HUD przez podwójne kliknięcie przycisku "H".
+hide_hud.tip=Kliknij tutaj, aby pokazać HUD
+
+## Pauza
+pause.quit_tip.title=Zapisz i wyjdź
+pause.quit_tip.content=Czy to zapisuje i wychodzi?
+pause.quit_tip.yes=Zapisz i wyjdź.
+pause.quit_tip.no=Przegapione kliknięcie...
+
+## kolimacja
+hud.focus_menu.tab_4=kolimacja
+focus.cross_hair.tip.subpack=Chcesz więcej kolimatorów? Proszę zainstalować i aktywować pakiet kolimatorów Cube UI!
+focus.cross_hair.tip.setting=Kolimacja resetuje się po wyjściu z gry, aby użyć jej na stałe należy zmodyfikować plik ui/_setting.json dla Cube UI.
+focus.cross_hair.title.default=brak
+focus.cross_hair.description.default=ukryj kolimator
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Wbudowana kolimacja Cube UI.
+
+## Muzyka
+cube_music.title=music
+cube_music.tip=Z uwagi na kwestie praw autorskich, Cube UI wywołuje tylko oryginalną muzykę do odtwarzania. Aby dodać dodatkową muzykę, zainstaluj pakiet rozszerzeń muzycznych innej firmy lub pobierz niestandardowy pakiet rozszerzeń muzycznych Cube UI!
+
+## note box
+cube_note.title=Skrzynka na notatki
+cube_note.sound=głośność
+
+## Ustawiać
+options.sounds=Głośność
+options.developer=Programista
+setting.file_storage.tip=Kiedy zmienisz ścieżkę przechowywania, utracisz interfejs Cube! (Po zmianie ścieżki spróbuj ponownie zaimportować i włączyć Cube UI)
+
+setting.sound.description.all=Dostosowuje ogólną głośność gry
+setting.sound.description.music=Dostosuj głośność muzyki w grze
+setting.sound.description.sound=Dostosowuje głośność efektów dźwiękowych gry
+setting.sound.description.ambient=Dostosowuje głośność dźwięków podwodnych, podziemnych, jaskiniowych i fajerwerków
+setting.sound.description.block=Dostosowuje głośność bloków, takich jak kowadła, skrzynie i drzwi
+setting.sound.description.hostile=Dostosowuje głośność wrogich mobów
+setting.sound.description.neutral=Dostosowuje głośność dźwięków przyjaznych mobów
+setting.sound.description.player=Dostosuj głośność odtwarzacza (np. upuszczone przedmioty, efekty dźwiękowe obrażeń itp.)
+setting.sound.description.record=Dostosowuje głośność muzyki odtwarzanej przez gramofony i bloki nutowe
+setting.sound.description.whether=Dostosowuje głośność deszczu i burz
+setting.sound.description.tts=Dostosuj głośność zamiany tekstu na mowę
+
+setting.gm.description.c=Nieograniczone zasoby, lataj swobodnie i natychmiast niszcz bloki
+setting.gm.description.s=Odkrywaj świat, zbieraj zasoby, syntetyzuj rekwizyty, ulepszaj poziomy, odnawiaj wytrzymałość i zdrowie
+setting.gm.description.a=Gracze nie mogą łamać ani umieszczać bloków, aby uniknąć uszkodzenia mapy przygody lub zniszczenia serwera
+setting.gm.description.sp=Pozwala graczowi latać i obserwować świat bez przeszkód

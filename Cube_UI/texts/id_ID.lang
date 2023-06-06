@@ -1,3 +1,4 @@
+## 印尼语
 Language=bahasa indonesia (indonesia)
 ## mempersiapkan
 options.beta_text=Teks atas beta
@@ -16,9 +17,12 @@ hover_text.all=semua
 hover_text.drop=Lepaskan item
 hover_text.destroy=Hancurkan item
 hover_text.help=Bantuan/Resep
-hover_text.default_mode=Mode default
-hover_text.auto_mode=Mode Otomatis
-hover_text.drop_mode=Mode Jatuhkan
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=fast drop
+quick.trade=Semua perdagangan
+quick.craft=Kerajin Semua
+quick.cut=potong semua
 
 ## masalah umum
 cube_ui.faq_t1=Bagaimana cara merasakan dan menggunakan UI pendidikan?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Bagaimana cara menyetel konten bagian UI?
 cube_ui.faq_2=Dalam paket sumber daya, klik ui/_global_variables.json secara bergantian, harap ubah sesuai dengan petunjuk dalam file
 cube_ui.faq_t3=1.18.10, beberapa UI tidak berpengaruh?
 cube_ui.faq_3=Saat ini UI telah sepenuhnya tercakup, disarankan untuk menggunakan versi lama Minecraft untuk mengalami cakupan penuh (bagian dari UI asli mungkin tercakup oleh konsep UI asli, sehingga tidak berpengaruh)
-cube_ui.faq_t4=Apakah UI open source?
-cube_ui.faq_4=Saat ini UI adalah open source, Anda dapat membuat dua perubahan dan menggunakan kode sumber (penggunaan komersial dilarang untuk menghindari kewajiban hukum yang tidak perlu)
 cube_ui.faq_t5=Bagaimana cara melaporkan bug?
 cube_ui.faq_5=Beri tahu penulis di area komentar di bawah sumber, silakan pindah ke utas umpan balik untuk umpan balik
 
@@ -39,15 +41,11 @@ about.sub_package=Paket Ekstensi
 update_time=Waktu pembaruan
 about_ui.subpack_sorting=Penyortiran sub-paket harus lebih tinggi daripada pengurutan UI Kubus agar sub-paket dapat berjalan sepenuhnya
 about_ui.no_subpack=Tidak ada subpaket yang terpasang
+cube.coming_soon=Apa yang diharapkan
 
 about_ui.ui_file=Berkas UI saat ini:
 about_ui.default_ui=Klasik
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Tidak ada penjualan kembali
-about_ui.precautions_2=● Dilarang untuk penggunaan komersial
-about_ui.precautions_3=● Dilarang mencetak ulang tanpa izin
-about_ui.precautions_4=● Memungkinkan untuk mengintegrasikan gambar atau kode apa pun dalam paket sumber daya ke dalam paket sumber daya lain atau paket sumber daya yang dimodifikasi kedua untuk penggunaan pribadi, tetapi persetujuan penulis diperlukan untuk penerbitan
 
 subpack.no_name=Paket ekspansi ini tidak memiliki nama
 subpack.incompatibility=§cPaket ekspansi ini tidak kompatibel dengan versi saat ini
@@ -62,13 +60,16 @@ penampilan.header_5=Penggeser
 
 cube.piracy=UI saat ini telah dimodifikasi, harap gunakan versi asli untuk sepenuhnya merasakan UI Cube
 
-## panel fokus
-hud.focus_menu.tab_1=Tombol Pintasan
-hud.focus_menu.tab_2=Kelas pemberitahuan
-hud.focus_menu.tab_3=Lainnya
+## Variabel
+cube.variables.title=variables
+cube.variables.subtitle=Variabel-variabel ini dapat dimodifikasi dalam file ui/_global_variables.json Cube UI.
+cube.variables.more=Hanya variabel-variabel penting yang dicantumkan di sini, variabel-variabel lain tidak ditampilkan di sini
 
-hud.personalization=Personalisasi
-hud.personalization.title=Menu Fokus
+## panel fokus
+hud.focus_menu.tab1=ekstensi
+hud.focus_menu.tab2=Notifikasi
+hud.focus_menu.tab3=Lainnya
+
 hud.hide.player_position=Koordinat
 hud.hide.title=Judul
 hud.hide.subtitle=Subjudul
@@ -81,6 +82,20 @@ hud.toggle.scb=Papan Skor
 hud.toggle.effect=Efek Ramuan
 hud.toggle.hotbar=Bilah panas
 hud.toggle.item_name=Nama Barang
+hud.toggle.paper_doll=boneka kertas
+hud.focus_menu.hand=Tampilan genggam
+hud.focus_menu.light=brightness
+hud.focus_menu.rc=Pulihkan Kompas
+hud.focus_menu.tc=Lingkaran progres layar sentuh
+hud.focus_menu.crosshair=Garis silang
+hud.focus_menu.dt=Pengingat Daya Tahan Rendah
+hud.focus_menu.vignette=Rendering Lingkungan
+hud.focus_menu.mini_map=Peta Mini
+
+hud.focus_menu.set.hand_info=Informasi item genggam
+hud.focus_menu.set.2d_paper=boneka kertas 2D
+hud.focus_menu.set.old_rc=Aktifkan kompas lama yang dipulihkan
+hud.focus_menu.set.map_size=Ukuran peta mini
 
 hud.btn.hide_all=Sembunyikan hud
 hud.btn.hide_doll=Sembunyikan Boneka Kertas
@@ -90,9 +105,76 @@ tab.down=Konten berikutnya
 tab.back=Konten sebelumnya
 chat.up=Pesan berikutnya
 chat.back=Pesan terakhir
+chat.to_down=Kembali ke bawah
 
 ## Antarmuka lainnya
+search.form=menu pencarian...
 search.item=| peka huruf besar/kecil Cari konten...
-hide_hud.tip=Klik di sini untuk menampilkan HUD
 command_block.empty_command_text=Masukkan perintah Anda di sini
 seed_picker.header=Gambar hanya untuk referensi, seed dapat berubah dengan pembaruan versi
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Penulis: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Petunjuk: Silakan klik "x" di sudut kanan atas untuk kembali ke layar jeda!
+screenshot.locationButton=Lihat lokasi tangkapan layar
+screenshot.location=Lokasi tangkapan layar: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Klik dua kali ruang kosong untuk kembali ke permainan
+gui.one_empty_back=Klik ruang kosong untuk kembali ke permainan
+
+## berdagang
+trade.unlock=Buka semua perdagangan
+
+## permainan
+play_screen.lately_first=Pertandingan pertama akhir-akhir ini
+play_screen.db_click_start=Klik dua kali lagi untuk masuk
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Sembunyikan HUD dengan mengklik dua kali tombol "H"
+hide_hud.tip=Klik di sini untuk menampilkan HUD
+
+## Jeda
+pause.quit_tip.title=Simpan dan keluar
+pause.quit_tip.content=Apakah ini menyimpan dan keluar?
+pause.quit_tip.yes=Simpan dan keluar
+pause.quit_tip.no=Klik yang terlewat...
+
+## kolimasi
+hud.focus_menu.tab_4=kolimasi
+focus.cross_hair.tip.subpack=Ingin lebih banyak kolimator? Silakan instal dan aktifkan paket kolimator Cube UI!
+focus.cross_hair.tip.setting=Collimation disetel ulang saat Anda keluar dari game, untuk menggunakannya secara permanen, silakan ubah file ui/_setting.json untuk Cube UI.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=sembunyikan kolimator
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Kolimasi bawaan kubus UI
+
+## Musik
+cube_music.title=musik
+cube_music.tip=Karena masalah hak cipta, Cube UI hanya memanggil musik asli untuk pemutaran. Untuk menambahkan musik tambahan, instal paket ekstensi musik pihak ketiga atau unduh paket ekstensi musik kustom Cube UI!
+
+## kotak catatan
+cube_note.title=Kotak catatan
+cube_note.sound=volume
+
+## mempersiapkan
+options.sounds=Volume
+options.developer=Pengembang
+setting.file_storage.tip=Saat Anda mengubah jalur penyimpanan, Anda akan kehilangan UI Cube! (Setelah mengubah jalur, silakan coba impor ulang dan aktifkan UI Cube)
+
+setting.sound.description.all=Menyesuaikan volume keseluruhan permainan
+setting.sound.description.music=Sesuaikan volume musik permainan
+setting.sound.description.sound=Menyesuaikan volume efek suara permainan
+setting.sound.description.ambient=Menyesuaikan volume bawah air, bawah, suara ambient gua dan roket kembang api
+setting.sound.description.block=Menyesuaikan volume balok seperti paron, peti dan pintu
+setting.sound.description.hostile=Menyesuaikan volume massa musuh
+setting.sound.description.neutral=Menyesuaikan volume suara gerombolan ramah
+setting.sound.description.player=Sesuaikan volume pemutar (seperti barang terjatuh, efek suara cedera, dll.)
+setting.sound.description.record=Menyesuaikan volume musik yang dihasilkan oleh pemutar rekaman dan blok not
+setting.sound.description.whether=Menyesuaikan volume hujan dan badai petir
+setting.sound.description.tts=Sesuaikan volume text-to-speech
+
+setting.gm.description.c=Sumber daya tidak terbatas, terbang bebas dan hancurkan blok secara instan
+setting.gm.description.s=Jelajahi dunia, kumpulkan sumber daya, sintesa properti, tingkatkan level, pulihkan stamina dan kesehatan
+setting.gm.description.a=Pemain tidak dapat merusak dan menempatkan blok apa pun untuk menghindari kerusakan peta petualangan atau perusakan server
+setting.gm.description.sp=Memungkinkan pemain untuk terbang dan mengamati dunia tanpa hambatan

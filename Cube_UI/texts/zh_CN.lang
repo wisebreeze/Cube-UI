@@ -1,5 +1,5 @@
+## 简体中文（中国大陆）
 Language=简体中文
-
 ## 设置
 options.beta_text=测试版顶部文字
 shortcut.setting=快捷访问
@@ -17,9 +17,12 @@ hover_text.all=全部
 hover_text.drop=丢弃物品
 hover_text.destroy=摧毁物品
 hover_text.help=帮助/配方
-hover_text.default_mode=默认模式
-hover_text.auto_mode=自动模式
-hover_text.drop_mode=丢弃模式
+hover_text.default_mode=默认
+hover_text.auto_mode=快速移动
+hover_text.drop_mode=快速丢弃
+quick.trade=全部交易
+quick.craft=全部合成
+quick.cut=全部切制
 
 ## 常见问题
 cube_ui.faq_t1=如何体验和使用教育版UI？
@@ -28,8 +31,6 @@ cube_ui.faq_t2=如何设置UI部分内容?
 cube_ui.faq_2=在资源包内，依次点击ui/_global_variables.json，请根据文件内提示进行修改
 cube_ui.faq_t3=1.18.10后，部分UI没有效果?
 cube_ui.faq_3=目前UI已经全覆盖，建议使用旧版本Minecraft体验全覆盖（部分原版UI可能被原版概念UI覆盖所以没有效果）
-cube_ui.faq_t4=UI开放源代码吗?
-cube_ui.faq_4=目前UI开放源代码，你可以进行二改和使用源码(禁止商业用途，以免承担不必要的法律责任)
 cube_ui.faq_t5=如何反馈Bug?
 cube_ui.faq_5=资源下方评论区告诉作者，论坛请移步至反馈贴反馈
 
@@ -40,15 +41,11 @@ about.sub_package=扩展包
 update_time=更新时间
 about_ui.subpack_sorting=扩展包排序需要比Cube UI排序高，扩展包才能完整运行
 about_ui.no_subpack=未安装扩展包
+cube.coming_soon=敬请期待
 
 about_ui.ui_file=目前UI档案: 
 about_ui.default_ui=经典
 about_ui.default_os=操作系统: 
-
-about_ui.precautions_1=● 禁止倒卖
-about_ui.precautions_2=● 禁止作为商业用途
-about_ui.precautions_3=● 未经允许，禁止转载
-about_ui.precautions_4=● 允许将资源包里的任何图片或代码整合到其他资源包或二改资源包，可以供个人使用，但是发布需要作者同意
 
 subpack.no_name=该扩展包没有名字
 subpack.incompatibility=§c该扩展包不兼容目前版本
@@ -63,13 +60,16 @@ appearance.header_5=滑块
 
 cube.piracy=当前的UI被修改，请使用正版完整体验Cube UI
 
-## 专注面板
-hud.focus_menu.tab_1=快捷按钮
-hud.focus_menu.tab_2=通知类
-hud.focus_menu.tab_3=其他
+## 变量
+cube.variables.title=变量
+cube.variables.subtitle=这些变量可以在Cube UI的ui/_global_variables.json文件修改，修改这些变量能改善你的 UI 体验！
+cube.variables.more=这里仅列举重要的变量，其他变量不再此展示
 
-hud.personalization=个性化
-hud.personalization.title=专注菜单
+## 专注面板
+hud.focus_menu.tab1=扩展
+hud.focus_menu.tab2=通知
+hud.focus_menu.tab3=其他
+
 hud.hide.player_position=坐标
 hud.hide.title=标题
 hud.hide.subtitle=副标题
@@ -82,8 +82,23 @@ hud.toggle.scb=记分板
 hud.toggle.effect=药水效果
 hud.toggle.hotbar=快捷栏
 hud.toggle.item_name=物品名
+hud.toggle.paper_doll=纸娃娃
+hud.focus_menu.hand=手持显示
+hud.focus_menu.light=亮度
+hud.focus_menu.rc=追溯指针
+hud.focus_menu.tc=触屏进度圆圈
+hud.focus_menu.crosshair=准心
+hud.focus_menu.dt=低耐久提醒
+hud.focus_menu.vignette=环境渲染
+hud.focus_menu.mini_map=小地图
 
-hud.btn.hide_all=隐藏 hud
+hud.focus_menu.set.light_color=亮度渲染颜色
+hud.focus_menu.set.hand_info=手持物品信息
+hud.focus_menu.set.2d_paper=2D纸娃娃
+hud.focus_menu.set.old_rc=启用旧版追溯指针
+hud.focus_menu.set.map_size=小地图大小
+
+hud.btn.hide_all=隐藏 HUD
 hud.btn.hide_doll=隐藏纸娃娃
 
 ## 聊天
@@ -91,17 +106,78 @@ tab.down=下个内容
 tab.back=上个内容
 chat.up=下个信息
 chat.back=上个信息
+chat.to_down=回到底部
 
 ## 其他界面
+search.form=搜索菜单…
 search.item=区分大小写 | 搜索内容…
-hide_hud.tip=点击此处显示 HUD
 command_block.empty_command_text=在此输入你的命令
 seed_picker.header=图片仅供参考，种子可能会随着版本的更新而变化
+cube_ui.author=作者：MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=提示：请点击右上角的"x"返回暂停屏幕！
+screenshot.locationButton=查看截图位置
+screenshot.location=截图位置: 
+createWorldScreen.gameMode.spectator=旁观
+gui.empty_back=双击空白处返回游戏
+gui.one_empty_back=点击空白处返回游戏
+
+## 交易
+trade.unlock=解锁全部交易
+
+## 游戏
+play_screen.lately_first=最近游戏
+play_screen.db_click_start=再次双击进入世界
+
+## HUD
+low_durability.tip=低耐久
+hide_hud.db.tip=双击 "H" 按钮隐藏 HUD
+hide_hud.tip=点击此处显示 HUD
+
+## 暂停
+pause.quit_tip.title=保存并退出
+pause.quit_tip.content=是否保存并退出？
+pause.quit_tip.yes=保存并退出
+pause.quit_tip.no=点错了…
+
+## 准心
+hud.focus_menu.tab_4=准心
+focus.cross_hair.tip.subpack=想要更多的准心？请安装并激活Cube UI准心包！
+focus.cross_hair.tip.setting=准心会随着退出游戏而重置，若要永久使用此准心请修改 Cube UI 的 ui/_setting.json 文件。
+focus.cross_hair.title.default=无
+focus.cross_hair.description.default=隐藏准心
+focus.cross_hair.title.default=默认
+focus.cross_hair.description.default=Cube UI内置的准心
+
+## 音乐
+cube_music.title=音乐
+cube_music.tip=因版权问题，Cube UI仅调用原版音乐播放。如需添加其他音乐，可以安装第三方音乐扩展包或下载 Cube UI 自定义音乐扩展包！
+
+## 音符盒
+cube_note.title=音符盒
+cube_note.sound=音量
 
 ## 设置
 options.video=显示
 options.sounds=音量
 options.developer=开发者
+setting.file_storage.tip=当你更换储存路径时，你将会失去 Cube UI ！（更换路径后，请尝试重新导入并启用 Cube UI）
+
+setting.sound.description.all=调节游戏的总音量
+setting.sound.description.music=调节游戏音乐的音量
+setting.sound.description.sound=调节游戏音效的音量
+setting.sound.description.ambient=调节水下、下界、洞穴环境音效和烟花火箭的音量
+setting.sound.description.block=调节方块（如铁砧、箱子和门等）的音量
+setting.sound.description.hostile=调节敌对生物的音量
+setting.sound.description.neutral=调节友好生物的音量
+setting.sound.description.player=调节玩家的音量大小（如丢弃物品、受伤音效等）
+setting.sound.description.record=调节唱片机和音符盒发出音乐的音量
+setting.sound.description.whether=调节降雨和雷暴的音量
+setting.sound.description.tts=调节文字转语音的音量
+
+setting.gm.description.c=无限的资源、自由地飞翔并且能够瞬间破坏方块
+setting.gm.description.s=探索世界、收集资源、合成道具、提高等级、补充体力和生命值
+setting.gm.description.a=玩家不能破坏和放置任何方块，以避免损坏冒险地图或恶意破坏服务器
+setting.gm.description.sp=允许玩家以飞行的方式无障碍穿过和观察世界
 
 ## 资源/行为包设置
 resourcePack.subpackResolution=%s
@@ -129,82 +205,3 @@ options.usetouchpad=准星瞄准
 xbox.signinFree=注册或登录
 xbox.signOutLong=退出登录
 xbox.signInLong=注册或登录！
-
-## 新版成就UI （中文翻译）
-hbui.AchievementDetails.anotherPlatform=在另一个平台上完成
-hbui.AchievementDetails.completed=完成
-hbui.AchievementDetails.gamerscore=游戏分数
-hbui.AchievementDetails.locked=锁定
-hbui.AchievementDetails.yes=是的
-hbui.AchievementDetailsRoute.errorMessage=成就无法加载。请再试一次或检查您的Internet连接
-hbui.AchievementDetailsRoute.narration.completed=完成
-hbui.AchievementDetailsRoute.narration.gamerscore=游戏分数
-hbui.AchievementDetailsRoute.narration.loadingMessage=加载中
-hbui.AchievementDetailsRoute.narration.locked=锁定
-hbui.AchievementDetailsRoute.narration.percentage=已完成%1$s个 还有%2$s个待完成
-hbui.AchievementDetailsRoute.narration.progress=进度
-hbui.AchievementDetailsRoute.narration.rewardLocked=奖励锁定
-hbui.AchievementDetailsRoute.narration.rewardUnlocked=奖励解锁
-hbui.AchievementDetailsRoute.narration.title=成就细节
-hbui.AchievementDetailsRoute.reward=奖励
-hbui.AchievementDetailsRoute.title=成就细节
-hbui.AchievementDetailsRoute.titleNarration=成就细节屏幕
-hbui.AchievementDetailsRoute.viewReward=查看奖励
-hbui.AchievementListItem.completed=完成
-hbui.AchievementListItem.gamerscoreNarration=游戏分数 %1$s
-hbui.AchievementListItem.groupNarration=组 %1$s 还有 %2$s 个待完成
-hbui.AchievementListItem.inProgress=进行中
-hbui.AchievementListItem.locked=未解锁
-hbui.AchievementListItem.narrationCompleted=已完成%1$s个 还有%2$s个待完成, 开锁, %3$s 游戏分数
-hbui.AchievementListItem.narrationLocked=已完成%1$s个 还有 %2$s个待完成, 开锁, %3$s 游戏分数 
-hbui.AchievementListItem.percentageNarration=进度 %1$s%
-hbui.AchievementListItem.rewardLockedNarration=奖励锁定
-hbui.AchievementListItem.rewardUnlockedNarration=奖励解锁
-hbui.AchievementListItem.siblingNarration=按钮 %1$s 还有 %2$s个
-hbui.AchievementListItem.view=查看详细信息
-hbui.AchievementReward.reward=奖励
-hbui.AchievementReward.viewReward=查看奖励
-hbui.Achievements.all=全部
-hbui.Achievements.completed=完成
-hbui.Achievements.completedEmptyText=完整的成就！
-hbui.Achievements.completedEmptyTitle=这里没什么可看的.还没有！
-hbui.Achievements.errorMessage=请再试一次或检查您的Internet连接。
-hbui.Achievements.errorMessageTitle=哦哦！成就无法加载。
-hbui.Achievements.inProgress=进行中
-hbui.Achievements.loading=吸引人的成就…
-hbui.Achievements.loadingMessage=加载中
-hbui.Achievements.locked=未解锁
-hbui.Achievements.lockedEmptyText=你已经完成了所有的成就。
-hbui.Achievements.lockedEmptyTitle=哇，你太棒了！
-hbui.Achievements.title=成就
-hbui.Achievements.titleMessage=成就筛选
-hbui.AchievementsSummary.gamerscore=游戏分数
-hbui.AchievementsSummary.hoursPlayed=%1$s 小时
-hbui.AchievementsSummary.narratorCompletedAchievements=完成 %2$s个 还有%2$s个待完成
-hbui.AchievementsSummary.narratorCompletedRewards=奖励 %1$s 还有%2$s个待奖励
-hbui.AchievementsSummary.narratorGamerscore=游戏分数 %1$s 还有%2$s
-hbui.AchievementsSummary.narratorIndex=完成%1$s个 还有%2$s个待完成
-hbui.AchievementsSummary.narratorInProgress=%1$s个进行中
-hbui.AchievementsSummary.narratorPercentage=%1$s 进度百分比
-hbui.AchievementsSummary.narratorTimePlayed=游玩时间 %1$s 小时
-hbui.AchievementsSummary.percentage=已完成%1$s个 还有 %2$s 个待完成
-hbui.AchievementsSummary.progress=进行中
-hbui.AchievementsSummary.rewards=奖励
-hbui.AchievementsSummary.summary=成就摘要
-hbui.AchievementsSummary.time=游戏时间
-hbui.BackButton.back=返回
-hbui.BackButton.narration.backButton=退出按钮
-hbui.Button.button=按钮
-hbui.CreateNewWorld.title=创造新世界
-hbui.ErrorModal.goBack=返回
-hbui.ErrorModal.goingBack=回到上一个屏幕…
-hbui.ErrorModal.title=发生错误
-hbui.MenuButton.menu=菜单
-hbui.MenuButton.toggle=切换菜单
-hbui.Modal.close=关闭模态框
-hbui.TabBar.open=开启
-hbui.TabBar.selected=选定
-hbui.TabBar.selectedTab=%1$s 中的 %2$s
-hbui.TabBar.tab=选项
-hbui.TextField.deselect=取消选定
-hbui.TextField.select=选择

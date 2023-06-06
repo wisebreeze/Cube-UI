@@ -1,3 +1,4 @@
+## 繁体中文（香港、澳门、台湾）
 Language=繁體中文
 ## 設置
 options.beta_text=測試版頂部文字
@@ -16,9 +17,12 @@ hover_text.all=全部
 hover_text.drop=丟棄物品
 hover_text.destroy=摧毀物品
 hover_text.help=幫助/配方
-hover_text.default_mode=默認模式
-hover_text.auto_mode=自動模式
-hover_text.drop_mode=丟棄模式
+hover_text.default_mode=默認
+hover_text.auto_mode=快速移動
+hover_text.drop_mode=快速丟棄
+quick.trade=全部交易
+quick.craft=全部合成
+quick.cut=全部切制
 
 ## 常見問題
 cube_ui.faq_t1=如何體驗和使用教育版UI？
@@ -27,8 +31,6 @@ cube_ui.faq_t2=如何設置UI部分內容?
 cube_ui.faq_2=在資源包內，依次點擊ui/_global_variables.json，請根據文件內提示進行修改
 cube_ui.faq_t3=1.18.10後，部分UI沒有效果?
 cube_ui.faq_3=目前UI已經全覆蓋，建議使用舊版本Minecraft體驗全覆蓋（部分原版UI可能被原版概念UI覆蓋所以沒有效果）
-cube_ui.faq_t4=UI開放源代碼嗎?
-cube_ui.faq_4=目前UI開放源代碼，你可以進行二改和使用源碼(禁止商業用途，以免承擔不必要的法律責任)
 cube_ui.faq_t5=如何反饋Bug?
 cube_ui.faq_5=資源下方評論區告訴作者，論壇請移步至反饋貼反饋
 
@@ -39,15 +41,11 @@ about.sub_package=擴展包
 update_time=更新時間
 about_ui.subpack_sorting=擴展包排序需要比Cube UI排序高，擴展包才能完整運行
 about_ui.no_subpack=未安裝擴展包
+cube.coming_soon=敬請期待
 
 about_ui.ui_file=目前UI檔案: 
 about_ui.default_ui=經典
 about_ui.default_os=操作系統: 
-
-about_ui.precautions_1=● 禁止倒賣
-about_ui.precautions_2=● 禁止作為商業用途
-about_ui.precautions_3=● 未經允許，禁止轉載
-about_ui.precautions_4=● 允許將資源包裡的任何圖片或代碼整合到其他資源包或二改資源包，可以供個人使用，但是發布需要作者同意
 
 subpack.no_name=該擴展包沒有名字
 subpack.incompatibility=§c該擴展包不兼容目前版本
@@ -62,13 +60,16 @@ appearance.header_5=滑塊
 
 cube.piracy=當前的UI被修改，請使用正版完整體驗Cube UI
 
-## 專注面板
-hud.focus_menu.tab_1=快捷按鈕
-hud.focus_menu.tab_2=通知類
-hud.focus_menu.tab_3=其他
+## 變量
+cube.variables.title=變量
+cube.variables.subtitle=這些變量可以在Cube UI的ui/_global_variables.json文件修改，修改這些變量能改善你的 UI 體驗！
+cube.variables.more=這裏僅列舉重要的變量，其他變量不再此展示
 
-hud.personalization=個性化
-hud.personalization.title=專注菜單
+## 專注面板
+hud.focus_menu.tab1=擴展
+hud.focus_menu.tab2=通知
+hud.focus_menu.tab3=其他
+
 hud.hide.player_position=坐標
 hud.hide.title=標題
 hud.hide.subtitle=副標題
@@ -81,6 +82,20 @@ hud.toggle.scb=記分板
 hud.toggle.effect=藥水效果
 hud.toggle.hotbar=快捷欄
 hud.toggle.item_name=物品名
+hud.toggle.paper_doll=紙娃娃
+hud.focus_menu.hand=手持顯示
+hud.focus_menu.light=亮度
+hud.focus_menu.rc=追溯指針
+hud.focus_menu.tc=觸屏進度圓圈
+hud.focus_menu.crosshair=準心
+hud.focus_menu.dt=低耐久提醒
+hud.focus_menu.vignette=環境渲染
+hud.focus_menu.mini_map=小地圖
+
+hud.focus_menu.set.hand_info=手持物品信息
+hud.focus_menu.set.2d_paper=2D紙娃娃
+hud.focus_menu.set.old_rc=啟用舊版恢復指南針
+hud.focus_menu.set.map_size=小地圖大小
 
 hud.btn.hide_all=隱藏 hud
 hud.btn.hide_doll=隱藏紙娃娃
@@ -90,9 +105,77 @@ tab.down=下個內容
 tab.back=上個內容
 chat.up=下個信息
 chat.back=上個信息
+chat.to_down=回到底部
 
 ## 其他界面
+search.form=搜索菜單…
 search.item=區分大小寫 | 搜尋內容...
-hide_hud.tip=點擊此處顯示 HUD
 command_block.empty_command_text=在此輸入你的命令
 seed_picker.header=圖片僅供參考，種子可能會隨著版本的更新而變化
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=作者：MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=提示：請點擊右上角的"x"返回暫停屏幕！
+screenshot.locationButton=查看截圖位置
+screenshot.location=截圖位置: 
+createWorldScreen.gameMode.spectator=旁觀
+gui.empty_back=雙擊空白處返回游戲
+gui.one_empty_back=點擊空白處返回游戲
+
+## 交易
+trade.unlock=解鎖全部交易
+
+## 遊戲
+play_screen.lately_first=最近遊戲
+play_screen.db_click_start=再次雙擊進入世界
+
+## HUD
+low_durability.tip=低耐久
+hide_hud.db.tip=雙擊 "H" 按鈕隱藏 HUD
+hide_hud.tip=點擊此處顯示 HUD
+
+## 暫停
+pause.quit_tip.title=保存並退出
+pause.quit_tip.content=是否保存並退出？
+pause.quit_tip.yes=保存並退出
+pause.quit_tip.no=點錯了…
+
+## 準心
+hud.focus_menu.tab_4=準心
+focus.cross_hair.tip.subpack=想要更多的準心？請安裝並激活Cube UI準心包！
+focus.cross_hair.tip.setting=準心會隨着退出遊戲而重置，若要永久使用此準心請修改 Cube UI 的 ui/_setting.json 文件。
+focus.cross_hair.title.default=無
+focus.cross_hair.description.default=隱藏準心
+focus.cross_hair.title.default=默認
+focus.cross_hair.description.default=Cube UI內置的準心
+
+## 音樂
+cube_music.title=音樂
+cube_music.tip=因版權問題，Cube UI僅調用原版音樂播放。如需添加其他音樂，可以安裝第三方音樂擴展包或下載 Cube UI 自定義音樂擴展包！
+
+## 音符盒
+cube_note.title=音符盒
+cube_note.sound=音量
+
+## 設置
+options.video=顯示
+options.sounds=音量
+options.developer=開發者
+setting.file_storage.tip=當你更換儲存路徑時，你將會失去 Cube UI ！ （更換路徑後，請嘗試重新導入並啟用 Cube UI）
+
+setting.sound.description.all=調節遊戲的總音量
+setting.sound.description.music=調節遊戲音樂的音量
+setting.sound.description.sound=調節遊戲音效的音量
+setting.sound.description.ambient=調節水下、下界、洞穴環境音效和煙花火箭的音量
+setting.sound.description.block=調節方塊（如鐵砧、箱子和門等）的音量
+setting.sound.description.hostile=調節敵對生物的音量
+setting.sound.description.neutral=調節友好生物的音量
+setting.sound.description.player=調節玩家的音量大小（如丟棄物品、受傷音效等）
+setting.sound.description.record=調節唱片機和音符盒發出音樂的音量
+setting.sound.description.whether=調節降雨和雷暴的音量
+setting.sound.description.tts=調節文字轉語音的音量
+
+setting.gm.description.c=無限的資源、自由地飛翔並且能夠瞬間破壞方塊
+setting.gm.description.s=探索世界、收集資源、合成道具、提高等級、補充體力和生命值
+setting.gm.description.a=玩家不能破壞和放置任何方塊，以避免損壞冒險地圖或惡意破壞服務器
+setting.gm.description.sp=允許玩家以飛行的方式無障礙穿過和觀察世界

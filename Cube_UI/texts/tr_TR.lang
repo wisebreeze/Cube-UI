@@ -1,3 +1,4 @@
+## 土耳其语
 Language=Türkçe (Türkiye)
 ## kurmak
 options.beta_text=Beta üst metni
@@ -16,9 +17,12 @@ hover_text.all=tümü
 hover_text.drop=Öğeyi bırak
 hover_text.destroy=Öğeleri yok et
 hover_text.help=Yardım/Tarif
-hover_text.default_mode=Varsayılan mod
-hover_text.auto_mode=Otomatik Mod
-hover_text.drop_mode=Bırakma Modu
+hover_text.default_mode=Varsayılan
+hover_text.auto_mode=hızlı hareket et
+hover_text.drop_mode=hızlı bir şekilde atıldı
+quick.trade=Tüm işlemler
+quick.craft=Tümünü Yap
+quick.cut=hepsini kes
 
 ## ortak sorun
 cube_ui.faq_t1=Eğitim kullanıcı arayüzü nasıl deneyimlenir ve kullanılır?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=UI bölüm içeriği nasıl ayarlanır?
 cube_ui.faq_2=Kaynak paketinde, sırayla ui/_global_variables.json'a tıklayın, lütfen dosyadaki istemlere göre değiştirin
 cube_ui.faq_t3=1.18.10'dan sonra, bazı UI'ların etkisi yok mu?
 cube_ui.faq_3=Şu anda kullanıcı arayüzü tamamen kapsanmıştır, tam kapsamı deneyimlemek için Minecraft'ın eski sürümünün kullanılması önerilir (orijinal kullanıcı arayüzünün bir kısmı orijinal konsept kullanıcı arayüzü tarafından kapsanabilir, bu nedenle hiçbir etkisi yoktur)
-cube_ui.faq_t4=UI açık kaynak mı?
-cube_ui.faq_4=Şu anda kullanıcı arayüzü açık kaynak, iki değişiklik yapabilir ve kaynak kodunu kullanabilirsiniz (gereksiz yasal sorumluluktan kaçınmak için ticari kullanım yasaktır)
 cube_ui.faq_t5=Hatalar nasıl bildirilir?
 cube_ui.faq_5=Kaynağın altındaki yorum alanında yazara söyleyin, geri bildirim için lütfen geri bildirim başlığına gidin
 
@@ -39,15 +41,11 @@ about.sub_package=Uzantı Paketi
 update_time=Güncelleme zamanı
 about_ui.subpack_sorting=Alt paketin tamamen çalışması için alt paket sıralamasının Küp UI sıralamasından daha yüksek olması gerekir
 about_ui.no_subpack=Yüklü alt paket yok
+cube.coming_soon=Ne beklemeliyim
 
 about_ui.ui_file=Geçerli UI dosyası:
 about_ui.default_ui=Klasik
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Yeniden satış yok
-about_ui.precautions_2=● Ticari kullanım için yasaktır
-about_ui.precautions_3=● İzinsiz yeniden yazdırma yasaktır
-about_ui.precautions_4=● Kaynak paketindeki herhangi bir resmin veya kodun diğer kaynak paketlerine veya kişisel kullanım için ikinci değiştirilmiş kaynak paketlerine entegre edilmesine izin verir, ancak yayınlamak için yazarın onayı gerekir
 
 subpack.no_name=Bu genişleme paketinin adı yok
 subpack.incommunication=§cBu genişleme paketi mevcut sürümle uyumlu değil
@@ -62,13 +60,16 @@ appearance.header_5=Kaydırıcı
 
 cube.piracy=Mevcut UI değiştirildi, lütfen Cube UI'yi tam olarak deneyimlemek için orijinal sürümü kullanın
 
-## odak paneli
-hud.focus_menu.tab_1=Kısayol Düğmesi
-hud.focus_menu.tab_2=Bildirim sınıfı
-hud.focus_menu.tab_3=Diğer
+## Değişkenler
+cube.variables.title=değişkenler
+cube.variables.subtitle=Bu değişkenler Cube UI'nin ui/_global_variables.json dosyasında değiştirilebilir.
+cube.variables.more=Sadece önemli değişkenler burada listelenir, diğer değişkenler burada gösterilmez
 
-hud.personalization=Kişiselleştirme
-hud.personalization.title=Odak Menüsü
+## odak paneli
+hud.focus_menu.tab1=extension
+hud.focus_menu.tab2=Bildirim
+hud.focus_menu.tab3=Diğer
+
 hud.hide.player_position=Koordinatlar
 hud.hide.title=Başlık
 hud.hide.subtitle=Altyazı
@@ -81,6 +82,20 @@ hud.toggle.scb=Skorbord
 hud.toggle.effect=İksir Etkisi
 hud.toggle.hotbar=Sıcak çubuk
 hud.toggle.item_name=Öğe Adı
+hud.toggle.paper_doll=kağıt bebek
+hud.focus_menu.hand=Elde tutulan ekran
+hud.focus_menu.light=parlaklık
+hud.focus_menu.rc=Pusulayı Geri Yükle
+hud.focus_menu.tc=Dokunmatik ekran ilerleme dairesi
+hud.focus_menu.crosshair=İmleç
+hud.focus_menu.dt=Düşük Dayanıklılık Hatırlatıcısı
+hud.focus_menu.vignette=Ortam İşleme
+hud.focus_menu.mini_map=Mini Harita
+
+hud.focus_menu.set.hand_info=Elde tutulan öğe bilgisi
+hud.focus_menu.set.2d_paper=2D kağıt bebek
+hud.focus_menu.set.old_rc=Eski geri yüklenen pusulayı etkinleştir
+hud.focus_menu.set.map_size=Mini Harita Boyutu
 
 hud.btn.hide_all=hud'u gizle
 hud.btn.hide_doll=Kağıt Bebeği Gizle
@@ -90,9 +105,76 @@ tab.down=Sonraki içerik
 tab.back=Önceki içerik
 chat.up=Sonraki mesaj
 chat.back=Son mesaj
+chat.to_down=En alta geri dön
 
 ## Diğer arayüz
+search.form=arama menüsü...
 search.item=büyük/küçük harfe duyarlı | İçerik arayın...
-hide_hud.tip=HUD'yi görüntülemek için buraya tıklayın
 command_block.empty_command_text=Komutunuzu buraya girin
 seed_picker.header=Resim sadece referans içindir, sürüm güncellemesi ile tohum değişebilir
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Yazar: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=İpucu: Duraklatma ekranına dönmek için lütfen sağ üst köşedeki "x" işaretine tıklayın!
+screenshot.locationButton=Ekran görüntüsü konumunu görüntüle
+screenshot.location=Ekran görüntüsü konumu: 
+createWorldScreen.gameMode.spectator=İzleyici
+gui.empty_back=Oyuna geri dönmek için boş alana çift tıklayın
+gui.one_empty_back=Oyuna geri dönmek için boş alana tıklayın
+
+## Ticaret
+trade.unlock=Tüm işlemlerin kilidini aç
+
+## oyun
+play_screen.lately_first=Son zamanlarda ilk oyun
+play_screen.db_click_start=Girmek için tekrar çift tıklayın
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip="H" düğmesine çift tıklayarak HUD'ı gizleyin
+hide_hud.tip=HUD'yi göstermek için buraya tıklayın
+
+## Pause
+pause.quit_tip.title=Kaydet ve çık
+pause.quit_tip.content=Bu kaydedilip çıkılacak mı?
+pause.quit_tip.yes=Kaydet ve çık
+pause.quit_tip.no=Kaçırılan tıklama...
+
+## kolimasyon
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Daha fazla kolimatör ister misiniz? Lütfen Cube UI kolimatör paketini yükleyin ve etkinleştirin!
+focus.cross_hair.tip.setting=Oyundan çıktığınızda kolimasyon sıfırlanır, kalıcı olarak kullanmak için lütfen Cube UI için ui/_setting.json dosyasını değiştirin.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=hide collimator
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Cube UI'nin yerleşik kolimasyonu
+
+## Müzik
+cube_music.title=müzik
+cube_music.tip=Telif hakkı sorunları nedeniyle, Cube UI oynatma için yalnızca orijinal müziği çağırır. Ek müzik eklemek için üçüncü taraf bir müzik eklenti paketi yükleyin veya Cube UI özel müzik eklenti paketini indirin!
+
+## not kutusu
+cube_note.title=Not kutusu
+cube_note.sound=volume
+
+## kurmak
+options.sounds=Ses
+options.developer=Geliştirici
+setting.file_storage.tip=Depolama yolunu değiştirdiğinizde, Cube UI'yi kaybedersiniz! (Yolu değiştirdikten sonra lütfen yeniden içe aktarmayı ve Cube UI'yi etkinleştirmeyi deneyin)
+
+setting.sound.description.all=Oyunun genel sesini ayarlar
+setting.sound.description.music=Oyun müziğinin sesini ayarlayın
+setting.sound.description.sound=Oyun ses efektlerinin sesini ayarlar
+setting.sound.description.ambient=Sualtı, yeraltı, mağara ortam seslerinin ve havai fişek roketlerinin ses seviyesini ayarlar
+setting.sound.description.block=Örsler, sandıklar ve kapılar gibi blokların hacmini ayarlar
+setting.sound.description.hostile=Düşman çetelerin sesini ayarlar
+setting.sound.description.neutral=Dost çetelerin ses seviyesini ayarlar
+setting.sound.description.player=Oyuncunun sesini ayarlayın (düşen öğeler, yaralı ses efektleri vb.)
+setting.sound.description.record=Plak çalarlar ve nota blokları tarafından üretilen müziğin sesini ayarlar
+setting.sound.description.whem=Yağmur ve gök gürültülü fırtınaların sesini ayarlar
+setting.sound.description.tts=Metin okuma sesini ayarla
+
+setting.gm.description.c=Sınırsız kaynaklar, özgürce uçun ve blokları anında kırın
+setting.gm.description.s=Dünyayı keşfedin, kaynakları toplayın, dekorları sentezleyin, seviyeleri iyileştirin, dayanıklılığı ve sağlığı yenileyin
+setting.gm.description.a=Oyuncular, macera haritasına zarar vermemek veya sunucuya zarar vermemek için herhangi bir blok kıramaz ve yerleştiremez
+setting.gm.description.sp=Oyuncunun engel olmadan uçarak dünyayı gözlemlemesini sağlar

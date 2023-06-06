@@ -1,3 +1,4 @@
+## 荷兰语
 Language=Nederlands (Nederland)
 ## opstelling
 options.beta_text=Bèta bovenste tekst
@@ -16,9 +17,12 @@ hover_text.all=alles
 hover_text.drop=Laat item vallen
 hover_text.destroy=Vernietig voorwerpen
 hover_text.help=Help/Recept
-hover_text.default_mode=Standaardmodus
-hover_text.auto_mode=Auto-modus
-hover_text.drop_mode=Drop-modus
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=snelle daling
+quick.trade=Alle transacties
+quick.craft=Maak alles
+quick.cut=alles knippen
 
 ## vaak voorkomend probleem
 cube_ui.faq_t1=Hoe de educatieve gebruikersinterface ervaren en gebruiken?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Hoe stel ik de inhoud van het UI-gedeelte in?
 cube_ui.faq_2=Klik in het bronpakket om de beurt op ui/_global_variables.json, pas het aan volgens de aanwijzingen in het bestand
 cube_ui.faq_t3=1.18.10 heeft een bepaalde gebruikersinterface geen effect?
 cube_ui.faq_3=Momenteel is de gebruikersinterface volledig gedekt, het wordt aanbevolen om de oude versie van Minecraft te gebruiken om de volledige dekking te ervaren (een deel van de originele gebruikersinterface kan worden gedekt door de originele concept-UI, dus het heeft geen effect)
-cube_ui.faq_t4=Is UI open source?
-cube_ui.faq_4=Momenteel is de gebruikersinterface open source, u kunt twee wijzigingen aanbrengen en de broncode gebruiken (commercieel gebruik is verboden om onnodige wettelijke aansprakelijkheid te voorkomen)
 cube_ui.faq_t5=Hoe bugs melden?
 cube_ui.faq_5=Vertel de auteur in het commentaargebied onder de bron, ga naar de feedbackthread voor feedback
 
@@ -39,15 +41,11 @@ about.sub_package=Uitbreidingspakket
 update_time=Update tijd
 about_ui.subpack_sorting=De subpack-sortering moet hoger zijn dan de Cube UI-sortering om het subpack volledig te laten werken
 about_ui.no_subpack=Geen subpakket geïnstalleerd
+cube.coming_soon=Wat u kunt verwachten
 
-about_ui.ui_file=Huidig ​​UI-bestand:
+about_ui.ui_file=Huidig UI-bestand:
 about_ui.default_ui=Klassiek
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Geen doorverkoop
-about_ui.precautions_2=● Verboden voor commercieel gebruik
-about_ui.precautions_3=● Herdrukken is verboden zonder toestemming
-about_ui.precautions_4=● Maakt het mogelijk om elke afbeelding of code in het resource pack te integreren in andere resource packs of tweede aangepaste resource packs voor persoonlijk gebruik, maar de toestemming van de auteur is vereist voor publicatie
 
 subpack.no_name=Dit uitbreidingspakket heeft geen naam
 subpack.incompatibility=§cDit uitbreidingspakket is niet compatibel met de huidige versie
@@ -62,13 +60,16 @@ appearance.header_5=Slider
 
 cube.piracy=De huidige gebruikersinterface is gewijzigd, gebruik de originele versie om de gebruikersinterface van Cube volledig te ervaren
 
-## focuspaneel
-hud.focus_menu.tab_1=Sneltoets
-hud.focus_menu.tab_2=Meldingsklasse
-hud.focus_menu.tab_3=Overig
+## Variabelen
+cube.variables.title=variables
+cube.variables.subtitle=Deze variabelen kunnen worden aangepast in het ui/_global_variables.json bestand van de Cube UI.
+cube.variables.more=Alleen de belangrijke variabelen worden hier vermeld, andere variabelen worden hier niet getoond
 
-hud.personalization=Personalisatie
-hud.personalization.title=Focusmenu
+## focuspaneel
+hud.focus_menu.tab1=extensie
+hud.focus_menu.tab2=Melding
+hud.focus_menu.tab3=Ander
+
 hud.hide.player_position=Coördinaten
 hud.hide.title=Titel
 hud.hide.subtitle=Ondertitel
@@ -81,6 +82,20 @@ hud.toggle.scb=Scorebord
 hud.toggle.effect=Potion-effect
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Artikelnaam
+hud.toggle.paper_doll=papierpop
+hud.focus_menu.hand=Handheld weergave
+hud.focus_menu.light=helderheid
+hud.focus_menu.rc=Herstel Kompas
+hud.focus_menu.tc=Voortgangscirkel touchscreen
+hud.focus_menu.crosshair=Draadkruis
+hud.focus_menu.dt=Lage duurzaamheidsherinnering
+hud.focus_menu.vignette=Omgeving Rendering
+hud.focus_menu.mini_map=Minikaart
+
+hud.focus_menu.set.hand_info=Handheld item informatie
+hud.focus_menu.set.2d_paper=2D paper doll
+hud.focus_menu.set.old_rc=Schakel oud hersteld kompas in
+hud.focus_menu.set.map_size=Minimapgrootte
 
 hud.btn.hide_all=Hud verbergen
 hud.btn.hide_doll=Verberg Paper Doll
@@ -90,9 +105,76 @@ tab.down=Volgende inhoud
 tab.back=Vorige inhoud
 chat.up=Volgend bericht
 chat.back=Laatste bericht
+chat.to_down=Terug naar beneden
 
 ## Andere interface
+search.form=zoek menu...
 search.item=hoofdlettergevoelig | Zoeken naar inhoud...
-hide_hud.tip=Klik hier om de HUD weer te geven
 command_block.empty_command_text=Voer hier je commando in
 seed_picker.header=De afbeelding is alleen ter referentie, de seed kan veranderen met de update van de versie
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Auteur: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Hint: Klik op de "x" in de rechterbovenhoek om terug te keren naar het pauzescherm!
+screenshot.locationButton=Bekijk screenshot locatie
+screenshot.location=Schermopnamelocatie: 
+createWorldScreen.gameMode.spectator=Kijker
+gui.empty_back=Dubbelklik op de lege ruimte om terug te keren naar het spel
+gui.one_empty_back=Klik op de lege ruimte om terug te keren naar het spel
+
+## handel
+trade.unlock=Ontgrendel alle transacties
+
+## spel
+play_screen.lately_first=Onlangs eerste spel
+play_screen.db_click_start=Dubbelklik nogmaals om te openen
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Verberg de HUD door te dubbelklikken op de "H" knop.
+hide_hud.tip=Klik hier om de HUD te tonen
+
+## Pauze
+pause.quit_tip.title=Opslaan en afsluiten
+pause.quit_tip.content=Slaat dit op en sluit het af?
+pause.quit_tip.yes=Opslaan en afsluiten
+pause.quit_tip.no=Gemiste klik...
+
+## collimatie
+hud.focus_menu.tab_4=collimatie
+focus.cross_hair.tip.subpack=Wil je meer collimatoren? Installeer en activeer het Cube UI collimator pakket!
+focus.cross_hair.tip.setting=De collimatie wordt gereset wanneer je het spel afsluit, om het permanent te gebruiken moet je het ui/_setting.json bestand voor Cube UI aanpassen.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=collimator verbergen
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Kubus UI's ingebouwde collimatie
+
+## Music
+cube_music.title=music
+cube_music.tip=Wegens copyright problemen, roept Cube UI alleen de originele muziek op om af te spelen. Om extra muziek toe te voegen, installeert u een muziekuitbreidingspakket van derden of downloadt u het Cube UI aangepaste muziekuitbreidingspakket!
+
+## note box
+cube_note.title=Note box
+cube_note.sound=volume
+
+## opstelling
+opties.geluiden=Volume
+options.developer=Ontwikkelaar
+setting.file_storage.tip=Als u het opslagpad wijzigt, verliest u de Cube UI! (Probeer na het wijzigen van het pad de Cube UI opnieuw te importeren en in te schakelen)
+
+setting.sound.description.all=Past het algemene volume van het spel aan
+setting.sound.description.music=Pas het volume van de gamemuziek aan
+setting.sound.description.sound=Hiermee past u het volume van de geluidseffecten van het spel aan
+setting.sound.description.ambient=Past het volume van onderwater-, onderwereld-, grotomgevingsgeluiden en vuurwerkraketten aan
+setting.sound.description.block=Pas het volume aan van blokken zoals aambeelden, kisten en deuren
+setting.sound.description.hostile=Past het volume van vijandige mobs aan
+setting.sound.description.neutral=Past het geluidsvolume van bevriende mobs aan
+setting.sound.description.player=Pas het volume van de speler aan (zoals gevallen voorwerpen, beschadigde geluidseffecten, enz.)
+setting.sound.description.record=Past het volume aan van muziek geproduceerd door platenspelers en nootblokken
+setting.sound.description.whether=Past het volume van regen en onweer aan
+setting.sound.description.tts=Pas het tekst-naar-spraakvolume aan
+
+setting.gm.description.c=Onbeperkte bronnen, vlieg vrijuit en breek blokken onmiddellijk
+setting.gm.description.s=Verken de wereld, verzamel middelen, synthetiseer rekwisieten, verbeter niveaus, vul uithoudingsvermogen en gezondheid aan
+setting.gm.description.a=Spelers kunnen geen blokken breken en plaatsen om te voorkomen dat ze de avonturenkaart beschadigen of de server vernielen
+setting.gm.description.sp=Hiermee kan de speler door de wereld vliegen en de wereld observeren zonder obstakels

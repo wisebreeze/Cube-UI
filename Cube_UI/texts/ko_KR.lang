@@ -1,3 +1,4 @@
+## 韩语
 Language=한국어 (대한민국)
 ## 설정
 options.beta_text=베타 상단 텍스트
@@ -16,9 +17,12 @@ hover_text.all=모두
 hover_text.drop=드롭 아이템
 hover_text.destroy=아이템 파괴
 hover_text.help=도움말/레시피
-hover_text.default_mode=기본 모드
-hover_text.auto_mode=자동 모드
-hover_text.drop_mode=드롭 모드
+hover_text.default_mode=기본값
+hover_text.auto_mode=빠르게 이동
+hover_text.drop_mode=빠르게 폐기
+quick.trade=모든 거래
+quick.craft=모두 제작
+quick.cut=모두 자르기
 
 ## 일반적인 문제
 cube_ui.faq_t1=교육용 UI를 어떻게 체험하고 사용하나요?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=UI 부분 콘텐츠 설정은 어떻게 하나요?
 cube_ui.faq_2=리소스 패키지에서 ui/_global_variables.json을 차례로 클릭하고 파일의 프롬프트에 따라 수정하십시오.
 cube_ui.faq_t3=1.18.10 이후 일부 UI가 효과가 없나요?
 cube_ui.faq_3=현재 UI가 완전히 가려져 있으므로 전체 적용을 경험하려면 이전 버전의 Minecraft를 사용하는 것이 좋습니다(원래 UI의 일부가 원래 컨셉 UI로 가려질 수 있으므로 효과가 없습니다)
-cube_ui.faq_t4=UI가 오픈 소스입니까?
-cube_ui.faq_4=현재 UI는 오픈 소스이므로 두 가지 변경 및 소스 코드 사용 가능(불필요한 법적 책임을 피하기 위해 상업적 사용 금지)
 cube_ui.faq_t5=버그 신고는 어떻게 하나요?
 cube_ui.faq_5=리소스 아래의 댓글 영역에 작성자에게 알려주십시오. 피드백을 위해 피드백 스레드로 이동하십시오.
 
@@ -39,15 +41,11 @@ about.sub_package=확장 패키지
 update_time=업데이트 시간
 about_ui.subpack_sorting=서브팩이 완전히 실행되려면 서브팩 정렬이 큐브 UI 정렬보다 높아야 합니다.
 about_ui.no_subpack=설치된 서브팩 없음
+cube.coming_soon=계속 지켜봐
 
 about_ui.ui_file=현재 UI 파일:
 about_ui.default_ui=클래식
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● 재판매 금지
-about_ui.precautions_2=● 상업적 이용 금지
-about_ui.precautions_3=● 무단 전재 금지
-about_ui.precautions_4=● 리소스 팩의 모든 이미지 또는 코드를 다른 리소스 팩이나 개인 용도로 두 번째 수정된 리소스 팩에 통합할 수 있지만 게시하려면 작성자의 동의가 필요합니다.
 
 subpack.no_name=이 확장팩에는 이름이 없습니다
 subpack.incompatibility=§c이 확장 팩은 현재 버전과 호환되지 않습니다.
@@ -62,13 +60,16 @@ appearance.header_5=슬라이더
 
 cube.piracy=현재 UI가 수정되었습니다. Cube UI를 완벽하게 경험하시려면 정품을 사용하시기 바랍니다.
 
-## 포커스 패널
-hud.focus_menu.tab_1=단축키 버튼
-hud.focus_menu.tab_2=알림 클래스
-hud.focus_menu.tab_3=기타
+## 변수
+cube.variables.title=변수
+cube.variables.subtitle=이러한 변수는 큐브 UI의 ui/_global_variables.json 파일에서 수정할 수 있으며, 이러한 변수를 수정하면 UI 경험이 향상될 수 있습니다!
+cube.variables.more= 중요한 변수만 여기에 나열되고 다른 변수는 여기에 표시되지 않습니다.
 
-hud.personalization=개인화
-hud.personalization.title=포커스 메뉴
+## 포커스 패널
+hud.focusmenu.tab1=확장
+hud.focusmenu.tab2=알림
+hud.focusmenu.tab3=기타
+
 hud.hide.player_position=좌표
 hud.hide.title=제목
 hud.hide.subtitle=자막
@@ -81,6 +82,20 @@ hud.toggle.scb=스코어보드
 hud.toggle.effect=물약 효과
 hud.toggle.hotbar=핫바
 hud.toggle.item_name=아이템 이름
+hud.toggle.paper인형=종이 인형
+hud.focus_menu.hand=휴대용 디스플레이
+hud.focus_menu.light=밝기
+hud.focus_menu.rc=나침반 복원
+hud.focus_menu.tc=터치 스크린 진행률 원
+hud.focus_menu.crosshair=십자선
+hud.focus_menu.dt=낮은 내구성 알림
+hud.focus_menu.vignette=환경 렌더링
+hud.focus_menu.mini_map=미니맵
+
+hud.focusmenu.set.hand_info=휴대용 물품 정보
+hud.focusmenu.set.2d_paper=2D 종이 인형
+hud.focus_menu.set.old_rc=구 복원된 나침반 활성화
+hud.focus_menu.set.map_size=미니맵 크기
 
 hud.btn.hide_all=허드 숨기기
 hud.btn.hide_doll=종이 인형 숨기기
@@ -90,9 +105,76 @@ tab.down=다음 콘텐츠
 tab.back=이전 내용
 chat.up=다음 메시지
 chat.back=마지막 메시지
+chat.to_down=아래로
 
 ## 기타 인터페이스
+search.form=검색 메뉴...
 search.item=대소문자 구분 | 콘텐츠 검색...
-hide_hud.tip=HUD를 표시하려면 여기를 클릭하십시오
 command_block.empty_command_text=여기에 명령을 입력하십시오
 seed_picker.header=사진은 참고용이며 버전 업데이트에 따라 시드가 변경될 수 있습니다.
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=저자 : MC_spruce | © 2021 - 2023
+hud.focus_menu.quit_tip=팁: 일시 중지 화면으로 돌아가려면 오른쪽 상단 모서리의 "x"를 클릭하십시오!
+screenshot.location버튼 =스크린샷 위치 보기
+screenshot.location=스크린샷 위치: 
+createWorldScreen.gameMode.spectator=시청
+gui.empty_back=게임으로 돌아가려면 빈 공간을 더블 클릭하십시오
+gui.one_empty_back=게임으로 돌아가려면 빈 공간을 클릭하세요
+
+## 거래
+trade.unlock=모든 거래 잠금 해제
+
+## 게임
+play_screen.lately_first=최근 첫 게임
+play_screen.db_click_start=입력하려면 다시 두 번 클릭하십시오.
+
+## HUD
+low_durability.tip=낮은 내구성
+hide_hud.db.tip="H" 버튼을 두 번 클릭하여 HUD를 숨깁니다.
+hide_hud.tip=HUD를 표시하려면 여기를 클릭하십시오.
+
+## 일시 중지
+pause.quittip.title=저장 및 종료
+pause.quittip.content=저장 및 종료?
+pause.quittip.yes=저장 및 종료
+pause.quittip.no=클릭이 잘못되었습니다...
+
+## 조준
+hud.focus_menu.tab_4=정확성
+focus.crosshair.tip.subpack=십자수를 더 원하십니까? 큐브 UI 십자수 팩을 설치하고 활성화하십시오!
+focus.crosshair.tip.setting=게임을 종료할 때 십자선이 재설정됩니다. 이 십자선을 영구적으로 사용하려면 큐브 UI의 UI/setting.json 파일을 수정합니다.
+focus.crosshair.title.default=없음
+focus.crosshair.description.default=숨겨진 십자수
+focus.crosshair.title.default=기본값
+focus.crosshair.description.default=큐브 UI 내장 십자선
+
+##음악
+cube_music.title=음악
+cube_music.tip=저작권 문제로 인해 큐브 UI는 원래 음악 재생만 호출합니다. 다른 음악을 추가하려면 타사 음악 확장을 설치하거나 큐브 UI 사용자 지정 음악 확장을 다운로드할 수 있습니다!
+
+## 음악 노트 상자
+cube_note.title=음악 노트 상자
+cube_note.sound=볼륨
+
+## 설정
+options.sounds=볼륨
+options.developer=개발자
+setting.file_storage.tip=저장 경로를 변경하면 큐브 UI가 사라집니다! (경로 변경 후 큐브 UI를 다시 불러와 활성화 해주세요)
+
+setting.sound.description.all=게임의 전체 볼륨을 조정합니다
+setting.sound.description.music=게임 음악의 볼륨을 조정합니다
+setting.sound.description.sound=게임 음향 효과의 볼륨을 조정합니다
+setting.sound.description.ambient=수중, 황천, 동굴 주변 소리 및 폭죽 로켓의 볼륨을 조정합니다.
+setting.sound.description.block=모루, 상자, 문과 같은 블록의 볼륨을 조정합니다.
+setting.sound.description.hostile=적대적인 몹의 볼륨을 조정합니다
+setting.sound.description.neutral=아군 몹의 음량을 조정합니다
+setting.sound.description.player=플레이어의 볼륨을 조정합니다(아이템을 떨어뜨리거나 손상된 음향 효과 등).
+setting.sound.description.record=레코드 플레이어 및 노트 블록에서 생성되는 음악의 볼륨을 조정합니다.
+setting.sound.description.whether=비와 뇌우의 양을 조정합니다
+setting.sound.description.tts=텍스트 음성 변환 볼륨 조정
+
+setting.gm.description.c=무제한 리소스, 자유롭게 비행하고 블록을 즉시 부수십시오.
+setting.gm.description.s=세계를 탐험하고, 자원을 수집하고, 소품을 합성하고, 레벨을 높이고, 스태미너와 건강을 보충하세요
+setting.gm.description.a=플레이어는 모험 지도를 손상시키거나 서버를 파괴하는 것을 피하기 위해 블록을 부수거나 배치할 수 없습니다.
+setting.gm.description.sp=플레이어가 장애물 없이 날아다니며 세계를 관찰할 수 있습니다.

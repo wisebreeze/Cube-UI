@@ -1,3 +1,4 @@
+## 意大利语
 Language=Italiano (Italia)
 ## impostare
 options.beta_text=Testo in versione beta
@@ -16,9 +17,12 @@ hover_text.all=tutto
 hover_text.drop=Rilascia elemento
 hover_text.destroy=Distruggi oggetti
 hover_text.help=Aiuto/Ricetta
-hover_text.default_mode=Modalità predefinita
-hover_text.auto_mode=Modalità automatica
-hover_text.drop_mode=Modalità di rilascio
+hover_text.default_mode=default
+hover_text.auto_mode=fast_move
+hover_text.drop_mode=goccia veloce
+quick.trade=Tutte le negoziazioni
+quick.craft=Crea tutto
+quick.cut=taglia tutto
 
 ## problema comune
 cube_ui.faq_t1=Come sperimentare e utilizzare l'interfaccia utente didattica?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Come impostare il contenuto della parte dell'interfaccia utente?
 cube_ui.faq_2=Nel pacchetto di risorse, fai clic su ui/_global_variables.json a sua volta, modificalo in base alle istruzioni nel file
 Dopo cube_ui.faq_t3=1.18.10, qualche interfaccia utente non ha effetto?
 cube_ui.faq_3=Attualmente l'interfaccia utente è stata completamente coperta, si consiglia di utilizzare la vecchia versione di Minecraft per provare la copertura completa (parte dell'interfaccia utente originale potrebbe essere coperta dall'interfaccia utente originale, quindi non ha alcun effetto)
-cube_ui.faq_t4=L'interfaccia utente è open source?
-cube_ui.faq_4=Attualmente l'interfaccia utente è open source, puoi apportare due modifiche e utilizzare il codice sorgente (l'uso commerciale è vietato per evitare inutili responsabilità legali)
 cube_ui.faq_t5=Come segnalare i bug?
 cube_ui.faq_5=Di' all'autore nell'area commenti sotto la risorsa, per favore passa al thread di feedback per un feedback
 
@@ -39,15 +41,11 @@ about.sub_package=Pacchetto Estensione
 update_time=Ora di aggiornamento
 about_ui.subpack_sorting=L'ordinamento del sottopack deve essere superiore all'ordinamento dell'interfaccia utente del cubo affinché il sottopack venga eseguito completamente
 about_ui.no_subpack=Nessun sottopacchetto installato
+cube.coming_soon=Cosa aspettarsi
 
 about_ui.ui_file=File dell'interfaccia utente corrente:
 about_ui.default_ui=Classico
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Nessuna rivendita
-about_ui.precautions_2=● Vietato per uso commerciale
-about_ui.precautions_3=● La ristampa è vietata senza autorizzazione
-about_ui.precautions_4=● Consente di integrare qualsiasi immagine o codice nel pacchetto di risorse in altri pacchetti di risorse o pacchetti di risorse di seconda modifica per uso personale, ma per la pubblicazione è richiesto il consenso dell'autore
 
 subpack.no_name=Questo pacchetto di espansione non ha nome
 subpack.incompatibility=§cQuesto pacchetto di espansione non è compatibile con la versione corrente
@@ -62,13 +60,16 @@ aspetto.header_5=Cursore
 
 cube.piracy=L'interfaccia utente attuale è stata modificata, utilizza la versione originale per provare l'interfaccia utente di Cube
 
-## pannello di messa a fuoco
-hud.focus_menu.tab_1=Pulsante di scelta rapida
-hud.focus_menu.tab_2=Classe di notifica
-hud.focus_menu.tab_3=Altro
+## Variabili
+cube.variables.title=variabili
+cube.variables.subtitle=Queste variabili possono essere modificate nel file ui/_global_variables.json dell'interfaccia utente di Cube.
+cube.variables.more=Solo le variabili importanti sono elencate qui, le altre non sono mostrate qui
 
-hud.personalization=Personalizzazione
-hud.personalization.title=Menu di messa a fuoco
+## pannello di messa a fuoco
+hud.focus_menu.tab1=estensione
+hud.focus_menu.tab2=Notifica
+hud.focus_menu.tab3=Altro
+
 hud.hide.player_position=Coordinate
 hud.hide.title=Titolo
 hud.hide.subtitle=Sottotitoli
@@ -81,6 +82,20 @@ hud.toggle.scb=Tabellone segnapunti
 hud.toggle.effect=Effetto pozione
 hud.toggle.hotbar=Barra calda
 hud.toggle.item_name=Nome oggetto
+hud.toggle.paper_doll=doll di carta
+hud.focus_menu.hand=Visualizzazione portatile
+hud.focus_menu.light=luminosità
+hud.focus_menu.rc=Ripristina Bussola
+hud.focus_menu.tc=Cerchio di avanzamento del touch screen
+hud.focus_menu.crosshair=Mirino
+hud.focus_menu.dt=Promemoria di bassa durata
+hud.focus_menu.vignette=Renderizzazione dell'ambiente
+hud.focus_menu.mini_map=Minimappa
+
+hud.focus_menu.set.hand_info=Informazioni sugli elementi del palmare
+hud.focus_menu.set.2d_paper=Pupazzo di carta 2D
+hud.focus_menu.set.old_rc=Abilita la vecchia bussola ripristinata
+hud.focus_menu.set.map_size=Dimensioni della minimappa
 
 hud.btn.hide_all=Nascondi hud
 hud.btn.hide_doll=Nascondi bambola di carta
@@ -90,9 +105,76 @@ tab.down=Contenuto successivo
 tab.back=Contenuto precedente
 chat.up=Messaggio successivo
 chat.back=Ultimo messaggio
+chat.to_down=Torna in basso
 
 ## Altra interfaccia
+search.form=menu di ricerca...
 search.item=| con distinzione tra maiuscole e minuscole Cerca contenuti...
-hide_hud.tip=Clicca qui per visualizzare l'HUD
 command_block.empty_command_text=Inserisci il tuo comando qui
 seed_picker.header=L'immagine è solo di riferimento, il seme potrebbe cambiare con l'aggiornamento della versione
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Autore: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Consiglio: clicca sulla "x" in alto a destra per tornare alla schermata di pausa!
+screenshot.locationButton=Visualizza la posizione dello screenshot
+screenshot.location=Posizione dello screenshot: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Fai doppio clic sullo spazio vuoto per tornare al gioco
+gui.one_empty_back=Clicca sullo spazio vuoto per tornare al gioco
+
+## commercio
+trade.unlock=Sblocca tutti gli scambi
+
+## gioco
+play_screen.lately_first=Ultimamente prima partita
+play_screen.db_click_start=Fai di nuovo doppio clic per entrare
+
+## HUD
+low_durability.tip=bassa_durabilità
+hide_hud.db.tip=Nascondere l'HUD facendo doppio clic sul pulsante "H".
+hide_hud.tip=Cliccare qui per mostrare l'HUD
+
+## Pausa
+pause.quit_tip.title=Salva e esci
+pause.quit_tip.content=Si salva e si esce?
+pause.quit_tip.yes=Salvataggio e uscita
+pause.quit_tip.no=Click mancato...
+
+## collimazione
+hud.focus_menu.tab_4=collimazione
+focus.cross_hair.tip.subpack=Vuoi altri collimatori? Installare e attivare il pacchetto collimatore Cube UI!
+focus.cross_hair.tip.setting=La collimazione si azzera quando si esce dal gioco; per usarla in modo permanente, modificare il file ui/_setting.json per l'interfaccia utente del cubo.
+focus.cross_hair.title.default=nessuno
+focus.cross_hair.description.default=nascondere collimatore
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Collimazione integrata dell'interfaccia utente del cubo
+
+## Musica
+cube_music.title=music
+cube_music.tip=Per questioni di copyright, Cube UI richiama solo la musica originale per la riproduzione. Per aggiungere musica aggiuntiva, installare un pacchetto di estensione musicale di terze parti o scaricare il pacchetto di estensione musicale personalizzato di Cube UI!
+
+## scatola delle note
+cube_note.title=Casella delle note
+cube_note.sound=volume
+
+## impostare
+options.sounds=Volume
+options.developer=Sviluppatore
+setting.file_storage.tip=Quando cambi il percorso di archiviazione, perderai l'interfaccia utente di Cube! (Dopo aver modificato il percorso, provare a reimportare e abilitare l'interfaccia utente di Cube)
+
+setting.sound.description.all=Regola il volume generale del gioco
+setting.sound.description.music=Regola il volume della musica del gioco
+setting.sound.description.sound=Regola il volume degli effetti sonori del gioco
+setting.sound.description.ambient=Regola il volume dei suoni ambientali subacquei, inferiori, delle caverne e dei fuochi d'artificio
+setting.sound.description.block=Regola il volume di blocchi come incudini, forzieri e porte
+setting.sound.description.hostile=Regola il volume dei mob ostili
+setting.sound.description.neutral=Regola il volume del suono dei mob amici
+setting.sound.description.player=Regola il volume del lettore (come oggetti caduti, effetti sonori feriti, ecc.)
+setting.sound.description.record=Regola il volume della musica prodotta dai giradischi e dai blocchi note
+setting.sound.description.whether=Regola il volume di pioggia e temporali
+setting.sound.description.tts=Regola il volume della sintesi vocale
+
+setting.gm.description.c=Risorse illimitate, vola liberamente e rompi i blocchi all'istante
+setting.gm.description.s=Esplora il mondo, raccogli risorse, sintetizza oggetti di scena, migliora i livelli, reintegra resistenza e salute
+setting.gm.description.a=I giocatori non possono rompere e posizionare alcun blocco per evitare di danneggiare la mappa dell'avventura o vandalizzare il server
+setting.gm.description.sp=Permette al giocatore di volare e osservare il mondo senza ostacoli

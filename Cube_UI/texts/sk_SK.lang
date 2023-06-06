@@ -1,3 +1,4 @@
+## 斯洛伐克语
 Language=Slovensky (SK)
 ## nastaviť
 options.beta_text=Horný text beta
@@ -16,9 +17,12 @@ hover_text.all=all
 hover_text.drop=Zrušiť položku
 hover_text.destroy=Zničte položky
 hover_text.help=Pomocník/recept
-hover_text.default_mode=Predvolený režim
-hover_text.auto_mode=Automatický režim
-hover_text.drop_mode=Drop Mode
+hover_text.default_mode=predvolené
+hover_text.auto_mode=pohybujte sa rýchlo
+hover_text.drop_mode=rýchlo zahodený
+quick.trade=Všetky obchody
+quick.craft=Vyrobte všetko
+quick.cut=vystrihnúť všetko
 
 ## bežný problém
 cube_ui.faq_t1=Ako zažiť a používať vzdelávacie používateľské rozhranie?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Ako nastaviť obsah časti používateľského rozhrania?
 cube_ui.faq_2=V balíku zdrojov postupne kliknite na ui/_global_variables.json, upravte ho podľa pokynov v súbore
 cube_ui.faq_t3=1.18.10 nemá niektoré používateľské rozhranie žiadny účinok?
 cube_ui.faq_3=Užívateľské rozhranie je momentálne plne pokryté, na plné pokrytie sa odporúča použiť starú verziu Minecraftu (časť pôvodného používateľského rozhrania môže byť pokrytá pôvodným používateľským rozhraním konceptu, takže to nemá žiadny vplyv)
-cube_ui.faq_t4=Je používateľské rozhranie open source?
-cube_ui.faq_4=V súčasnosti je používateľské rozhranie open source, môžete vykonať dve zmeny a použiť zdrojový kód (komerčné použitie je zakázané, aby ste sa vyhli zbytočnej právnej zodpovednosti)
 cube_ui.faq_t5=Ako nahlásiť chyby?
 cube_ui.faq_5=Povedzte to autorovi v oblasti komentárov pod zdrojom, presuňte sa do vlákna spätnej väzby pre spätnú väzbu
 
@@ -39,15 +41,11 @@ about.sub_package=Rozširujúci balík
 update_time=Čas aktualizácie
 about_ui.subpack_sorting=Triedenie podbalíkov musí byť vyššie ako triedenie používateľského rozhrania kocky, aby sa podbalík úplne spustil
 about_ui.no_subpack=Nie je nainštalovaný žiadny subpack
+cube.coming_soon=Čo očakávať
 
 about_ui.ui_file=Aktuálny súbor používateľského rozhrania:
 about_ui.default_ui=Klasické
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Žiadny ďalší predaj
-about_ui.precautions_2=● Zakázané na komerčné použitie
-about_ui.precautions_3=● Opätovná tlač je bez povolenia zakázaná
-about_ui.precautions_4=● Umožňuje integrovať akýkoľvek obrázok alebo kód v balíku zdrojov do iných balíkov zdrojov alebo druhých upravených balíkov zdrojov na osobné použitie, ale na publikovanie je potrebný súhlas autora
 
 subpack.no_name=Tento rozširujúci balík nemá názov
 subpack.incompatibility=§cTento rozširujúci balík nie je kompatibilný s aktuálnou verziou
@@ -62,13 +60,16 @@ appearance.header_5=Posuvník
 
 cube.piracy=Aktuálne používateľské rozhranie bolo upravené, použite prosím originálnu verziu, aby ste mohli naplno využívať používateľské rozhranie Cube
 
-## panel zaostrenia
-hud.focus_menu.tab_1=Tlačidlo skratky
-hud.focus_menu.tab_2=Trieda upozornení
-hud.focus_menu.tab_3=Iné
+## Premenné
+cube.variables.title=premenné
+cube.variables.subtitle=Tieto premenné možno upraviť v súbore ui/_global_variables.json používateľského rozhrania kocky.
+cube.variables.more=Uvádzajú sa tu len dôležité premenné, ostatné premenné sa tu nezobrazujú
 
-hud.personalization=Prispôsobenie
-hud.personalization.title=Ponuka zamerania
+## panel zaostrenia
+hud.focus_menu.tab1=extension
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Other
+
 hud.hide.player_position=Súradnice
 hud.hide.title=Názov
 hud.hide.subtitle=Titulky
@@ -81,6 +82,20 @@ hud.toggle.scb=Výsledková tabuľka
 hud.toggle.effect=Efekt elixíru
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Názov položky
+hud.toggle.paper_doll=papierová bábika
+hud.focus_menu.hand=Ručný displej
+hud.focus_menu.light=jas
+hud.focus_menu.rc=Obnoviť kompas
+hud.focus_menu.tc=Круг прогресса на сенсорном экране
+hud.focus_menu.crosshair=Перекрестие
+hud.focus_menu.dt=Напоминание о низкой долговечности
+hud.focus_menu.vignette=Визуализация среды
+hud.focus_menu.mini_map=Mini mapa
+
+hud.focus_menu.set.hand_info=Informácie o ručnej položke
+hud.focus_menu.set.2d_paper=2D paper doll
+hud.focus_menu.set.old_rc=Povoliť starý obnovený kompas
+hud.focus_menu.set.map_size=Veľkosť minimapy
 
 hud.btn.hide_all=Skryť hud
 hud.btn.hide_doll=Skryť papierovú bábiku
@@ -90,9 +105,76 @@ tab.down=Ďalší obsah
 tab.back=Predchádzajúci obsah
 chat.up=Ďalšia správa
 chat.back=Posledná správa
+chat.to_down=Zadné zobrazenie
 
 ## Iné rozhranie
+search.form=vyhľadávacie menu...
 search.item=| rozlišujúca veľké a malé písmená Vyhľadávanie obsahu...
-hide_hud.tip=Kliknutím sem zobrazíte HUD
 command_block.empty_command_text=Sem zadajte svoj príkaz
 seed_picker.header=Obrázok je len orientačný, seed sa môže zmeniť s aktualizáciou verzie
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Autor: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Nápoveda: Kliknutím na "x" v pravom hornom rohu sa vrátite na obrazovku pozastavenia!
+screenshot.locationButton=Zobraziť umiestnenie snímky obrazovky
+screenshot.location=Umiestnenie snímky obrazovky: 
+createWorldScreen.gameMode.spectator=Divák
+gui.empty_back=Dvakrát kliknite na prázdne miesto pre návrat do hry
+gui.one_empty_back=Kliknutím na prázdne miesto sa vrátite do hry
+
+## obchod
+trade.unlock=Odomknite všetky obchody
+
+## hra
+play_screen.lately_first=Nedávna prvá hra
+play_screen.db_click_start=Pre vstup znova dvakrát kliknite
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Skryje HUD dvojitým kliknutím na tlačidlo "H"
+hide_hud.tip=Kliknutím sem zobrazíte HUD
+
+## Pauza
+pause.quit_tip.title=Uložiť a ukončiť
+pause.quit_tip.content=Uloží sa a ukončí?
+pause.quit_tip.yes=Uložiť a ukončiť
+pause.quit_tip.no=Zmeškané kliknutie...
+
+## kolimácia
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Chcete viac kolimátorov? Nainštalujte a aktivujte balík kolimátora Cube UI!
+focus.cross_hair.tip.setting=Kolimácia sa resetuje pri ukončení hry, ak ju chcete používať trvalo, upravte súbor ui/_setting.json pre používateľské rozhranie kocky.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=skryť kolimátor
+focus.cross_hair.title.default=predvolené
+focus.cross_hair.description.default=Vstavaná kolimácia používateľského rozhrania kocky
+
+## Hudba
+cube_music.title=hudba
+cube_music.tip=Vzhľadom na autorské práva používateľské rozhranie kocky pri prehrávaní vyvoláva iba pôvodnú hudbu. Ak chcete pridať ďalšiu hudbu, nainštalujte si balík hudobných rozšírení tretej strany alebo si stiahnite balík vlastných hudobných rozšírení Cube UI!
+
+## poznámkové pole
+cube_note.title=Priečinok na poznámky
+cube_note.sound=volume
+
+## nastaviť
+možnosti.zvuky=Hlasitosť
+options.developer=Vývojár
+setting.file_storage.tip=Keď zmeníte cestu úložiska, stratíte používateľské rozhranie kocky! (Po zmene cesty skúste znova importovať a povoliť používateľské rozhranie kocky)
+
+setting.sound.description.all=Upravuje celkovú hlasitosť hry
+setting.sound.description.music=Upravte hlasitosť hudby v hre
+setting.sound.description.sound=Upravuje hlasitosť herných zvukových efektov
+setting.sound.description.ambient=Upravuje hlasitosť okolitých zvukov pod vodou, podmoria, jaskyne a ohňostrojových rakiet
+setting.sound.description.block=Upravuje hlasitosť blokov, ako sú nákovy, truhlice a dvere
+setting.sound.description.hostile=Upravuje hlasitosť nepriateľských davov
+setting.sound.description.neutral=Upravuje hlasitosť zvuku priateľských mobov
+setting.sound.description.player=Upravte hlasitosť prehrávača (ako sú spadnuté predmety, zranené zvukové efekty atď.)
+setting.sound.description.record=Upravuje hlasitosť hudby produkovanej gramofónmi a notovými blokmi
+setting.sound.description.with=Upravuje hlasitosť dažďa a búrok
+setting.sound.description.tts=Upravte hlasitosť prevodu textu na reč
+
+setting.gm.description.c=Neobmedzené zdroje, lietajte voľne a okamžite rozbíjajte bloky
+setting.gm.description.s=Skúmajte svet, zbierajte zdroje, syntetizujte rekvizity, vylepšujte úrovne, doplňte si výdrž a zdravie
+setting.gm.description.a=Hráči nemôžu rozbiť a umiestniť žiadne bloky, aby sa vyhli poškodeniu mapy dobrodružstva alebo vandalizmu servera
+setting.gm.description.sp=Umožňuje hráčovi preletieť a pozorovať svet bez prekážok

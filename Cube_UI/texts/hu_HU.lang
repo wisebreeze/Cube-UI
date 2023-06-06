@@ -1,3 +1,4 @@
+## 匈牙利语
 Language=Magyar (HU)
 ## beállít
 options.beta_text=Béta felső szöveg
@@ -16,9 +17,12 @@ hover_text.all=all
 hover_text.drop=Elem eldobása
 hover_text.destroy=Elemek megsemmisítése
 hover_text.help=Súgó/Recept
-hover_text.default_mode=Alapértelmezett mód
-hover_text.auto_mode=Automatikus mód
-hover_text.drop_mode=Eldobási mód
+hover_text.default_mode=default
+hover_text.auto_mode=fast_move
+hover_text.drop_mode=gyors leejtés
+quick.trade=Minden kereskedés
+quick.craft=Craft All
+quick.cut=minden kivágása
 
 ## gyakori probléma
 cube_ui.faq_t1=Hogyan ismerheti meg és használhatja az oktatási felhasználói felületet?
@@ -27,8 +31,6 @@ cube_ui.faq_t2=Hogyan kell beállítani a felhasználói felület tartalmát?
 cube_ui.faq_2=Az erőforráscsomagban kattintson egymás után az ui/_global_variables.json fájlra, és módosítsa a fájlban megjelenő utasításoknak megfelelően
 cube_ui.faq_t3=1.18.10 után néhány felhasználói felületnek nincs hatása?
 cube_ui.faq_3=Jelenleg a felhasználói felületet teljesen lefedték, a teljes lefedettség megéléséhez ajánlott a Minecraft régi verzióját használni (az eredeti felhasználói felület egy részét lefedheti az eredeti felhasználói felület, így nincs hatása)
-cube_ui.faq_t4=Nyílt forráskódú a felhasználói felület?
-cube_ui.faq_4=Jelenleg a felhasználói felület nyílt forráskódú, két változtatást végezhet, és használhatja a forráskódot (a szükségtelen jogi felelősség elkerülése érdekében a kereskedelmi felhasználás tilos)
 cube_ui.faq_t5=Hogyan jelenthetjük be a hibákat?
 cube_ui.faq_5=Mondja el a szerzőt az erőforrás alatti megjegyzés területen, kérem, lépjen a visszajelzési szálra visszajelzésért
 
@@ -39,15 +41,11 @@ about.sub_package=Bővítménycsomag
 update_time=Frissítés ideje
 about_ui.subpack_sorting=Az alcsomag rendezésnek magasabbnak kell lennie, mint a Cube UI rendezésnek, hogy az alcsomag teljes mértékben futhasson
 about_ui.no_subpack=Nincs telepített alcsomag
+cube.coming_soon=Mire számíthatsz?
 
 about_ui.ui_file=Jelenlegi felhasználói felület fájl:
 about_ui.default_ui=Klasszikus
 about_ui.default_os=OS:
-
-about_ui.precautions_1=● Nincs viszonteladás
-about_ui.precautions_2=● Kereskedelmi használatra tilos
-about_ui.precautions_3=● Az újranyomtatás engedély nélkül tilos
-about_ui.precautions_4=● Lehetővé teszi az erőforráscsomagban lévő bármely kép vagy kód integrálását más erőforráscsomagokba vagy másodszor módosított erőforráscsomagokba személyes használatra, de a közzétételhez a szerző beleegyezése szükséges
 
 subpack.no_name=Ennek a bővítőcsomagnak nincs neve
 subpack.incompatibility=§cEz a bővítőcsomag nem kompatibilis a jelenlegi verzióval
@@ -62,13 +60,16 @@ välimus.header_5=Csúszka
 
 cube.piracy=A jelenlegi felhasználói felület módosult, kérjük, használja az eredeti verziót, hogy teljes mértékben megtapasztalhassa a Cube felhasználói felületet
 
-## fókuszpanel
-hud.focus_menu.tab_1=Gyorsbillentyű
-hud.focus_menu.tab_2=Értesítési osztály
-hud.focus_menu.tab_3=Egyéb
+## Változók
+cube.variables.title=változók
+cube.variables.subtitle=Ezek a változók a Cube UI ui/_global_variables.json fájljában módosíthatók.
+cube.variables.more=Csak a fontos változók vannak itt felsorolva, más változók nem jelennek meg itt.
 
-hud.personalization=Személyre szabás
-hud.personalization.title=Fókusz menü
+## fókuszpanel
+hud.focus_menu.tab1=bővítmény
+hud.focus_menu.tab2=Értesítés
+hud.focus_menu.tab3=Másik
+
 hud.hide.player_position=Koordináták
 hud.hide.title=Cím
 hud.hide.subtitle=Felirat
@@ -81,6 +82,20 @@ hud.toggle.scb=Eredménytábla
 hud.toggle.effect=Bájital effektus
 hud.toggle.hotbar=Hotbar
 hud.toggle.item_name=Elem neve
+hud.toggle.paper_doll=papírbaba
+hud.focus_menu.hand=Kézi kijelző
+hud.focus_menu.light=világosság
+hud.focus_menu.rc=Az Iránytű visszaállítása
+hud.focus_menu.tc=Az érintőképernyő folyamatának köre
+hud.focus_menu.crosshair=Célkereszt
+hud.focus_menu.dt=Emlékeztető alacsony tartósságra
+hud.focus_menu.vignette=Környezeti renderelés
+hud.focus_menu.mini_map=Mini térkép
+
+hud.focus_menu.set.hand_info=Kézben tartott elemek információi
+hud.focus_menu.set.2d_paper=2D papírbaba
+hud.focus_menu.set.old_rc=Régi visszaállított iránytű engedélyezése
+hud.focus_menu.set.map_size=Minimális térképméret
 
 hud.btn.hide_all=Hud elrejtése
 hud.btn.hide_doll=Papírbaba elrejtése
@@ -90,9 +105,76 @@ tab.down=Következő tartalom
 tab.back=Korábbi tartalom
 chat.up=Következő üzenet
 chat.back=Utolsó üzenet
+chat.to_down=Hátra az aljára
 
 ## Egyéb felület
+search.form=keresés menü...
 search.item=kis- és nagybetűkre érzékeny | Tartalom keresése...
-hide_hud.tip=Kattintson ide a HUD megjelenítéséhez
 command_block.empty_command_text=Írja be ide a parancsot
 seed_picker.header=A kép csak tájékoztató jellegű, a verzió frissítésével a seed változhat
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Author: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Hip: Kérjük, kattintson a jobb felső sarokban lévő "x"-re a szünet képernyőre való visszatéréshez!
+screenshot.locationButton=Képernyőfotó helyének megtekintése
+screenshot.location=Képernyőkép helye: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Kattintson duplán az üres helyre, hogy visszatérjen a játékhoz
+gui.one_empty_back=Kattintson az üres helyre, hogy visszatérjen a játékhoz
+
+## kereskedelem
+trade.unlock=Minden kereskedés feloldása
+
+## játszma, meccs
+play_screen.lately_first=Az utóbbi időben az első játék
+play_screen.db_click_start=Kattintson ismét duplán a belépéshez
+
+## HUD
+alacsony_tartósság.tip=alacsony_tartósság
+hide_hud.db.tip=A HUD elrejtése a "H" gombra való dupla kattintással
+hide_hud.tip=Kattints ide a HUD megjelenítéséhez
+
+## Szünet
+pause.quit_tip.title=Mentés és kilépés
+pause.quit_tip.content=Ez mentés és kilépés?
+pause.quit_tip.yes=Mentés és kilépés
+pause.quit_tip.no=Missed click...
+
+## kollimáció
+hud.focus_menu.tab_4=kollimáció
+focus.cross_hair.tip.subpack=Még több kollimátort szeretne? Kérjük, telepítse és aktiválja a Cube UI kollimátor csomagot!
+focus.cross_hair.tip.setting=A kollimáció a játékból való kilépéskor visszaáll, a tartós használathoz módosítsd a Cube UI ui/_setting.json fájlját.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=hide kollimátor elrejtése
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Cube UI beépített kollimációja
+
+## Zene
+cube_music.title=zene
+cube_music.tip=A szerzői jogi problémák miatt a Cube UI csak az eredeti zenét hívja meg a lejátszáshoz. Ha további zenét szeretne hozzáadni, telepítsen egy harmadik féltől származó zenebővítő csomagot, vagy töltse le a Cube UI egyéni zenebővítő csomagját!
+
+## note box
+cube_note.title=Jegyzetdoboz
+cube_note.sound=volume
+
+## beállít
+options.sounds=Hangerő
+options.developer=Fejlesztő
+setting.file_storage.tip=Amikor megváltoztatja a tárolási útvonalat, elveszíti a Cube felhasználói felületet! (Az elérési út megváltoztatása után próbálja meg újra importálni és engedélyezni a Cube felhasználói felületet)
+
+setting.sound.description.all=Beállítja a játék teljes hangerejét
+setting.sound.description.music=A játékzene hangerejének beállítása
+setting.sound.description.sound=Beállítja a játék hangeffektusainak hangerejét
+setting.sound.description.ambient=Beállítja a víz alatti, alsó, barlangi környezeti hangok és tűzijáték rakéták hangerejét
+setting.sound.description.block=Beállítja az olyan blokkok hangerejét, mint az üllők, ládák és ajtók
+setting.sound.description.hostile=Beállítja az ellenséges csőcselék hangerejét
+setting.sound.description.neutral=Beállítja a barátságos mobok hangerejét
+setting.sound.description.player=A lejátszó hangerejének beállítása (például leejtett tárgyak, sérült hangeffektusok stb.)
+setting.sound.description.record=A lemezjátszók és hangjegyblokkok által előállított zene hangerejének beállítása
+setting.sound.description.whether=Beállítja az eső és zivatar hangerejét
+setting.sound.description.tts=Szöveg-beszéd hangerejének beállítása
+
+setting.gm.description.c=Korlátlan erőforrás, szabadon repül, és azonnal megtöri a blokkokat
+setting.gm.description.s=Fedezze fel a világot, gyűjtsön erőforrásokat, szintetizáljon kellékeket, javítsa a szintet, töltse fel az állóképességet és az egészséget
+setting.gm.description.a=A játékosok nem törhetnek fel és nem helyezhetnek el blokkokat, hogy elkerüljék a kalandtérkép sérülését vagy a szerver megrongálását
+setting.gm.description.sp=Lehetővé teszi a játékos számára, hogy akadályok nélkül átrepüljön és megfigyelje a világot

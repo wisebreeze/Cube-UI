@@ -1,3 +1,4 @@
+## 法语
 Language=Français (Canada)
 ## mettre en place
 options.beta_text=Test Version Text Text
@@ -11,6 +12,17 @@ help.effect_water=Potion faible doit être une bouteille d'eau ordinaire
 help.anvil.tool=outil
 help.anvil.tool2=équipement
 
+hover_text.all=all
+hover_text.drop=Rejeter les articles
+hover_text.destroy=Détruire les articles
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast_move
+hover_text.drop_mode=fast drop
+quick.trade=Tous les trades
+quick.craft=Créer tout
+quick.cut=tout couper
+
 ## Problème commun
 cube_ui.faq_t1=comment vivre et utiliser l'interface utilisateur de la version éducative?
 cube_ui.faq_1=ui cube peut être activé dans l'option de package de ressources §e au monde §f pour obtenir l'expérience complète de l'interface utilisateur
@@ -18,8 +30,6 @@ cube_ui.faq_t2=comment définir le contenu de l'interface utilisateur?
 cube_ui.faq_2=Dans le package de ressources, cliquez sur UI / _Global_variables.json à son tour, veuillez le modifier en fonction de l'invite en -file
 cube_ui.faq_t3=1.18.10, une interface utilisateur n'a aucun effet?
 cube_ui.faq_3=L'interface utilisateur actuelle a été entièrement couverte. Il est recommandé d'utiliser l'ancienne version de Minecraft pour ressentir une couverture complète (une interface utilisateur originale peut être couverte par l'interface utilisateur du concept d'origine, donc elle n'a aucun effet)
-cube_ui.faq_t4=code source open ui?
-cube_ui.faq_4=le code open source de l'interface utilisateur actuel, vous pouvez apporter deux modifications et utiliser le code source (interdisant les objectifs commerciaux pour éviter une responsabilité juridique inutile)
 cube_ui.faq_t5=comment comment faire un bug de rétroaction?
 cube_ui.faq_5=La zone de commentaire sous la ressource indique à l'auteur, veuillez passer aux commentaires de commentaires
 
@@ -30,15 +40,11 @@ about.sub_package=package étendu
 update_time=Temps de mise à jour
 cube_ui.subpack_sorting=Le tri du package d'extension doit être trié plus haut que l'interface utilisateur du cube.
 cube_ui.no_subpack=Package d'extension de déballage
+cube.coming_soon=Quoi attendre
 
 cube_ui.ui_file=fichier d'interface utilisateur actuel:
 cube_ui.default_ui=classique
 cube_ui.default_os=Système d'exploitation:
-
-cube_ui.precautions_1=● Interdit de vendre
-cube_ui.precautions_2=● Interdit à usage commercial
-cube_ui.precautions_3=● Impossible de réimprimer sans autorisation
-cube_ui.precautions_4=● Permet toutes les images ou code dans le package de ressources sur d'autres packages de ressources ou les packages de ressources à la seconde, qui peuvent être utilisés pour un usage personnel
 
 subpack.no_name=il n'y a pas de nom pour le package d'extension
 subpack.incompatibilité=§c Cette extension n'est pas compatible avec la version actuelle
@@ -53,13 +59,16 @@ apparence.header_5=curseur
 
 cube.piracy=l'interface utilisateur actuelle est modifiée, veuillez utiliser la véritable expérience complète Cube UI
 
-## Focus sur le panneau
-hud.focus_menu.tab_1=bouton de raccourci
-hud.focus_menu.tab_2=Classe de notification
-hud.focus_menu.tab_3=autres
+## Variables
+cube.variables.title=variables
+cube.variables.subtitle=Ces variables peuvent être modifiées dans le fichier ui/_global_variables.json de l'interface utilisateur du Cube.
+cube.variables.more=Seulement les variables importantes sont listées ici, les autres variables ne sont pas montrées ici
 
-hud.sersonalisation=Personnalisation
-hud.espersonalisation.title=se concentrer sur le menu
+## Focus sur le panneau
+hud.focus_menu.tab1=extension
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Autre
+
 hud.hide.player_position=coordonnées
 hud.hide.title=title
 hud.hide.subtitle=Sous-titre
@@ -72,6 +81,19 @@ hud.toggle.scb=carte de notation
 hud.toggle.effect=effet de potion
 hud.toggle.hotbar=barre rapide
 hud.toggle.item_name=nom de l'article
+hud.toggle.paper_doll=poupée de papier
+hud.focus_menu.hand=Affichage à la main
+hud.focus_menu.light=luminosité
+hud.focus_menu.rc=Restaurer la boussole
+hud.focus_menu.crosshair=Réticule
+hud.focus_menu.dt=Rappel de faible durabilité
+hud.focus_menu.vignette=Rendu d'environnement
+hud.focus_menu.mini_map=Mini-carte
+
+hud.focus_menu.set.hand_info=Informations sur les éléments portatifs
+hud.focus_menu.set.2d_paper=poupée en papier 2D
+hud.focus_menu.set.old_rc=Activer l'ancienne boussole restaurée
+hud.focus_menu.set.map_size=Taille de la mini-carte
 
 hud.btn.hide_all=Hidden Hud
 hud.btn.hide_dol=poupée de papier cachée
@@ -81,9 +103,76 @@ tab.down=contenu suivant
 tab.back=contenu précédent
 chat.up=Informations suivantes
 chat.back=informations précédentes
+chat.to_down=Retour en bas de page
 
 ## Toutes les autres interfaces
+search.form=menu de recherche...
 search.item=| sensible à la casse Rechercher du contenu...
-hide_hud.tip=Cliquez ici pour afficher le HUD
 command_block.empty_command_text=entrez votre commande ici
 seed_picker.header=l'image est pour référence uniquement, les graines peuvent changer avec la mise à jour de la version
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Auteur : MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Instruction : Veuillez cliquer sur le "x" dans le coin supérieur droit pour revenir à l'écran de pause !
+screenshot.locationButton=Voir l'emplacement de la capture d'écran
+screenshot.location=L'emplacement de la capture d'écran : 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Double-cliquez sur l'espace vide pour revenir au jeu
+gui.one_empty_back=Cliquez sur l'espace vide pour revenir au jeu
+
+## Commerce
+trade.unlock=Déverrouiller toutes les transactions
+
+## Jeu
+play_screen.lately_first=Premier jeu en retard
+play_screen.db_click_start=Double-cliquez à nouveau pour entrer
+
+## HUD
+low_durability.tip=faible_durabilité
+hide_hud.db.tip=Cacher le HUD en double-cliquant sur le bouton "H".
+hide_hud.tip=Cliquez ici pour afficher le HUD
+
+## Pause
+pause.quit_tip.title=Sauvegarder et quitter
+pause.quit_tip.content=Est-ce que cela sauvegarde et quitte ?
+pause.quit_tip.yes=Sauvegarder et quitter
+pause.quit_tip.no=Clic manqué...
+
+## collimation
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Vous voulez plus de collimateurs ? Veuillez installer et activer le pack collimateur Cube UI !
+focus.cross_hair.tip.setting=La collimation se réinitialise lorsque vous quittez le jeu, pour l'utiliser de façon permanente, veuillez modifier le fichier ui/_setting.json pour Cube UI.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=cacher le collimateur
+focus.cross_hair.title.default=défaut
+focus.cross_hair.description.default=Cube UI's integrated collimation
+
+## Musique
+cube_music.title=musique
+cube_music.tip=En raison de problèmes de droits d'auteur, Cube UI n'appelle que la musique originale pour la lecture. Pour ajouter de la musique, installez un pack d'extension musical tiers ou téléchargez le pack d'extension musical personnalisé de Cube UI !
+
+## note box
+cube_note.title=Boîte à notes
+cube_note.sound=volume
+
+## installer
+options.sounds=Volume
+options.developer=Développeur
+setting.file_storage.tip=Lorsque vous modifiez le chemin de stockage, vous perdrez l'interface utilisateur du cube ! (Après avoir changé le chemin, essayez de réimporter et d'activer l'interface utilisateur du cube)
+
+setting.sound.description.all=Ajuste le volume global du jeu
+setting.sound.description.music=Ajuster le volume de la musique du jeu
+setting.sound.description.sound=Ajuste le volume des effets sonores du jeu
+setting.sound.description.ambient=Ajuste le volume des sons ambiants sous-marins, du Nether, des grottes et des fusées de feu d'artifice
+setting.sound.description.block=Ajuste le volume des blocs tels que les enclumes, les coffres et les portes
+setting.sound.description.hostile=Ajuste le volume des foules hostiles
+setting.sound.description.neutral=Ajuste le volume sonore des mobs amis
+setting.sound.description.player=Ajustez le volume du lecteur (comme les objets tombés, les effets sonores blessés, etc.)
+setting.sound.description.record=Ajuste le volume de la musique produite par les tourne-disques et les blocs de notes
+setting.sound.description.whether=Ajuste le volume de la pluie et des orages
+setting.sound.description.tts=Ajuster le volume de la synthèse vocale
+
+setting.gm.description.c=Ressources illimitées, volez librement et cassez des blocs instantanément
+setting.gm.description.s=Explorez le monde, collectez des ressources, synthétisez des accessoires, améliorez les niveaux, régénérez votre endurance et votre santé
+setting.gm.description.a=Les joueurs ne peuvent pas casser et placer des blocs pour éviter d'endommager la carte d'aventure ou de vandaliser le serveur
+setting.gm.description.sp=Permet au joueur de voler et d'observer le monde sans obstacles

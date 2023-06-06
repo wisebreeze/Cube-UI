@@ -1,3 +1,4 @@
+## 芬兰语
 Language=Suomi (Suomi)
 ## perustaa
 options.beta_text=test version ylä teksti
@@ -11,6 +12,18 @@ help.effect_water=heikon juoman on oltava tavallinen vesipullo
 help.anvil.tool=työkalu
 help.anvil.tool2=laitteet
 
+## Hover-teksti
+hover_text.all=Kaikki
+hover_text.drop=Pudota kohde
+hover_text.destroy=Tuhoa kohde
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=nopea pudotus
+quick.trade=Kaikki kaupat
+quick.craft=Craft All
+quick.cut=leikkaa kaikki
+
 ## Yleinen ongelma
 cube_ui.faq_t1=Kuinka kokea ja käyttää koulutusversion käyttöliittymää?
 cube_ui.faq_1=Cube -käyttöliittymä voidaan ottaa käyttöön maailman §E -resurssipaketin vaihtoehdoissa §f saadaksesi täydellisen käyttöliittymäkokemuksen
@@ -18,8 +31,6 @@ cube_ui.faq_t2=miten käyttöliittymän sisällön asettaminen?
 cube_ui.faq_2=Resurssipaketissa napsauta UI/_global_variables.json vuorostaan, muokkaa sitä IN -FILE -kehotuksen mukaisesti
 cube_ui.faq_t3=1,18.10, joillakin käyttöliittymällä ei ole vaikutusta?
 cube_ui.faq_3=Nykyinen käyttöliittymä on katettu kokonaan. On suositeltavaa käyttää Minecraftin vanhaa versiota täydellisen kattavuuden kokemiseen (alkuperäinen käyttöliittymä voi kattaa joitain alkuperäisiä käyttöliittymiä, joten sillä ei ole vaikutusta)
-cube_ui.faq_t4=ui avoimen lähdekoodin?
-cube_ui.faq_4=Nykyinen käyttöliittymän avoimen lähdekoodin koodi, voit tehdä kaksi muutosta ja käyttää lähdekoodia (kaupalliset tarkoitukset tarpeettoman oikeudellisen vastuun välttämiseksi)
 cube_ui.faq_t5=miten palautetta vika?
 cube_ui.faq_5=Resurssin alapuolella oleva kommenttialue kertoo tekijälle, siirry palautteeseen palautetta
 
@@ -30,13 +41,11 @@ about.sub_package=laajennettu paketti
 update_time=päivitysaika
 cube_ui.subpack_sorting=Laajennuspaketin lajittelu on lajiteltava korkeampi kuin kuutioliitti.
 cube_ui.no_subpack=pakkaus laajennuspaketti
+cube.coming_soon=Mitä on odotettavissa
 
 cube_ui.ui_file=nykyinen UI -tiedosto:
 cube_ui.default_ui=klassikko
 cube_ui.default_os=käyttöjärjestelmä:
-
-cube_ui.precations_1=● Kielletty myyminen
-cube_ui.precations_2=● Kielletty kaupalliselle käyttöön
 
 subpack.no_name=laajennuspaketille ei ole nimeä
 subpack.compatibility=§c Tämä laajennus ei ole yhteensopiva nykyisen version kanssa
@@ -51,13 +60,16 @@ appearance.header_5=liukusäädin
 
 Cube.piracy=nykyistä käyttöliittymää on muokattu, käytä aitoa täydellistä kokemusta kuutioliittymää
 
-## Keskity paneeliin
-hud.focus_menu.tab_1=pikavalintapainike
-hud.focus_menu.tab_2=ilmoitusluokka
-hud.focus_menu.tab_3=muut
+## Muuttujat
+cube.variables.title=muuttujat
+cube.variables.subtitle=Nämä muuttujat voidaan muuttaa Cube UI:n ui/_global_variables.json-tiedostossa.
+cube.variables.more=Tässä luetellaan vain tärkeät muuttujat, muita muuttujia ei näytetä tässä.
 
-hud.personalisointi=personointi
-hud.personalisaatio.title=keskity valikkoon
+## Keskity paneeliin
+hud.focus_menu.tab1=laajennus
+hud.focus_menu.tab2=ilmoitus
+hud.focus_menu.tab3=Muut
+
 hud.hide.player_position=koordinaatit
 hud.hide.title=otsikko
 hud.hide.subtitle=Tekstitys
@@ -70,18 +82,99 @@ hud.toggle.scb=pisteytyslauta
 hud.toggle.effect=juomavaikutus
 hud.toggle.hotbar=nopea baari
 hud.toggle.item_name=tuotteen nimi
+hud.toggle.paper_doll=paperinukke
+hud.focus_menu.hand=Kämmennäyttö
+hud.focus_menu.light=kirkkaus
+hud.focus_menu.rc=Palauta kompassi
+hud.focus_menu.tc=Kosketusnäytön edistymisympyrä
+hud.focus_menu.crosshair=Crosshair
+hud.focus_menu.dt=Alhaisen kestävyyden muistutus
+hud.focus_menu.vignette=Ympäristön renderöinti
+hud.focus_menu.mini_map=Pienoiskartta
+
+hud.focus_menu.set.hand_info=Kämmenellä pidettävän kohteen tiedot
+hud.focus_menu.set.2d_paper=2D paperinukke
+hud.focus_menu.set.old_rc=Ota vanha palautettu kompassi käyttöön
+hud.focus_menu.set.map_size=Minimikartan koko
 
 Hud.btn.hide_all=piilotettu HUD
 hud.btn.hide_dol=piilotettu paperinukke
 
 ## keskustella
-Tab.down=seuraava sisältö
-Tab.back=Edellinen sisältö
-Chat.up=seuraava tieto
-Chat.back=Aikaisemmat tiedot
+tab.down=seuraava sisältö
+tab.back=Edellinen sisältö
+chat.up=seuraava tieto
+chat.back=Aikaisemmat tiedot
+chat.to_down=Takaisin alareunaan
 
 ## Kaikki muut rajapinnat
+search.form=hakuvalikko...
 search.item=kirjainkoolla on merkitystä | Hae sisältöä...
-hide_hud.tip=Klikkaa tästä näyttääksesi HUD:n
-Command_block.empty_command_text=kirjoita komento tähän
+command_block.empty_command_text=kirjoita komento tähän
 Seed_picker.Header=Kuva on vain viitteelliselle, siemenet voivat muuttua version päivityksen myötä
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Tekijä: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Vihje: Klikkaa oikeassa yläkulmassa olevaa "x"-merkkiä palataksesi taukoruutuun!
+screenshot.locationButton=Katsele kuvakaappauksen sijaintia
+screenshot.location=Kuvakaappauksen sijainti: 
+createWorldScreen.gameMode.spectator=Katsoja
+gui.empty_back=Kaksoisnapsauta tyhjää kohtaa palataksesi peliin
+gui.one_empty_back=Napsauta tyhjää kohtaa palataksesi peliin
+
+## käydä kauppaa
+trade.unlock=Avaa kaikki kaupat
+
+## peli
+play_screen.lately_first=Äskettäin ensimmäinen peli
+play_screen.db_click_start=Kaksoisnapsauta uudelleen päästäksesi sisään
+
+## HUD
+low_durability.tip=matala_kestävyys
+hide_hud.db.tip=Piilota HUD kaksoisnapsauttamalla "H"-painiketta.
+hide_hud.tip=Klikkaa tästä näyttääksesi HUD:in
+
+## Tauko
+pause.quit_tip.title=Tallenna ja poistu
+pause.quit_tip.content=Tallennetaanko ja poistutaanko tästä?
+pause.quit_tip.yes=Tallenna ja poistu käytöstä.
+pause.quit_tip.no=Missed click...
+
+## kollimointi
+hud.focus_menu.tab_4=kollimointi
+focus.cross_hair.tip.subpack=Haluatko lisää kollimaattoreita? Asenna ja aktivoi Cube UI -kollimaattoripaketti!
+focus.cross_hair.tip.setting=Kollimaatio nollautuu, kun poistut pelistä, jos haluat käyttää sitä pysyvästi, muuta ui/_setting.json-tiedostoa Cube UI:n osalta.
+focus.cross_hair.title.default=ei ole
+focus.cross_hair.description.default=piilota kollimaattori
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Cube UI:n sisäänrakennettu kollimointi.
+
+## Musiikki
+cube_music.title=musiikki
+cube_music.tip=Tekijänoikeuskysymysten vuoksi Cube UI kutsuu vain alkuperäistä musiikkia toistettavaksi. Jos haluat lisätä lisämusiikkia, asenna kolmannen osapuolen musiikkilaajennuspaketti tai lataa Cube UI:n mukautettu musiikkilaajennuspaketti!
+
+## huomautuslaatikko
+cube_note.title=Muistiinpanolaatikko
+cube_note.sound=volume
+
+## perustaa
+options.sounds=Äänenvoimakkuus
+options.developer=Kehittäjä
+setting.file_storage.tip=Kun muutat tallennuspolkua, menetät Cube-käyttöliittymän! (Kun olet muuttanut polun, yritä tuoda Cube UI uudelleen ja ottaa se käyttöön)
+
+setting.sound.description.all=Säätää pelin äänenvoimakkuutta
+setting.sound.description.music=Säädä pelimusiikin äänenvoimakkuutta
+setting.sound.description.sound=Säätää pelin äänitehosteiden äänenvoimakkuutta
+setting.sound.description.ambient=Säätää vedenalaisten, hollantilaisten, luolan ympäristöäänten ja ilotulitusrakettien äänenvoimakkuutta
+setting.sound.description.block=Säätää lohkojen, kuten alasimien, arkkujen ja ovien, äänenvoimakkuutta
+setting.sound.description.hostile=Säätää vihamielisten väkijoukon äänenvoimakkuutta
+setting.sound.description.neutral=Säätää ystävällisten väkijoukon äänenvoimakkuutta
+setting.sound.description.player=Säädä soittimen äänenvoimakkuutta (kuten pudonneita esineitä, loukkaantuneita äänitehosteita jne.)
+setting.sound.description.record=Säätää levysoittimien ja nuottilohkojen tuottaman musiikin äänenvoimakkuutta
+setting.sound.description.whether=Säätää sateen ja ukkosmyrskyjen voimakkuutta
+setting.sound.description.tts=Säädä tekstistä puheeksi äänenvoimakkuutta
+
+setting.gm.description.c=Rajattomat resurssit, lennä vapaasti ja riko lohkoja välittömästi
+setting.gm.description.s=Tutki maailmaa, kerää resursseja, syntetisoi rekvisiitta, paranna tasoja, täydennä kestävyyttä ja terveyttä
+setting.gm.description.a=Pelaajat eivät voi rikkoa ja asettaa lohkoja välttääkseen seikkailukartan vahingoittumisen tai palvelimen vandalisoinnin
+setting.gm.description.sp=Antaa pelaajan lentää ja tarkkailla maailmaa ilman esteitä

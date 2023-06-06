@@ -1,3 +1,4 @@
+## 英语
 Language=English (US)
 ## set up
 options.beta_text=beta version top text
@@ -11,6 +12,18 @@ help.effect_water=potion of weakness must be a normal water bottle
 help.anvil.tool=tool
 help.anvil.tool2=equipment
 
+## Hover text
+hover_text.all=All
+hover_text.drop=Drop the item
+hover_text.destroy=Destroy item
+hover_text.help=help/recipe
+hover_text.default_mode=default
+hover_text.auto_mode=fast move
+hover_text.drop_mode=fast drop
+quick.trade=All trades
+quick.craft=Craft All
+quick.cut=Cut all
+
 ## common problem
 cube_ui.faq_t1=how to experience and use the educational ui?
 cube_ui.faq_1=enable cube ui in the world's §eresource pack options§f for the full ui experience
@@ -18,8 +31,6 @@ cube_ui.faq_t2=how to set ui part content?
 cube_ui.faq_2=in the resource package, click ui/_global_variables.json in turn, please modify it according to the prompts in the file
 cube_ui.faq_t3=1.18.10, some screen has no effect?
 cube_ui.faq_3=currently the ui has been fully covered, it is recommended to use the old version of minecraft to experience the full coverage (part of the original ui may be covered by the original concept ui, so it has no effect)
-cube_ui.faq_t4=is ui open source?
-cube_ui.faq_4=currently the ui is open source, you can make two changes and use the source code (commercial use is prohibited to avoid unnecessary legal liability)
 cube_ui.faq_t5=how to report bugs?
 cube_ui.faq_5=tell the author in the comment area below the resource, please move to the feedback thread for feedback
 
@@ -30,15 +41,11 @@ about.sub_package=extension package
 update_time=update time
 about_ui.subpack_sorting=the subpack sorting needs to be higher than the cube ui sorting for the subpack to run completely
 about_ui.no_subpack=no subpack installed
+cube.coming_soon=Coming soon
 
 about_ui.ui_file=current ui file:
 about_ui.default_ui=classic
 about_ui.default_os=os:
-
-about_ui.precautions_1=● no reselling
-about_ui.precautions_2=● prohibited for commercial use
-about_ui.precautions_3=● reprinting is prohibited without permission
-about_ui.precautions_4=● allows to integrate any image or code in the resource pack into other resource packs or second-modified resource packs for personal use, but the author's consent is required for publishing
 
 subpack.no_name=this expansion pack has no name
 subpack.incompatibility=§cthis expansion pack is not compatible with the current version
@@ -53,13 +60,16 @@ appearance.header_5=slider
 
 cube.piracy=the current ui has been modified, please use the genuine version to fully experience the cube ui
 
-## focus panel
-hud.focus_menu.tab_1=shortcut button
-hud.focus_menu.tab_2=notification class
-hud.focus_menu.tab_3=other
+## Variables
+cube.variables.title=variables
+cube.variables.subtitle=These variables can be modified in the ui/_global_variables.json file of the Cube UI, and modifying them will improve your UI experience!
+cube.variables.more=Only the important variables are listed here, other variables are not shown here
 
-hud.personalization=personalization
-hud.personalization.title=focus menu
+## focus panel
+hud.focus_menu.tab1=expand
+hud.focus_menu.tab2=Notification
+hud.focus_menu.tab3=Other
+
 hud.hide.player_position=coordinates
 hud.hide.title=title
 hud.hide.subtitle=subtitle
@@ -68,11 +78,25 @@ hud.hide.actionbar=activity bar title
 hud.switch=switch shortcut bar
 hud.boss=boss hp
 hud.chat=chat
-hud.note=note block hint
+hud.note=music tips
 hud.toggle.scb=scoreboard
 hud.toggle.effect=potion effect
 hud.toggle.hotbar=hotbar
 hud.toggle.item_name=item name
+hud.toggle.paper_doll=paper doll
+hud.focus_menu.hand=Handheld display
+hud.focus_menu.light=brightness
+hud.focus_menu.rc=recovery compass
+hud.focus_menu.tc=touch screen progress circle
+hud.focus_menu.crosshair=crosshair
+hud.focus_menu.dt=low durability reminder
+hud.focus_menu.vignette=environment render
+hud.focus_menu.mini_map=Mini Map
+
+hud.focus_menu.set.hand_info=Handheld item information
+hud.focus_menu.set.2d_paper=2D paper doll
+hud.focus_menu.set.old_rc=Enable old recovery compass
+hud.focus_menu.set.map_size=Minimap Size
 
 hud.btn.hide_all=hide hud
 hud.btn.hide_doll=hide paper doll
@@ -82,9 +106,91 @@ tab.down=next content
 tab.back=previous content
 chat.up=next message
 chat.back=last message
+chat.to_down=Back to the bottom
 
 ## other interface
+search.form=search form...
 search.item=case sensitive | Search for content...
-hide_hud.tip=Click here to display the HUD
 command_block.empty_command_text=enter your command here
 seed_picker.header=the picture is for reference only, the seed may change with the update of the version
+resourcePack.subpackResolution=%s
+selectWorld.newWorld.educationCopyOf=%s
+cube_ui.author=Author: MC_spruce | ©2021 - 2023
+hud.focus_menu.quit_tip=Hint: Please click the "x" in the upper right corner to return to the pause screen!
+screenshot.locationButton=View screenshot location
+screenshot.location=Screenshot location: 
+createWorldScreen.gameMode.spectator=Spectator
+gui.empty_back=Double click the empty space to return to the game
+gui.one_empty_back=Click on the empty space to return to the game
+
+## trade
+trade.unlock=Unlock all trades
+
+## game
+play_screen.lately_first=Lately first game
+play_screen.db_click_start=Double click again to enter
+
+## HUD
+low_durability.tip=low_durability
+hide_hud.db.tip=Hide the HUD by double-clicking the "H" button
+hide_hud.tip=Click here to show the HUD
+
+## variables
+cube.variables.global_font=$global_main_font
+cube.variables.auto_place=$always_auto_place
+cube.variables.percentage=$enabled_percentage
+cube.variables.flying_item=$show_flying_item_renderer
+cube.variables.enabled_help=$enabled_help
+cube.variables.brewing_effect_icon=$enabled_help
+cube.variables.enable_quit_tip=$enable_quit_tip
+cube.variables.old_world=$old_world_ignored
+cube.variables.spectator=$spectator_enable
+cube.variables.multiline_input=$use_multiline_input
+cube.variables.more_command=$show_more_command
+cube.variables.cross_hair=$always_show_cross_hair
+cube.variables.hotbar_selected_anim=$hotbar_selected_anim
+
+## Pause
+pause.quit_tip.title=Save and exit
+pause.quit_tip.content=Does it save and exit?
+pause.quit_tip.yes=Save and exit
+pause.quit_tip.no=Missed click...
+
+## collimation
+hud.focus_menu.tab_4=collimation
+focus.cross_hair.tip.subpack=Want more collimators? Please install and activate the Cube UI collimator pack!
+focus.cross_hair.tip.setting=The collimation will reset when you exit the game. To use this collimation permanently, please modify the ui/_setting.json file of Cube UI.
+focus.cross_hair.title.default=none
+focus.cross_hair.description.default=hide collimator
+focus.cross_hair.title.default=default
+focus.cross_hair.description.default=Cube UI's built-in collimation
+
+## Music
+cube_music.title=Music
+cube_music.tip=Due to copyright issues, Cube UI only calls the original music to play. To add other music, you can install third-party music extensions or download Cube UI's custom music extensions!
+
+## Note box
+cube_note.title=Note box
+cube_note.sound=Volume
+
+## set up
+options.sounds=Volume
+options.developer=Developer
+setting.file_storage.tip=When you change storage path, you will lose Cube UI! (After changing the path, please try to re-import and enable Cube UI)
+
+setting.sound.description.all=Adjusts the overall volume of the game
+setting.sound.description.music=Adjust the volume of the game music
+setting.sound.description.sound=Adjusts the volume of game sound effects
+setting.sound.description.ambient=Adjusts the volume of underwater, nether, cave ambient sounds and firework rockets
+setting.sound.description.block=Adjusts the volume of blocks such as anvils, chests and doors
+setting.sound.description.hostile=Adjusts the volume of hostile mobs
+setting.sound.description.neutral=Adjusts the sound volume of friendly mobs
+setting.sound.description.player=Adjust the player's volume (such as dropped items, injured sound effects, etc.)
+setting.sound.description.record=Adjusts the volume of music produced by record players and note blocks
+setting.sound.description.whether=Adjusts the volume of rain and thunderstorms
+setting.sound.description.tts=Adjust text-to-speech volume
+
+setting.gm.description.c=Unlimited resources, fly freely and break blocks instantly
+setting.gm.description.s=Explore the world, collect resources, synthesize props, improve levels, replenish stamina and health
+setting.gm.description.a=Players cannot break and place any blocks to avoid damaging the adventure map or vandalizing the server
+setting.gm.description.sp=Allows the player to fly through and observe the world without obstacles
