@@ -1,4 +1,38 @@
 {
+  "classic_skin_sections": {
+    "controls": [
+      { "featured_section@persona.classic_skin_features_group_content": {"ignored":"$remove_romotion","size": ["100%","100%c"]}},
+      { "get_more_button@persona.get_more_skins_button": {"ignored":"$remove_romotion"}},
+      { "divider1@persona.common_horizontal_divider": {"ignored":"$remove_romotion"}},
+      { "skin_pack_factory@persona.skin_pack_collection_factory": {}}
+    ]
+  },
+  "persona_category_grid_panel": {
+    "controls": [
+      { "main@persona.persona_category_main_featured_info_panel": {"ignored":"$remove_romotion"}},
+      { "category@persona.persona_category_featured_info_panel": {"ignored":"$remove_romotion"}},
+      { "factory@persona.persona_category_factory": {}}
+    ]
+  },
+  "popup_dialog__custom_skin_info": {"controls": [{"popup_dialog_bg@persona.custom_skin_popup_dialog_bg": {"$dialog_content": "persona.custom_skin_info_panel","size": ["60%","60%"]}}]},
+  "popup_anim_start": {
+    "to": "$global_toast_background_alpha"
+  },
+  "popup_anim_end": {
+    "from": "$global_toast_background_alpha"
+  },
+  "select_custom_skin_stack": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {"a6618@b046f6aa.a":{}},
+          {"b1648@b046f6aa.b":{}}
+        ]
+      }
+    ]
+  },
   "dialog_background_object_content": {"alpha": 0},
   "popup_frame_background": {"alpha": 0},
   "modal_window_input_blocker": {"alpha": 0},
@@ -6,6 +40,6 @@
   "switch_persona_and_classic_repeat_check_text": {"color": "$global_text_color"},
   "persona_screen": {
     "gamepad_cursor_deflection_mode": false,
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+    "$screen_bg_content": "cube_background.screen_blur_background_content"
   }
 }

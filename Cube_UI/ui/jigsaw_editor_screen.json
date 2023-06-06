@@ -192,10 +192,10 @@
       }
     ],
     "$screen_animations|default": [
-      "@cube_ui_anim.container_screen_exit_animation_push",
-      "@cube_ui_anim.container_screen_exit_animation_pop",
-      "@cube_ui_anim.container_screen_entrance_animation_push",
-      "@cube_ui_anim.container_screen_entrance_animation_pop",
+      "@cube_anim.container_screen_exit_animation_push",
+      "@cube_anim.container_screen_exit_animation_pop",
+      "@cube_anim.container_screen_entrance_animation_push",
+      "@cube_anim.container_screen_entrance_animation_pop",
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
       "@common.screen_entrance_animation_push_fade",

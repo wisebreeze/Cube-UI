@@ -1,6 +1,7 @@
 {
   "horse_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       { "flying_item_renderer@common.flying_item_renderer": {} },
@@ -11,7 +12,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   {"equipment@horse.equip_panel": {"offset": [ 7, 18 ]}},
                   {"inv_panel@horse.inv_panel": {}},
@@ -45,10 +46,9 @@
             {
               "background": {
                 "type": "image",
-                "texture": "textures/ui/white_background",
+                "texture": "textures/ui/White",
                 "color": "$global_background_color",
-                "alpha": "$global_background_alpha",
-                "fill": true
+                "alpha": "$global_background_alpha"
               }
             },
             {
@@ -70,7 +70,7 @@
         }
       },
       {
-        "panel@cube_ui_common.v_panel": {}
+        "panel@cube_common.v_panel": {}
       },
       {
         "stack_panel": {

@@ -11,7 +11,7 @@
           "size": [ 205, 200 ],
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half@matreduce.top_half": {}},
                   {
@@ -26,7 +26,7 @@
                 ]
               }
             },
-            { "player_renderer@cube_ui_common.player_renderer": {} },
+            { "player_renderer@cube_common.player_renderer": {} },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
           ]
         }

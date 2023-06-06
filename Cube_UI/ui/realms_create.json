@@ -22,10 +22,10 @@
       }
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "realms_create.realms_create_content_and_factory",
     "$default_text_color": [ 0.3, 0.3, 0.3 ]
   },
@@ -33,10 +33,10 @@
   "content": {
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ]
   },
 
@@ -44,7 +44,7 @@
     "type": "panel",
     "controls": [
       {
-        "realms_create_content@cube_ui_common.headbar_screen": {
+        "realms_create_content@cube_common.headbar_screen": {
           "$main_screen": "realms_create.content",
           "$title": "createWorldUpsell.title.realm"
         }

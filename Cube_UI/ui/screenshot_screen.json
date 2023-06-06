@@ -1,0 +1,109 @@
+{
+// anim
+  "location_anim_1": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 0.8,
+    "from": 0,
+    "to": 1,
+    "reset_event": "button.show_location",
+    "next": "@screenshot.location_anim_2"
+  },
+  "location_anim_2": {
+    "anim_type": "wait",
+    "duration": 2,
+    "next": "@screenshot.location_anim_3"
+  },
+  "location_anim_3": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 0.8,
+    "from": 1,
+    "to": 0
+  },
+// content
+  "screenshot_image": {
+    "type": "image",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_name": "#screenshot_texture",
+        "binding_name_override": "#texture"
+      },
+      {
+        "binding_name": "#screenshot_texture_source",
+        "binding_name_override": "#texture_file_system"
+      }
+    ],
+    "controls": [
+      {
+        "button@common_buttons.light_text_button": {
+          "$pressed_button_name": "button.show_location",
+          "$button_text": "screenshot.locationButton",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-3,3],
+          "layer": 100,
+          "size": ["30%",20]
+        }
+      }
+    ]
+  },
+  
+  "location_text": {
+    "type": "label",
+    "max_size": ["100%","default"],
+    "font_type": "$global_main_font"
+  },
+  
+  "bottom_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100% - 4px","100%c"],
+    "controls": [
+      {"1@location_text": {"text":"screenshot.location"}},
+      {
+        "2@location_text": {
+          "text":"#text",
+          "size": ["fill","default"],
+          "bindings": [
+            {
+              "binding_name": "#screenshot_texture",
+              "binding_name_override": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "bottom_image": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "size": ["95%","100%c + 4px"],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [0,-8],
+    "layer": 999,
+    "propagate_alpha": true,
+    "animation_reset_name": "button.show_location",
+    "anims": ["@screenshot.location_anim_1"],
+    "controls": [
+      {"bottom@bottom_panel":{}}
+    ]
+  },
+  
+  "screenshot_flash_image": {"layer":1000},
+  "content_panel/popup_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {"bottom_tip@bottom_image":{}}
+        ]
+      }
+    ]
+  }
+}

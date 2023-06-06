@@ -1,24 +1,9 @@
 {
-  //---------------------------------------------------------------------------
   // #region common items
-  //---------------------------------------------------------------------------
-
-  "generic_label": {
-    "type": "label",
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "color": "$title_text_color",
-    "layer": 1
+  "title_label": {
+    "ignored": true
   },
-  
-  "title_label@anvil.generic_label": {
-    "text": " "
-  },
-
-  //---------------------------------------------------------------------------
   // #region icon and text area (top quarter of screen)
-  //---------------------------------------------------------------------------
-
   "multiline_text_edit_control@common.multiline_text_edit_box": {
     "anchor_from": "top_left",
     "anchor_to": "top_left",
@@ -83,10 +68,7 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // #region recipe (input, material and results) area (2nd quarter of screen)
-  //---------------------------------------------------------------------------
-
+  // #region recipe area
   "plus_sign_icon": {
     "type": "image",
     "texture": "textures/ui/anvil-plus",
@@ -111,72 +93,14 @@
     ]
   },
 
-  "anvil_output_slot_button@common.container_slot_button_prototype": {
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.anvil_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.anvil_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.anvil_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.anvil_take_all_place_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_auto_place",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_auto_place",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop",
-        "to_button_id": "button.drop_one",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_inventory_drop_all",
-        "to_button_id": "button.drop_all",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.anvil_coalesce_stack",
-        "mapping_type": "double_pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.anvil_coalesce_stack",
-        "mapping_type": "double_pressed"
-      },
-      {
-        "to_button_id": "button.container_slot_hovered",
-        "mapping_type": "pressed"
-      }
-    ]
-  },
-
   "anvil_item_slot": {
     "type": "panel",
     "controls": [
       {
         "container_item@common.container_item": {
           "anchor_to": "center",
-          "anchor_from": "center"
+          "anchor_from": "center",
+          "$background_images": "common.cell_image"
         }
       }
     ]
@@ -315,10 +239,7 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
   // #region screen
-  //---------------------------------------------------------------------------
-
   "top_half_panel": {
     "type": "panel",
     "anchor_from": "top_left",
@@ -333,8 +254,10 @@
 
   "anvil_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "error@cube_common.error": {} },
       {
         "flying_item_renderer@common.flying_item_renderer": {
           "layer": 8
@@ -347,7 +270,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half_panel@anvil.top_half_panel": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
@@ -367,7 +290,7 @@
   "anvil_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
     "$container_image": "textures/ui/anvil_icon",
-    "$title": "container.repair",
+    "$title": "tile.anvil.name",
     "$help_panel":"anvil_help.anvil_help",
     "variables": [
       {

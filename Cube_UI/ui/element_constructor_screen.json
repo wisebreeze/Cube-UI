@@ -4,17 +4,15 @@
   "particle_slider/slider/slider_box": {"$slider_box_size": [14,14]},
 
   "slider_background": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_slider_background_color",
-    "alpha": 0,
-    "fill": true
+    "alpha": 0
   },
 
   "slider_background_hover@elemconstruct.slider_background": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_slider_background_hover_color",
-    "alpha": 0,
-    "fill": true
+    "alpha": 0
   },
 
   "slider_progress": {
@@ -24,9 +22,8 @@
       "requires": "($slider_direction = 'vertical')",
       "$progress_size": [1,"100%"]
     },
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_slider_background_alpha",
-    "fill": true,
     "color": "$slider_progress_color"
   },
 
@@ -43,7 +40,7 @@
           "size": [ 250, 220 ],
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   {"inventory@elemconstruct.inventory_panel": {}},
                   {"result_panel@elemconstruct.result_panel": {}},

@@ -1,8 +1,7 @@
 {
   "sidebar_bg": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_sidebar_navigation_bg_color",
-    "fill": true,
     "alpha": 0.4
   },
 
@@ -31,12 +30,12 @@
     "$default_checked_texture_alpha": "$global_sidebar_navigation_alpha",
     "$hover_checked_texture_alpha": "$global_sidebar_navigation_alpha",
     
-    "$unchecked_locked_texture": "textures/ui/white_background",
-    "$checked_locked_texture": "textures/ui/white_background",
-    "$default_texture": "textures/ui/white_background",
-    "$hover_texture": "textures/ui/white_background",
-    "$pressed_texture": "textures/ui/white_background",
-    "$pressed_no_hover_texture": "textures/ui/white_background",
+    "$unchecked_locked_texture": "textures/ui/White",
+    "$checked_locked_texture": "textures/ui/White",
+    "$default_texture": "textures/ui/White",
+    "$hover_texture": "textures/ui/White",
+    "$pressed_texture": "textures/ui/White",
+    "$pressed_no_hover_texture": "textures/ui/White",
 
     "$default_texture_color": "$global_sidebar_navigation_default_color",
     "$default_checked_texture_color": "$global_sidebar_navigation_default_color",

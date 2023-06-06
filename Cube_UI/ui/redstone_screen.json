@@ -1,13 +1,10 @@
 {
-  //---------------------------------------------------------------------------
-  // Screens
-  //---------------------------------------------------------------------------
-
   "redstone_input_grid": {
     "type": "grid",
     "anchor_from": "center",
     "anchor_to": "center",
     "offset": "$grid_offset",
+    "$background_images": "common.cell_image",
     "grid_dimensions": "$grid_dimensions",
     "collection_name": "container_items",
     "grid_item_template": "common.container_item",
@@ -27,6 +24,7 @@
 
   "panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -42,7 +40,7 @@
           "size": "$screen_dimensions",
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "red_panel@redstone.redstone_panel_top_half": {} },
                   { "red_bottom_half@common.inventory_panel_bottom_half_with_label": {} },

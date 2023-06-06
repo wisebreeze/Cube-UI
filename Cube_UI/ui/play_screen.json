@@ -1,24 +1,12 @@
 {
   "label_background": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
     "color": "$global_background_color"
   },
 
-  "server_scroll_content/feature_server_message_panel": {
-    "modifications": [
-      {
-        "control_name": "featured_servers_label",
-        "operation": "remove"
-      }
-    ]
-  },
-
-  "dark_label_background@label_background": {
-    "texture": "textures/ui/white_background"
-  },
+  "dark_label_background@label_background": {"texture": "textures/ui/White"},
   "add_friend_and_invite_panel": {
     "type": "stack_panel",
     "anchor_from": "top_left",
@@ -81,6 +69,53 @@
     ]
   },
   
+  "grey_bar_panel": {
+    "controls": [
+      {
+        "grey_bar": {
+          "type": "image",
+          "size": [ "100% - 1px", "100%" ],
+          "texture": "textures/ui/White",
+          "keep_ratio": false,
+          "color": "$global_button_default_color",
+          "alpha": "$global_button_alpha",
+          "bindings": [
+            {
+              "binding_name": "(not #this_screenshot_selected)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "server_screenshot_collection"
+            }
+          ]
+        }
+      },
+      {
+        "green_bar": {
+          "type": "image",
+          "size": [ "100% - 1px", "100%" ],
+          "texture": "textures/ui/White",
+          "keep_ratio": false,
+          "color": "$global_button_hover_color",
+          "alpha": "$global_button_alpha",
+          "bindings": [
+            {
+              "binding_name": "#this_screenshot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "server_screenshot_collection"
+            }
+          ]
+        }
+      },
+      {
+        "padding": {
+          "type": "panel",
+          "size": [ 1, "100%" ]
+        }
+      }
+    ]
+  },
+  
   "worlds_stack_panel/header_button": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -120,15 +155,12 @@
       {
         "array_name": "controls",
         "operation": "insert_front",
-        "value": [{"panel_a@cube_ui_common.v_panel": {}}]
+        "value": [{"panel_a@cube_common.v_panel": {}}]
       }
     ]
   },
 
-  //---------------------------------------------------------------------------
   // Scroll panels
-  //---------------------------------------------------------------------------
-
   "common_scrolling_panel@common.scrolling_panel": {
     "layer": 1,
     "$scrolling_pane_size": [ "100% - 1px", "100%" ],
@@ -139,10 +171,7 @@
     "anchor_to": "top_right"
   },
 
-  //---------------------------------------------------------------------------
   // Scroll content
-  //---------------------------------------------------------------------------
-
   "common_content": {
     "type": "input_panel",
     "anchor_from": "top_left",
@@ -176,7 +205,7 @@
   "show_servers_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "100%", "fill" ],
+    "size": [ "100%", "fill" ], 
     "bindings": [
       {
         "binding_name": "(not #feature_server_message_visible)",
@@ -186,11 +215,7 @@
     "controls": [
       {
         "left_panel": {
-          "type": "image",
-          "alpha": "$global_background_alpha",
-          "fill": true,
-          "color": "$global_background_color",
-          "texture": "textures/ui/white_background",
+          "type": "panel",
           "size": [ "50% - 1px", "100%" ],
           "controls": [
             {
@@ -261,15 +286,25 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
   // Toggle tab buttons
-  //---------------------------------------------------------------------------
-
   "tab_text_stack_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "fill", "100%" ],
+    "size": [ "100%", "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [3,0],
     "controls": [
+      {
+        "icon_section": {
+          "type": "panel",
+          "size": [ "100%c", "100%" ],
+          "controls": [
+            {"icon@$tab_icon": {"layer": 2}}
+          ]
+        }
+      },
+      {"panel@cube_common.h_panel":{}},
       {
         "text_section": {
           "type": "panel",
@@ -288,11 +323,22 @@
             }
           ]
         }
-      },
+      }
+    ]
+  },
+
+  "common_navigation_tab_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"count_text@play.tab_text_stack_panel": {}},
       {
         "count_section": {
           "type": "panel",
           "size": [ "100%c", "100%c" ],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "offset": [ -3, 0 ],
           "variables": [
             {
               "requires": "$is_checked_state",
@@ -306,162 +352,36 @@
             }
           ],
           "controls": [
-            {
-              "count_background_image": {
-                "type": "image",
-                "texture": "$count_background_image",
-                "size": [ "100%c + 3px", "100%c" ],
-                "offset": [ -15, 5 ],
-                "anchor_from": "right_middle",
-                "anchor_to": "right_middle",
-                "layer": 3,
-                "controls": [
-                  {
-                    "count@common_button_text": {
-                      "layer": 1,
-                      "font_type": "$global_main_font",
-                      "text": "$count_text_name",
-                      "color": "$count_text_color",
-                      "bindings": [
-                        {"binding_name": "$count_text_name"}
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
+            {"count_bg@play.count_bg": {}}
           ]
         }
       }
     ]
   },
 
-  "common_navigation_tab_content": {
+  "count_bg": {
     "type": "image",
-    "size": [ "100%", "100%" ],
-    "texture": "textures/ui/white_background",
-    "alpha": 0.4,
-    "fill": true,
-    "color": "$tab_color",
-    "variables": [
-      {
-        "requires": "$is_hover_state",
-        "$tab_color": "$tab_hover_color"
-      }
-    ],
+    "texture": "$count_background_image",
+    "size": [ "100%c + 4px", "100%c + 4px" ],
+    "layer": 3,
     "controls": [
       {
-        "common_navigation_tab_panel": {
-          "type": "stack_panel",
-          "size": [ "100%", "100%" ],
-          "orientation": "horizontal",
-          "controls": [
-            {
-              "padding_0": {
-                "type": "panel",
-                "size": [ 2, "100%" ]
-              }
-            },
-            {
-              "icon_section": {
-                "type": "panel",
-                "size": [ "100%c", "100%" ],
-                "controls": [
-                  {
-                    "icon@$tab_icon": {
-                      "layer": 2
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "padding_1": {
-                "type": "panel",
-                "size": [ 2, "100%" ]
-              }
-            },
-            {
-              "count_text@play.tab_text_stack_panel": {}
-            }
-          ]
+        "count": {
+          "type": "label",
+          "layer": 4,
+          "localize": false,
+          "font_type": "$global_main_font",
+          "text": "$count_text_name",
+          "color": "$count_text_color",
+          "bindings": [{"binding_name": "$count_text_name"}]
         }
       }
     ]
   },
 
-  //---------------------------------------------------------------------------
   // Main navigation tabs
-  //---------------------------------------------------------------------------
-  "tab_top@common_tabs.base_tab": {
-    "$empty_image": "cube_ui/textures/sidebar/sidebar_button_background",
-    "controls": [
-      {
-        "$tab_view_binding_name@common.toggle": {
-          "controls": [
-            {
-              "unchecked@$tab_panel": {
-                "$text_color": "$unchecked_text_color",
-                "$secondary_text_color": "$unchecked_secondary_text_color",
-                "$glyph_color": "$unchecked_glyph_color",
-                "$tab_texture": "$empty_image",
-                "$tab_state": "unchecked",
-                "layer": 1
-              }
-            },
-            {
-              "unchecked_hover@$tab_panel": {
-                "$text_color": "$unchecked_hover_text_color",
-                "$secondary_text_color": "$unchecked_hover_secondary_text_color",
-                "$glyph_color": "$unchecked_hover_glyph_color",
-                "$tab_texture": "$empty_image",
-                "$tab_state": "unchecked_hover",
-                "$is_hover_state": true,
-                "layer": 1
-              }
-            },
-            {
-              "unchecked_locked_hover@$tab_panel": {
-                "$text_color": "$unchecked_locked_hover_text_color",
-                "$secondary_text_color": "$unchecked_locked_hover_secondary_text_color",
-                "$glyph_color": "$unchecked_locked_hover_glyph_color",
-                "$tab_texture": "$empty_image",
-                "$tab_state": "unchecked_locked_hover",
-                "layer": 1
-              }
-            },
-            {
-              "checked@$tab_panel": {
-                "$text_color": "$checked_text_color",
-                "$secondary_text_color": "$checked_secondary_text_color",
-                "$glyph_color": "$checked_glyph_color",
-                "$tab_texture": "$empty_image",
-                "$tab_state": "checked",
-                "$is_checked_state": true,
-                "layer": 2
-              }
-            },
-            {
-              "checked_hover@$tab_panel": {
-                "$text_color": "$checked_hover_text_color",
-                "$secondary_text_color": "$checked_hover_secondary_text_color",
-                "$glyph_color": "$checked_hover_glyph_color",
-                "$tab_texture": "$empty_image",
-                "$tab_state": "checked_hover",
-                "$is_checked_state": true,
-                "$is_hover_state": true,
-                "layer": 2
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-
-  "top_tab@play.tab_top": {
+  "top_tab@cube_common.base_tab": {
     "$toggle_tts_enabled_binding_type": "global",
-    "$radio_toggle_group": true,
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$default_tab",
     "anchor_to": "top_left",
@@ -499,18 +419,15 @@
     "$toggle_group_forced_index": 2
   },
 
-  //---------------------------------------------------------------------------
   // Content tabs panel
-  //---------------------------------------------------------------------------
-
   "common_tab_content_panel": {
     "type": "panel",
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     "controls": [
       {
@@ -549,10 +466,7 @@
     "$scroll_tab_content": "play.server_scroll_content"
   },
 
-  //---------------------------------------------------------------------------
   // Content layout panels
-  //---------------------------------------------------------------------------
-
   "common_tab_content_panel_type": {
     "type": "input_panel",
     "anchor_to": "bottom_middle",
@@ -569,10 +483,7 @@
     ]
   },
 
-  //---------------------------------------------------------------------------
   // Tabs layout panels
-  //---------------------------------------------------------------------------
-
   "tab_navigation_panel_layout": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -600,7 +511,8 @@
   "common_tab_navigation_panel_layout": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "100% + 2px", "100%" ],
+    "size": [ "100% + 4px", "100%" ],
+    "offset": [-2,0],
     "ttsSectionContainer": true
   },
 
@@ -608,43 +520,70 @@
     "controls": [
       {
         "world_navigation_tab@play.world_navigation_tab": {
-          "size": [ "33%", "100%" ]
+          "size": [ "fill", "100%" ]
         }
       },
       {
         "friends_navigation_tab@play.friends_navigation_tab": {
-          "size": [ "33%", "100%" ]
+          "size": [ "fill", "100%" ]
         }
       },
       {
         "server_navigation_tab@play.server_navigation_tab": {
-          "size": [ "33%", "100%" ]
+          "size": [ "fill", "100%" ]
         }
       }
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // Default
-  //---------------------------------------------------------------------------
+  "edu_tab_navigation_panel_layout@play.common_tab_navigation_panel_layout": {
+    "controls": [
+      {
+        "world_navigation_tab@play.world_navigation_tab": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "friends_navigation_tab@play.friends_navigation_tab": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "server_navigation_tab@play.server_navigation_tab": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
 
+  "editor_tab_navigation_panel_layout@play.common_tab_navigation_panel_layout": {
+    "controls": [
+      {
+        "world_navigation_tab@play.world_navigation_tab": {
+          "size": [ "fill", "100%" ]
+        }
+      },
+      {
+        "server_navigation_tab@play.server_navigation_tab": {
+          "size": [ "fill", "100%" ]
+        }
+      }
+    ]
+  },
+
+  // Default
   "default_play_screen_panel@play.play_screen_panel": {
     "$navigation_tab": "play.default_tab_navigation_panel_layout",
     "$tab_content_panel": "play.default_tab_content_panel_layout"
   },
-  
-  //---------------------------------------------------------------------------
-  // Screen
-  //---------------------------------------------------------------------------
 
+  // Screen
   "common_play_screen_panel": {"size": ["100%","100%"]},
   "play_screen_content": {
     "type": "panel",
-    "$tab_color": "$global_toggle_checked_default_color",
-    "$tab_hover_color": "$global_toggle_checked_hover_color",
     "controls": [
       {
-        "main_control@cube_ui_common.headbar_screen": {
+        "main_control@cube_common.headbar_screen": {
           "$main_screen": "$main_panel",
           "$title": "menu.play"
         }
@@ -688,11 +627,10 @@
       "@common.screen_entrance_animation_push_fade",
       "@common.screen_entrance_animation_pop_fade"
     ],
-    // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "play.play_screen_content",
     "$world_picker_screen": false
   }

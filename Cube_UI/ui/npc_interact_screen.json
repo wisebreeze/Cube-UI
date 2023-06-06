@@ -678,8 +678,7 @@
 
   "action": {
     "type": "image",
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_background_color",
     "alpha": 0.3,
     "size": [ "100%", "100%c" ],
@@ -1202,13 +1201,13 @@
     "animation_reset_name": "screen_animation_reset",
     "$anim_default_point": ["-15%",0],
     "anims": [
-      "@cube_ui_anim.npc_entrance_animation_push",
-      "@cube_ui_anim.npc_entrance_animation_pop"
+      "@cube_anim.npc_entrance_animation_push",
+      "@cube_anim.npc_entrance_animation_pop"
     ],
     "offset": [0,-3],
     "$panel_anim": [
-      "@cube_ui_anim.npc_exit_animation_push",
-      "@cube_ui_anim.npc_exit_animation_pop"
+      "@cube_anim.npc_exit_animation_push",
+      "@cube_anim.npc_exit_animation_pop"
     ],
     "bindings": [
       {
@@ -1232,7 +1231,7 @@
                 "anims": "$panel_anim",
                 "controls": [
                   {"message_model_window@message_model_window": {}},
-                  {"center@cube_ui_common.v_panel":{}},
+                  {"center@cube_common.v_panel":{}},
                   {"name_panel@name_panel": {}}
                 ]
               }
@@ -1240,7 +1239,7 @@
           ]
         }
       },
-      {"center@cube_ui_common.h_panel":{}},
+      {"center@cube_common.h_panel":{}},
       {
         "right": {
           "type": "panel",
@@ -1248,7 +1247,7 @@
           "$anim_default_point": ["15%",0],
           "controls": [
             {
-              "close_button@cube_ui_common.close_button": {
+              "close_button@cube_common.close_button": {
                 "offset": [-4,-20],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right"
@@ -1262,7 +1261,7 @@
                 "anims": "$panel_anim",
                 "controls": [
                   {"student_message_panel@student_message_panel": {}},
-                  {"center@cube_ui_common.v_panel":{}},
+                  {"center@cube_common.v_panel":{}},
                   {"student_buttons@student_buttons": {}}
                 ]
               }
@@ -1348,10 +1347,9 @@
 
   "student_message_panel": {
     "type": "image",
-    "fill": true,
     "alpha": 0.2,
     "color": "$global_background_color",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "size": [ "100%", "fill" ],
     "$virtual_keyboard_buffer_control": "text_scroll",
     "controls": [
@@ -1410,8 +1408,7 @@
 
   "name_panel": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
     "color": "$global_background_color",
     "size": [ "100%", 20 ],
@@ -1436,8 +1433,7 @@
 
   "message_model_window": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
     "color": "$global_background_color",
     "size": [ "100%", "100% - 23px" ],
@@ -1467,7 +1463,7 @@
     "controls": [
       {
         // 包含基本和高级编辑屏幕的教师窗口
-        "teacher_screen@cube_ui_common.headbar_screen": {
+        "teacher_screen@cube_common.headbar_screen": {
           "$main_screen": "npc_interact.main_content",
           "$title": "options.edit",
           "bindings": [
@@ -1516,8 +1512,8 @@
     ],
     
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     "$show_headbar": false,
     "$screen_content": "npc_interact.npc_screen_contents",
     "button_mappings": [

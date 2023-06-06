@@ -1,10 +1,8 @@
 {
-  "selected_item_details@common.selected_item_details": {
-    "offset": [ 0, 0 ]
-  },
-
+  "selected_item_details@common.selected_item_details": {"offset": [0,0]},
   "beacon_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -18,13 +16,14 @@
         }
       },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      { "error@cube_common.error": {} },
       {
         "root_panel@common.root_panel": {
           "layer": 1,
           "size": [ 256, 219 ],
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   {
                     "beacon_inner_panel@beacon.beacon_inner_panel": {
@@ -53,32 +52,6 @@
             }
           ]
         }
-      }
-    ]
-  },
-
-  "inventory_slot_button@common.container_slot_button_prototype": {
-    "focus_mapping": [
-      {
-        "focus_identifier": "inventory_items8",
-        "focus_change_right": "FOCUS_OVERRIDE_STOP"
-      },
-      {
-        "focus_identifier": "inventory_items17",
-        "focus_change_right": "FOCUS_OVERRIDE_STOP"
-      },
-      {
-        "focus_identifier": "inventory_items26",
-        "focus_change_right": "FOCUS_OVERRIDE_STOP"
-      }
-    ]
-  },
-
-  "hotbar_slot_button@common.container_slot_button_prototype": {
-    "focus_mapping": [
-      {
-        "focus_identifier": "hotbar_items8",
-        "focus_change_right": "FOCUS_OVERRIDE_STOP"
       }
     ]
   },
@@ -642,7 +615,7 @@
     "$title": "tile.beacon.name",
     "$help_panel":"beacon_help.beacon_help",
     "$left_size": [ "49% - 32px", "100%-2px" ],
-    "$right_size": [ "49% + 32px", "100%-2px" ],
+    "$right_size": [ "49% + 32px", "100%-4px" ],
     "variables": [
       {
         "requires": "$desktop_screen",
@@ -652,7 +625,7 @@
       {
         "requires": "$pocket_screen",
         "$screen_content": "cube_container_common.container_screen",
-        "$right_panel": "beacon_pocket.beacon_contents_panel"
+        "$right_panel": "cube_beacon.contents_panel"
       }
     ]
   }

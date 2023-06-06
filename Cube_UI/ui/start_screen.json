@@ -159,7 +159,7 @@
     "orientation": "vertical",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {"gamepic_and_name@cube_ui_common.gamepic_and_name": {}},
+      {"gamepic_and_name@cube_common.gamepic_and_name": {}},
       {"setting_button@start_button_panel.setting_button": {}},
       {"about_button@start_button_panel.about_button": {}},
       {"achievements_button@start_button_panel.achievements_button": {}},
@@ -169,7 +169,7 @@
   },
   "sidebar_verbose_content@sidebar_content": {
     "controls": [
-      {"gamepic_and_name@cube_ui_common.gamepic_and_name": {}},
+      {"gamepic_and_name@cube_common.gamepic_and_name": {}},
       {"setting_button@start_button_panel.setting_button": {}},
       {"about_button@start_button_panel.about_button": {}},
       {"achievements_button@start_button_panel.achievements_button": {}},
@@ -183,16 +183,17 @@
   // 屏幕 //
   "start_screen": {
     "$blur_animations": [
-      "@cube_ui_anim.blur_exit_push",
-      "@cube_ui_anim.blur_exit_pop",
-      "@cube_ui_anim.blur_entrance_push",
-      "@cube_ui_anim.blur_entrance_pop"
+      "@cube_anim.blur_exit_push",
+      "@cube_anim.blur_exit_pop",
+      "@cube_anim.blur_entrance_push",
+      "@cube_anim.blur_entrance_pop"
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     "$empty_headbar_alpha": 0.6,
     "$screen_content": "start.start_screen_content",
+    "$screen_bg_content": "cube_background.screen_background_content",
     "$bg_content": [
       {
         "bottom_blur": {
@@ -203,19 +204,18 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_control_name": "cube_ui_common.default_toggle_control",
+              "source_control_name": "cube_common.default_toggle_control",
               "source_property_name": "#toggle_state",
               "target_property_name": "#visible"
             }
           ],
           "controls": [
-            {"blur@cube_ui_background.screen_blur_background_content":{"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}},
-            {"white":{"type":"image","texture":"textures/ui/white_background","color":"$global_background_color","alpha":0.12,"fill":true,"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}}
+            {"blur@cube_background.screen_blur_background_content":{"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}},
+            {"white":{"type":"image","texture":"textures/ui/White","color":"$global_background_color","alpha":0.12,"offset":[-32,"-100% + 10px"],"anims":"$blur_animations","animation_reset_name":"screen_animation_reset"}}
           ]
         }
       }
-    ],
-    "$screen_bg_content": "cube_ui_background.screen_background_content"
+    ]
   },
   
   "start_main_content": {
@@ -224,14 +224,15 @@
     "$default_sidebar_control": "start.sidebar_content",
     "$verbose_sidebar_control": "start.sidebar_verbose_content",
     "controls": [
-      { "text@start_text.new_bottom_text_panel": {}},
-      { "tip@start_tip.tip_panel": {}},
-      { "sidebar@cube_ui_common.sidebar": {"size":["100%","100% - 20px"],"offset":[0,20]}},
-      { "skin_viewer_panel@start.skin_viewer_panel": {}},
-      { "gamepad_helpers@start.gamepad_helpers": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
-      { "keyboard_helpers@start.keyboard_helper_vr_swap": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
-      { "headbar@cube_ui_common.headbar": {"alpha": 0.6,"layer": 2,"$title":"Minecraft","$back_button_ignored":"$is_ios"}},
-      { "popup_dialog_factory": {"type": "factory","control_ids": {"cloud_upload_prompt": "@start.cloud_upload_prompt"}}}
+      {"a@df1ec387.a": {}},
+      {"text@start_text.new_bottom_text_panel": {}},
+      {"tip@start_tip.tip_panel": {}},
+      {"sidebar@cube_common.sidebar": {"size":["100%","100% - 20px"],"offset":[0,20]}},
+      {"skin_viewer_panel@start.skin_viewer_panel": {}},
+      {"gamepad_helpers@start.gamepad_helpers": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
+      {"keyboard_helpers@start.keyboard_helper_vr_swap": {"anchor_from": "bottom_middle","anchor_to": "bottom_middle", "offset": [0, -5]}},
+      {"headbar@cube_common.headbar": {"alpha": 0.6,"layer": 2,"$title":"Minecraft","$back_button_ignored":"$is_ios"}},
+      {"popup_dialog_factory": {"type": "factory","control_ids": {"cloud_upload_prompt": "@start.cloud_upload_prompt"}}}
     ]
   }
 }

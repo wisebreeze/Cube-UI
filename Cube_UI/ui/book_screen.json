@@ -1,1 +1,6 @@
-{"book_screen":{"$book_close_on_player_hurt|default":true,"close_on_player_hurt":"$book_close_on_player_hurt"}}
+{
+  "book_screen": {
+    "$book_close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$book_close_on_player_hurt"
+  }
+}

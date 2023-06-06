@@ -9,7 +9,7 @@
     "type": "panel",
     "controls": [
       {
-        "content_log_history_dialog@cube_ui_common.headbar_button_screen": {
+        "content_log_history_dialog@cube_common.headbar_button_screen": {
           "$title": "contentlog.history.title",
           
           "$main_screen": "content_log_history.main_stack_panel",
@@ -21,11 +21,11 @@
   },
 
   "content_log_history_screen": {
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "content_log_history.content_log_history_panel",
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
     "button_mappings": [
       {

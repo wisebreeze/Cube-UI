@@ -1,4 +1,20 @@
 {
+  "create_persona_choice_button": {
+    "$default_texture": "textures/ui/White",
+    "$hover_texture_color": "$global_toggle_unchecked_hover_color",
+    "$hover_checked_texture_color": "$global_toggle_checked_hover_color",
+    "controls": [
+      {"choice_toggle@common_toggles.dark_vertical_form_fitting_content_toggle": {"size": [ "100%", "100%c" ],"$default_texture_alpha": 0}}
+    ]
+  },
+  "create_persona_choice_checked_image": {
+    "$image": "$global_radio_on_texture"
+  },
+
+  "create_persona_choice_unchecked_image": {
+    "$image": "$global_radio_off_texture"
+  },
+//////////////////////
   "profile_screen_main_content@common.vertical_stack_panel": {
     "size": [ "100%", "100%" ],
     "controls": [
@@ -32,21 +48,28 @@
   },
   "profile_screen": {
     "gamepad_cursor_deflection_mode":false,
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+    "$screen_bg_content": "cube_background.screen_blur_background_content"
   },
-  "selected_persona_skin_background": {"alpha": "$global_background_alpha","color": "$global_background_color"},
+  "selected_persona_skin_background": {"texture": "textures/ui/White","alpha": "$global_background_alpha","color": "$global_background_color"},
   "popup_dialog_delete_persona_content": {
     "controls": [
-      { "message@delete_popup_dialog_message": {} },
-      { "buttons@delete_persona_button_stack": {} }
+      {"message@delete_popup_dialog_message": {}},
+      {"buttons@delete_persona_button_stack": {}}
     ]
   },
+  "modal_window_input_blocker": {
+    "alpha": 0
+  },
+  "modal_popup_background": {
+    "alpha": "$global_dialog_background_alpha",
+    "color": "$global_dialog_background_color"
+  },"popup_frame": {"alpha":0},
   
   "delete_popup_dialog_message@popup_dialog.popup_dialog_message": {
     "font_type": "$global_main_font",
     "font_scale_factor": 1,
     "offset": [ 0, 0 ]
-  },
+  },"delete_persona_button_stack": {"offset": [ 0, "67% - 8px" ]},
   
   "popup_dialog__delete_persona@popup_dialog.popup_dialog": {
     "size": [ 260, 90 ],
@@ -55,12 +78,12 @@
     "$right_button_press": "button.confirm_delete",
     "$message_text": "dr.modal.persona_delete_confirm",
     "$persona_popup_title_font_type": "$global_main_font",
-    "$persona_popup_title_offset": [0, -30],
+    "$persona_popup_title_offset": [0, 0],
     "$persona_popup_title_text": "dr.modal.persona_delete_confirm_title",
     "$left_button_text": "gui.cancel",
     "$right_button_text": "gui.confirm",
     "$section_content_size": [ "100% - 16px", "100% - 20px" ],
-    "$section_content_offset": [ 0, -30 ],
+    "$section_content_offset": [ 0, 8 ],
     "controls": [
       {
         "popup_dialog_bg@persona.popup_dialog_bg": {

@@ -76,7 +76,8 @@
       {
         "container_item@common.container_item": {
           "anchor_to": "center",
-          "anchor_from": "center"
+          "anchor_from": "center",
+          "$background_images": "common.cell_image"
         }
       }
     ]
@@ -322,6 +323,7 @@
 
   "cartography_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -331,6 +333,7 @@
       },
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      { "error@cube_common.error": {} },
       {
         "root_panel@common.root_panel": {
           "size": [ "100% - 44px", "100%" ],
@@ -338,7 +341,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half_panel@cartography.top_half_panel": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },

@@ -1,11 +1,11 @@
 {
   "screen": {
   // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
     "$screen_content": "realmsplus_upgrade_notice_screen.main_content",
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -19,7 +19,7 @@
     "type": "panel",
     "controls": [
       {
-        "headbar_screen@cube_ui_common.headbar_screen": {
+        "headbar_screen@cube_common.headbar_screen": {
           "$title": "realmsPlusUpgradeNotice.title",
           "$main_screen": "realmsplus_upgrade_notice_screen.content"
         }
@@ -32,10 +32,10 @@
     "size": [ "100% - 6px", "100% - 4px" ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     "controls": [
       {

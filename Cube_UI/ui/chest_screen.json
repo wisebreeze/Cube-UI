@@ -1,5 +1,6 @@
 {
   "chest_grid_item@common.container_item": {
+    "$background_images": "common.cell_image",
     "$item_collection_name": "container_items"
   },
 
@@ -23,10 +24,7 @@
     "collection_name": "container_items"
   },
 
-  ////---------------------------------------------------------------------------
-  //// #region chest area
-  ////---------------------------------------------------------------------------
-
+  // #region chest area
   "small_chest_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50%" ],
@@ -57,12 +55,10 @@
     ]
   },
 
-  ////---------------------------------------------------------------------------
-  //// #region screen
-  ////---------------------------------------------------------------------------
-
+  // #region screen
   "small_chest_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -77,7 +73,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "small_chest_panel_top_half@chest.small_chest_panel_top_half": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
@@ -86,7 +82,6 @@
                 ]
               }
             },
-            { "player_renderer@cube_ui_common.player_renderer": {} },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
             { "gamepad_cursor@common.gamepad_cursor_button": {} }
           ]
@@ -101,6 +96,7 @@
 
   "large_chest_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -124,7 +120,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "large_chest_panel_top_half@chest.large_chest_panel_top_half": {} },
                   { "inventory_panel_bottom_half_with_label@chest.inventory_panel_bottom_half_with_label": {} },
@@ -133,7 +129,6 @@
                 ]
               }
             },
-            { "player_renderer@cube_ui_common.player_renderer": {} },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
             { "gamepad_cursor@common.gamepad_cursor_button": {} }
           ]

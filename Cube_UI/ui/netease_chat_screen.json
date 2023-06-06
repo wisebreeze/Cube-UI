@@ -1,1 +1,33 @@
-{"namespace":"netease_chat","netease_chat_screen@chat.chat_screen":{}}
+{
+  "netease_chat_screen": {
+    "close_on_player_hurt": "$chat_close_on_player_hurt",
+    "$screen_bg_content": "common.empty_panel"
+  },
+  "commands_panel": {
+    "offset": [ 0, -47 ],
+    "size": [ "100%", "100%-70px" ]
+  },
+  "messages_scrolling_panel@common.scrolling_panel": {
+    "size": [ "100%-2px", "100%-70px" ],
+    "offset": [ 2, -47 ]
+  },
+  "chat_screen_content": {
+    "controls": [
+      { "messages_panel@netease_chat.messages_scrolling_panel": {} },
+      { "bottom_panel@chat_bottom_bar.chat_bottom_panel": { "layer": 2 } },
+      { "chat_top_panel@netease_chat.chat_header": { "layer": 2 } },
+      { "autocomplete_commands_panel@netease_chat.commands_panel": { "layer": 3 } },
+      { "host_main_panel@chat_host_options.host_panel": { "layer": 7 } },
+      { "popup_factory@chat_set.popup_factory": {} },
+      { "message_button@netease_chat.message_button": {} },
+      {
+        "player_tips_factory": {
+          "type": "factory",
+          "control_ids": {
+            "player_tips": "@player_tips.player_panel"
+          }
+        }
+      }
+    ]
+  }
+}

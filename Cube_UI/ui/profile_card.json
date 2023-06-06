@@ -337,7 +337,7 @@
     "type": "stack_panel",
     "size": [ "100%", "100%" ],
     "controls": [
-      { "headbar@cube_ui_common.headbar": { "$title": "options.profile","layer": 1 } },
+      { "headbar@cube_common.headbar": { "$title": "options.profile","layer": 1 } },
       {
         "dialog_content_with_skin@profile_card.dialog_content_with_skin": {}
       }
@@ -354,16 +354,16 @@
     ],
     "$ar": "screen_animation_reset",
     "$a": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_bg_ignored": "(not $is_pregame)",
     "$screen_content": "profile_card.profile_card_screen_content"
   },

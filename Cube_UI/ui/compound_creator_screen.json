@@ -10,7 +10,7 @@
           "size": [ 184, 166 ],
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half@compcreate.top_half": {} },
                   { "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {} },
@@ -19,7 +19,7 @@
                 ]
               }
             },
-            { "player_renderer@cube_ui_common.player_renderer": {} },
+            { "player_renderer@cube_common.player_renderer": {} },
             { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} }
           ]
         }

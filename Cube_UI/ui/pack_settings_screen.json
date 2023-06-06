@@ -1,13 +1,11 @@
 {
   "screen": {
-    "force_render_below": true,
-    "$fill_alpha": 1.0,
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
     "$screen_content": "pack_settings.main_screen_contents",
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -16,7 +14,7 @@
       }
     ]
   },
-  
+
   "main_screen_contents": {
     "type": "panel",
     "controls": [{"pack_scroll_panel@header_screen": {}}]
@@ -31,7 +29,7 @@
     "$scroll_bar_right_padding_size": [ 0, 0 ]
   },
 
-  "header_screen@cube_ui_common.headbar_button_screen": {
+  "header_screen@cube_common.headbar_button_screen": {
     "$title": "#pack_settings_title",
     "$title_text_binding_type": "global",
     "$main_screen": "pack_settings.pack_scroll_panel"
@@ -40,7 +38,6 @@
   "scrolling_content": {
     "type": "stack_panel",
     "size": [ "100% - 4px", "100%c" ],
-    "orientation": "vertical",
     "controls": [
       {
         "content_tiering_panel@pack_settings.content_tiering_panel": {}
@@ -52,14 +49,6 @@
   },
 
   "content_tiering_panel": {
-    "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
-    "bindings": [
-      {
-        "binding_name": "#has_content_tiering",
-        "binding_name_override": "#visible"
-      }
-    ],
     "controls": [
       {
         "slider_panel": {

@@ -111,7 +111,7 @@
     ]
   },
 
-  "online_safety_dialog@cube_ui_common.headbar_button_screen": {
+  "online_safety_dialog@cube_common.headbar_button_screen": {
     "$title": "onlinePlay.notRated",
     "$description_text": "onlinePlay.message",
     "$main_screen": "online_safety.online_safety_label_main_panel",
@@ -142,10 +142,10 @@
       }
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "online_safety.online_safety_screen_content"
   },
 

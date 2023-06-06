@@ -46,15 +46,11 @@
             {
               "size_label": {
                 "type": "label",
-                "text_alignment": "right",
-                "size": [ "90%", "default" ],
+                "text_alignment": "center",
+                "size": [ "100%", "default" ],
                 "text": "#file_size_progress",
                 "color": "$body_text_color",
-                "bindings": [
-                  {
-                    "binding_name": "#file_size_progress"
-                  }
-                ]
+                "bindings": [{"binding_name": "#file_size_progress"}]
               }
             },
             {
@@ -68,9 +64,7 @@
                 "type": "panel",
                 "size": [ "100%", "100%c" ],
                 "controls": [
-                  {
-                    "fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}
-                  },
+                  {"fancy_progress_loading_bars@progress.fancy_progress_loading_bars": {}},
                   {
                     "progress_loading_bars@progress.progress_loading_bars": {
                       "offset": [ 0, 0 ]

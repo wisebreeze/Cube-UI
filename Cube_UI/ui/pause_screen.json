@@ -17,9 +17,9 @@
   "skin_panel_interior": {
     "type": "panel",
     "size": [ 100, "100%c" ],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "offset": [ "-4%", "-3%" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [ -103, 0 ],
     "controls": [
       {
         "viewer_panel@pause.skin_viewer_panel": {
@@ -32,26 +32,21 @@
   "skin_viewer_panel/paper_doll_name_tag": {
     "ignored": false
   },
-  "pause_screen": {
-    "force_render_below": true,
-    "render_game_behind": true
+  "empty_back@cube_common.db_button": {
+    "size": ["100%","100%"],
+    "$button_focus_precedence": 1,
+    "$db_pressed_name": "button.menu_continue",
+    "sound_volume": 0
   },
 
   "info_panel@pause.pause_screen_border": {
     "size": [ 150, "100%" ],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-    /*"bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "pause_sidebar.player_listbar_toggle_control",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ],*/
     "controls": [
-      { "info_panel_background@pause.info_panel_background": {} },
-      { "info_panel_list@pause.info_panel_content_list": {} }
+      {"info_panel_background@pause.info_panel_background": {}},
+      {"info_panel_list@pause.info_panel_content_list": {}},
+      {"info_panel_invite_panel@pause.info_panel_invite_panel": {"visible":"(not $is_netease)"}}
     ]
   },
 
@@ -66,11 +61,11 @@
     "controls": [
       {
         "vertical_padding_0@pause.vertical_padding": {
-          "size": [ 0, 4 ]
+          "size": [ 0, 2 ]
         }
       },
       {
-        "players_list_label@cube_ui_common.cube_ui_header": {
+        "players_list_label@cube_common.cube_ui_header": {
           "$cube_ui_header_text": "key.playerlist"
         }
       },
@@ -94,7 +89,7 @@
       { "disconnected_from_multiplayer_label_panel@pause.disconnected_from_multiplayer_label_panel": {} },
       {
         "vertical_padding_4@pause.vertical_padding": {
-          "size": [ 0, 1 ]
+          "size": [ 0, 31 ]
         }
       }
     ]
@@ -102,8 +97,7 @@
   
   "transparent_background": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "color": "$global_background_color",
     "alpha": "$global_background_alpha"
   },
@@ -113,10 +107,10 @@
     "ignored": "(not $trial)",
     "renderer": "trial_time_renderer",
     "size": [ "default", 10 ],
-    "offset": [ -2, -4 ],
+    "offset": [ 0, -5 ],
     "layer": 3,
-    "anchor_from": "top_right",
-    "anchor_to": "top_right",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
     "bindings": [
       {
         "binding_name": "#is_trial_version",
@@ -129,23 +123,30 @@
   "pause_screen_main_panels": {
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.right_offset_exit_push",
-      "@cube_ui_anim.right_offset_exit_pop",
-      "@cube_ui_anim.right_offset_entrance_push",
-      "@cube_ui_anim.right_offset_entrance_pop"
+      "@cube_anim.right_offset_exit_push",
+      "@cube_anim.right_offset_exit_pop",
+      "@cube_anim.right_offset_entrance_push",
+      "@cube_anim.right_offset_entrance_pop"
     ]
   },
-  
+  "pause_screen": {
+    "gamepad_cursor": "$focus_on_enable",
+    "absorbs_input": "(not $focus_on_enable)",
+    "force_render_below": "$focus_on_enable"
+  },
   "pause_screen_content": {
     "type": "panel",
+    "alpha": 1,
     "size": [ "100%", "100%" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "layer": 1,
     "controls": [
-      { "toggle@hud.togge_pause_panel": {"ignored": "(not $focus_on_enable)"}},
-      { "main@pause.pause_main_content": {}}
+      {"top_middle@hud_top.top_pause_panel":{}},
+      {"main@pause_main_content":{}}
     ]
+  },
+  "player_grid_banner_no_focus": {
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
   },
   "pause_main_content": {
     "type": "panel",
@@ -159,12 +160,12 @@
       }
     ],
     "controls": [
-      { "pause_sidebar@pause_sidebar.pause_sidebar": {} },
-      { "trialtime@pause.trialTime": {} },
-      { "skin_panel@pause.skin_panel_interior": {} },
-      { "pause_screen_main_panels@pause.pause_screen_main_panels": {} },
-      { "gamepad_helpers@pause.gamepad_helpers": {} },
-      { "keyboard_helpers@pause.keyboard_helpers": {} }
+      {"empty_back@pause.empty_back":{}},
+      //{"window@pause_quit.window":{"ignored":"(not $enable_quit_tip)"}},
+      {"content@pause_content.main":{}},
+      {"trialtime@pause.trialTime":{}},
+      {"gamepad_helpers@pause.gamepad_helpers":{}},
+      {"keyboard_helpers@pause.keyboard_helpers":{}}
     ]
   }
 }

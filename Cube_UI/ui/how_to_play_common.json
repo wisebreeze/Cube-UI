@@ -1,18 +1,17 @@
 {
   "top_bar": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_headbar_alpha",
     "color": "$global_headbar_color"
   },
 
   "dynamic_dialog_screen": {
     "$screen_content": "how_to_play_common.how_to_play_headbar_content",
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+    "$screen_bg_content": "cube_background.screen_blur_background_content"
   },
 
-  "how_to_play_headbar_content@cube_ui_common.headbar_screen": {
+  "how_to_play_headbar_content@cube_common.headbar_screen": {
     "$title": "#section_title",
     "$title_text_binding_type": "global",
     "$main_screen": "how_to_play_common.dialog_content"
@@ -25,8 +24,7 @@
     "size": [ "100%", 30 ]
   },
   "header_background": {
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "color": "$global_header_color",
     "alpha": "$global_header_alpha"
   },
@@ -59,15 +57,15 @@
   "content_area": {
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop",
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop"
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop",
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop"
     ]
   },
   "selector_area": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_selector_area_background_color",
     "alpha": "$global_selector_area_background_alpha",
     "nineslice_size": 1,
@@ -79,10 +77,10 @@
     "layer": 3,
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.set_entrance_push",
-      "@cube_ui_anim.set_entrance_pop",
-      "@cube_ui_anim.set_exit_push",
-      "@cube_ui_anim.set_exit_pop"
+      "@cube_anim.set_entrance_push",
+      "@cube_anim.set_entrance_pop",
+      "@cube_anim.set_exit_push",
+      "@cube_anim.set_exit_pop"
     ]
   }
 }

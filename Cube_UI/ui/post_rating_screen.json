@@ -1,1 +1,1 @@
-{"dropdown_background":{"fill":true,"alpha":"$global_background_alpha","color":"$global_background_color","texture":"textures/ui/white_background"}}
+{"dropdown_background":{"alpha":"$global_background_alpha","color":"$global_background_color","texture":"textures/ui/White"}}

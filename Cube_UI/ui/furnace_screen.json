@@ -1,4 +1,28 @@
 {
+"furnace_ingredient_panel/ingredient_item":{"$background_images": "common.cell_image"},
+"furnace_fuel_panel/fuel_item":{"$background_images": "common.cell_image"},
+"furnace_output_panel/output_item":{"$background_images": "common.cell_image"},
+  "flame_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "percentage@cube_common.percentage_panel": {
+              "offset": ["-120% - 4px",0],
+              "anchor_from": "left_middle",
+              "anchor_to": "left_middle",
+              "$percentage_binding_name": "#furnace_flame_ratio",
+              "$percentage_binding_condition": "always",
+              "$percentage_binding_type": "global",
+              "$percentage_type": "cube_common.clip_ratio_percentage"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "furnace_panel_top_half": {
     "type": "panel",
     "size": [ "100%", "50% - 12px" ],
@@ -19,12 +43,24 @@
           "anchor_from": "center"
         }
       },
+      {
+        "percentage@cube_common.percentage_panel": {
+          "offset": [0,20],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$percentage_binding_name": "#furnace_arrow_ratio",
+          "$percentage_binding_condition": "always",
+          "$percentage_binding_type": "global",
+          "$percentage_type": "cube_common.clip_ratio_percentage"
+        }
+      },
       { "output@furnace_output_panel": {} }
     ]
   },
 
   "furnace_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -39,7 +75,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "furnace_panel_top_half@furnace.furnace_panel_top_half": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },

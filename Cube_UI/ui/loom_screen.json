@@ -1,20 +1,15 @@
 {
-  //---------------------------------------------------------------------------
   // #region common images
-  //---------------------------------------------------------------------------
-
   "banner_outline": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_background_color",
-    "fill": true,
     "alpha": "$global_background_alpha"
   },
   
   "container_cell_image": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": 0.4,
     "color": "$global_cell_color",
     "size": "$cell_image_size",
@@ -24,8 +19,7 @@
 
   "pattern_cell_image": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": 0.4,
     "color": "$global_cell_color",
     "size": "$cell_image_size",
@@ -34,13 +28,15 @@
   },
 
   "loom_label": {
-    "visible": false
+    "ignored": true
   },
 
-  //---------------------------------------------------------------------------
-  // #region right panel, inventory and loom crafting
-  //---------------------------------------------------------------------------
+"input_item_slot":{"$background_images":"common.cell_image"},
+"dye_item_slot":{"$background_images":"common.cell_image"},
+"material_item_slot":{"$background_images":"common.cell_image"},
+"result_item_slot":{"$background_images":"common.cell_image"},
 
+  // #region right panel, inventory and loom crafting
   "result_banner_renderer": {
     "type": "custom",
     "renderer": "banner_pattern_renderer",
@@ -143,7 +139,7 @@
     "layer": 1,
     "controls": [
       {
-        "screen@cube_ui_common.container_common_screen": {
+        "screen@cube_common.container_common_screen": {
           "$show_player_renderer": false,
           "$inventory_controls": [
             { "top_half_panel@loom.top_half_panel": {} },
@@ -155,19 +151,7 @@
     ]
   },
 
-  // #endregion
-
-  //---------------------------------------------------------------------------
   // #region screen
-  //---------------------------------------------------------------------------
-
-  "help_button@common.help_button": {
-    "layer": 5,
-    "visible": "(not $education_edition_china)",
-    "$focus_id": "help_button",
-    "$focus_override_up": "FOCUS_OVERRIDE_STOP"
-  },
-
   "toolbar_panel@common.root_panel": {
     "size": [ "100%c", 20 ],
     "controls": [
@@ -241,20 +225,10 @@
       }
     ]
   },
-  //---------------------------------------------------------------------------
   // #region screen
-  //---------------------------------------------------------------------------
-
   "center_fold@common.root_panel": {
     "size": [ 4, 166 ],
-    "controls": [
-      {
-        "center_bg": {
-          "type": "image",
-          "alpha": 0
-        }
-      }
-    ]
+    "controls": []
   },
 
   "screen_stack_panel": {
@@ -272,7 +246,7 @@
     "size": [ 146, 166 ],
     "controls": [
       {
-        "background@cube_ui_common.container_common_screen": {
+        "background@cube_common.container_common_screen": {
           "$is_left_panel": true
         }
       },
@@ -281,6 +255,7 @@
   },
   "loom_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "screen_stack_panel@loom.screen_stack_panel": {} },
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
@@ -298,7 +273,6 @@
 
   "loom_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
-    
     "button_mappings": "$button_mappings",
     "$help_panel": "loom_help.loom_help",
     "$left_panel": "loom_pocket.pattern_scroll_panel",
@@ -316,6 +290,7 @@
       {
         "requires": "$pocket_screen",
         "$two_left_panel": true,
+        "$list_def_state": true,
         "$inv_size": [ "100%", "100% - 24px" ],
         "$screen_content": "cube_container_common.container_screen",
         "$button_mappings": [

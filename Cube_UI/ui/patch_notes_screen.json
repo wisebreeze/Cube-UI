@@ -134,9 +134,7 @@
   "button_content": {
     "type": "panel",
     "controls": [
-      {
-        "button_label2@patch_notes.button_label_panel": {}
-      }
+      {"button_label2@patch_notes.button_label_panel": {}}
     ]
   },
 
@@ -365,7 +363,7 @@
     "size": [ "100% - 4px", "20px" ]
   },
 
-  "patch_notes_main@cube_ui_common.headbar_button_screen": {
+  "patch_notes_main@cube_common.headbar_button_screen": {
     "$main_screen": "patch_notes.patch_notes_content",
     "$button_panel": "patch_notes.continue_button",
 
@@ -377,10 +375,10 @@
 
   "patch_notes_screen": {
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "patch_notes.patch_notes_main"
   },
 
@@ -505,7 +503,7 @@
     ]
   },
 
-  "sunsetting_dialog@cube_ui_common.headbar_button_screen": {
+  "sunsetting_dialog@cube_common.headbar_button_screen": {
     "$title": "#dialog_title",
     "$title_text_binding_type": "global",
 
@@ -520,10 +518,10 @@
 
   "sunsetting_screen": {
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "patch_notes.sunsetting_dialog"
   }
 }

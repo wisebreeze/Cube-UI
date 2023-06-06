@@ -16,7 +16,7 @@
   "safe_zone_screen": {
     "should_be_skipped_during_automation": true,
     "controls": [
-      {"bg@cube_ui_background.screen_blur_background_content": {}},
+      {"bg@cube_background.screen_blur_background_content": {}},
       {
         "safe_zone_bounds_markers": {
           "type": "panel",

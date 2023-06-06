@@ -10,7 +10,7 @@
           "size": [ 176, 200 ],
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half@labtable.top_half": {}},
                   { "inventory_panel_bottom_half@common.inventory_panel_bottom_half_with_label": {} },

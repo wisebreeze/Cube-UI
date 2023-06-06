@@ -76,10 +76,10 @@
       }
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "convert_purchases_to_xbl.convert_purchases_to_xbl_screen_content"
   },
 
@@ -87,7 +87,7 @@
     "type": "panel",
     "controls": [
       {
-        "headbar@cube_ui_common.headbar": {
+        "headbar@cube_common.headbar": {
           "$title": "xbl.savePurchase.title",
           "$back_button_ignored": true,
           "layer": 1

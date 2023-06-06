@@ -11,31 +11,28 @@
     "font_type": "$global_main_font"
   },
 
+  "background_with_hover_text": {"layer":100},
   "dark_background@enchanting.enchanting_image": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_button_alpha",
-    "fill": "$global_button_fill",
     "color": "$global_button_default_color"
   },
 
   "dark_background_with_hover_text@enchanting.background_with_hover_text": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_button_alpha",
-    "fill": "$global_button_fill",
     "color": "$global_button_hover_color"
   },
 
   "active_background@enchanting.enchanting_image": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_button_alpha",
-    "fill": "$global_button_fill",
     "color": "$global_button_default_color"
   },
 
   "active_background_with_hover_text@enchanting.background_with_hover_text": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_button_alpha",
-    "fill": "$global_button_fill",
     "color": "$global_button_hover_color"
   },
 
@@ -59,11 +56,11 @@
   },
 
   "success_runes@enchanting.enchant_runes": {
-    "color": "$enchanting_runes_color"
+    "color": "$global_button_text_default_color"
   },
 
   "fail_runes@enchanting.enchant_runes": {
-    "color": "$enchanting_runes_fail_color"
+    "color": "$global_button_text_default_color"
   },
 
   "success_cost@enchanting.enchant_cost": {
@@ -261,6 +258,7 @@
 
   "enchanting_panel": {
     "type": "panel",
+    "alpha": 1,
     "$use_compact_close_button": true,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
@@ -275,7 +273,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                "$inventory_controls": [
                   { "enchanting_panel_top_half@enchanting.enchanting_panel_top_half": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
@@ -294,7 +292,7 @@
   "enchanting_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
     "$container_image": "textures/blocks/enchanting_table_side",
-    "$right_panel": "enchanting_pocket.enchanting_contents_panel",
+    "$right_panel": "cube_enchanting.contents_panel",
     "$right_anchor": "top_right",
     "$help_panel": "enchanting_help.enchanting_help",
     "variables": [

@@ -1,1 +1,24 @@
-{"bundle_grid_item/banner_image":{"type":"image","fill":true,"texture":"textures/ui/white_background","alpha":"$global_background_alpha","color":"$global_background_color"}}
+{
+  "bundle_grid_item/banner_image": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color"
+  },
+
+  "bundle_purchase_warning_screen_content": {
+    "controls": [
+      {
+        "dialog@cube_common.headbar_button_screen": {
+          "$button_panel_size": [ "100% - 4px", 30 ],
+          "$title": "#bundle_purchase_warning_title",
+          "$title_text_binding_type": "global",
+          "$screen_type": "stack_panel",
+          "$main_screen": "bundle_purchase_warning.dialog_content",
+          "$button_panel": "bundle_purchase_warning.purchase_button_panel"
+        }
+      }
+    ]
+  },
+  "bundle_purchase_warning_screen": {"gamepad_cursor_deflection_mode":false}
+}

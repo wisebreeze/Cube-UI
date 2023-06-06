@@ -1,1 +1,28 @@
-{"long_form@common_dialogs.main_panel_no_buttons":{"$global_dialog_background_alpha":0.2,"$global_dialog_headbar_alpha":0},"custom_form@common_dialogs.main_panel_no_buttons":{"$global_dialog_background_alpha":0.2,"$global_dialog_headbar_alpha":0}}
+{
+  "long_form@common_dialogs.main_panel_no_buttons": {
+    "$global_dialog_background_alpha": 0.2,
+    "$global_dialog_headbar_alpha": 0,
+    "$global_button_text_font":"default",
+    "$global_toggle_text_font":"default",
+    "$global_headbar_title_font":"default",
+    "$global_header_label_font":"default",
+    "$global_text_box_font":"default",
+    "$global_text_box_place_holder_font":"default",
+    "$global_radio_text_font":"default",
+    "$global_dialog_title_text_font":"default",
+    "$global_dialog_message_text_font":"default"
+  },
+  "custom_form@common_dialogs.main_panel_no_buttons": {
+    "$global_dialog_background_alpha": 0.2,
+    "$global_dialog_headbar_alpha": 0,
+    "$global_button_text_font":"default",
+    "$global_toggle_text_font":"default",
+    "$global_headbar_title_font":"default",
+    "$global_header_label_font":"default",
+    "$global_text_box_font":"default",
+    "$global_text_box_place_holder_font":"default",
+    "$global_radio_text_font":"default",
+    "$global_dialog_title_text_font":"default",
+    "$global_dialog_message_text_font":"default"
+  }
+}

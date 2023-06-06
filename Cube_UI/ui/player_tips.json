@@ -1,0 +1,23 @@
+{
+  "namespace": "player_tips",
+  "default": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_button_alpha",
+    "color": "$global_button_default_color"
+  },
+  "hover": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_button_alpha",
+    "color": "$global_button_hover_color"
+  },
+  "pressed": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_button_alpha",
+    "color": "$global_button_pressed_color"
+  },
+  "back_ground_image": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color"
+  }
+}

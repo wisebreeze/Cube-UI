@@ -1,0 +1,121 @@
+{
+  "cast_character_select_main": {
+    "controls": [
+      {
+        "main_content_horizontal_stack": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", "100%" ],
+          "controls": [
+            { "cast_grid@persona_cast_character_screen.cast_scroll_view_panel": {} },
+            { "skin_viewer_panel@persona_cast_character_screen.persona_cast_paper_doll_panel": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "cast_single_character_button_panel": {
+    "type": "panel",
+    "size": [ "33%", "100%x" ],
+    "layer": 10,
+    "$pressed_button_name": "button.cast_single_character_button",
+    "controls": [
+      {
+        "cast_character_button@common.button": {
+          "max_size": [ "100%-2px", "100%-2px" ],
+          "$controller_left_bumper_mapping|default": "",
+          "$controller_right_bumper_mapping|default": "",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "background_image": {
+                "type": "image",
+                "size": [ "100%", "100%" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "texture": "textures/ui/White",
+                "color": "$global_background_color",
+                "alpha": "$global_background_alpha"
+              }
+            },
+            {
+              "selected": {
+                "type": "image",
+                "texture": "cube_ui/textures/common/preview_outline",
+                "layer": 8,
+                "nineslice_size": 1,
+                "size": ["100%","100%"],
+                "color": "$global_button_hover_color",
+                "bindings": [
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "$cast_single_character_collection_name",
+                    "binding_name": "#cast_button_selected",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { "default@common.empty_panel": {} },
+            { "hover@persona.focus_border": {} },
+            { "pressed@persona.focus_border": {} },
+            {
+              "button_outline": {
+                "type": "panel",
+                "size": [ "100%-2px", "100%-2px" ],
+                "controls": [
+                  { "cast_character_content@persona_cast_character_screen.cast_character_button_content_panel": {} }
+                ]
+              }
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "$pressed_button_name",
+              "mapping_type": "focused"
+            },
+            {
+              "to_button_id": "button.asset_button_hovered",
+              "mapping_type": "pressed"
+            },
+            {
+              "ignored": "($controller_left_bumper_mapping = '')",
+              "from_button_id": "button.menu_tab_left",
+              "to_button_id": "$controller_left_bumper_mapping",
+              "mapping_type": "focused"
+            },
+            {
+              "ignored": "($controller_right_bumper_mapping = '')",
+              "from_button_id": "button.menu_tab_right",
+              "to_button_id": "$controller_right_bumper_mapping",
+              "mapping_type": "focused"
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "$cast_single_character_collection_name",
+              "binding_collection_prefix": "cast_character_options"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#cast_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "$cast_single_character_collection_name"
+      }
+    ]
+  }
+}

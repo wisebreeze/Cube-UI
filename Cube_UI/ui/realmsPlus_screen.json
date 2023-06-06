@@ -1,17 +1,17 @@
 {
   "realms_plus_upgrade_notice_screen": {
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+    "$screen_bg_content": "cube_background.screen_blur_background_content"
   },
   "realms_plus_pdp_screen@common.base_screen": {
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content"
+    "$screen_bg_content": "cube_background.screen_blur_background_content"
   },
 
   "section_toggle_base": {"$anchor":"left_middle","$new_ui_label_offset":[3,0],"$button_type_panel":"common_buttons.new_ui_binding_button_label"},
   "buy_now_toggle@realmsPlus.toggle_base": {
-    "$default_texture": "textures/ui/white_background",
-    "$hover_texture": "textures/ui/white_background",
-    "$pressed_texture": "textures/ui/white_background",
-    "$pressed_no_hover_texture": "textures/ui/white_background",
+    "$default_texture": "textures/ui/White",
+    "$hover_texture": "textures/ui/White",
+    "$pressed_texture": "textures/ui/White",
+    "$pressed_no_hover_texture": "textures/ui/White",
     
     "$default_button_alpha": "$global_button_alpha",
     "$hover_button_alpha": "$global_button_alpha",
@@ -34,10 +34,9 @@
 
   "selector_area": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_selector_area_background_color",
     "alpha": "$global_selector_area_background_alpha",
-    "fill": true,
     "size": [ "30% - 3px", "100%" ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",

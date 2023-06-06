@@ -42,7 +42,7 @@
                       ]
                     }
                   },
-                  {"panel@cube_ui_common.v_panel":{}},
+                  {"panel@cube_common.v_panel":{}},
                   {
                     "flame_panel": {
                       "type": "panel",
@@ -60,11 +60,22 @@
                             "layer": 3,
                             "size": [ 13, 13 ]
                           }
+                        },
+                        {
+                          "percentage@cube_common.percentage_panel": {
+                            "offset": ["-120% - 4px",0],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "$percentage_binding_name": "#furnace_flame_ratio",
+                            "$percentage_binding_condition": "always",
+                            "$percentage_binding_type": "global",
+                            "$percentage_type": "clip_ratio_percentage"
+                          }
                         }
                       ]
                     }
                   },
-                  {"panel_1@cube_ui_common.v_panel":{}},
+                  {"panel_1@cube_common.v_panel":{}},
                   {
                     "fuel_panel": {
                       "type": "panel",
@@ -92,18 +103,29 @@
           ]
         }
       },
-      {"panel_1@cube_ui_common.h_panel":{}},
+      {"panel_1@cube_common.h_panel":{}},
       {
         "arrow_panel": {
           "type": "panel",
           "size": [ 22, "100%" ],
           "controls": [
             { "empty_arrow@furnace_pocket.empty_arrow": {} },
-            { "full_arrow@furnace_pocket.full_arrow": { "layer": 2 } }
+            { "full_arrow@furnace_pocket.full_arrow": { "layer": 2 } },
+            {
+              "percentage@cube_common.percentage_panel": {
+                "offset": [0,20],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "$percentage_binding_name": "#furnace_arrow_ratio",
+                "$percentage_binding_condition": "always",
+                "$percentage_binding_type": "global",
+                "$percentage_type": "cube_common.clip_ratio_percentage"
+              }
+            }
           ]
         }
       },
-      {"panel_2@cube_ui_common.h_panel":{}},
+      {"panel_2@cube_common.h_panel":{}},
       {
         "output_input_panel": {
           "type": "panel",

@@ -5,7 +5,7 @@
     "$button_text": "storage_migration.button.start"
   },
 
-  "start_transfer_main_panel@cube_ui_common.headbar_button_screen": {
+  "start_transfer_main_panel@cube_common.headbar_button_screen": {
     "$title": "storage_migration.start_transfer.generic.title",
     "$back_button_ignored": false,
 
@@ -14,7 +14,7 @@
     "$button_panel_size": [ "100% - 4px", "13%" ],
     "$button_panel": "storage_migration_generic.start_transfer_button"
   },
-  "start_transfer_main_out_of_space@cube_ui_common.headbar_button_screen": {
+  "start_transfer_main_out_of_space@cube_common.headbar_button_screen": {
     "$title": "storage_migration.resume_transfer.title",
     "$back_button_ignored": false,
 
@@ -23,7 +23,7 @@
     "$button_panel_size": [ "100% - 4px", "13%" ],
     "$button_panel": "storage_migration_common.continue_out_of_space_button"
   },
-  "resume_main_transfer@cube_ui_common.headbar_button_screen": {
+  "resume_main_transfer@cube_common.headbar_button_screen": {
     "$title": "storage_migration.resume_transfer.title",
     "$back_button_ignored": false,
 
@@ -32,7 +32,7 @@
     "$button_panel_size": [ "100% - 4px", "13%" ],
     "$button_panel": "storage_migration_common.resume_transfer_button"
   },
-  "resume_main_transfer_out_of_space@cube_ui_common.headbar_button_screen": {
+  "resume_main_transfer_out_of_space@cube_common.headbar_button_screen": {
     "$title": "storage_migration.resume_transfer.title",
     "$back_button_ignored": false,
 
@@ -41,7 +41,7 @@
     "$button_panel_size": [ "100% - 4px", "13%" ],
     "$button_panel": "storage_migration_common.continue_out_of_space_button"
   },
-  "transfer_main_error@cube_ui_common.headbar_button_screen": {
+  "transfer_main_error@cube_common.headbar_button_screen": {
     "$title": "storage_migration.transfer_error.title",
     "$back_button_ignored": false,
 
@@ -50,7 +50,7 @@
     "$button_panel_size": [ "100% - 4px", "13%" ],
     "$button_panel": "storage_migration_common.retry_button"
   },
-  "transfer_main_error_out_of_space@cube_ui_common.headbar_button_screen": {
+  "transfer_main_error_out_of_space@cube_common.headbar_button_screen": {
     "$title": "storage_migration.transfer_error_out_of_space.title",
     "$back_button_ignored": false,
 
@@ -125,7 +125,7 @@
         "mapping_type": "global"
       }
     ],
-    "$screen_bg_content": "cube_ui_background.progress_blur_bg",
+    "$screen_bg_content": "cube_background.progress_blur_bg",
     "$screen_content": "storage_migration_generic.modal_screen_content"
   },
 

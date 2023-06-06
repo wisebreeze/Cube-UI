@@ -5,7 +5,7 @@
   "blocktype_dropdown_content": {
     "controls": [
       {
-        "command_impulse_mode@cube_ui_common.radio_with_label": {
+        "command_impulse_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_impulse_mode",
           "$radio_text": "commandBlockScreen.blockType.impulse",
@@ -19,7 +19,7 @@
         }
       },
       {
-        "command_chain_mode@cube_ui_common.radio_with_label": {
+        "command_chain_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_chain_mode",
           "$radio_text": "commandBlockScreen.blockType.chain",
@@ -33,7 +33,7 @@
         }
       },
       {
-        "command_repeat_mode@cube_ui_common.radio_with_label": {
+        "command_repeat_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_repeat_mode",
           "$radio_text": "commandBlockScreen.blockType.repeat",
@@ -47,7 +47,7 @@
         }
       },
       {
-        "command_impulse_conditional_mode@cube_ui_common.radio_with_label": {
+        "command_impulse_conditional_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_impulse_mode",
           "$radio_text": "commandBlockScreen.blockType.impulse",
@@ -61,7 +61,7 @@
         }
       },
       {
-        "command_chain_conditional_mode@cube_ui_common.radio_with_label": {
+        "command_chain_conditional_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_chain_mode",
           "$radio_text": "commandBlockScreen.blockType.chain",
@@ -75,7 +75,7 @@
         }
       },
       {
-        "command_repeat_conditional_mode@cube_ui_common.radio_with_label": {
+        "command_repeat_conditional_mode@cube_common.radio_with_label": {
           "size": ["33.3%","100%"],
           "$toggle_state_binding_name": "#command_repeat_mode",
           "$radio_text": "commandBlockScreen.blockType.repeat",
@@ -109,7 +109,7 @@
   "condition_dropdown_content": {
     "controls": [
       {
-        "command_conditional_mode@cube_ui_common.radio_with_label": {
+        "command_conditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_conditional_mode",
           "$radio_text": "commandBlockScreen.condition.conditional",
@@ -123,7 +123,7 @@
         }
       },
       {
-        "command_unconditional_mode@cube_ui_common.radio_with_label": {
+        "command_unconditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_unconditional_mode",
           "$radio_text": "commandBlockScreen.condition.unconditional",
@@ -137,7 +137,7 @@
         }
       },
       {
-        "chain_command_conditional_mode@cube_ui_common.radio_with_label": {
+        "chain_command_conditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_conditional_mode",
           "$radio_text": "commandBlockScreen.condition.conditional",
@@ -151,7 +151,7 @@
         }
       },
       {
-        "chain_command_unconditional_mode@cube_ui_common.radio_with_label": {
+        "chain_command_unconditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_unconditional_mode",
           "$radio_text": "commandBlockScreen.condition.unconditional",
@@ -165,7 +165,7 @@
         }
       },
       {
-        "repeat_command_conditional_mode@cube_ui_common.radio_with_label": {
+        "repeat_command_conditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_conditional_mode",
           "$radio_text": "commandBlockScreen.condition.conditional",
@@ -179,7 +179,7 @@
         }
       },
       {
-        "repeat_command_unconditional_mode@cube_ui_common.radio_with_label": {
+        "repeat_command_unconditional_mode@cube_common.radio_with_label": {
           "size": ["50%","100%"],
           "$toggle_state_binding_name": "#command_unconditional_mode",
           "$radio_text": "commandBlockScreen.condition.unconditional",
@@ -210,13 +210,13 @@
   "redstone_dropdown_content": {
     "controls": [
       {
-        "command_always_on_mode@cube_ui_common.radio_with_label": {
+        "command_always_on_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#command_always_on_mode",
           "$radio_text": "commandBlockScreen.redstone.always_on"
         }
       },
       {
-        "command_needs_redstone_mode@cube_ui_common.radio_with_label": {
+        "command_needs_redstone_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#command_needs_redstone_mode",
           "$radio_text": "commandBlockScreen.redstone.needs_redstone"
         }
@@ -275,6 +275,9 @@
     ]
   },
 
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel1/command_block_commands_panel/offset": {"size":["fill","100%c"]},
+  "right_scroll_panel_content/command_block_commands_panel/centering_panel1/command_block_commands_panel/offset/command_block_commands_text": {"size":["100%",30]},
+
   "left_scroll_panel_content/content_stack_panel/offset2/hover_note_text": {
     "max_length": "$text_box_max_length",
     "enabled_newline": true
@@ -286,8 +289,7 @@
     "alpha": 0.8,
     "size": [ "100%", 20 ],
     "color": "$global_headbar_color",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
     "$title|default": "$container_title",
@@ -421,7 +423,7 @@
     "layer": 21,
     "texture": "cube_ui/textures/common/icons/tab",
     "size": [ 14, 14 ],
-    "color": [0.5,0.5,0.5]
+    "color": [0.7,0.7,0.7]
   },
 
   "tab_back_image": {
@@ -429,7 +431,7 @@
     "layer": 21,
     "texture": "cube_ui/textures/common/icons/tab_back",
     "size": [ 14, 14 ],
-    "color": [0.5,0.5,0.5]
+    "color": [0.7,0.7,0.7]
   },
 
   "headbar_title": {
@@ -440,7 +442,6 @@
     "size": [ "default", 10 ],
     "layer": 21,
     "text": "$title",
-    "font_type": "$global_headbar_title_font",
     "font_scale_factor": 1.1,
     "bindings": [
       {
@@ -530,10 +531,12 @@
   "command_screen_content": {
     "type": "panel",
     "layer": -2,
+    "alpha": 1,
     "size": "$screen_size",
     "$screen_size|default": [ "85%", "90%" ],
     "controls": [
-      {"background@cube_ui_common.container_pocket_background": {}},
+      {"error@cube_common.error": {}},
+      {"background@cube_common.container_pocket_background": {}},
       {"stack_panel@command_main_panel": {}}
     ]
   },
@@ -544,10 +547,10 @@
   "command_block_screen": {
     "$screen_content": "command_block.command_screen_content",
     "$screen_animations": [
-      "@cube_ui_anim.container_screen_exit_animation_push",
-      "@cube_ui_anim.container_screen_exit_animation_pop",
-      "@cube_ui_anim.container_screen_entrance_animation_push",
-      "@cube_ui_anim.container_screen_entrance_animation_pop",
+      "@cube_anim.container_screen_exit_animation_push",
+      "@cube_anim.container_screen_exit_animation_pop",
+      "@cube_anim.container_screen_entrance_animation_push",
+      "@cube_anim.container_screen_entrance_animation_pop",
       "@common.screen_exit_animation_push_fade",
       "@common.screen_exit_animation_pop_fade",
       "@common.screen_entrance_animation_push_fade",

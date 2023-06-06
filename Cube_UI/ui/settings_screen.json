@@ -6,7 +6,7 @@
     "orientation": "vertical",
     "controls": [
       {
-        "egg_1@cube_ui_common.cube_ui_header": {
+        "egg_1@cube_common.cube_ui_header": {
           "$cube_ui_header_text": "§cC§go§2l§bo§5r",
           "bindings": [
             {
@@ -17,7 +17,7 @@
         }
       },
       {
-        "egg_2@cube_ui_common.cube_ui_header": {
+        "egg_2@cube_common.cube_ui_header": {
           "$cube_ui_header_text": "§l§cC§go§2l§bo§5r",
           "bindings": [
             {
@@ -28,11 +28,22 @@
         }
       },
       {
-        "egg_3@cube_ui_common.cube_ui_header": {
+        "egg_3@cube_common.cube_ui_header": {
           "$cube_ui_header_text": "§l§cC§go§2l§bo§5r",
           "bindings": [
             {
               "binding_name": "(#player_name = 'COLOR')",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "codename@cube_common.cube_ui_header": {
+          "$cube_ui_header_text": "$cube_version_codename",
+          "bindings": [
+            {
+              "binding_name": "(#player_name = 'Cube UI')",
               "binding_name_override": "#visible"
             }
           ]
@@ -44,19 +55,19 @@
   "third_person_dropdown_content": {
     "controls": [
       {
-        "1@cube_ui_common.radio_with_label": {
+        "1@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#thirdperson_radio_first",
           "$main_texture": "cube_ui/textures/common/icons/person/first"
         }
       },
       {
-        "2@cube_ui_common.radio_with_label": {
+        "2@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#thirdperson_radio_third_back",
           "$main_texture": "cube_ui/textures/common/icons/person/third_back"
         }
       },
       {
-        "3@cube_ui_common.radio_with_label": {
+        "3@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#thirdperson_radio_third_front",
           "$main_texture": "cube_ui/textures/common/icons/person/third_front"
         }
@@ -74,8 +85,26 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          {"texture@search_box": {"ignored":"$cube_netease","$search_name": "texture_search","$is_pack": "level_texture_pack_button_toggle"}},
-          {"addon@search_box": {"ignored":"$cube_netease","$search_name": "addon_search","$is_pack": "addon_button_toggle"}}
+          {
+            "texture@setting_top.top_panel": {
+              "$selected_state_collection_name": "#selected_pack_items_level",
+              "$available_state_collection_name": "#available_pack_items_level",
+              "$selected_item": "texture_s",
+              "$available_item": "texture_a",
+              "$search_name": "texture_search",
+              "$is_pack": "level_texture_pack_button_toggle"
+            }
+          },
+          {
+            "addon@setting_top.top_panel": {
+              "$selected_state_collection_name": "#selected_pack_items_addon",
+              "$available_state_collection_name": "#available_pack_items_addon",
+              "$selected_item": "addon_s",
+              "$available_item": "addon_a",
+              "$search_name": "addon_search",
+              "$is_pack": "addon_button_toggle"
+            }
+          }
         ]
       }
     ]
@@ -86,26 +115,17 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          {"global@search_box": {"ignored":"$cube_netease","$search_name": "global_search","$is_pack": "global_texture_pack_button_toggle"}}
+          {
+            "global@setting_top.top_panel": {
+              "$selected_state_collection_name": "#selected_pack_items_global",
+              "$available_state_collection_name": "#available_pack_items_global",
+              "$selected_item": "global_s",
+              "$available_item": "global_a",
+              "$search_name": "global_search",
+              "$is_pack": "global_texture_pack_button_toggle"
+            }
+          }
         ]
-      }
-    ]
-  },
-  
-  "search_box@common.text_edit_box": {
-    "size": [ "98%", 20 ],
-    "$text_edit_box_label_size": ["default",16],
-    "max_length": 64,
-    "layer": 10,
-    "focus_wrap_enabled": false,
-    "$text_edit_text_control": "$search_name",
-    "$place_holder_text": "search.item",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "$is_pack",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
       }
     ]
   },
@@ -119,14 +139,14 @@
           {
             "info_background@setting_info_background.profile_panel": {
               "$toggle_group_forced_index": 51,
-              "visible": "((not $cube_netease) and $is_pregame)",
+              "visible": "((not $is_netease) and $is_pregame)",
               "ignored": "(not $include_controls_and_settings_sections)",
               "$tts_section_header": "$general_section_header"
             }
           },
           {
             "default_info_background@setting_info_background.info_background": {
-              "visible": "((not $cube_netease) and (not $is_pregame))",
+              "visible": "((not $is_netease) and (not $is_pregame))",
               "ignored": "(not $include_controls_and_settings_sections)"
             }
           },
@@ -147,7 +167,7 @@
             "info_empty_panel": {
               "type": "panel",
               "size": [ 0, 5 ],
-              "visible": "(not $cube_netease)",
+              "visible": "(not $is_netease)",
               "ignored": "(not $include_controls_and_settings_sections)"
             }
           },
@@ -184,7 +204,7 @@
             { "server_section@world_section.server_section": {} },
             {
               "multiplayer_section@world_section.multiplayer_section": {
-                "ignored": "$cube_netease"
+                "ignored": "$is_netease"
               }
             },
             {
@@ -199,7 +219,7 @@
       {
         "packs_sections": {
           "type": "stack_panel",
-          "visible": "(not $cube_netease)",
+          "visible": "(not $is_netease)",
           "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
           "controls": [
             { "level_texture_pack_section@world_section.level_texture_pack_section": {} },
@@ -241,13 +261,13 @@
             {
               "profile_section@general_section.profile_section": {
                 "visible": false,
-                "ignored": "$cube_netease"
+                "ignored": "$is_netease"
               }
             },
             {
               "global_texture_pack_section@general_section.global_texture_pack_section": {
                 "visible": false,
-                "ignored": "($ignore_global_resources_section and (not $cube_netease))"
+                "ignored": "($ignore_global_resources_section and (not $is_netease))"
               }
             },
             {
@@ -259,13 +279,13 @@
             {
               "creator_section@general_section.creator_section": {
                 "visible": false
-                //"ignored": "$cube_netease"
+                //"ignored": "$is_netease"
               }
             },
             { "video_section@general_section.video_section": { "visible": false } },
             {
               "view_subscriptions_section@general_section.view_subscriptions_section": {
-                "ignored": "($education_edition and (not $cube_netease))",
+                "ignored": "($education_edition and (not $is_netease))",
                 "visible": false
               }
             },
@@ -276,7 +296,7 @@
               }
             },
             { "sound_section@general_section.sound_section": { "visible": false } },
-            { "netease_auxiliary_section@general_section.netease_auxiliary_section": { "ignored": "(not $cube_netease)" } },
+            { "netease_auxiliary_section@general_section.netease_auxiliary_section": { "ignored": "(not $is_netease)" } },
             {
               "language_section@general_section.language_section": {
                 "visible": false

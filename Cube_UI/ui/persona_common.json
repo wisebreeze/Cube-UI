@@ -3,8 +3,5 @@
     "sound_name": "$global_selection_wheel_sound_name",
     "sound_volume": "$global_selection_wheel_sound_volume",
     "sound_pitch": "$global_selection_wheel_sound_pitch"
-  },
-  "emote_wheel_screen_deprecated@common.base_screen": {
-    "gamepad_cursor_deflection_mode":false
   }
 }

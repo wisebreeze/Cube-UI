@@ -1,18 +1,16 @@
 {
   "world_item_text@storage_management.grey_button": {
-    "$background_texture": "textures/ui/white_background"
+    "$background_texture": "textures/ui/White"
   },
 
   "common_main_button/background": {
     "alpha": "$global_button_alpha",
-    "fill": true,
     "color": "$global_button_default_color"
   },
 
   "resource_toggle/item_button_panel/y_sizing_panel/border": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
-    "fill": true,
     "color": "$global_background_color"
   },
 
@@ -235,19 +233,41 @@
           "offset": [0, 2],
           "controls":[
             {
+              "file_storage_dropdown@settings_common.option_dropdown": {
+                "$option_label": "options.filelocation.title",
+                "ignored": "($is_holographic and $is_reality_mode)",
+                "visible": "($storage_location_switch_enabled and not $gear_vr)",
+                "$dropdown_mode": "text_button",
+                "$dropdown_main_controls": "setting_dropdown.file_storage_location",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "file_storage_location",
+                "$option_enabled_binding_name": "#file_storage_location_enabled",
+                "$options_dropdown_toggle_label_binding": "#file_storage_location_toggle_label",
+                "$dropdown_scroll_content_size": [ "100%", "200%" ]
+              }
+            },
+            {
               "multiselect_panel":{
-                "type": "panel",
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": ["100%", 20],
                 "controls":[
                   {
                     "multiselect_button@common_toggles.light_image_toggle": {
-                      "offset": [-1, 0],
                       "$toggle_name": "toggle.enableMultiselect",
                       "$button_content": "storage_management.generic_button",
                       "$button_texture": "textures/ui/multiselection",
                       "$focus_override_right": "FOCUS_OVERRIDE_STOP",
                       "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-                      "size": [ "100%", "100%" ]
+                      "size": [ "fill", "100%" ]
+                    }
+                  },
+                  {"panel@cube_common.h_panel":{}},
+                  {
+                    "clear_cache_button@storage_management.clear_cache_button": {
+                      "size": ["fill","100%"],
+                      "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                      "$focus_override_up": "FOCUS_OVERRIDE_STOP"
                     }
                   }
                 ]

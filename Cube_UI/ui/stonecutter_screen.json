@@ -1,8 +1,5 @@
 {
-  "stonecutter_label": {
-    "text": ""
-  },
-
+  "stonecutter_label": {"text": ""},
   "arrow_icon": {
     "type": "image",
     "texture": "textures/ui/arrow_large",
@@ -13,8 +10,7 @@
     "type": "image",
     "layer": 1,
     "alpha": 0.4,
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_cell_color",
     "bindings": []
   },
@@ -23,8 +19,7 @@
     "type": "image",
     "layer": 1,
     "alpha": 0.4,
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_cell_color",
     "bindings": []
   },
@@ -296,7 +291,7 @@
     "size": [ 146, 166 ],
     "controls": [
       {
-        "background@cube_ui_common.container_common_screen": {
+        "background@cube_common.container_common_screen": {
           "$is_left_panel": true
         }
       },
@@ -333,12 +328,14 @@
   "input_item_slot@common.container_item": {
     "anchor_from": "center",
     "anchor_to": "center",
+    "$background_images": "common.cell_image",
     "$item_collection_name": "stonecutter_input_items"
   },
 
   "result_item_slot@common.container_item": {
     "anchor_from": "center",
     "anchor_to": "center",
+    "$background_images": "common.cell_image",
     "$item_collection_name": "stonecutter_result_items",
     "$button_ref": "stonecutter.result_slot_button",
     "$cell_image_size": [ 26, 26 ],
@@ -434,7 +431,7 @@
     "layer": 1,
     "controls": [
       {
-        "screen@cube_ui_common.container_common_screen": {
+        "screen@cube_common.container_common_screen": {
           "$show_player_renderer": false,
           "$inventory_controls": [
             { "top_half_panel@stonecutter.top_half_panel": {} },
@@ -483,6 +480,7 @@
 
   "stonecutter_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "screen_stack_panel@stonecutter.screen_stack_panel": {} },
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
@@ -501,7 +499,8 @@
   "stonecutter_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
     "button_mappings": "$button_mappings",
-    
+
+    "$list_def_state": true,
     "$container_image": "textures/blocks/stonecutter_side",
     "$title": "container.stonecutter",
     "$two_left_panel": true,

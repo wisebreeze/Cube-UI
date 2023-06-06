@@ -1,1 +1,14 @@
-{"ratings_box":{"color":"$global_divider_color","texture":"textures/ui/white_background","alpha":"$global_divider_alpha"}}
+{
+  "description_toggle_show_button_panel/description_bottom_right_button_border": {"ignored": true},
+  "ratings_box": {
+    "color": "$global_divider_color",
+    "texture": "textures/ui/White",
+    "alpha": "$global_divider_alpha"
+  },
+  "content_section_boarder_bg/bg_and_content/bg": {
+    "alpha":"$global_background_alpha",
+    "color": "$global_background_color",
+    "texture": "textures/ui/White"
+  },
+  "content_section_boarder_bg/bg_and_content/bg/inner": {"alpha":0}
+}

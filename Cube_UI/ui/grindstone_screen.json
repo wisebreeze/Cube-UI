@@ -83,7 +83,8 @@
       {
         "container_item@common.container_item": {
           "anchor_to": "center",
-          "anchor_from": "center"
+          "anchor_from": "center",
+          "$background_images": "common.cell_image"
         }
       }
     ]
@@ -190,6 +191,7 @@
 
   "grindstone_panel": {
     "type": "panel",
+    "alpha": 1,
     "controls": [
       { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
       {
@@ -204,7 +206,7 @@
           "layer": 1,
           "controls": [
             {
-              "screen@cube_ui_common.container_common_screen": {
+              "screen@cube_common.container_common_screen": {
                 "$inventory_controls": [
                   { "top_half_panel@grindstone.top_half_panel": {} },
                   { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
@@ -223,7 +225,7 @@
 
   "grindstone_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
-    "$title": "container.repairAndDisenchant",
+    "$title": "tile.grindstone.name",
     "$container_image": "textures/items/experience_bottle",
     "$right_panel": "grindstone_pocket.grindstone_contents_panel",
     "variables": [

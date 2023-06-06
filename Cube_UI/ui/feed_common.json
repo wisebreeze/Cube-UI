@@ -1,1 +1,1 @@
-{"popup_dialog_bg":{"fill":true,"alpha":"$global_background_alpha","texture":"textures/ui/white_background","color":"$global_background_color"},"white_banner":{"fill":true,"alpha":"$global_background_alpha","color":"$global_background_color","texture":"textures/ui/white_background"}}
+{"popup_dialog_bg":{"alpha":"$global_background_alpha","texture":"textures/ui/White","color":"$global_background_color"},"white_banner":{"alpha":"$global_background_alpha","color":"$global_background_color","texture":"textures/ui/White"}}
