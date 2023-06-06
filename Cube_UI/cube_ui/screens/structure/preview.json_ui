@@ -108,7 +108,7 @@
           "$text": "structure_block.corner.text.1.title"
         }
       },
-      { "padding_1@cube_ui_common.v_panel": {} },
+      { "padding_1@cube_common.v_panel": {} },
       {
         "paragraph_2_corner@how_to_play_common.paragraph": {
           "$text": "structure_block.corner.text.2.paragraph"

@@ -559,7 +559,7 @@
     ]
   },
   
-  "structure_screen@cube_ui_common.headbar_screen": {
+  "structure_screen@cube_common.headbar_screen": {
     "$main_screen": "structure_screen.structure_screen_content",
     "$title": "structure_block.title"
   }

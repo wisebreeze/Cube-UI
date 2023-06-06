@@ -468,17 +468,16 @@
   
   "scrolling_panel_wrapper": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_selector_area_background_color",
     "alpha": "$global_selector_area_background_alpha",
-    "fill": true,
     "layer": 2,
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.set_entrance_push",
-      "@cube_ui_anim.set_entrance_pop",
-      "@cube_ui_anim.set_exit_push",
-      "@cube_ui_anim.set_exit_pop"
+      "@cube_anim.set_entrance_push",
+      "@cube_anim.set_entrance_pop",
+      "@cube_anim.set_exit_push",
+      "@cube_anim.set_exit_pop"
     ],
     "$anim_offset": [ 0, 2 ],
     "offset": [ 0, 2 ],
