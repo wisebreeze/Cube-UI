@@ -1,0 +1,61 @@
+{
+  "namespace": "start_play_button",
+  
+  "play_button@common.button": {
+    "$focus_id": "play_focus",
+    "$focus_override_left": "set_focus",
+    "$pressed_button_name": "$play_button_target",
+    "size": [ 80, 20 ],
+    "$button_tts_header": "menu.play",
+    "$offset": [ 0, 22 ],
+    "offset": [ 0, 22 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "tts_index": 1,
+    "animation_reset_name": "screen_animation_reset",
+    "anims": [
+      "@cube_anim.start_play_exit_animation_push",
+      "@cube_anim.start_play_exit_animation_pop",
+      "@cube_anim.start_play_entrance_animation_push",
+      "@cube_anim.start_play_entrance_animation_pop"
+    ],
+    "controls": [
+      {"default@image":{}},
+      {
+        "hover@image": {
+          "color": "$global_button_hover_color",
+          "$button_text_color": "$global_button_text_hover_color"
+        }
+      },
+      {
+        "pressed@image": {
+          "color": "$global_button_pressed_color",
+          "$button_text_color": "$global_button_text_pressed_color"
+        }
+      }
+    ]
+  },
+  
+  "image": {
+    "type": "image",
+    "size": ["100%",20],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "alpha": 0.8,
+    "color": "$global_button_default_color",
+    "texture": "cube_ui/textures/start/play",
+    "$button_text_color|default": "$global_button_text_default_color",
+    "controls": [
+      {
+        "button_text": {
+          "type": "label",
+          "layer": 2,
+          "font_type": "smooth",
+          "font_scale_factor": 1.1,
+          "color": "$button_text_color",
+          "text": "menu.play"
+        }
+      }
+    ]
+  }
+}

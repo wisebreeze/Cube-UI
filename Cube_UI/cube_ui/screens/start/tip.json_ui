@@ -11,19 +11,19 @@
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "cube_ui_common.default_toggle_control",
+        "source_control_name": "cube_common.default_toggle_control",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }
     ],
     "controls": [
-      {"marketplace_disabled@marketplace_disabled": {}}
+      //{"marketplace_disabled@marketplace_disabled": {}}
     ]
   },
   
   "marketplace_disabled@tip_common": {
     "$content_name": "marketplace_disabled",
-    "$tip_title": "disconnectionScreen.noInternet",
+    "$tip_title": "store.connection.failed.body",
     "$tip_icon": "textures/ui/WarningGlyph",
     "$tip_visible_name": "#marketplace_disabled"
   },
@@ -64,12 +64,11 @@
 
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.tip_entrance"
+      "@cube_anim.tip_entrance"
     ],
 
     "type": "image",
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "size": ["100%","100%"],
     "color": "$global_start_tip_background_color",
     "alpha": "$global_start_tip_background_alpha",

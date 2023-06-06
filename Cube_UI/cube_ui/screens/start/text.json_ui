@@ -9,7 +9,7 @@
     "offset": [ -2, 0 ],
     "font_type": "OldSmoothFont",
     "text": "('Cube UI: ' + $cube_version_prefix + $cube_main_version)",
-    "color": "$start_bottom_text_color",
+    "color": [ 1, 1, 1 ],
     "size": [ "default", 10 ]
   },
   
@@ -39,7 +39,7 @@
   },
   
   "partition_text@bottom_text_common": {
-    "color": "$start_partition_color",
+    "color": [ 0.8, 0.8, 0.8 ],
     "text": " | "
   },
 
@@ -51,7 +51,7 @@
     "type": "label",
     "layer": 3,
     "size": [ "default", 10 ],
-    "color": "$start_bottom_text_color",
+    "color": [ 1, 1, 1 ],
     "max_size": [ "100%", "100%" ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
@@ -64,10 +64,10 @@
     "size": [ "100%", 10 ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "1@cube_ui_anim.start_text_entrance_push",
-      "2@cube_ui_anim.start_text_entrance_pop",
-      "3@cube_ui_anim.start_text_exit_push",
-      "4@cube_ui_anim.start_text_exit_pop"
+      "1@cube_anim.start_text_entrance_push",
+      "2@cube_anim.start_text_entrance_pop",
+      "3@cube_anim.start_text_exit_push",
+      "4@cube_anim.start_text_exit_pop"
     ]
   },
   
@@ -78,15 +78,15 @@
     "anchor_to": "bottom_right",
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "1@cube_ui_anim.start_text_entrance_push",
-      "2@cube_ui_anim.start_text_entrance_pop",
-      "3@cube_ui_anim.start_text_exit_push",
-      "4@cube_ui_anim.start_text_exit_pop"
+      "1@cube_anim.start_text_entrance_push",
+      "2@cube_anim.start_text_entrance_pop",
+      "3@cube_anim.start_text_exit_push",
+      "4@cube_anim.start_text_exit_pop"
     ],
     "bindings": [
       {
         "binding_type": "view",
-        "source_control_name": "cube_ui_common.default_toggle_control",
+        "source_control_name": "cube_common.default_toggle_control",
         "source_property_name": "#toggle_state",
         "target_property_name": "#visible"
       }

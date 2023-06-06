@@ -7,8 +7,7 @@
     "$button_name": "button.menu_settings",
     "$button_tts_header": "menu.settings",
     "$toggle_text": "menu.settings",
-    "$toggle_left_image": "cube_ui/textures/start/setting_icon",
-    "sound_name": "lodestone_compass.link_compass_to_lodestone"
+    "$toggle_left_image": "cube_ui/textures/start/setting_icon"
   },
   
   "about_button@start_button_panel.start_button": {
@@ -18,8 +17,7 @@
     "$button_name": "button.menu_buy_game",
     "$button_tts_header": "about.ui_pack",
     "$toggle_text": "about.ui_pack",
-    "$toggle_left_image": "cube_ui/textures/start/about_icon",
-    "sound_name": "item.book.page_turn"
+    "$toggle_left_image": "cube_ui/textures/start/about_icon"
   },
   
   "achievements_button@start_button_panel.start_button": {
@@ -29,8 +27,7 @@
     "$button_name": "button.menu_achievements",
     "$button_tts_header": "menu.achievements",
     "$toggle_text": "menu.achievements",
-    "$toggle_left_image": "cube_ui/textures/start/achievement_icon",
-    "sound_name": "random.potion.brewed"
+    "$toggle_left_image": "cube_ui/textures/start/achievement_icon"
   },
   
   "store_button@start_button_panel.start_button": {
@@ -40,8 +37,7 @@
     "$button_name": "button.menu_store",
     "$button_tts_header": "menu.store",
     "$toggle_text": "menu.store",
-    "$toggle_left_image": "cube_ui/textures/start/store_icon",
-    "sound_name": "mob.wanderingtrader.idle"
+    "$toggle_left_image": "cube_ui/textures/start/store_icon"
   },
   
   "dressroom_button@start_button_panel.start_button": {
@@ -51,8 +47,7 @@
     "$button_name": "button.to_profile_screen",
     "$button_tts_header": "profileScreen.header",
     "$toggle_text": "profileScreen.header",
-    "$toggle_left_image": "cube_ui/textures/start/dress_icon",
-    "sound_name": "armor.equip_iron"
+    "$toggle_left_image": "cube_ui/textures/start/dress_icon"
   },
   
   "invite_button@start_button_panel.start_button": {
@@ -63,8 +58,7 @@
     "$button_name": "button.menu_invite_notification",
     "$button_tts_header": "realmsInvitationScreen.shareTitle",
     "$toggle_text": "realmsInvitationScreen.shareTitle",
-    "$toggle_left_image": "cube_ui/textures/start/invite_icon",
-    "sound_name": "portal.trigger"
+    "$toggle_left_image": "cube_ui/textures/start/invite_icon"
   },
   
   "feedback_button@start_button_panel.start_button": {
@@ -74,8 +68,7 @@
     "property_bag": {"#hyperlink": "https://aka.ms/minecraftfb"},
     "$button_tts_header": "options.group.feedback",
     "$toggle_text": "options.group.feedback",
-    "$toggle_left_image": "cube_ui/textures/start/feedback_icon",
-    "sound_name": "mob.villager.idle"
+    "$toggle_left_image": "cube_ui/textures/start/feedback_icon"
   },
   
   "start_button@common.button": {
@@ -84,18 +77,17 @@
     "size": [ "100%", 20 ],
     "sound_volume": 0.8,
     "controls": [
-      {"default@cube_ui_common.sidebar_tab_base": {}},
-      {"hover@cube_ui_common.sidebar_tab_hover_base": {"$checked":true}},
-      {"pressed@cube_ui_common.sidebar_tab_hover_base": {"$checked":true}}
+      {"default@cube_common.sidebar_tab_base": {}},
+      {"hover@cube_common.sidebar_tab_hover_base": {"$checked":true}},
+      {"pressed@cube_common.sidebar_tab_hover_base": {"$checked":true}}
     ]
   },
   
   "common_start_button": {
     "type": "image",
     "layer": 2,
-    "fill": true,
     "size": [ "100%", "100%" ],
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$button_color",
     "alpha": "$global_button_alpha",
     "controls": [
