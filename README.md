@@ -17,21 +17,13 @@ Cube UI是一个MinecraftBE UI，他能让繁琐的界面变得简洁，而且�
 (建议使用.png .jpg格式)
 
 
-**问：能不能教我制作一个UI?**
-<br>你可以参考[我的UI文档（可点击）](https://shimo.im/docs/m8AZVO7xNaCnxmAb/)来制作您的UI
-
-
 **问：如何设置UI部分控件?**
 <br>在资源包内，依次点击**ui/\_global\_variables.json**
 <br>请根据文件内提示进行修改
 
 
-**问：可以推荐和分享UI包给我的朋友吗?**
-<br>可以，你可以给你的朋友Cube UI
-
-
 **问：Minecraft1.16.100版本后，部分UI屏幕没有效果?**
-<br>目前UI已经全覆盖，建议使用旧版本体验全覆盖（部分原版UI可能被原版概念UI所以没有效果）
+<br>目前UI已经全覆盖，建议使用旧版本体验全覆盖（部分原版UI可能被Ore UI覆盖所以没有效果）
 
 
 **问：如何反馈Bug?**
