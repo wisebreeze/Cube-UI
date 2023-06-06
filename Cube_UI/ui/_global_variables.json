@@ -1,133 +1,134 @@
 {
-//////////////////////////////////
-// 这是全局变量(设置UI)文件，你可以在这修改变量
-// 
+/* 中文 / Chinese */
+// 这是 Cube UI 全局变量文件。
+// 你可以在这修改变量以配置 Cube UI 功能。
+// 请不要删除此文件，否则会导致无法进入游戏！
+//
 // 修改须知：
-//   修改路径(路径以资源包为根目录，文件名不需要带后缀)
-//     根目录含文件夹
-//     "文件名"
-//     文件包含文件夹
-//     "文件夹名/文件名"
-//   修改布尔值
-//     真的(开启) true
-//     假的(关闭) false
-//   修改大小
-//     [ a, b ]
-//     a为x轴大小
-//     b为y轴大小
-//     ab两个分别可以填"百分比","纯数字","百分比 + 纯数字px","百分比 - 纯数字px",
-//   修改颜色
-//     [ 1, 0.5, 0.999 ]
-//     1 - 红色的成分
-//     0.5 - 绿色的成分
-//     0.999 - 蓝色的成分
-//     数字最好不要超过1.0
-//   修改数值
-//     "$xxx": 9
-//     9 - 纯数字，不能添加小数点
-//  修改后，千万不要忘记检查json格式！
-////////////////////////////////
+//  1. 必须检查json格式是否正确！
+//  2. 不要删除任何一个变量！
+//  3. 不要删除注释 (即 "//")
 
-  // UI界面 //
-     // 背景
-       /* 普通 */"$default_bg": "cube_ui/textures/background/main",
-       /* 黑暗 */"$dark_bg": "cube_ui/textures/background/dark_main",
-       /* 普通模糊 */"$default_blur_bg": "cube_ui/textures/background/blur",
-       /* 黑暗模糊 */"$dark_blur_bg": "cube_ui/textures/background/dark_blur",
+/* 英文 / English */
+// This is the Cube UI global variable file.
+// You can modify the variables here to configure the Cube UI function.
+// Please do not delete this file, otherwise you will not be able to enter the game!
+//
+// Modification notice:
+//  1. Must check if the json format is correct!
+//  2. Don't delete any variables!
+//  3. Do not delete comments (eg "//")
 
-     // 预设默认大小(不要更改)
-     "$fill_size": [ "100%", "100%" ],
-     
-     // 全局字体
+  // UI界面 / Global //
+     // 全局字体 / 列举 | Global font [List]
+     // 默认 - "default"
+     // 平滑 - "smooth"
      "$global_main_font": "smooth",
 
-     // 输入框字数限制
+     // 输入框字数限制 / 数字 | Text box word limit [number]
      "$text_box_max_length": 999999,
 
-     // 快速抢箱
-     "$quick_pvp": false,
+     // 始终自动放置 / 布尔值 | Always auto place [bool]
+     "$always_auto_place": false,
 
-     // 移动物品渲染显示
+     // 隐藏 HUD 提示 / Hide HUD tip [bool]
+     "$hide_hud_tip": true,
+
+     // 启用百分比 / 布尔值 | Enabled percentage [bool]
+     "$enabled_percentage": true,
+
+     // 移动物品渲染显示 / 布尔值 | Flying item rendering display [bool]
      "$show_flying_item_renderer": true,
 
-     // 启用指南/帮助
+     // 启用容器帮助 / 布尔值 | Enable container help [bool]
      "$enabled_help": true,
 
-     // 酿造指南显示药水效果图片(启用指南/帮助时有效)
+     // 增强酿造指南 (需启用容器帮助) / 布尔值 | Enhanced brewing guide (Container Help Required) [bool]
      "$brewing_effect_icon": false,
 
-  // 开始界面 //
-     // 底部文字颜色
-     "$start_bottom_text_color": [ 1.0, 1.0, 1.0 ],
-     // 底部文字分隔颜色
-     "$start_partition_color": [ 0.8, 0.8, 0.8 ],
+     // 去除推广 / 布尔值 | remove promotion [bool]
+     "$remove_romotion": false,
 
-  // 关于 UI界面 //
-     // 文字颜色
-       // 没有扩展包文字
-        "$no_subpack_text_color": [ 1.0, 0.333, 0.333 ],
+  // 暂停屏幕 / Pause screen //
+     // 启用保存并退出提示 / 布尔值 | Enable quit tip [bool]
+     "$enable_quit_tip": true,
 
-  // 设置界面 //
-    // 隐藏旧世界选项
+  // 关于 UI 屏幕 / About UI screen //
+     // 【开发者选项】 无扩展文字 / 颜色 | [Developer] No extended text [color]
+      "$no_subpack_text_color": [ 1.0, 0.333, 0.333 ],
+
+  // 设置屏幕 / Setting screen //
+    // 隐藏旧世界选项 / 布尔值 | Hide old world options [bool]
     "$old_world_ignored": false,
 
-  // 容器与交易界面 //
-    // 玩家受到伤害时是否自动关闭界面
+    // 启用旁观者模式选项 / 布尔值 | enable spectator options [bool]
+    "$spectator_enable": true,
+
+  // 容器与交易屏幕 / Containers and Trading screen //
+    // 受伤时自动关闭容器屏幕 / 布尔值 | Auto close container screen [bool]
     "$ui_close_on_player_hurt": true,
 
-    // 玩家受到伤害时是否自动关闭书与羽毛界面
+    // 受伤时自动关闭书与羽毛屏幕 / 布尔值 | Auto close book with feather screen [bool]
     "$book_close_on_player_hurt": true,
  
-  // 告示牌编辑界面 //
-    // 玩家受到伤害时是否自动关闭界面
+    // 总是解锁未交易选项 / 布尔值 | Always unlock trade option [bool]
+    "$always_unlock_trade_option": false,
+ 
+  // 告示牌编辑屏幕 / Sign screen //
+    // 受伤时自动退出告示牌编辑 / 布尔值 | Auto close sign Edit screen [bool]
     "$sign_close_on_player_hurt": true,
  
-  // 聊天界面 //
-    // 玩家受到伤害时是否自动关闭界面
+  // 聊天屏幕 / Chat screen //
+    // 受伤时自动关闭聊天屏幕 / 布尔值 | Auto close chat screen [bool]
     "$chat_close_on_player_hurt": false,
 
-    // 启用换行输入
+    // 启用换行输入 / 布尔值 | Enable newline input [bool]
     "$use_multiline_input": false,
 
-    // 增强命令显示
+    // 增强命令显示 / 布尔值 | Enhanced command display [bool]
     "$show_more_command": true,
 
-    // 是否使用全局字体
-    // (启用后，会忽视聊天设置的字体)
+    // 【开发者选项】 是否使用全局字体 / 布尔值 | [Developer] Use global fonts [bool]
+    // (启用后，会忽视聊天设置的字体) | (When enabled, the font of chat settings will be ignored)
     "$chat_use_global_main_font": false,
 
-  // 药水效果界面 //
-    // 玩家受到伤害时是否自动关闭界面
+  // 药水效果屏幕 / Effect screen //
+    // 受伤时是否自动关闭药水效果屏幕 / 布尔值 | Auto close effect screen [bool]
     "$effect_close_on_player_hurt": true,
 
-  // HUD界面 //
-    // 物品背景显示
+  // HUD屏幕 / HUD screen //
+    // 物品背景显示 / 布尔值 | Item background display [bool]
     "$show_hud_text_background": true,
-    // 物品背景
+    // 【开发者选项】 物品背景 / 路径 | [Developer] Item background [path]
     "$hud_text_background": "textures/ui/hud_tip_text_background",
 
-    // 显示侧边记分板分数
+    // 显示侧边记分板分数 / 布尔值 | Show scoreboard scores [bool]
     "$show_sidebar_score": true,
 
-    // 隐藏Hud时，始终显示准心
+    // 隐藏Hud时，始终显示准心 / 布尔值 | Always show crosshair [bool]
     "$always_show_cross_hair": false,
-    // 隐藏Hud时，始终显示快捷栏
+    // 隐藏Hud时，始终显示快捷栏 / 布尔值 | Always show shortcut bar [bool]
     "$always_visible_hotbar": false,
-    // 启用快捷栏选定改变颜色动画
+    // 启用快捷栏选定改变颜色动画 / 布尔值 | Enable hotbar selection change color animation [bool]
     "$hotbar_selected_anim": false,
 
-    // 聊天栏大小
+    // 【开发者选项】 聊天栏大小 / 大小 | [Developer] Chat bar size [size]
     "$hud_chat_size": [ "100%", "100%c" ],
-    // 聊天栏最大大小
+    // 【开发者选项】 聊天栏最大大小 / 大小 | [Developer] Chat bar max size [size]
     "$hud_chat_max_size": [ "100%", "50%" ],
 
-    // 专注模式和菜单启用
-    "$focus_on_enable": true,
-    // 启用隐藏hud
+    // 专注模式和菜单启用 / 布尔值 | Focus mode and menu enable [bool]
+    "$focus_on_enable": false,
+    // 启用隐藏hud / 布尔值 | Enable hidden hud [bool]
     "$hide_hud_enable": true,
 ////////////////////
-// 以下本文禁止修改
+// ! 以下本文禁止修改
+// ! Modifications to the following articles are prohibited
 ////////////////////
+
+  // 中国版适配 //
+  // netease compatibility //
+  "$is_netease": false,
 
   // 香草主题适配 //
   // 嵌套按钮
@@ -146,14 +147,18 @@
   "$dressing_room_panel_alpha": 0,
 
   // Cube 主题变量 //
-  // 基本信息
+  // Cube theme variables //
+
+  // 基本信息 / information
   "$cube_theme_name": "default theme",
   "$cube_theme_description": "none",
   "$cube_theme_author": "MC_spruce",
   "$cube_theme_prefix_version": "V",
   "$cube_theme_main_version": "1.0",
   "$cube_theme_support_version": "2.0",
-  // 背景
+  // 背景 / background
+  "$default_bg": "textures/ui/panorama_overlay",
+  "$default_blur_bg": "textures/ui/panorama_blur",
   "$global_background_color": [1,1,1],
   "$global_background_alpha": 0.4,
   
@@ -168,10 +173,9 @@
   
   "$global_selector_area_background_color": [1,1,1],
   "$global_selector_area_background_alpha": 0.2,
-  // 文字
+  // 文字 / text
   "$global_text_color": [0,0,0],
-  // 按钮
-  "$global_button_fill": true,
+  // 按钮 / button
   "$global_button_alpha": 0.4,
 
   "$global_button_default_color": [1,1,1],
@@ -186,10 +190,11 @@
   "$global_button_sound_pitch": 1.0,
 
   "$global_button_text_font": "smooth",
-  "$global_button_text_default_color": [0.4,0.4,0.4],
+  "$global_button_text_default_color": [0.15,0.15,0.15],
   "$global_button_text_hover_color": [1,1,1],
   "$global_button_text_pressed_color": [1,1,1],
-  // 开关
+  "$global_button_text_locked_color": [1,1,1],
+  // 开关 / toggle
   "$global_toggle_on_texture": "cube_ui/textures/toggle/toggle_on",
   "$global_toggle_on_hover_texture": "cube_ui/textures/toggle/toggle_on_hover",
   "$global_toggle_off_texture": "cube_ui/textures/toggle/toggle_off",
@@ -205,24 +210,32 @@
   "$global_toggle_unchecked_default_color": [0.9,0.9,0.9],
   "$global_toggle_unchecked_hover_color": [0.2289,0.4096,0.8265],
   "$global_toggle_locked_color": [1,0.1875,0.1875],
+  "$global_setting_toggle_checked_default_color": [1,1,1],
+  "$global_setting_toggle_checked_hover_color": [0.1686,0.5664,0.9765],
+  "$global_setting_toggle_unchecked_default_color": [0.9,0.9,0.9],
+  "$global_setting_toggle_unchecked_hover_color": [0.2289,0.4096,0.8265],
+  "$global_setting_toggle_locked_color": [1,0.1875,0.1875],
+  "$global_setting_toggle_circle_default_color": [0.8,0.8,0.8],
+  "$global_setting_toggle_circle_hover_color": [1,1,1],
 
   "$global_toggle_sound_name": "random.click",
   "$global_toggle_sound_volume": 1.0,
   "$global_toggle_sound_pitch": 1.0,
 
   "$global_toggle_alpha": 0.4,
+  "$global_setting_toggle_alpha": 1,
   "$global_toggle_locked_alpha": 0.4,
 
   "$global_toggle_text_font": "smooth",
-  "$global_toggle_text_unchecked_color": [0.4,0.4,0.4],
-  "$global_toggle_text_checked_color": [0.55,0.55,0.55],
-  "$global_toggle_text_unchecked_hover_color": [0.85,0.85,0.85],
+  "$global_toggle_text_unchecked_color": [0.15,0.15,0.15],
+  "$global_toggle_text_checked_color": [0.15,0.15,0.15],
+  "$global_toggle_text_unchecked_hover_color": [1,1,1],
   "$global_toggle_text_checked_hover_color": [1,1,1],
-  // 选项卡
+  // 选项卡 / tab
   "$global_tab_hover_color": [0.1686,0.5664,0.9765],
   "$global_tab_checked_color": [1,1,1],
   "$global_tab_checked_hover_color": [0.6,0.6,0.6],
-  // 滑块
+  // 滑块 / slider
   "$global_slider_background_color": [1,1,1],
   "$global_slider_background_hover_color": [0.1686,0.5664,0.9765],
   "$global_slider_background_alpha": 0.4,
@@ -245,30 +258,33 @@
   "$global_slider_step_hover_color": [0.1686,0.5664,0.9765],
   "$global_slider_step_progress_default_color": [1,1,1],
   "$global_slider_step_progress_hover_color": [0.1686,0.5664,0.9765],
-  "$global_slider_step_alpha": 0.4,
-  // 顶栏
+  "$global_slider_step_alpha": 0.8,
+  // 顶栏 / headbar
   "$global_headbar_color": [1,1,1],
   "$global_headbar_alpha": 0.8,
   "$global_headbar_title_font": "smooth",
-  "$global_headbar_title_color": [0.5,0.5,0.5],
-  // 分段栏
+  "$global_headbar_title_color": [0,0,0],
+  // 分段栏 / header
   "$global_header_alpha": 0.4,
   "$global_header_color": [1,1,1],
   "$global_header_label_color": [1,1,1],
   "$global_header_label_font": "smooth",
-  // 输入框
-  "$global_text_box_font": "smooth",
+  // 输入框 / text box
+  "$global_text_box_font": "default",
   "$global_text_box_alpha": 0.4,
   "$global_text_box_default_color": [1,1,1],
   "$global_text_box_hover_color": [0.1686,0.5664,0.9765],
-  // 物品格子
+  "$text_box_text_color": [1,1,1],
+  "$text_box_locked_text_color": [1,1,1],
+  "$place_holder_text_color": [0.851,0.851,0.851],
+  // 物品格子 / cell
   "$global_cell_alpha": 0.4,
-  "$global_cell_color": [1,1,1],
+  "$global_cell_color": [0.3,0.3,0.3],
   "$global_cell_selected_color": [0.1686,0.5664,0.9765],
   "$global_cell_red_color": [1,0.1875,0.1875],
-  // 滚动面板
+  // 滚动面板 / scroll box
   "$global_scroll_box_color": [1,1,1],
-  // 经验
+  // 经验 / experience
   "$global_experience_bar_empty_color": [1,1,1],
   "$global_experience_bar_empty_alpha": 0.6,
   "$global_experience_bar_full_color": [0.1686,0.5664,0.9765],
@@ -276,14 +292,14 @@
   "$global_experience_bar_number_color": [0.333,1,1],
   "$global_experience_bar_number_border_color": [0.2941,0.5921,1],
   "$global_experience_bar_number_font": "smooth",
-  // 下拉面板
+  // 下拉面板 / dropdown
   "$global_dropdown_background_color": [0.6,0.6,0.6],
   "$global_dropdown_background_alpha": 0.55,
   
   "$global_dropdown_sound_name": "random.click",
   "$global_dropdown_sound_volume": 1.0,
   "$global_dropdown_sound_pitch": 1.0,
-  // 单选项
+  // 单选项 / radio
   "$global_radio_background_alpha": 0.4,
   "$global_radio_background_selected_color": [1,1,1],
   "$global_radio_background_hover_color": [0.1686,0.5664,0.9765],
@@ -298,7 +314,7 @@
   "$global_radio_sound_name": "random.click",
   "$global_radio_sound_volume": 1.0,
   "$global_radio_sound_pitch": 1.0,
-  // 多选项
+  // 多选项 / checkbox
   "$global_checkbox_on_texture": "cube_ui/textures/checkbox/checkbox_on",
   "$global_checkbox_on_locked_texture": "cube_ui/textures/checkbox/checkbox_on_locked",
   "$global_checkbox_on_hover_texture": "cube_ui/textures/checkbox/checkbox_on_hover",
@@ -309,54 +325,66 @@
   "$global_checkbox_sound_name": "random.click",
   "$global_checkbox_sound_volume": 1.0,
   "$global_checkbox_sound_pitch": 1.0,
-  // 侧边选项卡
+  // 侧边选项卡 / sidebar navigation
   "$global_sidebar_navigation_default_color": [1,1,1],
   "$global_sidebar_navigation_hover_color": [0.1686,0.5664,0.9765],
   "$global_sidebar_navigation_alpha": 0.4,
   "$global_sidebar_navigation_bg_color": [1,1,1],
-  // 开始界面提示
+  // 开始界面提示 / tip
   "$global_start_tip_background_color": [1,1,1],
   "$global_start_tip_background_alpha": 0.4,
   "$global_start_tip_title_color": [1,1,1],
   "$global_start_tip_title_font": "smooth",
-  // 下划线
-  "$global_underline_color": [1,1,1],
-  "$global_underline_alpha": 0.4,
-  // 分割线
-  "$global_divider_color": [1,1,1],
-  "$global_divider_alpha": 0.4,
-  // 提示
+
   "$global_tooltip_background_color": [1,1,1],
   "$global_tooltip_background_alpha": 0.4,
   "$global_tooltip_chevron_color": [1,1,1],
   "$global_tooltip_chevron_alpha": 0.4,
-  // 弹出窗口
+  // 下划线 / underline
+  "$global_underline_color": [1,1,1],
+  "$global_underline_alpha": 0.4,
+  // 分割线 / divider
+  "$global_divider_color": [1,1,1],
+  "$global_divider_alpha": 0.4,
+  // 弹出窗口 / dialog
   "$global_dialog_background_color": [0.85,0.85,0.85],
-  "$global_dialog_background_alpha": 0.8,
+  "$global_dialog_background_alpha": 0.4,
   "$global_dialog_headbar_color": [1,1,1],
-  "$global_dialog_headbar_alpha": 1,
-  // 弹出提示
+  "$global_dialog_headbar_alpha": 0.8,
+  // 弹出提示 / toast
   "$global_toast_background_color": [1,1,1],
   "$global_toast_background_alpha": 0.4,
-  // 侧边栏
+  // 侧边栏 / sidebar
   "$global_sidebar_focus_left_color": [0.1686,0.5664,0.9765],
   "$global_sidebar_focus_right_color": [0.1686,0.5664,0.9765],
   "$global_sidebar_focus_alpha": 1,
-  // 记分板
+  // 记分板 / scoreboard
   "$global_scoreboard_player_score_font": "smooth",
   "$global_scoreboard_player_name_color": [ 1, 1, 1 ],
   "$global_scoreboard_objective_title_color": [ 1, 1, 1 ],
   "$global_scoreboard_player_score_color": [ 0.2, 0.6, 1.0 ],
   "$global_scoreboard_player_list_score_color": [ 1, 1, 1 ],
   "$global_scoreboard_player_list_rank_color": [ 1, 1, 1 ],
+  // 选项 / selection_wheel
+  "$global_selection_wheel_sound_name": "random.click",
+  "$global_selection_wheel_sound_volume": 1.0,
+  "$global_selection_wheel_sound_pitch": 1.0,
+  // 其他 / other
+  "$cube_bar_color": [1,1,1],
+  "$cube_bar_hover_color": [0.4705,0.7372,1],
+  "$cube_bar_alpha": 1,
+  "$store_author_text_color": [1,1,1],
+
+  // 预设默认大小 //
+  "$fill_size": [ "100%", "100%" ],
 
   // UI 信息 //
+  // UI information //
   "$cube_UI_enabled": true,//Cube UI是否启用
   "$cube_dev": false,//Cube UI开发者
-  "$cube_netease": false,//Cube UI中国版
   "$cube_ui_dark_mode|default": false,//Cube UI深色外观
-  "$cube_patch_version": "1.5",//补丁版本
-  "$cube_main_version": "2.4.0",//版本
+  "$cube_patch_version": "1192",//补丁版本
+  "$cube_main_version": "2.13.3",//版本
   "$cube_version_prefix": "V",//版本前缀
   "$cube_access_channel": "klpbbs",//获取渠道
   "$cube_author": "MC_spruce"//作者
