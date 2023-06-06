@@ -1,0 +1,118 @@
+{
+  "namespace": "hud_top",
+  // 暂停屏幕
+  "top_pause_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "ignored": "(not $focus_on_enable)",
+    "controls": [
+      {"focus_pause_toggle@hud_top.focus_pause_toggle":{}},
+      {"close_toggle@hud_top.focus_pause_close_toggle":{}}
+    ]
+  },
+
+  "focus_on_icon": {
+    "type": "image",
+    "offset": [0,-3],
+    "texture": "cube_ui/textures/common/icons/focus_on_icon"
+  },
+
+  "focus_pause_toggle@common.toggle": {
+    "size": [ 20, 20 ],
+    "layer": 2,
+    "offset": [-84,2],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "sound_volume": 0,
+    "$toggle_name": "focus_pause",
+    "$radio_toggle_group": true,
+    "$toggle_group_forced_index": 1,
+    "$toggle_default_state": false,
+    "$unchecked_control": "hud_top.focus_on_icon",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "hud_top.focus_on_icon",
+    "$checked_hover_control": "common.empty_panel"
+  },
+
+  "focus_pause_close_toggle@hud_top.focus_pause_toggle": {
+    "offset": ["-25% - 2px","22.5% + 2px"],
+    "$toggle_default_state": true,
+    "$toggle_group_forced_index": 0,
+    "$unchecked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel"
+  },
+  // Hud屏幕
+  "top_hud_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "layer": 114514,
+    "ignored": "(not $focus_on_enable)",
+    "controls": [
+      {"open@hud_top.focus_open_button":{}}
+    ]
+  },
+
+  "focus_open_button@common.button": {
+    "size": "@cube_anim.open_focus_btn_anim",
+    "animation_reset_name": "button.close_focus",
+    "offset": [-84,2],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "prevent_touch_input": true,
+    "$pressed_button_name": "button.open_focus"
+  },
+
+  "focus_close_button@common.button": {
+    "size": ["100%y","100%"],
+    "$pressed_button_name": "button.close_focus",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global",
+        "input_mode_condition": "gamepad_and_not_gaze"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "global",
+        "input_mode_condition": "not_gamepad"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$pressed_button_name",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {"default@close":{}},
+      {"hover@close":{"color":"$global_button_hover_color"}},
+      {"pressed@close":{}}
+    ]
+  },
+
+  // icon
+  "close": {
+    "type": "image",
+    "size": ["100%","100%"],
+    "texture": "textures/ui/White",
+    "alpha": "$global_button_alpha",
+    "color": "$global_button_default_color",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "layer": 1,
+    "controls": [
+      {
+        "x": {
+          "type": "image",
+          "texture": "textures/ui/close_button_default_light",
+          "size": ["80%","80%"],
+          "color": "$title_text_color",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 2
+        }
+      }
+    ]
+  }
+}

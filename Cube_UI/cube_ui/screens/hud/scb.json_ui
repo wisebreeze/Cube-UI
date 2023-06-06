@@ -1,0 +1,66 @@
+{
+  "namespace": "hud_scb",
+  
+  "top_player": {
+    "type": "label",
+    "layer": 2,
+    "text": "#player_name_sidebar",
+    "size": [ "default", 10 ],
+    "color": "$global_scoreboard_player_name_color",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      }
+    ]
+  },
+
+  "top": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "size": ["100%c + 4px",14],
+    "controls": [
+      {"tp@top_player":{}}
+    ]
+  },
+
+  "top_panel": {
+    "type": "stack_panel",
+    "size": ["100%c",14],
+    "controls": [
+      {"main@top":{}},
+      {"panel":{"type": "panel","size": [2,0]}}
+    ]
+  },
+
+  "top_scores": {
+    "type": "stack_panel",
+    "size": [ "100%c", 14 ],
+    "offset": [ 0, "8%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "orientation": "horizontal",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "hud_scb.top_panel"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      },
+      {
+        "binding_name": "#objective_sidebar_name",
+        "binding_type": "global"
+      },
+      {
+        "source_property_name": "(#objective_sidebar_name = $scores_api_name)",
+        "target_property_name": "#visible",
+        "binding_type": "view"
+      }
+    ]
+  }
+}

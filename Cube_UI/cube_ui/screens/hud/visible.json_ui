@@ -1,5 +1,57 @@
 {
   "namespace": "hud_visible",
+// hide button
+  "hide_hud_button@common_buttons.light_content_button": {
+    "visible": "($hide_hud_enable and (not ($game_pad or $mouse)))",
+    "size": [ 16, 16 ],
+    "offset": [2,0],
+    "anchor_from": "right_middle",
+    "anchor_to": "left_middle",
+    "default_focus_precedence": 16,
+    "focus_enabled": false,
+    "$button_image_size": ["100%","100%"],
+    "$button_type_panel": "hud_visible.hide_image",
+    "$hide_btn_binding_name|default": "#hotbar_elipses_right_visible",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.hide_gui_all",
+        "mapping_type": "pressed"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "$hide_btn_binding_name",
+        "binding_type": "global",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  "hide_image":{"type":"image","size":[14,14],"texture":"cube_ui/textures/common/icons/hide_hud_icon","controls":[{"tip@hud_visible.hide_tip":{}}]},
+// hide tip
+  "hide_tip": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "size": ["100%c + 4px","100%c + 4px"],
+    "offset": [0,"-114%"],
+    "alpha": "@hud_visible.hide_anim_3",
+    "propagate_alpha": true,
+    "disable_anim_fast_forward": false,
+    "animation_reset_name": "button.hide_gui_all",
+    "anchor_from": "$tip_anchor",
+    "anchor_to": "$tip_anchor",
+    "$tip_anchor|default": "top_left",
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "hide_hud.db.tip",
+          "font_type": "$global_main_font"
+        }
+      }
+    ]
+  },
+// has hide tip
   "visible_panel": {
     "type": "panel",
     "size": ["50%",25],
@@ -23,30 +75,51 @@
   "button@common.button": {
     "$pressed_button_name": "button.hide_gui_all",
     "size": [ "100%", "100%" ],
-    "sound_volume": 0.1
+    "sound_volume": 0
   },
   
   "board_ana_text": {
     "type": "image",
+    "ignored": "(not $touch)",
+    "visible": "$hide_hud_tip",
     "texture": "cube_ui/textures/common/focus_border",
     "size": ["100%","100%"],
-    "alpha": "@hud_visible.hide_anim_1",
+    "animation_reset_name": "button.hide_gui_all",
+    "alpha": "@hud_visible.hide_anim_0",
     "propagate_alpha": true,
+    "disable_anim_fast_forward": true,
+    "controls": [{"text@actionbar": {}}]
+  },
+ 
+  "actionbar": {
+    "type": "image",
+    "texture": "textures/ui/hud_tip_text_background",
+    "size": ["100%c + 4px","100%c + 4px"],
     "controls": [
       {
         "text": {
           "type": "label",
-          "text": "hide_hud.tip"
+          "text": "hide_hud.tip",
+          "font_type": "$global_main_font"
         }
       }
     ]
+  },
+ 
+  "hide_anim_0": {
+    "anim_type": "alpha",
+    "from": 0,
+    "to": 1,
+    "duration": 0.5,
+    "easing": "linear",
+    "reset_event": "button.hide_gui_all",
+    "next": "@hud_visible.hide_anim_1"
   },
   
   "hide_anim_1": {
     "anim_type": "wait",
     "duration": 5.5,
-    "next": "@hud_visible.hide_anim_2",
-    "play_event": "button.hide"
+    "next": "@hud_visible.hide_anim_2"
   },
   
   "hide_anim_2": {
@@ -54,7 +127,30 @@
     "from": 1,
     "to": 0,
     "duration": 1.5,
+    "easing": "linear"
+  },
+
+  "hide_anim_3": {
+    "anim_type": "alpha",
+    "from": 0,
+    "to": 1,
+    "duration": 0.5,
     "easing": "linear",
-    "destroy_at_end": "board_ana_text"
+    "play_event": "button.hide",
+    "next": "@hud_visible.hide_anim_4"
+  },
+  
+  "hide_anim_4": {
+    "anim_type": "wait",
+    "duration": 2.5,
+    "next": "@hud_visible.hide_anim_5"
+  },
+  
+  "hide_anim_5": {
+    "anim_type": "alpha",
+    "from": 1,
+    "to": 0,
+    "duration": 1.5,
+    "easing": "linear"
   }
 }

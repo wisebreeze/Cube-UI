@@ -1,0 +1,77 @@
+{
+  "namespace": "hud_durability",
+
+  "low_durability_panel": {
+    "type": "stack_panel",
+    "size": [ "100%c", "100%cm" ],
+    "offset": [ 0, "8%+16px" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "collection_name": "hotbar_items",
+    "controls": [
+      {"1@low_durability_tip":{"collection_index": 0}},
+      {"2@low_durability_tip":{"collection_index": 1}},
+      {"3@low_durability_tip":{"collection_index": 2}},
+      {"4@low_durability_tip":{"collection_index": 3}},
+      {"5@low_durability_tip":{"collection_index": 4}},
+      {"6@low_durability_tip":{"collection_index": 5}},
+      {"7@low_durability_tip":{"collection_index": 6}},
+      {"8@low_durability_tip":{"collection_index": 7}},
+      {"9@low_durability_tip":{"collection_index": 8}}
+    ]
+  },
+  "low_durability_tip": {
+    "type": "panel",
+    "size": ["100%c","100%c"],
+    "bindings": [
+      {
+        "binding_name": "#slot_selected",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [
+      {"main@main":{}}
+    ]
+  },
+
+  "main": {
+    "type": "panel",
+    "size": ["100%c","100%c"],
+    "bindings": [
+      {
+        "binding_name": "(not (#item_durability_total_amount = 0))",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [{"dtp@dtp":{}}]
+  },
+
+  "dtp": {
+    "type": "image",
+    "size": ["100%c+8px","100%c+4px"],
+    "layer": 1,
+    "texture": "textures/ui/hud_tip_text_background",
+    "bindings": [
+      {
+        "binding_name": "(#item_durability_current_amount < 24)",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "hotbar_items"
+      }
+    ],
+    "controls": [
+      {
+        "dt": {
+          "type": "label",
+          "text": "low_durability.tip",
+          "layer": 2,
+          "color": "$c_color_format"
+        }
+      }
+    ]
+  }
+}

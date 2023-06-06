@@ -1,28 +1,27 @@
+// 专注面板 Made by MC_spruce
 {
   "namespace": "hud_focus",
-  
+
   "addon_scroll_panel@hud_focus.scroll_common": {
     "$scrolling_content": "hud_focus.addon_panel",
     "$tab_bindings": "addon_tab_toggle"
   },
   "addon_panel@hud_focus.tab_content_panel": {
     "controls": [
-      {"top_title@head_title": {"$title": "accessibility.worldTemplates.help"}},
-      /*{
-        "hide_all_hud@hide_all_hud_button": {}
-      },*/
+      {"top_title@head_title": {"$title": "hud.focus_menu.tab1"}},
       {
-        "hide_doll@hide_doll_button": {}
-      },
-      {"divider@cube_ui_common.divider": {"size": ["100%","100%c + 10px"]}},
-      {
-        "compass@compass_toggle": {}
+        "tp1@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.compass_toggle",
+          "$togge_2": "hud_focus.clock_toggle",
+          "$togge_3": "hud_focus.recovery_compass_toggle"
+        }
       },
       {
-        "clock@clock_toggle": {}
-      },
-      {
-        "recovery_compass@recovery_compass_toggle": {}
+        "tp2@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.switch_toggle",
+          "$togge_2": "hud_focus.light_toggle",
+          "$togge_3": "hud_focus.focus_empty"
+        }
       }
     ]
   },
@@ -33,24 +32,27 @@
   },
   "notice_panel@hud_focus.tab_content_panel": {
     "controls": [
-      {"top_title@head_title": {"$title": "hud.focus_menu.tab_2"}},
+      {"top_title@head_title": {"$title": "hud.focus_menu.tab2"}},
       {
-        "chat@chat_toggle": {}
+        "tp1@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.chat_toggle",
+          "$togge_2": "hud_focus.title_toggle",
+          "$togge_3": "hud_focus.subtitle_toggle"
+        }
       },
       {
-        "title@title_toggle": {}
+        "tp2@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.actionbar_toggle",
+          "$togge_2": "hud_focus.note_toggle",
+          "$togge_3": "hud_focus.item_name_toggle"
+        }
       },
       {
-        "subtitle@subtitle_toggle": {}
-      },
-      {
-        "actionbar@actionbar_toggle": {}
-      },
-      {
-        "note@note_toggle": {}
-      },
-      {
-        "item_name@item_name_toggle": {}
+        "tp3@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.scb_toggle",
+          "$togge_2": "hud_focus.focus_empty",
+          "$togge_3": "hud_focus.focus_empty"
+        }
       }
     ]
   },
@@ -61,21 +63,20 @@
   },
   "other_panel@hud_focus.tab_content_panel": {
     "controls": [
-      {"top_title@head_title": {"$title": "hud.focus_menu.tab_3"}},
+      {"top_title@head_title": {"$title": "hud.focus_menu.tab3"}},
       {
-        "scb@scb_toggle": {}
+        "tp1@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.player_position_toggle",
+          "$togge_2": "hud_focus.effect_toggle",
+          "$togge_3": "hud_focus.boss_toggle"
+        }
       },
       {
-        "player_position@player_position_toggle": {}
-      },
-      {
-        "effect@effect_toggle": {}
-      },
-      {
-        "boss@boss_toggle": {}
-      },
-      {
-        "switch@switch_toggle": {}
+        "tp2@focus_toggle_v_panel":{
+          "$togge_1": "hud_focus.paper_doll_toggle",
+          "$togge_2": "hud_focus.focus_empty",
+          "$togge_3": "hud_focus.focus_empty"
+        }
       }
     ]
   },
@@ -101,7 +102,7 @@
       }
     ]
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+//* header title
   "head_title": {
     "type": "stack_panel",
     "size": ["100%-4px","100%c"],
@@ -114,226 +115,303 @@
           "font_size": "large"
         }
       },
-      {"divider@cube_ui_common.divider": {"$divider_size|default": ["100%",1]}}
+      {"divider@cube_common.divider": {"$divider_size|default": ["100%",1]}}
     ]
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-  "hide_all_hud_button@button_common": {
-    "$pressed_button_name": "button.hide_gui_all",
-    "$icon": "cube_ui/textures/common/icons/hide_hud_icon",
-    "$title": "hud.btn.hide_all"
-  },
-  
-  "hide_doll_button@button_common": {
-    "$pressed_button_name": "button.hide_paperdoll_hud",
-    "$icon": "textures/ui/sidebar_icons/dressing_room_animation",
-    "$title": "hud.btn.hide_doll"
-  },
-  
-  "scb_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "scb_toggle",
-    "$state_name": "$scb_state"
-  },
-  
-  "scb_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.scb_toggle_control",
-    "$icon": "textures/items/sign",
-    "$title": "hud.toggle.scb"
-  },
-  
-  "item_name_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "item_name_toggle",
-    "$state_name": "$item_name_state"
-  },
-  
-  "item_name_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.item_name_toggle_control",
-    "$icon": "textures/items/name_tag",
-    "$title": "hud.toggle.item_name"
-  },
-  
-  "effect_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "effect_toggle",
-    "$state_name": "$effect_state"
-  },
-  
-  "effect_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.effect_toggle_control",
-    "$icon": "textures/items/potion_bottle_absorption",
-    "$title": "hud.toggle.effect"
-  },
-  
-  "switch_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "switch_toggle",
-    "$state_name": "$switch_state"
-  },
-  
-  "switch_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.switch_toggle_control",
-    "$icon": "textures/ui/arrow_right",
-    "$title": "hud.switch"
-  },
-  
-  "boss_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "boss_toggle",
-    "$state_name": "$boss_state"
-  },
-  
-  "boss_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.boss_toggle_control",
-    "$icon": "textures/items/dragon_fireball",
-    "$title": "hud.boss"
-  },
-  
-  "chat_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "chat_toggle",
-    "$state_name": "$chat_state"
-  },
-  
-  "chat_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.chat_toggle_control",
-    "$icon": "textures/ui/mute_off",
-    "$title": "hud.chat"
-  },
-  
-  "note_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "note_toggle",
-    "$state_name": "$note_state"
-  },
-  
-  "note_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.note_toggle_control",
-    "$icon": "textures/blocks/noteblock",
-    "$title": "hud.note"
-  },
-  
-  "actionbar_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "actionbar_toggle",
-    "$state_name": "$actionbar_state"
-  },
-  
-  "actionbar_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.actionbar_toggle_control",
-    "$icon": "cube_ui/textures/common/icons/title_icon",
-    "$title": "hud.hide.actionbar"
-  },
-  
-  "title_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "title_toggle",
-    "$state_name": "$title_state"
-  },
-  
-  "title_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.title_toggle_control",
-    "$icon": "cube_ui/textures/common/icons/title_icon",
-    "$title": "hud.hide.title"
-  },
-  
-  "subtitle_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "subtitle_toggle",
-    "$state_name": "$subtitle_state"
-  },
-  
-  "subtitle_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.subtitle_toggle_control",
-    "$icon": "cube_ui/textures/common/icons/title_icon",
-    "$title": "hud.hide.subtitle"
-  },
-  
-  "player_position_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "player_position_toggle",
+//* other toggle
+  "player_position_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "player_position_toggle",
+    "$icon": "cube_ui/textures/common/icons/position_icon",
+    "$title": "hud.hide.player_position",
+    "$focus_id": "position",
+    "$focus_override_down": "paper_doll",
+    "$focus_override_right": "effect",
     "$state_name": "$position_state"
   },
-  
-  "player_position_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.player_position_toggle_control",
-    "$icon": "cube_ui/textures/common/icons/position_icon",
-    "$title": "hud.hide.player_position"
+
+  "effect_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "effect_toggle",
+    "$icon": "textures/items/potion_bottle_absorption",
+    "$title": "hud.toggle.effect",
+    "$focus_id": "effect",
+    "$focus_override_left": "position",
+    "$focus_override_right": "boss",
+    "$state_name": "$effect_state"
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-  "compass_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "compass_toggle",
+
+  "boss_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "boss_toggle",
+    "$icon": "textures/items/dragon_fireball",
+    "$title": "hud.boss",
+    "$focus_id": "boss",
+    "$focus_override_left": "effect",
+    "$state_name": "$boss_state"
+  },
+
+  "paper_doll_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "2d_paper_doll_toggle",
+    "$icon": "textures/ui/dressing_room_animation",
+    "$title": "hud.focus_menu.set.2d_paper",
+    "$focus_id": "paper_doll",
+    "$focus_override_up": "position",
+    "$state_name": "$paper_doll_state",
+    "$toggle_enabled_binding_type": "global",
+    "$toggle_enabled_binding_name": "#paper_doll_visible"
+  },
+//* notice toggle toggle
+  "chat_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "chat_toggle",
+    "$icon": "textures/ui/mute_off",
+    "$title": "hud.chat",
+    "$focus_id": "chat",
+    "$focus_override_down": "actionbar",
+    "$focus_override_right": "title",
+    "$state_name": "$chat_state"
+  },
+
+  "title_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "title_toggle",
+    "$icon": "cube_ui/textures/common/icons/title_icon",
+    "$title": "hud.hide.title",
+    "$focus_id": "title",
+    "$focus_override_down": "note",
+    "$focus_override_left": "chat",
+    "$focus_override_right": "subtitle",
+    "$state_name": "$title_state"
+  },
+
+  "subtitle_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "subtitle_toggle",
+    "$icon": "cube_ui/textures/common/icons/title_icon",
+    "$title": "hud.hide.subtitle",
+    "$focus_id": "subtitle",
+    "$focus_override_down": "item_name",
+    "$focus_override_left": "title",
+    "$state_name": "$subtitle_state"
+  },
+
+  "actionbar_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "actionbar_toggle",
+    "$icon": "cube_ui/textures/common/icons/title_icon",
+    "$title": "hud.hide.actionbar",
+    "$focus_id": "actionbar",
+    "$focus_override_up": "chat",
+    "$focus_override_down": "scb",
+    "$focus_override_right": "note",
+    "$state_name": "$actionbar_state"
+  },
+
+  "note_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "note_toggle",
+    "$icon": "textures/blocks/noteblock",
+    "$title": "hud.note",
+    "$focus_id": "note",
+    "$focus_override_up": "title",
+    "$focus_override_left": "actionbar",
+    "$focus_override_right": "item_name",
+    "$state_name": "$note_state"
+  },
+
+  "item_name_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "item_name_toggle",
+    "$icon": "textures/items/name_tag",
+    "$title": "hud.toggle.item_name",
+    "$focus_id": "item_name",
+    "$focus_override_up": "subtitle",
+    "$focus_override_left": "note",
+    "$state_name": "$item_name_state"
+  },
+
+  "scb_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "scb_toggle",
+    "$icon": "textures/items/sign_birch",
+    "$title": "hud.toggle.scb",
+    "$focus_id": "scb",
+    "$focus_override_up": "actionbar",
+    "$state_name": "$scb_state"
+  },
+//* addon toggle
+  "compass_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "compass_toggle",
+    "$icon": "textures/items/compass_item",
+    "$title": "item.compass.name",
+    "$focus_id": "compass",
+    "$focus_override_right": "clock",
+    "$focus_override_down": "switch",
     "$state_name": "$compass_state"
   },
 
-  "compass_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.compass_toggle_control",
-    "$icon": "textures/items/compass_item",
-    "$title": "item.compass.name"
-  },
-
-  "clock_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "clock_toggle",
+  "clock_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "clock_toggle",
+    "$icon": "textures/items/clock_item",
+    "$title": "item.clock.name",
+    "$focus_id": "clock",
+    "$focus_override_left": "compass",
+    "$focus_override_right": "recovery",
+    "$focus_override_down": "light",
     "$state_name": "$clock_state"
   },
 
-  "clock_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.clock_toggle_control",
-    "$icon": "textures/items/clock_item",
-    "$title": "item.clock.name"
-  },
-
-  "recovery_compass_toggle_control@hud_focus.toggle_common": {
-    "$toggle_name": "recovery_compass_toggle",
-    "$state_name": "$recovery_compass_state"
-  },
-
-  "recovery_compass_toggle@cube_ui_common.toggle": {
-    "$control_name": "hud_focus.recovery_compass_toggle_control",
+  "recovery_compass_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "recovery_compass_toggle",
     "$icon": "textures/items/recovery_compass_item",
-    "$title": "item.recovery_compass.name"
+    "$title": "hud.focus_menu.rc",
+    "$focus_id": "recovery",
+    "$focus_override_left": "clock",
+    "$state_name": "$recovery_compass_state",
+    "$enabled": "(not $is_netease)",
+    "$has_setting": true
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-  "toggle_common@cube_ui_common.toggle_control": {
+
+  "switch_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "switch_toggle",
+    "$icon": "textures/ui/arrow_right",
+    "$title": "hud.switch",
+    "$focus_id": "switch",
+    "$focus_override_up": "compass",
+    "$focus_override_right": "light",
+    "$state_name": "$switch_state"
+  },
+
+  "light_toggle@hud_focus.focus_toggle_common": {
+    "$toggle_binding_view": "light_toggle",
+    "$icon": "cube_ui/textures/focus/light",
+    "$title": "hud.focus_menu.light",
+    "$focus_id": "light",
+    "$focus_override_left": "switch",
+    "$focus_override_up": "clock",
+    "$state_name": "$light_state"
+  },
+//* focus common
+  "toggle_common@cube_common.toggle_control": {
     "$toggle_size": [ "100%", 20 ],
     "$show_option_label": false,
     "$toggle_default_state": "$state_name",
     "$option_binding_name": "('#' + $toggle_name)",
-    "$unchecked_control": "cube_ui_common.hide_toggle_off",
-    "$checked_control": "cube_ui_common.hide_toggle_on",
-    "$unchecked_hover_control": "cube_ui_common.hide_toggle_off_hover",
-    "$checked_hover_control": "cube_ui_common.hide_toggle_on_hover"
+    "$unchecked_control": "cube_common.hide_toggle_off",
+    "$checked_control": "cube_common.hide_toggle_on",
+    "$unchecked_hover_control": "cube_common.hide_toggle_off_hover",
+    "$checked_hover_control": "cube_common.hide_toggle_on_hover"
   },
-  
-  "button_common@common.button": {
-    "size": [ "100%", 22 ],
-    "layer": 2,
+
+  "focus_toggle_v_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%","100%c"],
     "controls": [
-      {"default@hide_button": {}},
-      {"hover@hide_button_hover": {}},
-      {"pressed@hide_button": {}}
+      {"p1@cube_common.v_panel":{}},
+      {"h@hud_focus.focus_toggle_h_panel":{}},
+      {"p2@cube_common.v_panel":{}}
     ]
   },
-  
-  "hide_button@cube_ui_common.hide_common": {
-    "$toggle_controls": "hud_focus.right_arrow",
-    "$status_text": "§r",
-    "$bg_color": "$global_button_default_color"
+
+  "focus_toggle_h_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%","100%cm"],
+    "controls": [
+      {"p1@cube_common.h_panel":{}},
+      {"t1@$togge_1":{}},
+      {"p2@cube_common.h_panel":{}},
+      {"t2@$togge_2":{}},
+      {"p3@cube_common.h_panel":{}},
+      {"t3@$togge_3":{}},
+      {"p4@cube_common.h_panel":{}}
+    ]
   },
-  
-  "hide_button_hover@cube_ui_common.hide_common": {
-    "$toggle_controls": "hud_focus.right_arrow",
-    "$status_text": "§r",
-    "$bg_color": "$global_button_hover_color"
+
+  "focus_empty": {
+    "type": "panel",
+    "size": ["fill",0]
   },
-  
-  "right_arrow": {
+
+  "focus_toggle_common": {
+    "type": "panel",
+    "size": ["fill","100%x"],
+    "$enabled|default": true,
+    "$toggle_binding_view|default": "none",
+    "controls": [
+      {
+        "$toggle_binding_view@common.toggle": {
+          "enabled": "$enabled",
+          "toggle_default_state": "$state_name",
+          "$unchecked_control": "hud_focus.toggle_uncheck_style",
+          "$checked_control": "hud_focus.toggle_check_style",
+          "$unchecked_hover_control": "hud_focus.toggle_uncheck_hov_style",
+          "$checked_hover_control": "hud_focus.toggle_check_hov_style",
+          "$unchecked_locked_control": "hud_focus.toggle_uncheck_locked_style",
+          "$checked_locked_control": "hud_focus.toggle_check_locked_style",
+          "$unchecked_locked_hover_control": "hud_focus.toggle_uncheck_locked_style",
+          "$checked_locked_hover_control": "hud_focus.toggle_check_locked_style"
+        }
+      }
+    ]
+  },
+
+  "toggle_uncheck_style@hud_focus.toggle_style": {"$t_color":"$global_toggle_unchecked_default_color"},
+  "toggle_check_style@hud_focus.toggle_style": {"$is_check":true,"$t_color":"$global_toggle_checked_default_color"},
+  "toggle_uncheck_hov_style@hud_focus.toggle_style": {"$is_hover":true,"$t_color":"$global_toggle_unchecked_hover_color"},
+  "toggle_check_hov_style@hud_focus.toggle_style": {"$is_check":true,"$is_hover":true,"$t_color":"$global_toggle_checked_hover_color"},
+  "toggle_uncheck_locked_style@hud_focus.toggle_style": {"$t_color":"$global_toggle_locked_color"},
+  "toggle_check_locked_style@hud_focus.toggle_style": {"$is_check":true,"$t_color":"$global_toggle_locked_color"},
+
+  "toggle_style": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "$is_hover|default": false,
+    "$is_check|default": false,
+    "$title|default": "none",
+    "controls": [
+      {"bg@cube_common.white": {"alpha":"$global_toggle_alpha","color":"$t_color"}},
+      {"board@cube_common.cube_img": {"$img":"common/focus_border","visible":"$is_hover","color":"$t_color"}},
+      {"check@cube_common.white": {"anchor_from":"bottom_middle","anchor_to":"bottom_middle","layer":5,"visible":"$is_check","offset":[0,-1],"size":["30%",1]}},
+      {"content@hud_focus.image_and_text_content":{}}
+    ]
+  },
+
+  "image_and_text_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%","75%"],
+    "controls": [
+      {"image@image_content": {"size": ["100%","100% - 12px"]}},
+      {"fill": {"type":"panel","size":["100%","fill"]}},
+      {"text@text_content": {"size": ["100%","default"]}}
+    ]
+  },
+
+  "image_content": {
     "type": "image",
-    "size": [16,16],
-    "texture": "textures/ui/arrow_right"
+    "texture": "$icon",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "75%", "75%" ],
+    "layer": 4
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+  
+  "text_content": {
+    "type": "label",
+    "text": "$title",
+    "text_alignment": "center",
+    "font_type": "$global_toggle_text_font",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "80%", "default" ],
+    "layer": 3
+  },
+
+//* left toggle
   "toggle_icon": {
     "type": "image",
     "size": [16,16],
     "texture": "$toggle_icon"
   },
-//✎▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+
   "other_toggle@left_tab": {
     "$group_name": "other_tab_toggle",
     "$focus_id": "ot",
-    "$focus_override_up": "at",
-    "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_left": "at",
+    "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$toggle_group_forced_index": 2,
     "$toggle_icon": "cube_ui/textures/focus/other"
   },
@@ -341,8 +419,8 @@
   "addon_toggle@left_tab": {
     "$group_name": "addon_tab_toggle",
     "$focus_id": "at",
-    "$focus_override_up": "nt",
-    "$focus_override_down": "ot",
+    "$focus_override_left": "nt",
+    "$focus_override_right": "ot",
     "$toggle_group_forced_index": 1,
     "$toggle_icon": "cube_ui/textures/focus/addon"
   },
@@ -350,162 +428,171 @@
   "notice_toggle@left_tab": {
     "$group_name": "notice_tab_toggle",
     "$focus_id": "nt",
-    "$focus_override_up": "ct",
-    "$focus_override_down": "at",
+    "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+    "$focus_override_right": "at",
     "$toggle_group_forced_index": 0,
     "$toggle_icon": "cube_ui/textures/focus/notice"
   },
-  
-  "close_toggle@left_tab": {
-    "$group_name": "focus_toggle",
-    "$toggle_name": "focus_on_toggle",
-    "$focus_id": "ct",
-    "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-    "$focus_override_down": "nt",
-    "$toggle_group_forced_index": 0,
-    "$toggle_icon": "textures/ui/close_button_default_light",
-    "$toggle_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_select",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.menu_ok",
-        "mapping_type": "focused"
-      },
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_select",
-        "mapping_type": "global"
-      }
-    ]
-  },
-  
-/*  "button_toggle@left_tab": {
-    "$toggle_group_forced_index": 0,
-    "$focus_id": "bt",
-    "$focus_override_up": "ot",
-    "$focus_override_down": "nt",
-    "$tab_view_binding_name": "button_tab_toggle",
-    "$tab_icon": "hud.focus_menu.tab_1"
-  },*/
-  
-  "left_tab@cube_ui_common.group_toggle": {
+
+  "left_tab@cube_common.group_toggle": {
     "$radio_toggle_group": true,
-    "$toggle_size": [ "100%", "100%x" ],
+    "$toggle_size": [ "100%y", "100%" ],
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": 0,
     "$left_tab": false,
+    "layer": 2,
     "$tab_icon": "hud_focus.toggle_icon",
-    "$unchecked_control": "cube_inventory.tab_bg",
-    "$checked_control": "cube_inventory.tab_bg",
-    "$unchecked_hover_control": "cube_inventory.tab_bg",
-    "$checked_hover_control": "cube_inventory.tab_bg"
+    "$unchecked_control": "hud_focus.tab_bg",
+    "$checked_control": "hud_focus.tab_checked_bg",
+    "$unchecked_hover_control": "hud_focus.tab_unchecked_hover_bg",
+    "$checked_hover_control": "hud_focus.tab_checked_hover_bg"
   },
-////////////////////////
-  "personalization_stack_panel": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "anchor_to": "top_left",
-    "anchor_from": "top_left",
-    "size": [ "100%", "100%c" ],
-    "controls": [
-      {"panel@cube_ui_common.h_panel": {}},
-      {
-        "main@hud_focus.personalization_panel": {
-          "anchor_to": "top_left",
-          "anchor_from": "top_left"
-        }
-      },
-      {"panel_1@cube_ui_common.h_panel": {}}
-    ]
-  },
-  
-  "personalization_screen_panel": {
-    "type": "stack_panel",
-    "orientation": "vertical",
-    "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "headbar@cube_ui_common.headbar": {
-          "$title": "hud.personalization.title",
-          "$back_button_ignored": true
-        }
-      },
-      {"padding@tabbed_upsell.padding_vertical": {}},
-      {
-        "scrolling_panel@common.scrolling_panel": {
-          "size": [ "100%", "fill" ],
-          "$scrolling_content": "hud_focus.personalization_stack_panel",
-          "$show_background": false,
-          "$scroll_size": [ "3px", "100% - 4px" ],
-          "layer": 3
-        }
-      },
-      {"padding_2@tabbed_upsell.padding_vertical": {}}
-    ]
-  },
-//////////////////////////
-  "personalization_panel_bg": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
+
+  "tab_checked_bg@tab_bg": {"$checked":true},
+  "tab_checked_hover_bg@tab_bg": {"$hover":true,"$checked":true},
+  "tab_unchecked_hover_bg@tab_bg": {"$hover":true},
+  "tab_bg": {
+    "type": "panel",
     "size": ["100%","100%"],
-    "layer": 3,
+    "$checked|default": false,
+    "$hover|default": false,
     "controls": [
       {
-        "left_content": {
+        "focus": {
           "type": "image",
-          "texture": "textures/ui/white_background",
-          "color": "$global_background_color",
-          "alpha": 0.25,
-          "fill": true,
-          "size": [ "90%", "100%" ],
-          "layer": 4,
-          "controls": [
-            {
-              "panel": {
-                "type": "panel",
-                "size": ["100% - 4px", "100% - 4px"],
-                "controls": [
-                  {"notice_panel@notice_scroll_panel": {}},
-                  {"addon_panel@addon_scroll_panel": {}},
-                  {"other_panel@other_scroll_panel": {}}
-                ]
-              }
-            }
-          ]
+          "texture": "textures/ui/White",
+          "size": ["100%",1],
+          "ignored": "(not $hover)",
+          "color": "$global_toggle_checked_hover_color",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 1
         }
       },
-      {"panel@cube_ui_common.h_panel":{}},
       {
-        "right_content": {
+        "bg": {
           "type": "image",
-          "texture": "textures/ui/white_background",
-          "color": "$global_background_color",
-          "alpha": 0.25,
-          "fill": true,
-          "size": [ "fill", "100%" ],
-          "layer": 4,
+          "texture": "textures/ui/White",
+          "size": ["100%","100%"],
+          "ignored": "(not $checked)",
+          "color": "$global_toggle_checked_default_color",
+          "alpha": "$global_toggle_alpha"
+        }
+      },
+      {"icon@$tab_icon":{}}
+    ]
+  },
+
+//* main
+  "left_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {"bg@bg":{}},
+      {
+        "panel": {
+          "type": "input_panel",
+          "size": ["100% - 4px", "100% - 4px"],
+          "focus_container": true,
+          "use_last_focus": false,
+          "ttsSectionContainer": true,
+          "focus_nagivation_mode_right": "contained",
+          "focus_nagivation_mode_down": "contained",
           "controls": [
-            {
-              "stack_panel": {
-                "type": "stack_panel",
-                "orientation": "vertical",
-                "size": ["100% - 4px", "100% - 4px"],
-                "controls": [
-                  {"close@close_toggle": {}},
-                  {"divider@cube_ui_common.divider": {"$divider_size":["100%",1]}},
-                  {"notice_toggle@notice_toggle": {}},
-                  {"addon_toggle@addon_toggle": {}},
-                  {"other_toggle@other_toggle": {}}
-                ]
-              }
-            }
+            {"notice_panel@notice_scroll_panel": {}},
+            {"addon_panel@addon_scroll_panel": {}},
+            {"other_panel@other_scroll_panel": {}}
           ]
         }
       }
     ]
+  },
+
+  "bottom_content": {
+    "type": "input_panel",
+    "prevent_touch_input": true,
+    "size": [ "100%", "fill" ],
+    "controls": [
+      {"left_content@left_content":{}}
+    ]
+  },
+
+  "top_content": {
+    "type": "input_panel",
+    "prevent_touch_input": true,
+    "size": [ "100%", "20%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {"bg@bg":{}},
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100% - 4px", "100% - 4px"],
+          "focus_container": true,
+          "use_last_focus": false,
+          "ttsSectionContainer": true,
+          "focus_nagivation_mode_down": "contained",
+          "controls": [
+            {"notice_toggle@notice_toggle": {}},
+            {"addon_toggle@addon_toggle": {}},
+            {"other_toggle@other_toggle": {}},
+            {"panel":{"type":"panel","size":["fill",0]}},
+            {"close@hud_top.focus_close_button":{}}
+          ]
+        }
+      }
+    ]
+  },
+
+  "bg": {
+    "type": "image",
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": 0.25,
+    "size": ["100%","100%"],
+    "layer": -1
+  },
+
+  "focus_panel_bg": {
+    "type": "stack_panel",
+    "size": "@cube_anim.open_focus_anim",
+    "alpha": "@cube_anim.open_focus_alpha_anim",
+    "propagate_alpha": true,
+    "animation_reset_name": "button.close_focus",
+    "layer": 114,
+    "controls": [
+      {"top@hud_focus.top_content": {}},
+      {"panel@cube_common.v_panel":{}},
+      {"bottom@hud_focus.bottom_content": {}}
+    ],
+    // addon
+    "$compass_state": true,
+    "$clock_state": true,
+    "$recovery_compass_state": false,
+    "$switch_state": true,
+    "$hand_state": true,
+    "$light_state": false,
+    "$mini_map_state": false,
+    // notice
+    "$chat_state": true,
+    "$title_state": true,
+    "$subtitle_state": true,
+    "$actionbar_state": true,
+    "$note_state": true,
+    "$item_name_state": true,
+    "$scb_state": true,
+    "$dt_state": true,
+    // other
+    "$position_state": true,
+    "$effect_state": true,
+    "$boss_state": true,
+    "$paper_doll_state": false,
+    "$touch_circle_state": true,
+    "$crosshair_state": true,
+    "$vignette_state": true
   }
 }
