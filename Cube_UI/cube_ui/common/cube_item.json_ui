@@ -1,0 +1,162 @@
+// Cube UI 由 MC_spruce 制作
+// 这个是 Cube UI 的 物品文件
+{
+  "namespace": "cube_item",
+  "button_panel": {
+    "type": "panel",
+    "$toggle_source|default": "default_exchange_toggle",
+    "bindings": [
+      {
+        "ignored": "(not $use_auto_item)",
+        "binding_type": "view",
+        "source_control_name": "$toggle_source",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "item_button_ref": {
+    "type": "panel",
+    "layer": 5,
+    "$use_auto_item|default": false,
+    "controls": [
+      {
+        "default@button_panel": {
+          "controls": [
+            {
+              "default@$button_ref": {
+                "consume_hover_events": false,
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "auto@button_panel": {
+          "ignored": "(not $use_auto_item)",
+          "$toggle_source": "auto_exchange_toggle",
+          "controls": [
+            {
+              "auto@cube_item.container_slot_button_prototype": {
+                "consume_hover_events": false,
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "drop@button_panel": {
+          "ignored": "(not $use_auto_item)",
+          "$toggle_source": "drop_exchange_toggle",
+          "controls": [
+            {
+              "drop@cube_item.drop_container_slot_button_prototype": {
+                "consume_hover_events": false,
+                "tts_ignore_count": true,
+                "tts_skip_message": true,
+                "tts_inherit_siblings": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "container_slot_button_prototype@common.container_slot_button_prototype": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+  
+  "drop_container_slot_button_prototype@common.container_slot_button_prototype": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      }
+    ]
+  }
+}

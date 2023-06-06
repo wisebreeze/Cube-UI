@@ -1,0 +1,84 @@
+// Cube UI 由 MC_spruce 制作
+// 这个是 Cube UI 的 背景文件
+{
+  "namespace": "cube_background",
+  
+  "progress_blur_bg": {
+    "type": "panel",
+    "clips_children": true,
+    "size": "$fill_size",
+    "controls": [
+      {"bg@screen_background_content": {"layer": -100}},
+      {
+        "panel": {
+          "size": "$fill_size",
+          "type": "panel",
+          "clips_children": true,
+          "offset": [ 0, "85%" ],
+          "controls": [
+            {
+              "sub_bg": {
+                "type": "image",
+                "layer": -99,
+                "size": "$fill_size",
+                "fill": true,
+                "bilinear": true,
+                "offset": [ 0, "-85%" ],
+                "$background_image|default": "$default_blur_bg",
+                "variables": {
+                  "requires": "$cube_ui_dark_mode",
+                  "$background_image": "$dark_blur_bg"
+                },
+                "texture": "$background_image"
+              }
+            },
+            {
+              "sub_dark_bg": {
+                "type": "image",
+                "layer": -98,
+                "size": "$fill_size",
+                "fill": true,
+                "offset": [ 0, "-85%" ],
+                "alpha": 0.25,
+                "color": "black",
+                "texture": "textures/ui/white_background"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "screen_background_content": {
+    "type": "image",
+    "fill": true,
+    "bilinear": true,
+    "color": "$bg_color",
+    "$bg_content|default": [],
+    "$bg_color|default": [ 1,1,1 ],
+    "$background_image|default": "$default_bg",
+    /*"variables": {
+      "requires": "$cube_ui_dark_mode",
+      "$background_image": "$dark_bg",
+      "$bg_color": [ 1, 1, 1 ]
+    },*/
+    "texture": "$background_image",
+    "controls": "$bg_content"
+  },
+  
+  "screen_blur_background_content": {
+    "type": "image",
+    "fill": true,
+    "bilinear": true,
+    "color": "$bg_color",
+    "$bg_color|default": [ 1,1,1 ],
+    "$background_image|default": "$default_blur_bg",
+    /*"variables": {
+      "requires": "$cube_ui_dark_mode",
+      "$background_image": "$dark_blur_bg",
+      "$bg_color": [ 1, 1, 1 ]
+    },*/
+    "texture": "$background_image"
+  }
+}
