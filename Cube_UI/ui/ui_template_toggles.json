@@ -27,14 +27,12 @@
     "$checked_locked_texture": "$global_toggle_on_texture",
     "$global_toggle_default_color": [],
     "$global_toggle_hover_color": [],
-    "$global_toggle_alpha": 1,
-    "$global_button_fill": false
+    "$global_toggle_alpha": 1
   },
   "switch_toggle_collection": {
     "$global_toggle_default_color": [],
     "$global_toggle_hover_color": [],
     "$global_toggle_alpha": 1,
-    "$global_button_fill": false,
     "$default_texture": "$global_toggle_off_texture",
     "$hover_texture": "$global_toggle_on_texture",
     "$pressed_texture": "$global_toggle_off_hover_texture",
@@ -69,17 +67,22 @@
   },
 //////////////////////
   "light_template_toggle@common.toggle": {
-    "$default_texture|default": "textures/ui/white_background",
-    "$hover_texture|default": "textures/ui/white_background",
-    "$pressed_texture|default": "textures/ui/white_background",
-    "$pressed_no_hover_texture|default": "textures/ui/white_background",
-    "$locked_texture|default": "textures/ui/white_background",
+    "$default_texture|default": "textures/ui/White",
+    "$hover_texture|default": "textures/ui/White",
+    "$pressed_texture|default": "textures/ui/White",
+    "$pressed_no_hover_texture|default": "textures/ui/White",
+    "$locked_texture|default": "textures/ui/White",
 
     "$button_image_size": ["100%","100%"],
 
     "$default_button_alpha": "$global_toggle_alpha",
     "$hover_button_alpha": "$global_toggle_alpha",
     "$locked_alpha": "$global_toggle_locked_alpha",
+
+    "$default_text_color|default": "$global_toggle_text_unchecked_color",
+    "$hover_text_color|default": "$global_toggle_text_unchecked_hover_color",
+    "$default_checked_text_color|default": "$global_toggle_text_checked_color",
+    "$hover_checked_text_color|default": "$global_toggle_text_checked_hover_color",
 
     "$default_texture_color|default": "$global_toggle_unchecked_default_color",
     "$default_checked_texture_color|default": "$global_toggle_checked_default_color",
@@ -91,11 +94,11 @@
     "$hover_border_visible|default": false
   },
   "light_ui_toggle_collection": {
-    "$default_texture|default": "textures/ui/white_background",
-    "$hover_texture|default": "textures/ui/white_background",
-    "$pressed_texture|default": "textures/ui/white_background",
-    "$pressed_no_hover_texture|default": "textures/ui/white_background",
-    "$locked_texture|default": "textures/ui/white_background",
+    "$default_texture|default": "textures/ui/White",
+    "$hover_texture|default": "textures/ui/White",
+    "$pressed_texture|default": "textures/ui/White",
+    "$pressed_no_hover_texture|default": "textures/ui/White",
+    "$locked_texture|default": "textures/ui/White",
 
     "$default_button_alpha": "$global_toggle_alpha",
     "$hover_button_alpha": "$global_toggle_alpha",
@@ -103,6 +106,11 @@
     "$default_checked_texture_alpha|default": "$global_toggle_alpha",
     "$hover_texture_alpha|default": "$global_toggle_alpha",
     "$hover_checked_texture_alpha|default": "$global_toggle_alpha",
+
+    "$default_text_color|default": "$global_toggle_text_unchecked_color",
+    "$hover_text_color|default": "$global_toggle_text_unchecked_hover_color",
+    "$default_checked_text_color|default": "$global_toggle_text_checked_color",
+    "$hover_checked_text_color|default": "$global_toggle_text_checked_hover_color",
 
     "$default_texture_color|default": "$global_toggle_unchecked_default_color",
     "$default_checked_texture_color|default": "$global_toggle_checked_default_color",

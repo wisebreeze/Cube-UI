@@ -1,7 +1,6 @@
 {
   "horizontal_divider/divider": {
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_divider_alpha",
     "color": "$global_divider_color"
   },

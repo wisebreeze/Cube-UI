@@ -6,10 +6,10 @@
     "$offset": [ 0, "20px" ],
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     "controls": [
       {
@@ -65,10 +65,10 @@
       }
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "xbl_report_user.xbl_report_user_screen_content"
   },
 
@@ -76,7 +76,7 @@
     "type": "panel",
     "controls": [
       { "gamepad_helpers@xbl_report_user.gamepad_helpers": {} },
-      { "headbar@cube_ui_common.headbar": { "$title": "feed.reported_label","layer": 1 } },
+      { "headbar@cube_common.headbar": { "$title": "feed.reported_label","layer": 1 } },
       { "main_panel@xbl_report_user.dialog_content": { "layer": 1 } },
       {
         "report_button@common_buttons.dark_content_button": {
@@ -95,10 +95,10 @@
           ],
           "animation_reset_name": "screen_animation_reset",
           "anims": [
-            "@cube_ui_anim.headbar_screen_exit_animation_push",
-            "@cube_ui_anim.headbar_screen_exit_animation_pop",
-            "@cube_ui_anim.headbar_screen_entrance_animation_push",
-            "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+            "@cube_anim.headbar_screen_exit_animation_push",
+            "@cube_anim.headbar_screen_exit_animation_pop",
+            "@cube_anim.headbar_screen_entrance_animation_push",
+            "@cube_anim.headbar_screen_entrance_animation_pop"
           ]
         }
       }

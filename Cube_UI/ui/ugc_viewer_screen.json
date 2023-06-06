@@ -9,10 +9,10 @@
     "orientation": "vertical",
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     "controls": [
       { "padding_0@ugc_viewer.padding": { } },
@@ -27,7 +27,7 @@
       },
       { "padding_1@ugc_viewer.padding": { "$padding_size": [ 0, 3 ] } },
       {
-        "header@cube_ui_common.image_header": {
+        "header@cube_common.image_header": {
           "$cube_ui_header_text": "seed_picker.header",
           "$header_image": "textures/items/map_locked"
         }
@@ -72,11 +72,11 @@
       }
     ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
     "$default_text_color": [ 0.3, 0.3, 0.3 ],
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "ugc_viewer.screen_content"
   },
 
@@ -84,7 +84,7 @@
     "type": "panel",
     "controls": [
       {
-        "headbar@cube_ui_common.headbar": {
+        "headbar@cube_common.headbar": {
           "$title": "seedPicker.title",
           "layer": 1
         }

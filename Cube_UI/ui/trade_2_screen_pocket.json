@@ -1,1 +1,13 @@
-{"name_and_trade_slots_stack_panel/trade_slots_panel":{"size":["100%","100%-70px"]}}
+{
+  "name_and_trade_slots_stack_panel/trade_slots_panel": {"size": ["100%","100%-70px"]},
+  "arrow_holder/arrow_image": {
+  "bindings": [
+    {"binding_type": "collection_details"},
+    {
+      "binding_name": "(not #trade_cross_out_visible)",
+      "binding_name_override": "#visible"
+    }
+  ]
+},
+"arrow_holder/lock_image":{"ignored":true}
+}

@@ -7,13 +7,11 @@
   "new_button_image": {
     "type": "image",
     "layer": 1,
-    "fill": "$global_button_fill",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$button_alpha"
   },
   "new_ui_button_panel/$button_image": {
-    "alpha": "$global_button_alpha",
-    "fill": "$global_button_fill"
+    "alpha": "$global_button_alpha"
   },
   "light_text_button/default": {
     "$text_color": "$global_button_text_default_color",
@@ -64,41 +62,49 @@
     "$button_alpha": "$global_button_alpha"
   },
   "light_content_button/default": {
+    "$text_color": "$global_button_text_default_color",
     "$button_image_color": "$global_button_default_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "light_content_button/hover": {
+    "$text_color": "$global_button_text_hover_color",
     "$button_image_color": "$global_button_hover_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "light_content_button/pressed": {
+    "$text_color": "$global_button_text_pressed_color",
     "$button_image_color": "$global_button_pressed_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "light_content_button/locked": {
+    "$text_color": "$global_button_text_locked_color",
     "$button_image_color": "$global_button_default_red_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "dark_content_button/default": {
+    "$text_color": "$global_button_text_default_color",
     "$button_image_color": "$global_button_default_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "dark_content_button/hover": {
+    "$text_color": "$global_button_text_hover_color",
     "$button_image_color": "$global_button_hover_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "dark_content_button/pressed": {
+    "$text_color": "$global_button_text_pressed_color",
     "$button_image_color": "$global_button_pressed_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"
   },
   "dark_content_button/locked": {
+    "$text_color": "$global_button_text_locked_color",
     "$button_image_color": "$global_button_default_red_color",
     "$button_image": "common_buttons.new_button_image",
     "$button_alpha": "$global_button_alpha"

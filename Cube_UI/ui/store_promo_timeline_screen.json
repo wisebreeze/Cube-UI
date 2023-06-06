@@ -1,0 +1,17 @@
+{
+  "namespace": "promo_timeline",
+  "promotion_period_grid_panel/promotion_offer_grid_image/item_selected_bg": {
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  },
+  "promo_grey_bar_panel/grey_bar": {
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  },
+  "promo_grey_bar_panel/green_bar": {
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  }
+}

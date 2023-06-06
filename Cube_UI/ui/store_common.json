@@ -13,10 +13,20 @@
     "alpha": "$global_experience_bar_full_alpha"
   },
 ////////////////////
+  "store_description_background": {
+    "texture": "textures/ui/White",
+    "color": [0,0,0],
+    "alpha": 0.6
+  },
+  "store_description_background_dark": {
+    "texture": "textures/ui/White",
+    "color": [0,0,0],
+    "alpha": 0.6
+  },
+////////////////////
   "store_top_bar": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": 0.4,
     "color": "$global_headbar_color",
     "size": [ "100%", 23 ]
@@ -27,63 +37,58 @@
 ////////////////////
   "store_background": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
-    "fill": true,
     "color": "$global_background_color"
   },
   "ribbon_bar_text_background": {
     "type": "image",
     "alpha": 0.4,
-    "fill": true,
-    "color": "$background_hoverstate_color_swap",
-    "$background_hoverstate_color_swap|default": [],
+    "color": "$background_color_swap",
     "variables": [
       {
         "requires": "$default_state",
-        "$background_hoverstate_color_swap": "$global_button_default_color"
+        "$background_color_swap": "$global_button_default_color"
       },
       {
         "requires": "$hover_state",
-        "$background_hoverstate_color_swap": "$global_button_hover_color"
+        "$background_color_swap": "$global_button_hover_color"
       },
       {
         "requires": "$pressed_state",
-        "$background_hoverstate_color_swap": "$global_button_pressed_color"
+        "$background_color_swap": "$global_button_pressed_color"
       },
       {
         "requires": "$locked_state",
-        "$background_hoverstate_color_swap": "$global_button_default_red_color"
+        "$background_color_swap": "$global_button_default_red_color"
       }
     ],
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
 
   "ribbon_bar_red_hover_text_background": {
     "type": "image",
     "alpha": 0.4,
-    "fill": true,
-    "color": "$background_hoverstate_color_swap",
-    "$background_hoverstate_color_swap|default": [],
+    "color": "$background_color_swap",
     "variables": [
       {
         "requires": "$default_state",
-        "$background_hoverstate_color_swap": "$global_button_default_color"
+        "$background_color_swap": "$global_button_default_color"
       },
       {
         "requires": "$hover_state",
-        "$background_hoverstate_color_swap": "$global_button_hover_color"
+        "$background_color_swap": "$global_button_hover_color"
       },
       {
         "requires": "$pressed_state",
-        "$background_hoverstate_color_swap": "$global_button_pressed_color"
+        "$background_color_swap": "$global_button_pressed_color"
       },
       {
         "requires": "$locked_state",
-        "$background_hoverstate_color_swap": "$global_button_default_red_color"
+        "$background_color_swap": "$global_button_default_red_color"
       }
     ],
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   
   "spinner_animation": {
@@ -108,8 +113,9 @@
   },
 
   "store_base_screen@common.base_screen": {
+    "alpha": 1,
     "$ratings_visible_after_x_reviews": 5,
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_background_content",
     "$store_factory_clipping_event": "none",
     "$store_factory_collection_details|default": "none",
     "$store_factory_binding_type|default": "global",

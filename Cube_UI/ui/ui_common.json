@@ -71,42 +71,41 @@
   
   "dialog_background_common": {
     "type": "image",
-    "fill": true,
     "color": "$global_dialog_background_color",
     "alpha": "$global_dialog_background_alpha",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "layer": 1
   },
 
   "dialog_background_opaque@dialog_background_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_1@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_2@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_3@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_4@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_4_thin@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_5@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_6@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_7@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   "dialog_background_hollow_8@dialog_background_hollow_common": {
-    "texture": "textures/ui/white_background"
+    "texture": "textures/ui/White"
   },
   
   "common_panel": {
@@ -115,11 +114,10 @@
       {
         "bg_image": {
           "type": "image",
-          "fill": true,
           "size": ["100%","100%"],
           "color": "$global_dialog_background_color",
           "alpha": "$global_dialog_background_alpha",
-          "texture": "textures/ui/white_background",
+          "texture": "textures/ui/White",
           "layer": 0
         }
       },
@@ -127,13 +125,12 @@
         "headbar": {
           "type": "image",
           "size": ["100%",20],
-          "fill": true,
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "visible": "$show_headbar",
           "alpha": "$global_dialog_headbar_alpha",
           "color": "$global_dialog_headbar_color",
-          "texture": "textures/ui/white_background",
+          "texture": "textures/ui/White",
           "layer": 1
         }
       },
@@ -173,118 +170,84 @@
               }
             }
           ],
-          "bindings": [
-            {
-              "binding_name": "$close_button_visible_binding_name",
-              "binding_name_override": "#visible"
-            }
-          ]
+          "bindings": [{"binding_name":"$close_button_visible_binding_name","binding_name_override":"#visible"}]
         }
       }
     ]
   },
 ////////////////////////////////
-  "checked_image@checkbox_image": {
-    "texture": "$global_checkbox_on_texture"
-  },
-  "unchecked_image@checkbox_image": {
-    "texture": "$global_checkbox_off_texture"
-  },
-  "checked_hover_image@checkbox_image": {
-    "texture": "$global_checkbox_on_hover_texture"
-  },
-  "unchecked_hover_image@checkbox_image": {
-    "texture": "$global_checkbox_off_hover_texture"
-  },
-  "checkbox_checked_state@toggle_state_template": {
-    "texture": "$global_checkbox_on_texture"
-  },
-  "checkbox_unchecked_state@toggle_state_template": {
-    "texture": "$global_checkbox_off_texture"
-  },
-  "checkbox_checked_hover_state@checkbox_checked_state": {
-    "texture": "$global_checkbox_on_hover_texture"
-  },
-  "checkbox_unchecked_hover_state@checkbox_unchecked_state": {
-    "texture": "$global_checkbox_off_hover_texture"
-  },
-  "checkbox_checked_locked_state@checkbox_checked_state": {
-    "texture": "$global_checkbox_on_locked_texture"
-  },
-  "checkbox_unchecked_locked_state@toggle_state_template": {
-    "texture": "$global_checkbox_off_locked_texture"
-  },
-  "radio_toggle_checked_state@checkbox_unchecked_state": {
-    "texture": "$global_checkbox_on_texture"
-  },
-  "radio_toggle_checked_hover_state@toggle_state_template": {
-    "texture": "$global_checkbox_on_hover_texture"
-  },
-  "radio_toggle_checked_locked_state@toggle_state_template": {
-    "texture": "$global_checkbox_on_locked_texture"
-  },
+"checked_image@checkbox_image": {"texture":"$global_checkbox_on_texture"},
+"unchecked_image@checkbox_image": {"texture":"$global_checkbox_off_texture"},
+"checked_hover_image@checkbox_image": {"texture":"$global_checkbox_on_hover_texture"},
+"unchecked_hover_image@checkbox_image": {"texture":"$global_checkbox_off_hover_texture"},
+"checkbox_checked_state@toggle_state_template": {"texture":"$global_checkbox_on_texture"},
+"checkbox_unchecked_state@toggle_state_template": {"texture":"$global_checkbox_off_texture"},
+"checkbox_checked_hover_state@checkbox_checked_state": {"texture":"$global_checkbox_on_hover_texture"},
+"checkbox_unchecked_hover_state@checkbox_unchecked_state": {"texture":"$global_checkbox_off_hover_texture"},
+"checkbox_checked_locked_state@checkbox_checked_state": {"texture":"$global_checkbox_on_locked_texture"},
+"checkbox_unchecked_locked_state@toggle_state_template": {"texture":"$global_checkbox_off_locked_texture"},
+"radio_toggle_checked_state@checkbox_unchecked_state": {"texture":"$global_checkbox_on_texture"},
+"radio_toggle_checked_hover_state@toggle_state_template": {"texture":"$global_checkbox_on_hover_texture"},
+"radio_toggle_checked_locked_state@toggle_state_template": {"texture":"$global_checkbox_on_locked_texture"},
 ////////////////////////////////
   "dialog_divider": {
     "color": "$global_divider_color",
-    "fill": true,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_divider_alpha"
   },
   
   "horizontal_divider/divider_image": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_divider_color",
     "alpha": "$global_divider_alpha"
   },
 
   "vertical_divider/divider_image": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_divider_color",
     "alpha": "$global_divider_alpha"
   },
   
   "section_divider/divider_parent/divider": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_divider_color",
-    "alpha": "$global_divider_alpha",
-    "fill": true
+    "alpha": "$global_divider_alpha"
   },
 ////////////////////////////////
   "item_lock_cell_image": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_cell_color",
-    "alpha": "$global_cell_alpha",
-    "fill": true
+    "alpha": "$global_cell_alpha"
   },
 ////////////////////////////////
-  "slider_box/locked/transparent_grey": {"alpha": 1},
-  "slider_bar_default/transparent_grey": {"alpha": 1},
+"slider_box/locked/transparent_grey": {"alpha":1},
+"slider_bar_default/transparent_grey": {"alpha":1},
 ////////////////////////////////
-  "single_line_label": {"$font_type|default":"$global_main_font"},
-  "static_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {"$tooltip_text_font_type|default":"$global_main_font"},
-  "dynamic_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {"$tooltip_text_font_type|default":"$global_main_font"},
+"single_line_label": {"$font_type|default":"$global_main_font"},
+"static_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {"$tooltip_text_font_type|default":"$global_main_font"},
+"dynamic_tooltip_popup_with_image_and_text/image_and_text_stack_panel/tooltip_text": {"$tooltip_text_font_type|default":"$global_main_font"},
 ////////////////////////////////
-  "text_edit_box_label": {"font_type":"$global_text_box_font"},
-  "text_edit_box_place_holder_label": {"font_type":"$global_text_box_font"},
+"text_edit_box_label": {"font_type":"$global_text_box_font"},
+"text_edit_box_place_holder_label": {"font_type":"$global_text_box_font"},
 ////////////////////////////////
   "underline": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_underline_alpha",
     "color": "$global_underline_color"
   },
 ////////////////////////////////
   "slider": {
-    "$slider_box_size": [16,16],
-    "$main_circle_size": ["100%+0.2px","100%"],
+    "$slider_box_size": [16,16]
+/*  "$main_circle_size": ["100%+0.2px","100%"],
     "modifications": [
       {
         "array_name": "controls",
         "operation": "insert_back",
         "value": [
-          {"bg@cube_ui_common.half_circle":{"ignored":"($slider_direction = 'vertical')","$circle_size":["100%","100%"],"$circle_alpha":"$global_slider_border_alpha","$circle_color":"$global_slider_border_default_color"}}
+          {"bg@cube_common.half_circle":{"ignored":"($slider_direction = 'vertical')","$circle_size":["100%","100%"],"$circle_alpha":"$global_slider_border_alpha","$circle_color":"$global_slider_border_default_color"}}
         ]
       }
-    ]
+    ]*/
   },
   "slider_button_state": {
     "texture": "cube_ui/textures/start/button",
@@ -317,143 +280,127 @@
   },
   
   "slider_background": {
-    "size": ["100%",1],
-    "texture": "textures/ui/white_background",
+    "size": ["100%",6],
+    "texture": "textures/ui/White",
     "color": "$global_slider_background_color",
-    "alpha": "$global_slider_background_alpha",
-    "fill": true
+    "alpha": "$global_slider_background_alpha"
   },
 
   "slider_background_hover": {
-    "size": ["100%",1],
-    "texture": "textures/ui/white_background",
+    "size": ["100%",6],
+    "texture": "textures/ui/White",
     "color": "$global_slider_background_hover_color",
-    "alpha": "$global_slider_background_alpha",
-    "fill": true
+    "alpha": "$global_slider_background_alpha"
   },
 
   "slider_progress": {
-    "size": ["100%",1],
-    "texture": "textures/ui/white_background",
+    "size": ["100%",6],
+    "texture": "textures/ui/White",
     "color": "$global_slider_progress_default_color",
-    "alpha": "$global_slider_progress_alpha",
-    "fill": true
+    "alpha": "$global_slider_progress_alpha"
   },
 
   "slider_progress_hover": {
-    "size": ["100%",1],
-    "texture": "textures/ui/white_background",
+    "size": ["100%",6],
+    "texture": "textures/ui/White",
     "color": "$global_slider_progress_hover_color",
-    "alpha": "$global_slider_progress_alpha",
-    "fill": true
+    "alpha": "$global_slider_progress_alpha"
   },
   "slider_border": {"alpha": 0},
   "slider_bar_default/transparent_grey": {"alpha": 0},
 
   "slider_step": {
-    "size": [1,8],
-    "texture": "textures/ui/white_background",
+    "size": [1,4],
+    "texture": "textures/ui/White",
     "color": "$global_slider_step_default_color",
-    "alpha": "$global_slider_step_alpha",
-    "fill": true
+    "alpha": "$global_slider_step_alpha"
   },
 
   "slider_step_hover@common.slider_step": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_slider_step_hover_color"
   },
 
   "slider_step_progress@common.slider_step": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_slider_step_progress_default_color"
   },
 
   "slider_step_progress_hover@common.slider_step": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_slider_step_progress_hover_color"
   },
 ////////////////////////////////
   "dropdown_background": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_dropdown_background_alpha",
-    "fill": true,
     "color": "$global_dropdown_background_color"
   },
 ////////////////////////////////
   "scroll_box_indent": {
     "texture": "cube_ui/textures/common/scroll_handle",
-    "fill": true,
     "color": "$global_scroll_box_color"
   },
 
   "scrollbar_box_image": {
     "texture": "cube_ui/textures/common/scroll_handle",
-    "fill": true,
     "color": "$global_scroll_box_color"
   },
   
   "scroll_indent_image": {
     "texture": "cube_ui/textures/common/scroll_handle",
-    "fill": true,
     "color": "$global_scroll_box_color"
   },
   
   "touch_scrollbar_box_image": {
     "texture": "cube_ui/textures/common/scroll_handle",
-    "fill": true,
     "color": "$global_scroll_box_color"
   },
 
   "new_touch_scrollbar_box_image": {
     "texture": "cube_ui/textures/common/scroll_handle",
-    "fill": true,
     "color": "$global_scroll_box_color"
   },
 ////////////////////////////////
   "edit_box_indent": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_text_box_alpha",
-    "fill": true,
     "color": "$global_text_box_default_color"
   },
 
   "edit_box_indent_hover@common.edit_box_indent": {
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_text_box_hover_color"
   },
 
   "transparent_edit_box_indent": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_text_box_alpha",
-    "fill": true,
     "color": "$global_text_box_default_color"
   },
 
   "transparent_edit_box_indent_hover": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "alpha": "$global_text_box_alpha",
-    "fill": true,
     "color": "$global_text_box_hover_color"
   },
 ////////////////////////////////
   "cell_image": {
     "type": "image",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_cell_alpha",
     "color": "$global_cell_color",
     "layer": 1
   },
   "pocket_ui_highlight_selected_slot": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "layer": 2,
-    "alpha": "$global_cell_alpha",
-    "fill": true,
+    "alpha": 0,
     "color": "$global_cell_selected_color",
     "size": [ "100%", "100%" ]
   },
@@ -464,26 +411,38 @@
       {
         "bg": {
           "type": "image",
-          "texture": "textures/ui/white_background",
-          "fill": true,
+          "texture": "textures/ui/White",
           "alpha": "$global_cell_alpha",
           "color": "$global_cell_selected_color",
           "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "progress_bar_release@common.inventory_hold_icon_release": {
+          "layer": 70
         }
       }
     ]
   },
   "highlight_slot": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "size": [ "100%", "100%" ],
-    "fill": true,
-    "alpha": "$global_cell_alpha",
+    "alpha": 0,
     "color": "$global_cell_selected_color"
   },
   "flying_item_renderer": {
     "layer": 999,
     "visible": "$show_flying_item_renderer"
+  },
+  "container_item": {
+    "modifications": [
+      {
+        "control_name": "item_button_ref",
+        "operation": "replace",
+        "value": [{"ref@cube_item.item_button_ref": {}}]
+      }
+    ]
   },
 ////////////////////////////////
   "inventory_screen_common": {
@@ -492,10 +451,10 @@
         "array_name": "$screen_animations|default",
         "operation": "insert_back",
         "value": [
-          "@cube_ui_anim.container_screen_exit_animation_push",
-          "@cube_ui_anim.container_screen_exit_animation_pop",
-          "@cube_ui_anim.container_screen_entrance_animation_push",
-          "@cube_ui_anim.container_screen_entrance_animation_pop"
+          "@cube_anim.container_screen_exit_animation_push",
+          "@cube_anim.container_screen_exit_animation_pop",
+          "@cube_anim.container_screen_entrance_animation_push",
+          "@cube_anim.container_screen_entrance_animation_pop"
         ]
       }
     ]
@@ -511,24 +470,28 @@
       }
     ]
   },
-  "base_screen/variables_button_mappings_and_controls/bg_no_safezone_screen_panel":{"ignored":"$screen_bg_ignored"},
+  "safezone_inner_matrix/inner_top": {"ignored": "$is_netease"},
+  "safezone_inner_matrix/inner_bottom": {"ignored": "$is_netease"},
+  "safezone_inner_matrix/outer_top": {"ignored": "$is_netease"},
+  "safezone_inner_matrix/outer_bottom": {"ignored": "$is_netease"},
+  "base_screen/variables_button_mappings_and_controls/bg_no_safezone_screen_panel":{"$screen_bg_ignored|default":false,"ignored":"$screen_bg_ignored"},
   "base_screen": {
     "gamepad_cursor_deflection_mode":false,
+    "$not_safezone_content|default": "common.empty_panel",
     "modifications": [
       {
         "control_name": "loading_bars_background",
         "operation": "replace",
         "value": [
-          {
-            "loading_panel@loading.loading_panel": {}
-          }
+          {"loading_panel@loading.loading_panel": {}},
+          {"not_safezone_content@$not_safezone_content":{}}
         ]
       },
       {
         "array_name": "$background_animations|default",
         "operation": "insert_back",
         "value": [
-          "@cube_ui_anim.screen_background_anim_1"
+          "@cube_anim.screen_background_anim_1"
         ]
       }
     ]

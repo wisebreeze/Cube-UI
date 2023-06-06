@@ -9,12 +9,11 @@
         "tab_focus": {
           "type": "image",
           "visible": "$tab_focus_visible",
-          "fill": true,
           "offset": [0,-3],
           "color": "$tab_focus_color",
           "anchor_from": "$focus_anchor",
           "anchor_to": "$focus_anchor",
-          "texture": "textures/ui/white_background",
+          "texture": "textures/ui/White",
           "size": "$focus_size",
           "layer": 2
         }
@@ -60,11 +59,11 @@
     "$focus_size": ["100%",1]
   },
   "tab_left": {
-    "$focus_anchor": "left_middle",
+    "$focus_anchor": "right_middle",
     "$focus_size": [1,"100%"]
   },
   "tab_right": {
-    "$focus_anchor": "right_middle",
+    "$focus_anchor": "left_middle",
     "$focus_size": [1,"100%"]
   }
 }

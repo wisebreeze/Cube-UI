@@ -1,0 +1,7 @@
+{
+  "button": {
+    "sound_name": "$global_button_sound_name",
+    "sound_volume": "$global_button_sound_volume",
+    "sound_pitch": "$global_button_sound_pitch"
+  }
+}

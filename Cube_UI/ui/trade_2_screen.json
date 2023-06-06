@@ -1,24 +1,91 @@
 {
-  // 查看所有交易
-  "tier_stack_panel": {"bindings": []},
+  // 解锁所有交易
+"unlock_toggle@common_toggles.light_text_toggle": {
+  "$button_text": "trade.unlock",
+  "$toggle_default_state": "$always_unlock_trade_option",
+  "$toggle_view_binding_name": "unlock_bd",
+  "size": ["100%",20]
+},
+"scroll_inner_stack_panel": {
+  "type": "stack_panel",
+  "size": [ "100% - 4px", "100%c" ],
+  "offset": [4,0],
+  "controls": [
+    {"unlock_toggle@trade2.unlock_toggle": {} },
+    {"panel": {"type": "panel","size": [0,2]} },
+    {
+      "trade_selector_stack_panel@trade2.trade_selector_stack_panel": {
+        "$unlock_trade_option": false,
+        "bindings": [
+          {
+            "binding_type": "view",
+            "source_control_name": "unlock_bd",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+          },
+          {
+            "binding_name": "#trade_selector_total",
+            "binding_name_override": "#collection_length"
+          }
+        ]
+      }
+    },
+    {
+      "trade_unlock_selector_stack_panel@trade2.trade_selector_stack_panel": {
+        "$unlock_trade_option": true,
+        "bindings": [
+          {
+            "binding_type": "view",
+            "source_control_name": "unlock_bd",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+          },
+          {
+            "binding_name": "#trade_selector_total",
+            "binding_name_override": "#collection_length"
+          }
+        ]
+      }
+    }
+  ]
+},
+"scroll_inner_input_panel": {
+  "controls": [
+    { "scroll_inner_stack_panel@trade2.scroll_inner_stack_panel": {} }
+  ]
+},
+"tier_stack_panel": {"bindings": []},
+"tier_label": {"bindings":[{"binding_name":"#tier_name","binding_type":"collection","binding_collection_name":"$collection_name"}],"font_type":"$global_main_font"},
+"tier_label_locked": {"ignored":true},
+"arrow_holder/arrow_image": {
+  "bindings": [
+    {"binding_type": "collection_details"},
+    {
+      "binding_name": "(not #trade_cross_out_visible)",
+      "binding_name_override": "#visible"
+    }
+  ]
+},
+"arrow_holder/lock_image":{"ignored":true},
+"item_slots_stack_panel/ingredient_item_2_holder": {"ignored":false},
+"item_slots_stack_panel/pointing_left_arrow_holder":{"controls":[{"arrow_left_image@trade2.arrow_left_image":{"size":["100% + 3px",13],"anchor_from":"bottom_right","anchor_to":"bottom_right","offset":[0,-2]}}]},
 
   // 强制显示
   "hover_button": {"bindings": []},
   
   // 适配主题
-  "stack_count_label": {
-    "shadow": false,
-    "font_type": "$global_main_font"
-  },
-  "tier_label": {"font_type": "$global_main_font"},
-  "tier_label_locked": {"font_type": "$global_main_font"},
+"stack_count_label": {
+  "shadow": false,
+  "font_type": "$global_main_font"
+},
+"trade2_item_slot":{"$background_images":"common.cell_image"},
+"top_half_stack_panel/item_slots_holder":{"controls":[{"item_slots_stack_panel@item_slots_stack_panel":{}}]},
 
   "red_cell_image": {
     "type": "image",
-    "fill": true,
     "color": "$global_cell_red_color",
     "alpha": "$global_cell_alpha",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "layer": 1
   },
 
@@ -38,7 +105,7 @@
   "left_panel@common.root_panel": {
     "controls": [
       {
-        "bg@cube_ui_common.container_common_screen": {
+        "bg@cube_common.container_common_screen": {
           "$is_left_panel": true
         }
       },
@@ -50,7 +117,7 @@
     "layer": 1,
     "controls": [
       {
-        "screen@cube_ui_common.container_common_screen": {
+        "screen@cube_common.container_common_screen": {
           "$show_player_renderer": false,
           "$inventory_controls": [
             { "villager_name_label@trade2.villager_name_label": {} },
@@ -75,11 +142,21 @@
       { "right_panel@trade2.right_panel": {} }
     ]
   },
-  
+
+"screen_panel": {"alpha": 1,"controls": [
+{"screen_stack_panel@trade2.screen_stack_panel":{}},
+{"container_gamepad_helpers@common.container_gamepad_helpers":{"$helper_x_control":"trade2.gamepad_helper_x","$helper_y_control":"trade2.gamepad_helper_y"}},
+{"selected_item_details_factory@common.selected_item_details_factory":{}},
+{"item_lock_notification_factory@common.item_lock_notification_factory":{}},
+{"inventory_selected_icon_button@common.inventory_selected_icon_button":{}},
+{"inventory_take_progress_icon_button@common.inventory_take_progress_icon_button":{}},
+{"flying_item_renderer@common.flying_item_renderer": {"layer": 20}}]},
+
   "trade_screen": {
     "close_on_player_hurt": "$ui_close_on_player_hurt",
     "button_mappings": "$button_mappings",
 
+    "$list_def_state": true,
     "$title": "action.interact.trade",
     "$container_image": "textures/ui/trade_icon",
     "$two_left_panel": true,

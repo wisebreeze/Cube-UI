@@ -1,0 +1,13 @@
+{
+  "namespace": "gift_promo",
+  "grey_bar_panel/grey_bar": {
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  },
+  "grey_bar_panel/green_bar": {
+    "texture": "textures/ui/White",
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha"
+  }
+}

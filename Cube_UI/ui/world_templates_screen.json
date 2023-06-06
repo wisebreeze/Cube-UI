@@ -2,18 +2,13 @@
   "template_scroll_panel@world_templates.common_scroll_pane": {
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ]
   },
 
-  //---------------------------------------------------------------------------
-  // SCREEN CONTENT
-  //---------------------------------------------------------------------------
-
-  "world_list_grids_stack/template_list_panel/inventory_button": {"size":["100%",20]},
   "world_list_grids_stack": {
     "type": "stack_panel",
     "orientation": "vertical",
@@ -60,10 +55,10 @@
           ]
         }
       },
-      ////
       {
         "store_panel": {
           "type": "panel",
+          "ignored": "$remove_romotion",
           "size": [ "100%", "100%cm" ],
           "enabled": "(not $store_disabled)",
           "controls": [
@@ -134,7 +129,6 @@
                       ]
                     }
                   },
-                  ////
                   {
                     "suggested_content_panel": {
                       "type": "stack_panel",
@@ -292,29 +286,13 @@
     ]
   },
 
-  //--------------------------------------------------------------------------------
-  // Screen
-  //--------------------------------------------------------------------------------
-
   "world_templates_screen@common.base_screen": {
     "$screen_header_title_visible": false,
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.menu_select",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_cancel",
-        "to_button_id": "button.menu_exit",
-        "mapping_type": "global"
-      }
-    ],
     // 空的顶部面板 - 填充安全角
-    "$header_safezone_control": "cube_ui_common.empty_headbar",// 顶部
-    "$header_bar_control": "cube_ui_common.empty_headbar",// 侧边
+    "$header_safezone_control": "cube_common.empty_headbar",// 顶部
+    "$header_bar_control": "cube_common.empty_headbar",// 侧边
     
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "world_templates.world_templates_picker_content",
     "$is_full_screen_layout": true
   },
@@ -324,7 +302,7 @@
     "size": [ "100%", "100%" ],
     "controls": [
       {
-        "main@cube_ui_common.headbar_screen": {
+        "main@cube_common.headbar_screen": {
           "$main_screen": "world_templates.template_scroll_content",
           "$title": "selectTemplate.create"
         }
