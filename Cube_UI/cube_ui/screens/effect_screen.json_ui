@@ -63,7 +63,7 @@
     "size": [ "100%", 20 ],
     "offset": [ 4, 0 ],
     "color": "$global_background_color",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "nineslice_size": 1,
     "layer": 3,
     "alpha": "$global_background_alpha",
@@ -79,9 +79,9 @@
     "orientation": "vertical",
     "size": [ "100%", 26 ],
     "controls": [
-      {"p1@cube_ui_common.v_panel": {}},
+      {"p1@cube_common.v_panel": {}},
       {"main@mob_effect_grid_main_item": {}},
-      {"p2@cube_ui_common.v_panel": {}}
+      {"p2@cube_common.v_panel": {}}
     ]
   },
 ////////////////////
@@ -102,9 +102,9 @@
     "orientation": "horizontal",
     "size": [ "100%", "100%c" ],
     "controls": [
-      {"p1@cube_ui_common.h_panel": {}},
+      {"p1@cube_common.h_panel": {}},
       {"grid@mob_effect_grid": {}},
-      {"p2@cube_ui_common.h_panel": {}}
+      {"p2@cube_common.h_panel": {}}
     ]
   },
 ////////////////////
@@ -133,7 +133,7 @@
     "size": [ "100%", "100%" ],
     "controls": [
       {
-        "headbar@cube_ui_common.headbar": {
+        "headbar@cube_common.headbar": {
           "$title": "itemGroup.name.potion",
           "$headbar_add": "hud_effect.right_button",
           
@@ -158,7 +158,7 @@
     "layer": 2,
     "size": [ "70%", "85%" ],
     "controls": [
-      {"background@cube_ui_common.container_pocket_background": {}},
+      {"background@cube_common.container_pocket_background": {}},
       {"tab_panel@hud_effect.main_screen_panel": {}}
     ]
   }
