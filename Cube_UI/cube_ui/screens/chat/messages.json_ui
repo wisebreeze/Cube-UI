@@ -4,7 +4,7 @@
   "messages_text": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
-    "anims": ["@cube_ui_anim.chat_push"],
+    "anims": ["@cube_anim.chat_push"],
     "$chat_message_font|default": "$chat_font_type",
     "variables": {
       "requires": "$chat_use_global_main_font",

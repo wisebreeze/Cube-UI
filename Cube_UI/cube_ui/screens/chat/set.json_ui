@@ -3,6 +3,7 @@
 
   "chat_settings_scrolling_content": {
     "type": "panel",
+    "$is_setting_screen": true,
     "size": [ "100%", "100%c" ],
     "controls": [
       {
@@ -38,7 +39,6 @@
   },
 
   "chat_setting_scrolling_panel@common.scrolling_panel": {
-    "size": [ 120, 100 ],
     "clips_children": true,
     "$scroll_bar_left_padding_size": [ 2.5, 0 ],
     "$scroll_bar_right_padding_size": [ 2.5, 0 ],
@@ -46,12 +46,10 @@
     "$show_background": false
   },
 
-  "chat_settings_popup@popup_dialog.form_fit_modal_dialog_popup": {
+  "chat_settings_popup@cube_common.form_modal_popup": {
     "$modal_title": "chat.settings",
-    "$popup_dialog_escape_button_name": "button.close_chat_settings",
-    "$modal_contents": "chat_set.chat_setting_scrolling_panel",
-    "$screen_background_alpha": 0.4,
-    "$modal_contents_padding": [ 8, 6 ]
+    "$back_button_name": "button.close_chat_settings",
+    "$modal_content": "chat_set.chat_setting_scrolling_panel"
   },
 
   "popup_factory": {

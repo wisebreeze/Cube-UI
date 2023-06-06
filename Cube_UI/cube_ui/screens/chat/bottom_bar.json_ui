@@ -51,10 +51,9 @@
   
   "common_button": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_button_default_color",
     "alpha": 0.4,
-    "fill": true,
     "size": [ "100%", 20 ],
     "controls": [
       {
@@ -65,10 +64,9 @@
   
   "common_hover_button": {
     "type": "image",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_button_hover_color",
     "alpha": 0.4,
-    "fill": true,
     "size": [ "100%", 20 ],
     "controls": [
       {

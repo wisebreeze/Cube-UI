@@ -3,16 +3,16 @@
 
   // Auto Complete //
   "auto_complete_panel_contents_with_item": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
+    "type": "panel",
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "size": [ "100%", 10 ],
     "controls": [
       {
         "auto_complete_item_renderer@common.item_renderer": {
-          "size": [ 9, 9 ],
-          "offset": [ 2, 0 ],
+          "size": [ 10, 10 ],
+          "offset": [ 3, 0 ],
+          "layer": 5,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "bindings": [
@@ -29,7 +29,8 @@
         "text": {
           "type": "label",
           "color": "$chat_text_color",
-          "offset": [ 2, 0 ],
+          "offset": [ 15, 0 ],
+          "layer": 5,
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "text": "#text",
@@ -44,7 +45,44 @@
             }
           ]
         }
+      },
+      {
+        "autocomplete_button@common.button": {
+          "$pressed_button_name": "button.click_autocomplete",
+          "tts_inherit_siblings": true,
+          "sound_volume": 0.001,
+          "controls": [
+            {"default@common.empty_panel": {}},
+            {"hover@chat_commands.click_autocomplete_focused": {}},
+            {"pressed@chat_commands.click_autocomplete_focused": {}}
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "auto_complete"
+            },
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "auto_complete"
+            },
+            {
+              "binding_type": "collection",
+              "binding_name": "(not (#auto_complete_text = ''))",
+              "binding_name_override": "#visible",
+              "binding_collection_name": "auto_complete"
+            }
+          ]
+        }
       }
+    ]
+  },
+
+  "click_autocomplete_focused": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "controls": [
+      {"bg":{"type":"image","texture":"cube_ui/textures/gradient","fill":true,"color":"$cube_background_color","alpha":0.4,"size":["100%","100%"]}},
+      {"bar":{"type":"image","texture":"textures/ui/White","alpha":"$cube_bar_alpha","color":"$cube_bar_hover_color","size":[2,"100%"],"anchor_from":"left_middle","anchor_to":"left_middle"}}
     ]
   },
 
@@ -53,6 +91,12 @@
     "size": [ "100%", 1500 ],
     "anchor_from": "bottom_left",
     "anchor_to": "bottom_left",
+    "bindings": [
+      {
+        "binding_name": "(not #chat_visible)",
+        "binding_name_override": "#visible"
+      }
+    ],
     "controls": [
       {
         "panel": {
@@ -96,12 +140,12 @@
       {
         "auto_complete_panel@chat_commands.auto_complete_panel": {
           "size": [ "100%", "100%" ],
-          "visible": "(not $show_more_command)"
+          "ignored": "$show_more_command"
         }
       },
       {
         "cmd_scroll@common.scrolling_panel": {
-          "visible": "$show_more_command",
+          "ignored": "(not $show_more_command)",
           "size": [ "100%", "100%" ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",

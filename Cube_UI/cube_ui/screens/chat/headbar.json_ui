@@ -5,10 +5,10 @@
 // radio
   "radio_panel": {
     "type": "panel",
-    "$radio_content": "cube_ui_common.radio_text_content",
+    "$radio_content": "cube_common.radio_text_content",
     "controls": [
       {
-        "1@cube_ui_common.radio_with_label": {
+        "1@cube_common.radio_with_label": {
           "size": ["100%","100%"],
           "$toggle_state_binding_name": "#coordinate_type_position",
           "$radio_text": "chat.coordinateTypeFacing",
@@ -21,7 +21,7 @@
         }
       },
       {
-        "2@cube_ui_common.radio_with_label": {
+        "2@cube_common.radio_with_label": {
           "size": ["100%","100%"],
           "$toggle_state_binding_name": "#coordinate_type_facing",
           "$radio_text": "chat.coordinateTypePosition",
@@ -91,13 +91,12 @@
     "type": "image",
     "anchor_to": "center",
     "anchor_from": "center",
-    "fill": true,
     "offset": [0,1],
     "size": [ "100%c + 14px", 18 ],
     "min_size": [ 100, 18 ],
     "alpha": "$global_header_alpha",
     "color": "$global_header_color",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "layer": 1,
     "controls": [
       {
@@ -141,7 +140,7 @@
           "size": [ 100, 20 ]
         }
       },
-      {"p@cube_ui_common.h_panel":{}},
+      {"p@cube_common.h_panel":{}},
       {
         "coordinates_panel": {
           "type": "panel",
@@ -151,7 +150,7 @@
           ]
         }
       },
-      {"p2@cube_ui_common.h_panel":{}},
+      {"p2@cube_common.h_panel":{}},
       {
         "copy_coordinate_button@chat_headbar.copy_coordinate_button": {
           "size": [ 20, 20 ]
