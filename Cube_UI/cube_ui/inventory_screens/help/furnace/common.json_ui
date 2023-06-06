@@ -1,1 +1,197 @@
+{
+  "namespace": "furnace_common",
 
+  "item_cell": {
+    "type": "image",
+    "size": "$cell_size",
+    "$cell_size|default": [20,20],
+    "$cell_item_size|default": ["75%","75%"],
+    "texture": "textures/ui/White",
+    "alpha": 0.4,
+    "color": "$global_cell_color",
+    "layer": 4,
+    "variables": {
+      "requires": "$bottom_poison",
+      "$hover_text_anchor": "bottom_left",
+      "$hover_text_offset": [5,"-100% + 3px"]
+    },
+    "$has_more|default": false,
+    "$bottom_poison|default": false,
+    "$hover_text_anchor|default": "top_left",
+    "$hover_text_offset|default": [5,"100% + 3px"],
+    "controls": [
+      {
+        "hover_text@common.button": {
+          "size": ["100%","100%"],
+          "controls": [
+            {"hover@brewing_common.item_hover_text_background": {}},
+            {"pressed@brewing_common.item_hover_text_background": {}}
+          ]
+        }
+      },
+      {
+        "item": {
+          "type": "image",
+          "size": "$cell_item_size",
+          "layer": 5,
+          "texture": "$item_texture"
+        }
+      },
+      {
+        "plus": {
+          "type": "image",
+          "visible": "$has_more",
+          "size": [ "30%", "30%" ],
+          "offset": [0,1],
+          "layer": 6,
+          "texture": "textures/ui/recipe_book_expand_icon",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right"
+        }
+      }
+    ]
+  },
+  
+  "item_hover_text_background": {
+    "type": "image",
+    "allow_clipping": false,
+    "layer": 10,
+    "size": ["100%c + 8px","100%c + 8px"],
+    "texture": "textures/ui/purpleBorder",
+    "anchor_from": "$hover_text_anchor",
+    "anchor_to": "$hover_text_anchor",
+    "offset": "$hover_text_offset",
+    "controls": [
+      {"hover_text@item_hover_text": {}}
+    ]
+  },
+
+  "item_hover_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["100%cm","100%c"],
+
+    "$item_name|default": "unknow",
+    "$more_list|default": [],
+    "controls": [
+      {
+        "item_name": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c",10],
+          "controls": [
+            {
+              "main@item_panel": {
+                "$item_name_color": "$f_color_format"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "item_panel": {
+    "type": "panel",
+    "size": ["100%cm",10],
+    "$item_name_color|default": "$9_color_format",
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "size": ["default",10],
+          "text": "$item_name",
+          "color": "$item_name_color"
+        }
+      }
+    ]
+  },
+//--------------------------//
+  "fuel_item_panel": {
+    "type": "panel",
+    "size": ["100%","100%c + 4px"],
+    "$time|default": "§a",
+    "$fuel_plus|default": false,
+    "$fuel|default": "textures/items/charcoal",
+    "controls": [
+      {
+        "brewing_item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%",18],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "potion_bottle_cell@cube_common.cell": {
+                "$item_texture|default": "$fuel",
+                "$is_plus": "$fuel_plus"
+              }
+            },
+            {"panel_1@cube_common.h_panel": {}},
+            {"flame@cube_common.time": {}}
+          ]
+        }
+      }
+    ]
+  },
+
+  "fired_item_panel": {
+    "type": "panel",
+    "size": [ "100%", 24 ],
+    "$fired_data|default": 0,
+    "$unfire_data|default": 0,
+    "$unfired_plus|default": false,
+    "controls": [
+      {
+        "fired_item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%c", 20],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "unfired_cell@cube_common.cell": {
+                "$item_id": "$unfire_item",
+                "$item_data": "$unfire_data",
+                "$use_renderer": true,
+                "$is_plus": "$unfired_plus"
+              }
+            },
+            {"arrow@brewing_arrow.right": {}},
+            {
+              "fired_cell@cube_common.cell": {
+                "$item_id": "$fired_item",
+                "$item_data": "$fired_data",
+                "$use_renderer": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "furnace_time": {
+    "type": "panel",
+    "size": [ "100%", "100%c + 4px" ],
+    "$item_name|default": "tile.furnace.name",
+    "controls": [
+      {
+        "item": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [ "100%", 24 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {"furnace@furnace_common.item_cell": {}},
+            {"panel_1@cube_common.h_panel": {}},
+            {"time@cube_common.time": {}}
+          ]
+        }
+      }
+    ]
+  }
+}

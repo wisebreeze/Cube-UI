@@ -1,0 +1,125 @@
+{
+  "namespace": "furnace_recipe_other",
+  "other_help": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "visible": "$is_furnace",
+    "controls": [
+      {
+        "other@cube_common.cube_ui_header": {
+          "$cube_ui_header_text": "xbox.report.area.other"
+        }
+      },
+      {
+        "g@furnace_common.fired_item_panel": {
+          "$unfire_item": 12,
+          "$fired_item": 20,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "s@furnace_common.fired_item_panel": {
+          "$unfire_item": 4,
+          "$fired_item": 1
+        }
+      },
+      {
+        "smooth_s@furnace_common.fired_item_panel": {
+          "$unfire_item": 1,
+          "$fired_item": -183
+        }
+      },
+      {
+        "d@furnace_common.fired_item_panel": {
+          "$unfire_item": -379,
+          "$fired_item": -378
+        }
+      },
+      {
+        "ss@furnace_common.fired_item_panel": {
+          "$unfire_item": 24,
+          "$fired_item": 24,
+          "$fired_data": 3,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "b@furnace_common.fired_item_panel": {
+          "$unfire_item": 384,
+          "$fired_item": 383
+        }
+      },
+      {
+        "nb@furnace_common.fired_item_panel": {
+          "$unfire_item": 87,
+          "$fired_item": 523
+        }
+      },
+      {
+        "hc@furnace_common.fired_item_panel": {
+          "$unfire_item": 82,
+          "$fired_item": 172
+        }
+      },
+      {
+        "sc@furnace_common.fired_item_panel": {
+          "$unfire_item": 98,
+          "$fired_item": 98,
+          "$fired_data": 2
+        }
+      },
+      {
+        "cdb@furnace_common.fired_item_panel": {
+          "$unfire_item": -391,
+          "$fired_item": -410
+        }
+      },
+      {
+        "basalt@furnace_common.fired_item_panel": {
+          "$unfire_item": -234,
+          "$fired_item": -377
+        }
+      },
+      {
+        "hcs@furnace_common.fired_item_panel": {
+          "$unfire_item": 159,
+          "$fired_item": 220,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "charcoal@furnace_common.fired_item_panel": {
+          "$unfire_item": 17,
+          "$fired_item": 303,
+          "$unfired_plus": true
+        }
+      },
+      {
+        "gd@furnace_common.fired_item_panel": {
+          "$unfire_item": 81,
+          "$fired_item": 397
+        }
+      },
+      {
+        "sw@furnace_common.fired_item_panel": {
+          "$unfire_item": 19,
+          "$fired_item": 19,
+          "$unfire_data": 1
+        }
+      },
+      {
+        "sw@furnace_common.fired_item_panel": {
+          "$unfire_item": 558,
+          "$fired_item": 559
+        }
+      },
+      {
+        "ld@furnace_common.fired_item_panel": {
+          "$unfire_item": -156,
+          "$fired_item": 405
+        }
+      }
+    ]
+  }
+}
