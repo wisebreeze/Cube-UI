@@ -1,0 +1,20 @@
+{
+  "random.click": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "cube_ui/sounds/click",
+        "volume": 1.0
+      }
+    ]
+  },
+  "random.toast": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "cube_ui/sounds/toast",
+        "volume": 1.0
+      }
+    ]
+  }
+}
