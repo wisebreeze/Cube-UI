@@ -1,53 +1,65 @@
-﻿用户使用协议 / User Protocol
+用户使用协议 / User Protocol
 
-// 中文 / Chinese //
-以下内容是您与Cube UI（以下简称为“资源包”）的使用协议
+协议版本 / Protocol version: V3.0
+协议更新时间 / Protocol date: 2023/02/19
+协议标识符 / Protocol identifier: c2u43-u56i2-b8425-e1145
 
-一、适用范围
-1.1 此协议长期适用于任何版本的Cube UI(包括其中的扩展包)
-1.2 此协议遵守GPL V3.0协议，查看GPL V3.0协议内容请前往互联网进行搜索
+中文
+以下内容是您与 Cube UI（以下简称为“资源包”）的使用协议。
+Cube UI 不是商业项目，仅是一款个人制作的项目。
+同时也欢迎各位用户对 Cube UI 提出意见或反馈，利于帮助我们改进和优化 Cube UI。
 
-二、主要规定
-2.1  用户使用该资源包即为同意本协议
-2.2  如果您未满十八岁，请在以监护人陪同下阅读本协议
-2.3  作者保留并享有该协议的所有解释权
+使用许可
+1.1  Cube UI V3.0 采用 署名标示（BY）- 非商业性使用（NC）- 禁止演绎（ND）国际许可协议 CC 4.0 协议进行许可（以下简称 "BY-NC-ND CC 协议" ）
 
-三、常规规定
-3.2  用户有权遵守协议情况下进行使用，进行拍摄关于该资源的音视频媒体文件
-3.3  禁止作为任何商业用途，不得将其进行转让、出售或者其他商业用途
-3.4  允许使用资源包内的任何源代码或者媒体文件进行修改、引用、洐生代码，但必须在明显的区域标注其中的来源
+免责声明
+2.1  在遵守 BY-NC-ND CC 协议的基础下，Cube UI 的原作者 MC_spruce 不承担用户使用 Cube UI 引起的任何直接或间接的损失责任。
 
-四、转载规定
-4.1 允许未经过作者的情况下转载资源的任何版本(Cube UI以及其中的扩展包)
-4.2 转载必须标注原作者
-4.3 不能声明这个资源包是你的资源包
-4.4 未经作者同意转载需要标注为"转载"，经过作者同意后可以标注为"授权转载"
-4.5 转载后，资源包介绍内容可以将其重新排版，但是言语不能含有敏感词
+适用范围
+3.1  此协议长期适用于任何版本的 Cube UI (包括其中的扩展包)
+3.2  除特殊声明外，Cube UI 均遵守 BY-NC-ND CC 协议协议，协议内容请使用互联网进行搜索
+3.3  请以最新版本的协议为主
 
-// 英文 / English //
-The following is your agreement with the Cube UI ("Resource Pack").
-Please use the Chinese version protocol as the mainstay.
+主要规定
+4.1  用户使用该资源包即为同意本协议
+4.2  如果您未满十八周岁，请在以监护人陪同下阅读本协议
+4.3  作者保留并享有该协议的所有解释权
+4.4  禁止擅自修改该协议并发布至互联网
+4.5  不得谎称自己是 Cube UI 的原作者
+4.6  不得隐去、删除 Cube UI 中的任意版权信息
+4.7  未经作者允许的情况下 [需要与作者沟通]，禁止作为任何商业用途，不得将其进行转让、出售或者其他商业用途
+4.8  未经作者允许的情况下 [需要与作者沟通]，禁止使用资源包内的源代码或媒体文件进行修改、引用、洐生代码
 
-1. Scope of application
-1.1 This protocol is available for any version of the Cube UI (including expansion packs) for a long time
-1.2 This protocol complies with the GPL V3.0 protocol, please go to the Internet to search for the contents of the GPL V3.0 protocol
+转载规定
+5.1  未经作者允许的情况下 [需要与作者沟通]，禁止转载至互联网中
+5.2  搬运后，需要标注原作者的署名
 
-2. Main provisions
-2.1 By using the Resource Pack, the User agrees to this Agreement
-2.2 If you are under the age of eighteen, please read this Agreement accompanied by a guardian
-2.3 The author reserves and reserves all rights of interpretation of this Agreement
+English
+The following content is the use agreement between you and Cube UI (hereinafter referred to as "resource pack").
+Cube UI is not a commercial project, but a personal project.
+At the same time, all users are welcome to give comments or feedback on Cube UI, which will help us improve and optimize Cube UI.
 
-3. General provisions
-3.2 The User has the right to use and shoot audio and video media files about the Resource in compliance with the Agreement
-3.3 Any commercial use is prohibited, transferred, sold or otherwise commercially exploited
-3.4 Any source code or media files in the Resource Kit are permitted to be modified, referenced, or generated using the source code, provided that the source thereof is noted in a conspicuous area
+License
+1.1 Cube UI V3.0 is licensed under the Attribution (BY) - Non-Commercial (NC) - No Derivatives (ND) International License Agreement CC 4.0 (hereinafter referred to as "BY-NC-ND CC Agreement")
 
-4. Provisions on Reprinting
-4.1 Allow reprinting of any version of the asset without going through the author (Cube UI and the extension pack in it)
-4.2 Reprints must be labeled with the original author
-4.3 You cannot declare this resource bundle to be your resource bundle
-4.4 Reproduction without the author's consent needs to be marked as "reprinted", and can be marked as "authorized reprint" with the consent of the author.
-4.5 After reprinting, the content of the resource pack description can be reformatted, but the language cannot contain sensitive words
+Disclaimer
+2.1 On the basis of complying with the BY-NC-ND CC agreement, MC_spruce, the original author of Cube UI, shall not be liable for any direct or indirect losses caused by users using Cube UI.
 
-协议版本/Protocol version: V1.1
-协议更新时间/Protocol date: 2022/10/14 (第二版)
+Scope of application
+3.1 This agreement is long-term applicable to any version of Cube UI (including its subpack packs)
+3.2 Unless otherwise stated, Cube UI abides by the BY-NC-ND CC agreement, please use the Internet to search for the content of the agreement
+3.3 Please focus on the latest version of the agreement
+
+Main regulations
+4.1 The user agrees to this agreement by using the resource pack
+4.2 If you are under the age of eighteen, please read this agreement accompanied by your guardian
+4.3 The author reserves and enjoys all interpretation rights of this agreement
+4.4 It is forbidden to modify this agreement without authorization and publish it on the Internet
+4.5 Do not falsely claim to be the original author of Cube UI
+4.6 Do not hide or delete any copyright information in Cube UI
+4.7 Without the permission of the author [need to communicate with the author], it is prohibited to be used for any commercial purpose, and shall not be transferred, sold or used for other commercial purposes
+4.8 Without the permission of the author [need to communicate with the author], it is forbidden to use the source code or media files in the resource pack to modify, quote, and reproduce the code
+
+Reprint policy
+5.1 Without the permission of the author [need to communicate with the author], reprinting to the Internet is prohibited
+5.2 After relocation, the signature of the original author needs to be marked
