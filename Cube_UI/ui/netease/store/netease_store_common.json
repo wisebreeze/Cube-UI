@@ -1,1 +1,23 @@
-
+{
+  "store_top_bar_filler": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_headbar_alpha",
+    "color": "$global_headbar_color"
+  },
+  "store_top_bar": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_headbar_alpha",
+    "color": "$global_headbar_color"
+  },
+  "top_bar": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_headbar_alpha",
+    "color": "$global_headbar_color"
+  },
+  "store_description_background": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color"
+  },
+  "section_divider": {"ignored": true}
+}
