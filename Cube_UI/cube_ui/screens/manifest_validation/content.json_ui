@@ -24,7 +24,7 @@
         "scope": "view"
       }
     ],
-    "$screen_bg_content": "cube_ui_background.screen_blur_background_content",
+    "$screen_bg_content": "cube_background.screen_blur_background_content",
     "$screen_content": "manifest_validation_content.manifest_validation_screen_content"
   },
   
@@ -32,7 +32,7 @@
     "type": "panel",
     "controls": [
       {
-        "headbar@cube_ui_common.headbar": {"$title":"manifestvalidation.title"}
+        "headbar@cube_common.headbar": {"$title":"manifestvalidation.title"}
       },
       {
         "main_content_panel@manifest_main_content.manifest_validation_scroll_content": {}

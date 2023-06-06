@@ -5,7 +5,7 @@
     "type": "image",
     "nineslice_size": 1.0,
     "alpha": "$global_background_alpha",
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$global_background_color"
   },
   
@@ -31,7 +31,7 @@
     "layer": 1,
     "alpha": 0.4,
     "nineslice_size": 1,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$btn_color",
     "$btn_color|default": "$global_button_default_color",
     "controls": [

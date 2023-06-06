@@ -35,10 +35,10 @@
     "anchor_to": "top_left",
     "animation_reset_name": "screen_animation_reset",
     "anims": [
-      "@cube_ui_anim.headbar_screen_exit_animation_push",
-      "@cube_ui_anim.headbar_screen_exit_animation_pop",
-      "@cube_ui_anim.headbar_screen_entrance_animation_push",
-      "@cube_ui_anim.headbar_screen_entrance_animation_pop"
+      "@cube_anim.headbar_screen_exit_animation_push",
+      "@cube_anim.headbar_screen_exit_animation_pop",
+      "@cube_anim.headbar_screen_entrance_animation_push",
+      "@cube_anim.headbar_screen_entrance_animation_pop"
     ],
     "controls": [
       {

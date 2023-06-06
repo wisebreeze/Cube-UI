@@ -481,7 +481,7 @@
     "layer": 1,
     "alpha": 0.4,
     "nineslice_size": 1,
-    "texture": "textures/ui/white_background",
+    "texture": "textures/ui/White",
     "color": "$bg_color",
     "controls": [
       {
