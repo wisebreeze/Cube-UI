@@ -1,0 +1,195 @@
+{
+  "namespace": "setting_info_background",
+  
+  "profile_panel@settings_common.section_toggle_base": {
+    "$toggle_view_binding_name": "info_button_toggle",
+    "$button_text": "options.profile",
+    "$toggle_property_bag": {
+      "#panel_title": "options.profileTitle"
+    },
+    "$button_type_panel": "common.empty_panel",
+    "$unchecked_control": "setting_info_background.info_background",
+    "$checked_control": "setting_info_background.info_background",
+    "$unchecked_hover_control": "setting_info_background.info_background_hover",
+    "$checked_hover_control": "setting_info_background.info_background_hover",
+    "$unchecked_locked_control": "setting_info_background.info_background"
+  },
+  
+  "info_setting_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$spatialPatternsPadding": ["100%", 8],
+	  "$paddingLineDivider": ["100%", 8],
+    "bindings": [
+      { 
+        "binding_type": "view",
+        "source_control_name": "info_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "name_controls@settings_common.option_custom_control": {
+          "ignored": "$education_edition",
+          "$option_label": "options.name",
+          "$control_name": "general_section.name_controls",
+          "bindings": [
+            {
+              "binding_name": "#can_change_name",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+
+      { "paddingSignInControls": { "ignored": "$education_edition", "type": "panel", "size": "$spatialPatternsPadding", "bindings": [
+		{
+		  "binding_name": "#not_logged_in",
+		  "binding_name_override": "#visible"
+		}
+	  ] } },
+
+      {
+        "signin_controls@settings_common.option_custom_control": {
+          "$control_name": "general_section.signin_controls",
+          "ignored": "$education_edition",
+          "bindings": [
+            {
+              "binding_name": "#not_logged_in",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+
+	{ "paddingGamerTagControls": { "type": "panel", "size": "$spatialPatternsPadding", "bindings": [
+				{
+					"binding_name": "#logged_in",
+					"binding_name_override": "#visible"
+				}
+			]
+		} 
+	},
+      {
+        "gamertag_controls@settings_common.option_custom_control": {
+          "$show_option_label": false,
+          "$control_name": "general_section.gamertag_controls",
+          "bindings": [
+            {
+              "binding_name": "#logged_in",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "info_background_hover@info_background": {
+    "color": "$global_button_hover_color"
+  },
+  
+  "info_background": {
+    "type": "image",
+    "ignored": "(not $include_controls_and_settings_sections)",
+    "size": [ "100%", 32 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/ui/White",
+    "color": "$global_button_default_color",
+    "alpha": "$global_button_alpha",
+    "controls": [
+      {
+        "main_panel": {
+          "type": "panel",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "100% - 4px", 30 ],
+          "offset": [ 2, 0 ],
+          "controls": [
+            {
+              "gamepic": {
+                "type": "image",
+                "layer": 3,
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ 28, 28 ],
+                "texture": "cube_ui/textures/about_ui/default_pack_icon",
+                "bindings": [
+                  {
+                    "binding_name": "#gamerpic_texture_path",
+                    "binding_name_override": "#texture"
+                  },
+                  {
+                    "binding_name": "#gamerpic_texture_location_type",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            },
+            {
+              "info_panel": {
+                "type": "panel",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ "100% - 4px", 30 ],
+                "offset": [ 30, 0 ],
+                "controls": [
+                  {
+                    "gametag": {
+                      "type": "label",
+                      "text": "#gamertag_label",
+                      "layer": 5,
+                      "localize": false,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "font_scale_factor": 0.9,
+                      "text_alignment": "left",
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 30px", "default" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#gamertag_label"
+                        },
+                        {
+                          "binding_name": "#logged_in",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "player_name": {
+                      "type": "label",
+                      "text": "#player_name",
+                      "layer": 5,
+                      "localize": false,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "font_scale_factor": 0.9,
+                      "text_alignment": "left",
+                      "size": [ "default", "default" ],
+                      "max_size": [ "100% - 30px", "default" ],
+                      "bindings": [
+                        {
+                          "binding_name": "#player_name"
+                        },
+                        {
+                          "binding_name": "#not_logged_in",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

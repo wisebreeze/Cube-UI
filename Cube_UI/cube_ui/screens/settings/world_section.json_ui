@@ -3,19 +3,19 @@
   "world_game_mode_dropdown_content": {
     "controls": [
       {
-        "survival_mode@cube_ui_common.radio_with_label": {
+        "survival_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_game_mode_radio_survival",
           "$radio_text": "createWorldScreen.gameMode.survival"
         }
       },
       {
-        "creative_mode@cube_ui_common.radio_with_label": {
+        "creative_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_game_mode_radio_creative",
           "$radio_text": "createWorldScreen.gameMode.creative"
         }
       },
       {
-        "adventure_mode@cube_ui_common.radio_with_label": {
+        "adventure_mode@cube_common.radio_with_label": {
           "ignored": "$trial",
           "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
           "$radio_text": "createWorldScreen.gameMode.adventure"
@@ -27,27 +27,34 @@
   "player_game_mode_dropdown_content": {
     "controls": [
       {
-        "default_mode@cube_ui_common.radio_with_label": {
+        "default_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#player_game_mode_radio_default",
           "$radio_text": "createWorldScreen.gameMode.serverDefault"
         }
       },
       {
-        "survival_mode@cube_ui_common.radio_with_label": {
+        "survival_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#player_game_mode_radio_survival",
           "$radio_text": "createWorldScreen.gameMode.survival"
         }
       },
       {
-        "creative_mode@cube_ui_common.radio_with_label": {
+        "creative_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#player_game_mode_radio_creative",
           "$radio_text": "createWorldScreen.gameMode.creative"
         }
       },
       {
-        "adventure_mode@cube_ui_common.radio_with_label": {
+        "adventure_mode@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
           "$radio_text": "createWorldScreen.gameMode.adventure"
+        }
+      },
+      {
+        "player_spectator_mode_toggle@cube_common.radio_with_label": {
+          "enabled": "$spectator_enable",
+          "$toggle_state_binding_name": "#player_game_mode_radio_spectator",
+          "$radio_text": "createWorldScreen.gameMode.spectator"
         }
       }
     ]
@@ -56,25 +63,25 @@
   "world_difficulty_dropdown_content": {
     "controls": [
       {
-        "@cube_ui_common.radio_with_label": {
+        "@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_difficulty_radio_peaceful",
           "$radio_text": "options.difficulty.peaceful"
         }
       },
       {
-        "@cube_ui_common.radio_with_label": {
+        "@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_difficulty_radio_easy",
           "$radio_text": "options.difficulty.easy"
         }
       },
       {
-        "@cube_ui_common.radio_with_label": {
+        "@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_difficulty_radio_normal",
           "$radio_text": "options.difficulty.normal"
         }
       },
       {
-        "@cube_ui_common.radio_with_label": {
+        "@cube_common.radio_with_label": {
           "$toggle_state_binding_name": "#world_difficulty_radio_hard",
           "$radio_text": "options.difficulty.hard"
         }
@@ -129,7 +136,7 @@
           "$focus_override_right": "FOCUS_OVERRIDE_STOP"
         }
       },
-      {"divider@cube_ui_common.divider": {}},
+      {"divider@cube_common.divider": {}},
       {
         "world_options_label@settings_common.option_group_label": {
           "$text": "createWorldScreen.worldOptions",
@@ -355,7 +362,7 @@
           "$toggle_binding_condition": "always_when_visible"
         }
       },
-      {"divider@cube_ui_common.divider": {}},
+      {"divider@cube_common.divider": {}},
       {"title_1@cheat_title": {"$title": "howtoplay.category.education"}},
       {
         "education_toggle@settings_common.option_toggle": {

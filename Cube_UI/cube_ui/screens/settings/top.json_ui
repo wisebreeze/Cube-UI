@@ -1,0 +1,148 @@
+{
+  "namespace": "setting_top",
+
+  "top_panel": {
+    "type": "stack_panel",
+    "size": ["98%+1px","100%c"],
+    "ignored":"$is_netease",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$is_pack",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"search_box@search_box": {}},
+      {"p@cube_common.v_panel": {}},
+      {"toggle_panel@toggle_panel": {}}
+    ]
+  },
+
+  "toggle_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%",20],
+    "controls": [
+      {
+        "selected@toggle": {
+          "$count_name": "#selected_count",
+          "$state_collection_name": "$selected_state_collection_name",
+          "$button_text": "resourcePack.selected.title.packs",
+          "$toggle_view_binding_name": "$selected_item",
+          "$toggle_group_forced_index": 0
+        }
+      },
+      {
+        "available@toggle": {
+          "$hide_error_tip": true,
+          "$count_name": "#available_count",
+          "$state_collection_name": "$available_state_collection_name",
+          "$button_text": "resourcePack.available.title.packs",
+          "$toggle_view_binding_name": "$available_item",
+          "$toggle_group_forced_index": 1
+        }
+      }
+    ]
+  },
+
+  "toggle@common_toggles.light_text_toggle": {
+    "size": [ "fill", 20 ],
+    "$button_size_override": [ "100%", "100%" ],
+    "$button_type_panel": "setting_top.toggle_style",
+
+    "$radio_toggle_group": true,
+    "$toggle_name": "$search_name",
+    "$toggle_group_default_selected": 0
+  },
+  
+  "toggle_style": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "$hide_error_tip|default": false,
+    "controls": [
+      {
+        "new_ui_binding_button_label": {
+          "type": "label",
+          "layer": 2,
+          "text": "$button_text",
+          "color": "$text_color",
+          "font_type": "$global_toggle_text_font",
+          "size": [ "default", "default" ]
+        }
+      },
+      {"right_stack@right_stack":{}}
+    ]
+  },
+
+  "right_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": ["100%c","100%"],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [-3,0],
+    "controls": [
+      {"status@status_panel":{"ignored":"$hide_error_tip"}},
+      {
+        "count@common.minecraftTenLabel": {
+          "size": [ "default", 10 ],
+          "max_size": [ 40, 10 ],
+          "text": "$count_name",
+          "color": "$text_color",
+          "bindings": [
+            {
+              "binding_name": "$count_name",
+              "binding_collection_name": "$state_collection_name",
+              "binding_type": "collection"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "status_panel": {
+    "type": "panel",
+    "size": [ 16, 14 ],
+    "controls": [
+      {
+        "error@resource_packs.error_image": {
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_collection_name": "$state_collection_name",
+              "binding_type": "collection",
+              "binding_name": "#any_errors",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "warning_image@resource_packs.warning_image": {
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_collection_name": "$state_collection_name",
+              "binding_type": "collection",
+              "binding_name": "#any_warnings",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "search_box@common.text_edit_box": {
+    "size": [ "100%", 20 ],
+    "$text_edit_box_label_size": ["default",16],
+    "max_length": 64,
+    "layer": 10,
+    "focus_wrap_enabled": false,
+    "$text_edit_text_control": "$search_name",
+    "$place_holder_text": "search.item"
+  }
+}
