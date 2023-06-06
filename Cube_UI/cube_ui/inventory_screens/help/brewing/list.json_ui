@@ -1,0 +1,259 @@
+{
+  "namespace": "brewing_list",
+  "potion_common": {
+    "type": "panel",
+    "size": [ "100%", 30 ],
+    "$list|default": [],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%",20],
+          "controls": "$list"
+        }
+      }
+    ]
+  },
+  "awkward_list@potion_common": {
+    "$list": [
+      {"base_item@default_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/nether_wart","$item_name":"item.nether_wart.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@awkward_potion": {}}
+    ]
+  },
+  "splash_list@potion_common": {
+    "$list": [
+      {"base_item@default_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/gunpowder","$item_name":"item.gunpowder.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@brewing_common.item_cell": {"$item_texture":"textures/items/potion_bottle_splash_waterBreathing","$item_name":"itemGroup.name.splashPotion"}}
+    ]
+  },
+  "lingering_list@potion_common": {
+    "$list": [
+      {"base_item@brewing_common.item_cell": {"$item_texture":"textures/items/potion_bottle_splash_waterBreathing","$item_name":"itemGroup.name.splashPotion"}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/dragons_breath","$item_name":"item.dragon_breath.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@brewing_common.item_cell": {"$item_texture":"textures/items/potion_bottle_lingering_waterBreathing","$item_name":"itemGroup.name.lingeringPotion"}}
+    ]
+  },
+  // 常用物品
+  "default_potion@brewing_common.item_cell": {
+    "$item_texture":"textures/items/potion_bottle_drinkable",
+    "$item_name":"potion.emptyPotion.name"
+  },
+  "awkward_potion@brewing_common.item_cell": {
+    "$item_texture":"textures/items/potion_bottle_drinkable",
+    "$item_name":"potion.awkward.name",
+    "$is_empty":true
+  },
+  "spider_eye_fermented@brewing_common.item_cell": {
+    "$item_texture":"textures/items/spider_eye_fermented",
+    "$item_name":"item.fermented_spider_eye.name"
+  },
+  "redstone@brewing_common.item_cell": {
+    "$item_texture":"textures/items/redstone_dust",
+    "$item_name":"item.redstone.name"
+  },
+  "glowstone@brewing_common.item_cell": {
+    "$item_texture":"textures/items/glowstone_dust",
+    "$item_name":"item.glowstone_dust.name"
+  },
+  // 正面效果
+  "speed_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$glowstone_text":"+40 / 1:30(90s)","$item_texture":"textures/items/potion_bottle_moveSpeed","$effect_texture":"textures/ui/speed_effect","$item_name":"potion.moveSpeed.name","$potion_effect_name":"potion.moveSpeed","$has_effect":true,"$potion_effect_text":"attribute.name.minecraft:movement","$potion_effect":"+20","$potion_time":"3:00(180s)"},
+  "speed_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/sugar","$item_name":"item.sugar.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@speed_common": {}}
+    ]
+  },
+  "jump_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$glowstone_text":"+1.25block / 1:30(90s)","$item_texture":"textures/items/potion_bottle_jump","$effect_texture":"textures/ui/jump_boost_effect","$item_name":"potion.jump.name","$potion_effect_name":"potion.jump","$has_effect":true,"$potion_effect_text_2":"dr.body_size_label_text","$potion_effect":"+0.5","$potion_time":"3:00(180s)"},
+  "jump_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/rabbit_foot","$item_name":"item.rabbit_foot.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@jump_common": {}}
+    ]
+  },
+  "damage_image_list": {
+    "controls": [
+      {"damage@brewing_common.damage":{}}
+    ]
+  },
+  "damage_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$glowstone_text":"+2.99 / 1:30(90s)","$image_list":"brewing_list.damage_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_damageBoost","$effect_texture":"textures/ui/strength_effect","$item_name":"potion.damageBoost.name","$potion_effect_name":"potion.damageBoost","$has_effect":true,"$potion_effect_text":"attribute.name.minecraft:attack_damage","$potion_effect":"+1.3","$potion_time":"3:00(180s)"},
+  "damage_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/blaze_powder","$item_name":"item.blaze_powder.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@damage_common": {}}
+    ]
+  },
+  "instant_health_image_list": {
+    "controls": [
+      {"heart1@brewing_common.heart":{}},
+      {"heart2@brewing_common.heart":{}}
+    ]
+  },
+  "instant_health_common@brewing_common.item_cell": {"$glowstone_text":"+4","$image_list":"brewing_list.instant_health_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_heal","$effect_texture":"cube_ui/textures/common/effect/instant_health","$item_name":"potion.heal.name","$potion_effect_name":"potion.heal","$has_effect":true,"$potion_effect_text_2":"§a","$potion_effect":"+2","$potion_time":"0:00"},
+  "instant_health_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/melon_speckled","$item_name":"item.speckled_melon.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@instant_health_common": {}}
+    ]
+  },
+  "regeneration_image_list": {
+    "controls": [
+      {"heart_half@brewing_common.heart_half":{}}
+    ]
+  },
+  "regeneration_common@brewing_common.item_cell": {"$redstone_text":"2:00(120s)","$glowstone_text":"+0.5/1.2s / 0:22(2s)","$image_list":"brewing_list.regeneration_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_regeneration","$effect_texture":"textures/ui/regeneration_effect","$item_name":"potion.regeneration.name","$potion_effect_name":"potion.regeneration","$has_effect":true,"$potion_effect_text_2":"§a","$potion_effect":"+0.5/2.5s","$potion_time":"0:45(45s)"},
+  "regeneration_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/ghast_tear","$item_name":"item.ghast_tear.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@regeneration_common": {}}
+    ]
+  },
+  "fire_resistance_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$item_texture":"textures/items/potion_bottle_fireResistance","$effect_texture":"textures/ui/fire_resistance_effect","$item_name":"potion.fireResistance.name","$potion_effect_name":"potion.fireResistance","$potion_time":"3:00(180s)"},
+  "fire_resistance_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/magma_cream","$item_name":"item.magma_cream.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@fire_resistance_common": {}}
+    ]
+  },
+  "water_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$item_texture":"textures/items/potion_bottle_waterBreathing","$effect_texture":"textures/ui/water_breathing_effect","$item_name":"potion.waterBreathing.name","$potion_effect_name":"potion.waterBreathing","$potion_time":"3:00(180s)"},
+  "water_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/fish_pufferfish_raw","$item_name":"item.pufferfish.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@water_common": {}}
+    ]
+  },
+  "night_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$item_texture":"textures/items/potion_bottle_nightVision","$effect_texture":"textures/ui/night_vision_effect","$item_name":"potion.nightVision.name","$potion_effect_name":"potion.nightVision","$potion_time":"3:00(180s)"},
+  "night_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/carrot_golden","$item_name":"item.golden_carrot.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@night_common": {}}
+    ]
+  },
+  "hide_common@brewing_common.item_cell": {"$redstone_text":"8:00(480s)","$item_texture":"textures/items/potion_bottle_invisibility","$effect_texture":"textures/ui/invisibility_effect","$item_name":"potion.invisibility.name","$potion_effect_name":"potion.invisibility","$potion_time":"3:00(180s)"},
+  "hide_list@potion_common": {
+    "$list": [
+      {"base_item@night_common": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@hide_common": {}}
+    ]
+  },
+  "slowfall_common@brewing_common.item_cell": {"$redstone_text":"4:00(240s)","$item_texture":"textures/items/potion_bottle_slowFall","$effect_texture":"textures/ui/slow_falling_effect","$item_name":"potion.slowFalling.name","$potion_effect_name":"potion.slowFalling","$potion_time":"1:30(90s)"},
+  "slowfall_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/phantom_membrane","$item_name":"item.phantom_membrane.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@slowfall_common": {}}
+    ]
+  },
+  "turtle_common@brewing_common.item_cell": {"$redstone_text":"0:40(40s)","$glowstone_text":"-90 / 0:20(20s)","$potion_effect_name_2":"potion.turtleMaster","$potion_effect_name":"potion.turtleMaster2","$potion_level_2":"3","$potion_level":"2","$item_texture":"textures/items/potion_bottle_turtleMaster","$effect_texture":"textures/ui/resistance_effect","$effect_texture_2":"textures/ui/slowness_effect","$item_name":"potion.turtleMaster.name","$has_effect":true,"$potion_effect_text":"§r","$potion_effect_text_2":"attribute.name.minecraft:movement","$potion_effect":"-60","$effect_text_color":"$c_color_format","$potion_time":"0:20(20s)"},
+  "turtle_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/turtle_helmet","$item_name":"item.turtle_helmet.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@turtle_common": {}}
+    ]
+  },
+  "slowness_common@brewing_common.item_cell": {"$redstone_text":"4:00(240s)","$glowstone_text":"-60 / 0:20(20s)","$item_texture":"textures/items/potion_bottle_moveSlowdown","$effect_texture":"textures/ui/slowness_effect","$item_name":"potion.moveSlowdown.name","$potion_effect_name":"potion.moveSlowdown","$has_effect":true,"$potion_effect_text":"§r","$potion_effect_text_2":"attribute.name.minecraft:movement","$potion_effect":"-20","$effect_text_color":"$c_color_format","$potion_time":"1:30(90s)"},
+  "slowness_list@potion_common": {
+    "$list": [
+      {"base_item@speed_common": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@slowness_common": {}}
+    ]
+  },
+  "slowness_list_2@potion_common": {
+    "$list": [
+      {"base_item@jump_common": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@slowness_common": {}}
+    ]
+  },
+  "poison_common@brewing_common.item_cell": {"$redstone_text":"2:00(120s)","$glowstone_text":"-0.5/1.2s / 0:22(22s)","$image_list":"brewing_list.regeneration_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_poison","$effect_texture":"textures/ui/poison_effect","$item_name":"potion.poison.name","$potion_effect_name":"potion.poison","$has_effect":true,"$potion_effect_text_2":"§a","$potion_effect":"-0.5/2.5s","$effect_text_color":"$c_color_format","$potion_time":"0:45(45s)"},
+  "poison_list@potion_common": {
+    "$list": [
+      {"base_item@awkward_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@brewing_common.item_cell": {"$item_texture":"textures/items/spider_eye","$item_name":"item.spider_eye.name"}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@poison_common": {}}
+    ]
+  },
+  "instant_damage_image_list": {
+    "controls": [
+      {"heart1@brewing_common.heart":{}},
+      {"heart2@brewing_common.heart":{}},
+      {"heart3@brewing_common.heart":{}}
+    ]
+  },
+  "instant_damage_common@brewing_common.item_cell": {"$glowstone_text":"-6","$image_list":"brewing_list.instant_damage_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_harm","$effect_texture":"cube_ui/textures/common/effect/instant_damage","$item_name":"potion.harm.name","$potion_effect_name":"potion.harm","$has_effect":true,"$potion_effect_text_2":"§a","$potion_effect":"-3","$effect_text_color":"$c_color_format","$potion_time":"0:00"},
+  "instant_damage_list@potion_common": {
+    "$list": [
+      {"base_item@instant_health_common": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@instant_damage_common": {}}
+    ]
+  },
+  "instant_damage_list_2@potion_common": {
+    "$list": [
+      {"base_item@poison_common": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@instant_damage_common": {}}
+    ]
+  },
+  "weakness_common@brewing_common.item_cell": {"$redstone_text":"4:00(240s)","$image_list":"brewing_list.damage_image_list","$has_image_list":true,"$item_texture":"textures/items/potion_bottle_weakness","$effect_texture":"textures/ui/weakness_effect","$item_name":"potion.weakness.name","$potion_effect_name":"potion.weakness","$has_effect":true,"$potion_effect_text":"attribute.name.generic.attackDamage","$potion_effect":"-0.7","$effect_text_color":"$c_color_format","$potion_time":"1:30(90s)"},
+  "weakness_list@potion_common": {
+    "$list": [
+      {"base_item@default_potion": {}},
+      {"arrow_plus@brewing_arrow.right_plus": {}},
+      {"base_resource_item@spider_eye_fermented": {}},
+      {"arrow_to@brewing_arrow.right_to": {}},
+      {"potion_item@weakness_common": {}}
+    ]
+  }
+}
