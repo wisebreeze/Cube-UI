@@ -1,0 +1,186 @@
+{
+  "namespace": "pause_sidebar",
+
+  "empty_panel": {
+    "type": "panel",
+    "size": [ "100%", 5 ]
+  },
+  
+  "empty_panels": {
+    "type": "panel",
+    "size": [ "100%", 2 ]
+  },
+
+  // main button panel //
+  "scroll_button_panel@common.scrolling_panel": {
+    "size": [ "100%", "100%" ],
+    "offset": [ 0, 20 ],
+    "$show_background": false,
+    "$scroll_track_size": [ 4, "100% - 4px" ],
+    "$scrolling_content": "pause_sidebar.main_pause_button_panel"
+  },
+  
+  "main_pause_button_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "controls": [
+      { "button_panel@pause_sidebar.main_button_panel": {} }
+    ]
+  },
+  
+  "main_button_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "orientation": "vertical",
+    "controls": [
+      { "return_to_game_button@pause_sidebar.return_to_game_button": {}},
+      { "empty_panel_1@pause_sidebar.empty_panel": {}},
+      { "set_button@pause_sidebar.set_button": {}},
+      { "empty_panel_2@pause_sidebar.empty_panel": {}},
+      { "about_button@pause_sidebar.about_button": {}},
+      { "empty_panel_3@pause_sidebar.empty_panel": {}},
+      { "achievements_button@pause_sidebar.achievements_button": {}},
+      { "empty_panel_4@pause_sidebar.empty_panel": {"visible": "(not $is_netease)"}},
+      { "store_button@pause_sidebar.store_button": {}},
+      { "empty_panel_5@pause_sidebar.empty_panel": {"visible": "(not $is_netease)"}},
+      { "profile_button@pause_sidebar.profile_button": {}},
+      { "empty_panel_6@pause_sidebar.empty_panel": {"visible": "(not $is_netease)"}},
+      { "quit_toggle@pause_sidebar.quit_toggle": {}},
+      { "quit_button@pause_sidebar.quit_button": {}}
+    ]
+  },
+  
+  "return_to_game_button@sidebar_button": {
+    "$pressed_button_name": "button.menu_continue",
+    "$sidebar_button_text": "menu.returnToGame",
+    "$button_focus_precedence": 1,
+    "focus_change_up": "button.menu_quit",
+    "$focus_override_right": "change_skin_button",
+    "$sidebar_button_image": "setting/controller_icon"
+  },
+  
+  "set_button@sidebar_button": {
+    "$pressed_button_name": "button.menu_settings",
+    "$sidebar_button_text": "menu.settings",
+    "$sidebar_button_image": "start/setting_icon"
+  },
+  
+  "about_button@sidebar_button": {
+    "$pressed_button_name": "button.menu_buy_game",
+    "$sidebar_button_text": "about.ui_pack",
+    "$sidebar_button_image": "start/about_icon"
+  },
+
+  "achievements_button@sidebar_button": {
+    "ignored": "$is_netease",
+    "$pressed_button_name": "button.menu_achievements",
+    "$sidebar_button_text": "menu.achievements",
+    "$sidebar_button_image": "start/achievement_icon"
+  },
+
+  "store_button@sidebar_button": {
+    "ignored": "$is_netease",
+    "$pressed_button_name": "button.menu_store",
+    "$sidebar_button_text": "$store_button_text",
+    "$button_tts_header": "$store_button_text",
+    "$sidebar_button_image": "start/store_icon"
+  },
+
+  "profile_button@sidebar_button": {
+    "ignored": "$is_netease",
+    "$pressed_button_name": "button.to_profile_or_skins_screen",
+    "$sidebar_button_text": "profileScreen.header",
+    "$button_tts_header": "accessibility.start.profile",
+    "$sidebar_button_image": "start/dress_icon"
+  },
+  
+  "quit_button@sidebar_button": {
+    "ignored": "$enable_quit_tip",
+    "$pressed_button_name": "button.menu_quit",
+    "$sidebar_button_text": "playscreen.confirmLeaveTitle",
+    "$sidebar_button_image": "pause/icon_quit"
+  },
+  
+  "quit_toggle@common_toggles.light_text_toggle": {
+    "ignored": "(not $enable_quit_tip)",
+    "$sidebar_button_image": "pause/icon_quit",
+    "$toggle_view_binding_name": "quitbtn_toggle",
+    "$toggle_name": "quit_toggle",
+    "$sidebar_button_text": "pauseScreen.quit",
+    "$toggle_group_forced_index": 1,
+    "$toggle_default_state": false,
+    "$radio_toggle_group": true,
+    "$unchecked_control": "pause_sidebar.toggle_default",
+    "$checked_control": "pause_sidebar.toggle_default",
+    "$unchecked_hover_control": "pause_sidebar.toggle_hover",
+    "$checked_hover_control": "pause_sidebar.toggle_hover",
+    "size": [ "100%", 20 ]
+  },
+  
+  "toggle_default@pause_sidebar.sidebar_button_common": {
+    "$sidebar_button_text_color": "$global_button_text_default_color"
+  },
+  "toggle_hover@pause_sidebar.sidebar_button_common": {
+    "$hover": true,
+    "$sidebar_button_text_color": "$global_button_text_hover_color"
+  },
+  
+  "sidebar_button@common.button": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$button_tts_header": "$sidebar_button_text",
+    "size": [ "100%", 20 ],
+    "controls": [
+      {"default@pause_sidebar.sidebar_button_common": {"$sidebar_button_text_color": "$global_button_text_default_color"}},
+      {"hover@pause_sidebar.sidebar_button_common": {"$hover":true,"$sidebar_button_text_color": "$global_button_text_hover_color"}},
+      {"pressed@pause_sidebar.sidebar_button_common": {"$sidebar_button_text_color": "$global_button_text_pressed_color"}}
+    ]
+  },
+  
+  "sidebar_button_common": {
+    "type": "panel",
+    "layer": 2,
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$hover|default": false,
+    "controls": [
+      {
+        "left_hover": {
+          "type": "image",
+          "size": [ 1, "100%" ],
+          "layer": 2,
+          "color": "$global_button_hover_color",
+          "texture": "textures/ui/White",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "visible": "$hover"
+        }
+      },
+      {
+        "base_image": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "offset": [3,0],
+          "layer": 3,
+          "texture": "('cube_ui/textures/' + $sidebar_button_image)",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "text": {
+          "type": "label",
+          "layer": 3,
+          "font_scale_factor": 1.1,
+          "color": "$sidebar_button_text_color",
+          "text": "$sidebar_button_text",
+          "size": [ "default", "default" ],
+          "offset": [ 22, 0 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      }
+    ]
+  }
+}

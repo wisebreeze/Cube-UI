@@ -1,0 +1,112 @@
+{
+  "namespace": "pause_quit",
+
+  "label": {
+    "type": "label",
+    "text_alignment": "left",
+    "font_type": "$global_main_font"
+  },
+
+  "window": {
+    "type": "input_panel",
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "quitbtn_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"left_top@left_top":{}},
+      {"windows@windows":{}}
+    ]
+  },
+
+  "left_top": {
+    "type": "image",
+    "alpha": 0.35,
+    "layer": 1,
+    "size": [ "100%", 20 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "color": "$global_headbar_color",
+    "texture": "textures/ui/White",
+    "controls": [
+      {
+        "title@label": {
+          "text": "pause.quit_tip.title",
+          "color": "$global_headbar_title_color",
+          "layer": 2,
+          "offset": [3,0],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle"
+        }
+      }
+    ]
+  },
+
+  "windows": {
+    "type": "stack_panel",
+    "size": ["100%-4px","100%-24px"],
+    "offset": [0,-2],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "layer": 101,
+    "controls": [
+      {"content@label": {"text":"pause.quit_tip.content"}},
+      {"pad":{"type":"panel","size":[1,"fill"]}},
+      {"buttonPanel@button_panel":{}}
+    ]
+  },
+  
+  "button_panel": {
+    "type": "stack_panel",
+    "size": ["100%",30],
+    "orientation": "horizontal",
+    "controls": [
+      {"btn1@pause_quit.quit_btn":{}},
+      {"panel":{"type":"panel","size":[5,1]}},
+      {"btn2@pause_quit.back_btn":{}}
+    ]
+  },
+  
+  "quit_btn@common_buttons.light_text_button":{
+    "$focus_id": "yes",
+    "size": ["fill",30],
+    "$button_image_size": [ "100%", "100%" ],
+    "$pressed_button_name": "button.menu_quit",
+    "$button_sound": "random.door_close",
+    "$button_text": "pause.quit_tip.yes",
+    "$focus_override_right": "no"
+  },
+  
+  "back_btn@common_toggles.light_text_toggle":{
+    "$focus_id": "no",
+    "size": ["fill",30],
+    "$radio_toggle_group": true,
+    "$toggle_default_state": true,
+    "$toggle_name": "quit_toggle",
+    "$toggle_group_forced_index": 0,
+    "$button_text": "pause.quit_tip.no",
+    "$focus_override_left": "yes",
+    "$button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_select",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "focused"
+      }
+    ]
+  }
+}
