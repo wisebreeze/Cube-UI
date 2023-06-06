@@ -1,0 +1,313 @@
+{
+  "namespace": "voice_trans",
+  "button_cancel@common.button": {
+    "$labelText": "取消",
+    "$pressed_button_name": "%voice_trans.ClickCancelButton",
+    "$text_offset": [
+      0,
+      0
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "default@fold_menu.default": {}
+      },
+      {
+        "hover@fold_menu.hover": {}
+      },
+      {
+        "pressed@fold_menu.pressed": {}
+      },
+      {
+        "button_label": {
+          "layer": 3,
+          "max_size": [
+            "100%",
+            "100%"
+          ],
+          "offset": "$text_offset",
+          "shadow": false,
+          "text": "$labelText",
+          "type": "label"
+        }
+      }
+    ],
+    "layer": 2,
+    "offset": [
+      "-23.500000%",
+      "33%"
+    ],
+    "size": [
+      "43%",
+      "20%"
+    ]
+  },
+  "button_send@common.button": {
+    "$labelText": "发送",
+    "$label_font_size": "normal",
+    "$pressed_button_name": "%voice_trans.ClickSendButton",
+    "$text_offset": [
+      0,
+      0
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "default@fold_menu.default": {}
+      },
+      {
+        "hover@fold_menu.hover": {}
+      },
+      {
+        "pressed@fold_menu.pressed": {}
+      },
+      {
+        "button_label": {
+          "layer": 3,
+          "max_size": [
+            "100%",
+            "100%"
+          ],
+          "offset": "$text_offset",
+          "shadow": false,
+          "text": "$labelText",
+          "type": "label"
+        }
+      },
+      {
+        "label_send@voice_trans.label_send": {}
+      }
+    ],
+    "layer": 2,
+    "offset": [
+      "23.500000%",
+      "33%"
+    ],
+    "size": [
+      "43%",
+      "20%"
+    ],
+    "visible": false
+  },
+  "button_finish@common.button": {
+    "$labelText": "完成",
+    "$pressed_button_name": "%voice_trans.ClickFinishButton",
+    "$text_offset": [
+      0,
+      0
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "default@fold_menu.default": {}
+      },
+      {
+        "hover@fold_menu.hover": {}
+      },
+      {
+        "pressed@fold_menu.pressed": {}
+      },
+      {
+        "button_label": {
+          "layer": 3,
+          "max_size": [
+            "100%",
+            "100%"
+          ],
+          "offset": "$text_offset",
+          "shadow": false,
+          "text": "$labelText",
+          "type": "label"
+        }
+      },
+      {
+        "label_send@voice_trans.label_send": {}
+      }
+    ],
+    "layer": 2,
+    "offset": [
+      "23.500000%",
+      "33%"
+    ],
+    "size": [
+      "43%",
+      "20%"
+    ]
+  },
+  "image_progress": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 3,
+    "offset": [
+      0,
+      0
+    ],
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "type": "image",
+    "visible": false,
+    "texture": "textures/ui/White",
+    "alpha": "$global_experience_bar_empty_alpha",
+    "color": "$global_experience_bar_empty_color"
+  },
+  "image_progressbar": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "image_progress@voice_trans.image_progress": {}
+      }
+    ],
+    "layer": 2,
+    "offset": [
+      0,
+      "-20%"
+    ],
+    "size": [
+      "81.300003%",
+      "2.700000%"
+    ],
+    "texture": "textures/ui/White",
+    "type": "image",
+    "visible": false,
+    "alpha": "$global_experience_bar_full_alpha",
+    "color": "$global_experience_bar_full_color"
+  },
+  "image_soundtotext": {
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+      {
+        "button_cancel@voice_trans.button_cancel": {}
+      },
+      {
+        "button_send@voice_trans.button_send": {}
+      },
+      {
+        "button_finish@voice_trans.button_finish": {}
+      },
+      {
+        "label_trans@voice_trans.label_trans": {}
+      },
+      {
+        "image_progressbar@voice_trans.image_progressbar": {}
+      },
+      {
+        "label_recording@voice_trans.label_recording": {}
+      }
+    ],
+    "layer": 10000,
+    "offset": [
+      "-36%",
+      "8.646620%"
+    ],
+    "size": [
+      "27.93427%",
+      "27.81955%"
+    ],
+    "color": "$global_background_color",
+    "alpha": "$global_background_alpha",
+    "texture": "textures/ui/White",
+    "type": "image"
+  },
+  "label_recording": {
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "auto_expand": false,
+    "color": [
+      1,
+      1,
+      1
+    ],
+    "layer": 2,
+    "offset": [
+      0,
+      "-1%"
+    ],
+    "size": [
+      "100%",
+      "16%"
+    ],
+    "text": "#text",
+    "type": "label"
+  },
+  "label_send": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "auto_expand": false,
+    "color": [
+      0.301960,
+      0.301960,
+      0.301960,
+      1.0
+    ],
+    "layer": 3,
+    "offset": [
+      0,
+      "23%"
+    ],
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "text": "#text",
+    "type": "label",
+    "bindings": [
+      {
+        "binding_name": "#send_btn_text",
+        "binding_name_override": "#text"
+      }
+    ]
+  },
+  "label_cancel": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "auto_expand": false,
+    "color": [
+      0.301960,
+      0.301960,
+      0.301960,
+      1.0
+    ],
+    "layer": 3,
+    "offset": [
+      0,
+      "23%"
+    ],
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "text": "neteaseVoice.cancel_btn_text",
+    "type": "label"
+  },
+  "label_trans": {
+    "anchor_from": "center",
+    "anchor_to": "top_left",
+    "auto_expand": false,
+    "layer": 2,
+    "offset": [
+      "-40.67797%",
+      "-36.48648%"
+    ],
+    "size": [
+      "82.20341%",
+      "51.35135%"
+    ],
+    "text": "#text",
+    "text_alignment": "left",
+    "type": "label"
+  },
+  "main@common.base_screen": {
+    "controls": [
+      {
+        "image_soundtotext@voice_trans.image_soundtotext": {}
+      }
+    ]
+  }
+}

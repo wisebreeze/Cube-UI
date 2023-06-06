@@ -1,0 +1,71 @@
+{
+  "report_screen": {
+    "$header_safezone_control": "cube.empty_headbar",
+    "$header_bar_control": "cube.empty_headbar"
+  },
+  "report_screen_content": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "headbar@cube.headbar_screen": {
+          "$title": "netease.report.title",
+          "$main_screen": "report.content_panel"
+        }
+      }
+    ]
+  },
+  "player_grid_item": {
+    "controls": [
+      {
+        "player_toggle@report.player_toggle": {
+          "size": [ "100%", "100% + 1px" ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle"
+        }
+      }
+    ]
+  },
+  "content_area": {
+    "controls": [
+      {
+        "report_options_background": {
+          "type": "panel",
+          "controls": [{"report_options_background_image@report.banner_background": {"size": ["100% + 2px","100%"],"controls": [{"report_options_panel@report.report_options_panel" : {}}]}}]
+        }
+      }
+    ]
+  },
+  "banner_background": {
+    "texture": "textures/ui/White",
+    "alpha": "$global_background_alpha",
+    "color": "$global_background_color"
+  },
+  "report_checkbox/selected_checkbox_image": {
+    "$checked_image": "$global_checkbox_on_texture",
+    "variables":[
+      {
+        "requires": "($checked_state and $button_state = hover)",
+        "$checked_image": "$global_checkbox_on_hover_texture"
+      },
+      {
+        "requires": "(not $checked_state and $button_state = default)",
+        "$checked_image": "$global_checkbox_off_texture"
+      },
+      {
+        "requires": "(not $checked_state and $button_state = hover)",
+        "$checked_image": "$global_checkbox_off_hover_texture"
+      }
+    ]
+  },
+  "option_toggle": {
+    "$unchecked_control": "settings_common.option_toggle_off",
+    "$checked_control": "settings_common.option_toggle_on",
+    "$unchecked_hover_control": "settings_common.option_toggle_off_hover",
+    "$checked_hover_control": "settings_common.option_toggle_on_hover",
+    "$unchecked_locked_control": "settings_common.option_toggle_off_locked",
+    "$unchecked_locked_hover_control": "settings_common.option_toggle_off_locked",
+    "$checked_locked_control": "settings_common.option_toggle_on_locked",
+    "$checked_locked_hover_control": "settings_common.option_toggle_on_locked"
+  }
+}
