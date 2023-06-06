@@ -16,55 +16,69 @@
       },
       // §6 > 更改 // §a + 增加 // §b ✔ 修复 // §c - 移除 // §5 * 扩展包 //
       {
-        "2.5@version.version_common": {
-          "$version": "V2.5",
-          "$update_time": "2022.10.14",
-          "$description": "§l§a(增加)§r\n§f+ 为hud屏幕添加了隐藏hud按钮 (仅触屏)\n§l§6(更改)§r\n§f> 专注菜单Toggle在Hud显示\n> 稍微调整了hud屏幕部分细节\n> 设置按钮点击音效更改\n> 在聊天栏输入命令时，允许查看所有命令\n§l§5(扩展包)\n§f* 不再支持黑暗模式扩展包（使用黎明主题扩展包代替）"
+        "2.13.3@version.version_common": {
+          "$version": "V2.13.3",
+          "$update_time": "2023.6.6",
+          "$description": "§l§b(修复)§r\n§f✔ 修复追溯指南针的显示问题"
         }
       },
       {
-        "2.4@version.version_common": {
-          "$version": "V2.4",
-          "$update_time": "2022.10.1",
-          "$description": "§l§b(修复)§r\n§f✔ 修复在HUD屏幕追溯指针显示问题\n§l§a(增加)§r\n§f+ 在全局资源、行为包、资源包页面可以搜索资源了\n+ 暂停屏幕点击空白区域即可返回游戏\n+ 点击'保存并退出'时需要再次点击才能退出\n§l§c(移除)§r\n§f- 在start屏幕点击纸娃娃不会打开更衣室屏幕了"
+        "2.13.2@version.version_common": {
+          "$version": "V2.13.2",
+          "$update_time": "2023.5.20",
+          "$description": "§l§b(修复)§r\n§f✔ 修复服务器表单屏幕字体显示问题"
         }
       },
       {
-        "2.3@version.version_common": {
-          "$version": "V2.3",
-          "$update_time": "2022.9.18",
-          "$description": "§l§6(更改)§r\n§f> 对于专注面板进行了一些优化\n> 专注面板入口改为点击hud右上角打开\n(手柄、新触摸方式以及Window玩家需修改RP/ui/_setting.json文件以代替专注面板)\n> 兼容v1.18.0 - beta1.19.40版本\n§l§a(增加)§r\n§f+ 允许在未解锁的交易项目情况下进行交易"
+        "2.13.1@version.version_common": {
+          "$version": "V2.13.1",
+          "$update_time": "2023.5.13",
+          "$description": "§l§a(新增)§r\n§f+ 新增官方限时活动入口"
         }
       },
       {
-        "2.2.1@version.version_common": {
-          "$version": "V2.2.1",
-          "$update_time": "2022.7.22",
-          "$description": "§l§6(更改)§r\n§f> 专注菜单移动至暂停屏幕\n> 调整消息弹出时间\n§l§a(增加)§r\n§f+ 增加UI设置文件"
+        "2.13@version.version_common": {
+          "$version": "V2.13",
+          "$update_time": "2023.5.13",
+          "$description": "§l§b(修复)§r\n§f✔ 修复1.20版本锻造台布局问题"
         }
       },
       {
-        "2.1@version.version_common": {
-          "$version": "V2.1",
-          "$update_time": "2022.7.20",
-          "$description": "§l§6(更改)§r\n§f> 调整暂停界面动画\n> 现在在聊天界面换行即可发送信息\n> 在_global_variables.json修改$use_multiline_input为true即可换行\n> 部分细节优化"
+        "2.12.2@version.version_common": {
+          "$version": "V2.12.2",
+          "$update_time": "2023.3.18",
+          "$description": "§l§a(新增)§r\n§f+ 新增自定义皮肤选择手臂粗细按钮"
         }
       },
       {
-        "2.0.2@version.version_common": {
-          "$version": "V2.0.2",
-          "$update_time": "2022.7.19",
-          "$description": "§l§6(更改)§r\n§f> 更改部分细节\n§l§b(修复)§r\n§f✔ 修复游戏界面世界编辑按钮显示问题"
+        "2.12.1@version.version_common": {
+          "$version": "V2.12.1",
+          "$update_time": "2023.3.3",
+          "$description": "§l§6(更改)§r\n§f> 优化聊天栏命令自动填充功能"
         }
       },
       {
-        "2.0@version.version_common": {
-          "$version": "V2.0",
-          "$update_time": "2022.7.17",
-          "$description": "§l§a(增加)§r\n§f+ 新的背景\n+ 新的命令方块界面\n+ 开始界面断网提示\n+ 关于UI界面加入外观浏览和常见问题选项\n+ 新的背包界面和容器界面\n+ HUD快捷栏快速切换\n+ 更多可供用户修改的变量\n§l§6(更改)§r\n§f> 关于UI界面顶部选项栏更改为侧边栏\n> 更好的Cube UI版本描述排版\n> 新的加载等待提示\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复加载界面背景显示问题\n✔ 修复一些问题"
+        "2.12@version.version_common": {
+          "$version": "V2.12",
+          "$update_time": "2023.2.26",
+          "$description": "§l§6(更改)§r\n§f> 更改隐藏 HUD 按钮位置\n> 部分细节优化\n§l§d(变量)§r\n§f> 加入 $hide_hud_tip 变量，以方便关闭隐藏 HUD 提示"
         }
       },
-      { "dividers@cube_ui_common.divider": {"ignored": "(not $subpacks_ignored)"} },
+      {
+        "2.11.1@version.version_common": {
+          "$version": "V2.11.1",
+          "$update_time": "2023.2.21",
+          "$description": "§l§6(更改)§r\n§f> 更改HUD屏幕药水效果位置\n> 部分细节优化"
+        }
+      },
+      {
+        "2.11@version.version_common": {
+          "$version": "V2.11",
+          "$update_time": "2023.2.11",
+          "$description": "§l§6(更改)§r\n§f> 更改部分容器标题\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复字体异常显示问题"
+        }
+      },
+      { "dividers@cube_common.divider": {"ignored": "(not $subpacks_ignored)"} },
       { "no_subpack@subpack.no_subpack": {} },
       { "pack_6_version@subpack_version.HD_patch_version": {} }
     ]
@@ -102,7 +116,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "text_alignment": "left",
-          "$text_color": [ 0.2, 0.4, 0.8 ],
+          "$text_color": "$b_color_format",
           "$text_font_scale_factor": 1.1
         }
       },
@@ -162,7 +176,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "text_alignment": "left",
-          "$text_color": [ 0.2, 0.4, 0.8 ],
+          "$text_color": "$b_color_format",
           "$text_font_scale_factor": 1.1
         }
       },

@@ -14,7 +14,7 @@
         }
       },
       {
-        "tip@cube_ui_common.image_header": {
+        "tip@cube_common.image_header": {
           "$header_image": "textures/ui/infobulb",
           "$cube_ui_header_text": "about_ui.subpack_sorting"
         }
@@ -86,7 +86,7 @@
     "type": "panel",
     "size": [ "100%", "28px" ],
     "controls": [
-      {"header@cube_ui_common.cube_ui_header_background": {}}
+      {"header@cube_common.cube_ui_header_background": {}}
     ]
   },
 
@@ -99,11 +99,10 @@
 
   "subpack_background": {
     "type": "image",
-    "size": [ "100%", 40 ],
+    "size": [ "100%", 42 ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
     "color": "$global_background_color",
     
@@ -121,7 +120,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "size": [ "100% - 4px", 40 ],
-          "offset": [2,0],
+          "offset": [2,2],
           "controls": [
             {
               "pack_icon": {
@@ -133,7 +132,7 @@
                 "texture": "$pack_icon"
               }
             },
-            {"empty_panel@cube_ui_common.h_panel": {}},
+            {"empty_panel@cube_common.h_panel": {}},
             {
               "info_panel": {
                 "type": "stack_panel",
@@ -158,7 +157,7 @@
                             "font_scale_factor": 1.2
                           }
                         },
-                        {"version_separation@cube_ui_common.h_panel":{"size":[ 5, 0 ]}},
+                        {"version_separation@cube_common.h_panel":{"size":[ 5, 0 ]}},
                         {
                           "version@subpack.subpack_info_common_label": {
                             "color": [ 1, 1, 0.333 ],

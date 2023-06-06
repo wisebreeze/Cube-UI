@@ -14,37 +14,37 @@
         }
       },
       {"theme@theme": {}},
-      {"background@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_1"}},
+      {"background@cube_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_1"}},
       {
         "preview_background": {
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%", 100 ],
           "controls": [
-            {"p1@cube_ui_common.h_panel": {}},
+            {"p1@cube_common.h_panel": {}},
             {
-              "default_bg@cube_ui_background.screen_background_content": {
+              "default_bg@cube_background.screen_background_content": {
                 "size": [ "fill", 100 ]
               }
             },
-            {"p2@cube_ui_common.h_panel": {}},
+            {"p2@cube_common.h_panel": {}},
             {
-              "blur_bg@cube_ui_background.screen_blur_background_content": {
+              "blur_bg@cube_background.screen_blur_background_content": {
                 "size": [ "fill", 100 ]
               }
             },
-            {"p3@cube_ui_common.h_panel": {}}
+            {"p3@cube_common.h_panel": {}}
           ]
         }
       },
-      {"button@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_2"}},
+      {"button@cube_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_2"}},
       {
         "preview_button": {
           "type": "stack_panel",
           "orientation": "horizontal",
           "size": [ "100%", 30 ],
           "controls": [
-            {"p1@cube_ui_common.h_panel": {}},
+            {"p1@cube_common.h_panel": {}},
             {
               "image_button@common_buttons.light_content_button": {
                 "size": [ 30, 30 ],
@@ -52,7 +52,7 @@
                 "$pressed_button_name": "button.empty"
               }
             },
-            {"p2@cube_ui_common.h_panel": {}},
+            {"p2@cube_common.h_panel": {}},
             {
               "text_button@start.main_button": {
                 "size": [ "fill", 30 ],
@@ -60,11 +60,11 @@
                 "$button_text": "menu.play"
               }
             },
-            {"p3@cube_ui_common.h_panel": {}}
+            {"p3@cube_common.h_panel": {}}
           ]
         }
       },
-      {"text@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_3"}},
+      {"text@cube_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_3"}},
       {
         "preview_text_1": {
           "type": "label",
@@ -135,15 +135,15 @@
           "text_alignment": "left"
         }
       },
-      {"toggle@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_4"}},
+      {"toggle@cube_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_4"}},
       {
-        "preview_toggle@cube_ui_common.toggle": {
+        "preview_toggle@cube_common.toggle": {
           "$toggle_size": ["100%",20],
           "$show_option_label": true,
           "$option_label": "Test"
         }
       },
-      {"slider@cube_ui_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_5"}},
+      {"slider@cube_common.cube_ui_header": {"$cube_ui_header_text": "appearance.header_5"}},
       {
         "preview_slider@settings_common.option_slider": {
           "$option_label": "Test slider",
@@ -160,8 +160,7 @@
     "size": [ "100%", 40 ],
     "anchor_from": "center",
     "anchor_to": "center",
-    "texture": "textures/ui/white_background",
-    "fill": true,
+    "texture": "textures/ui/White",
     "alpha": "$global_background_alpha",
     "color": "$global_background_color",
     "controls": [
@@ -189,7 +188,7 @@
                       "font_scale_factor": 1.2
                     }
                   },
-                  {"version_separation@cube_ui_common.h_panel":{"size":[ 5, 0 ]}},
+                  {"version_separation@cube_common.h_panel":{"size":[ 5, 0 ]}},
                   {
                     "version@subpack.subpack_info_common_label": {
                       "color": [ 1, 1, 0.333 ],

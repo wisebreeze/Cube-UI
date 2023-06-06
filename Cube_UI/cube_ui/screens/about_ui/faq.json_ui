@@ -13,7 +13,7 @@
           "$text_font_scale_factor": 1.6
         }
       },
-      {"divider@cube_ui_common.divider": {}},
+      {"divider@cube_common.divider": {}},
       {
         "q1@faq_common": {
           "$q_title": "cube_ui.faq_t1",
@@ -65,7 +65,7 @@
           "size": [ "100%", 15 ],
           "$text": "$q_title",
           "$label_font_type": "MinecraftTen",
-          "$text_color": [0.55,0.55,0.55],
+          "$text_color": [0.7,0.7,0.7],
           "$text_font_scale_factor": 1.3
         }
       },

@@ -1,0 +1,140 @@
+{
+  "namespace": "variables",
+
+  "variables_panel": {
+    "controls": [
+      {"first_panel@tabbed_upsell.padding_vertical": {}},
+      {
+        "title@about_ui.label_panel": {
+          "$text": "cube.variables.title",
+          "$text_alignment": "left",
+          "$text_color": "$main_header_text_color",
+          "$text_font_scale_factor": 1.5
+        }
+      },
+      {
+        "subtitle@about_ui.label_panel": {
+          "$text": "cube.variables.subtitle",
+          "$text_alignment": "left"
+        }
+      },
+      {
+        "more@about_ui.label_panel": {
+          "$text": "cube.variables.more",
+          "$text_alignment": "left"
+        }
+      },
+      {"panel@cube_common.v_panel": {}},
+      {
+        "global_font@var": {
+          "$var_name": "cube.variables.global_font",
+          "$var_type": "string",
+          "$var": "$global_main_font"
+        }
+      },
+      {
+        "always_auto_place@var": {
+          "$var_name": "cube.variables.auto_place",
+          "$var": "$always_auto_place"
+        }
+      },
+      {
+        "percentage@var": {
+          "$var_name": "cube.variables.percentage",
+          "$var": "$enabled_percentage"
+        }
+      },
+      {
+        "flying_item@var": {
+          "$var_name": "cube.variables.flying_item",
+          "$var": "$show_flying_item_renderer"
+        }
+      },
+      {
+        "help@var": {
+          "$var_name": "cube.variables.enabled_help",
+          "$var": "$enabled_help"
+        }
+      },
+      {
+        "brewing_effect@var": {
+          "$var_name": "cube.variables.brewing_effect_icon",
+          "$var": "$brewing_effect_icon"
+        }
+      },
+      {
+        "quit_tip@var": {
+          "$var_name": "cube.variables.enable_quit_tip",
+          "$var": "$enable_quit_tip"
+        }
+      },
+      {
+        "old_world@var": {
+          "$var_name": "cube.variables.old_world",
+          "$var": "$old_world_ignored"
+        }
+      },
+      {
+        "spectator@var": {
+          "$var_name": "cube.variables.spectator",
+          "$var": "$spectator_enable"
+        }
+      },
+      {
+        "multiline_input@var": {
+          "$var_name": "cube.variables.multiline_input",
+          "$var": "$use_multiline_input"
+        }
+      },
+      {
+        "more_command@var": {
+          "$var_name": "cube.variables.more_command",
+          "$var": "$show_more_command"
+        }
+      },
+      {
+        "cross_hair@var": {
+          "$var_name": "cube.variables.cross_hair",
+          "$var": "$always_show_cross_hair"
+        }
+      },
+      {
+        "selected_anim@var": {
+          "$var_name": "cube.variables.hotbar_selected_anim",
+          "$var": "$hotbar_selected_anim"
+        }
+      }
+    ]
+  },
+
+  "var@cube_common.h_sp": {
+    "$var_type|default": "bool",
+    "size": ["100%",10],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "$var_name",
+          "font_type":"$global_main_font"
+        }
+      },
+      {"panel":{"type":"label","text":": ","font_type":"$global_main_font"}},
+      {
+        "text": {
+          "type": "label",
+          "text": "$var",
+          "visible": "($var_type = 'string')",
+          "font_type":"$global_main_font"
+        }
+      },
+      {"true@bool": {"ignored":"(not $var)","visible":"($var_type = 'bool')","color":"$a_color_format"}},
+      {"false@bool": {"ignored":"$var","visible":"($var_type = 'bool')","color":"$c_color_format"}}
+    ]
+  },
+
+  "bool": {
+    "type": "label",
+    "text": "('§r' + $var)",
+    "font_type":"$global_main_font"
+  }
+}
