@@ -1,6 +1,6 @@
 {
-"addon_section": {"$search_name": "addon_search"},
-"level_texture_pack_section": {"$search_name": "texture_search"},
+"addon_section": {"$selected_item": "addon_s","$available_item": "addon_a","$search_name": "addon_search"},
+"level_texture_pack_section": {"$selected_item": "texture_s","$available_item": "texture_a","$search_name": "texture_search"},
   "game_button": {
     "type": "stack_panel",
     "size": ["100%","100%c"],
@@ -78,7 +78,7 @@
         "control_name": "world_preferences_label",
         "operation": "replace",
         "value": [
-          {"divider@cube_ui_common.divider": {}}
+          {"divider@cube_common.divider": {}}
         ]
       },
       {"control_name": "starting_map_toggle","operation": "remove"},
@@ -114,9 +114,9 @@
         "control_name": "random_tick_speed",
         "operation": "replace",
         "value": [
-          {"divider_2@cube_ui_common.divider": {"visible":"($is_pregame and (not $is_world_create))"}}
+          {"divider_2@cube_common.divider": {"visible":"($is_pregame and (not $is_world_create))"}}
         ]
       }
     ]
   },
-"selector_pane_content/classroom_button":{"$toggle_icon":"cube_ui/textures/setting/class_icon"},"selector_pane_content/switch_game_button":{"$toggle_icon":"cube_ui/textures/setting/controller_icon"},"addon_button":{"$toggle_icon":"cube_ui/textures/setting/addon_icon"},"multiplayer_button":{"$toggle_icon":"cube_ui/textures/setting/multiplayer_icon"},"debug_button":{"$toggle_icon":"cube_ui/textures/setting/debug_icon"},"server_settings_button":{"$toggle_icon":"$glyph_color_texture"},"world_type_dropdown_content@settings_common.option_radio_dropdown_group":{"$radio_buttons":[{"flat_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_flat","$radio_label_text":"generator.flat"}},{"infinite_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_infinite","$radio_label_text":"generator.infinite"}},{"old_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_old","$radio_label_text":"generator.old","ignored":"$old_world_ignored"}}]},"selector_pane_content/multiplayer_button":{"ignored":"$cube_netease"},"game_section/export_template_panel":{"ignored":"(not $is_pregame or not $is_world_edit)"}}
+"selector_pane_content/classroom_button":{"$toggle_icon":"cube_ui/textures/setting/class_icon"},"selector_pane_content/switch_game_button":{"$toggle_icon":"cube_ui/textures/setting/controller_icon"},"addon_button":{"$toggle_icon":"cube_ui/textures/setting/addon_icon"},"multiplayer_button":{"$toggle_icon":"cube_ui/textures/setting/multiplayer_icon"},"debug_button":{"$toggle_icon":"cube_ui/textures/setting/debug_icon"},"server_settings_button":{"$toggle_icon":"$glyph_color_texture"},"world_type_dropdown_content@settings_common.option_radio_dropdown_group":{"$radio_buttons":[{"flat_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_flat","$radio_label_text":"generator.flat"}},{"infinite_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_infinite","$radio_label_text":"generator.infinite"}},{"old_world_type_toggle@settings_common.radio_with_label":{"$toggle_state_binding_name":"#world_type_radio_old","$radio_label_text":"generator.old","ignored":"$old_world_ignored"}}]},"selector_pane_content/multiplayer_button":{"ignored":"$is_netease"},"game_section/export_template_panel":{"ignored":"(not $is_pregame or not $is_world_edit)"}}

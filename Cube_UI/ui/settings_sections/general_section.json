@@ -1,17 +1,27 @@
 {
-"global_texture_pack_section": {"$search_name": "global_search"},
+"video_section/perspective_dropdown": {"$dropdown_mode": "text_button",
+"$dropdown_main_controls": "setting_dropdown.third_person"
+},
+"video_section/split_screen_dropdown": {"$dropdown_mode": "text_button",
+"$dropdown_main_controls": "setting_dropdown.split_screen"
+},
+"video_section/ui_profile_dropdown": {"$dropdown_mode": "text_button",
+"$dropdown_main_controls": "setting_dropdown.ui_profile"
+},
+"global_texture_pack_section": {"$selected_item": "global_s","$available_item": "global_a","$search_name": "global_search"},
   "language_section": {
     "modifications": [
       {
         "array_name": "controls",
         "operation": "insert_front",
         "value": [
-          {"header@cube_ui_common.image_header":{"$cube_ui_header_text": "options.languageWarning","$header_image": "textures/ui/infobulb"}}
+          {"header@cube_common.image_header":{"$cube_ui_header_text": "options.languageWarning","$header_image": "textures/ui/infobulb"}}
         ]
       }
     ]
   },
   "video_section/setup_safe_zone": {"ignored": "(not $supports_user_configured_safezone)"},
+  //"video_section/hide_paperdoll_toggle": {"ignored": "$focus_on_enable"},
   "video_section/reset_button": {"ignored": false},
   "accessibility_section/reset_button": {"ignored": false},
   "content_log_panel": {
@@ -94,7 +104,7 @@
           ]
         }
       },
-      {"section_spacer_2@cube_ui_common.divider": {}},
+      {"section_spacer_2@cube_common.divider": {}},
       {
         "content_log_location_label_header": {
           "type": "label",
@@ -150,46 +160,6 @@
 "how_to_play_button":{"$toggle_icon":"cube_ui/textures/setting/howtoplay_icon"},
 //////////////////////////
   "video_section/max_framerate_slider": {"ignored":false},
-/*  "profile_section/licenses_label_header": {"font_type":"$global_main_font"},
-  "profile_section/third_party_copyright_info_label_panel/copyright_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/build_id_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/protocol_version_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/device_id_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/MinecraftAccount_id_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/commerce_id_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/build_date_label": {"font_type":"$global_main_font"},
-  "profile_section/build_info_label_panel/world_converter_label": {"font_type":"$global_main_font"},
-  "profile_section": {
-  	"$spatialPatternsPadding": ["100%", 8],
-  	"$paddingLineDivider": ["100%", 8],
-    "modifications": [
-      {
-        "control_name": "paddingNameControls",
-        "operation": "remove"
-      },
-      {
-        "control_name": "name_controls",
-        "operation": "remove"
-      },
-      {
-        "control_name": "paddingSignInControls",
-        "operation": "remove"
-      },
-      {
-        "control_name": "signin_controls",
-        "operation": "remove"
-      },
-      {
-        "control_name": "paddingGamerTagControls",
-        "operation": "remove"
-      },
-      {
-        "control_name": "gamertag_controls",
-        "operation": "remove"
-      }
-    ],
-    "$hide_login_button": "($win10_edition or not $is_xboxlive_enabled)"
-  },*/
   
   "gamertag_controls": {
     "type": "panel",
@@ -274,7 +244,7 @@
                 ]
               }
             },
-            { "dividers@cube_ui_common.divider": {"ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)"}},
+            { "dividers@cube_common.divider": {"ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)"}},
       	  	{ "paddingXboxAccountButtons": { "ignored": "($device_must_be_removed_for_xbl_signin or $fire_tv or not $is_pregame or $disable_gamertag_controls)", "type": "panel", "size": "$spatialPatternsPadding" } },
             {
               "xboxlive_deep_link_buttons": {
@@ -308,7 +278,7 @@
                             }
                           }
                         },
-                        {"panel@cube_ui_common.h_panel":{}},
+                        {"panel@cube_common.h_panel":{}},
                         {
                           "manage_account_button@settings_common.action_button": {
                             "ignored": "($is_ios or $is_android)",
@@ -421,13 +391,13 @@
     "controls": [
       { "paddingMainVolume": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "main_volume_header@cube_ui_common.image_header": {
+        "main_volume_header@cube_common.image_header": {
           "$cube_ui_header_text": "options.dev_overrideVersionMajor",
           "$header_image": "textures/items/emerald"
         }
       },
       { "padding_1": { "type": "panel", "size": "$padding" } },
-	  {
+	    {
         "option_slider_0@settings_common.option_slider": {
           "size": "$audioSlidersSize",
           "$option_label": "#main_volume_slider_label",
@@ -444,10 +414,10 @@
         }
       },
       { "paddingDividerAudioSettings": { "type": "panel", "size": "$spatialPatternsPadding" } },
-      {"dividerAudioSettings@cube_ui_common.divider": {}},
+      {"dividerAudioSettings@cube_common.divider": {}},
       { "paddingMusic": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "sound_header@cube_ui_common.image_header": {
+        "sound_header@cube_common.image_header": {
           "$cube_ui_header_text": "options.category.audio",
           "$header_image": "textures/blocks/noteblock"
         }
@@ -486,7 +456,7 @@
       },
       { "paddingAmbient": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "ambient_header@cube_ui_common.image_header": {
+        "ambient_header@cube_common.image_header": {
           "$cube_ui_header_text": "soundCategory.ambient",
           "$header_image": "textures/ui/icon_summer"
         }
@@ -525,7 +495,7 @@
       },
       { "paddingBlockVolume": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "block_header@cube_ui_common.image_header": {
+        "block_header@cube_common.image_header": {
           "$cube_ui_header_text": "soundCategory.block",
           "$header_image": "textures/ui/icon_new"
         }
@@ -564,7 +534,7 @@
       },
       { "paddingHostile": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "mobs_header@cube_ui_common.image_header": {
+        "mobs_header@cube_common.image_header": {
           "$cube_ui_header_text": "stat.mobsButton",
           "$header_image": "textures/items/fish_raw"
         }
@@ -603,7 +573,7 @@
       },
       { "paddingPlayervolume": { "type": "panel", "size": "$spatialPatternsPadding" } },
       {
-        "other_header@cube_ui_common.image_header": {
+        "other_header@cube_common.image_header": {
           "$cube_ui_header_text": "xbox.report.area.other",
           "$header_image": "textures/items/diamond"
         }
@@ -622,7 +592,6 @@
               "binding_name": "$option_label"
             }
           ]
-
         }
       },
       { "paddingTTSVolume": { "type": "panel", "size": "$spatialPatternsPadding" } },
@@ -642,7 +611,7 @@
         }
       },
       { "paddingResetVolumes": { "type": "panel", "size": "$spatialPatternsPadding" } },
-      {"dividerResetSettings@cube_ui_common.divider": {}},
+      {"dividerResetSettings@cube_common.divider": {}},
       { "padding_7": { "type": "panel", "size": "$padding"}},
       {
         "reset_button@settings_common.action_button": {
