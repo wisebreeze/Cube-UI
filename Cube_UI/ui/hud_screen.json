@@ -512,7 +512,7 @@
       {"p1@common.empty_panel": {"bindings":[{"binding_type":"view","source_control_name":"compass_toggle","source_property_name":"#toggle_state","target_property_name":"#visible"}],"size":[3,0]}},
       {"391@cube_common.item_renderer": {"bindings":[{"binding_type":"view","source_control_name":"compass_toggle","source_property_name":"#toggle_state","target_property_name":"#visible"}],"property_bag":{"#item_id_aux":22609920}}},
       {"p2@common.empty_panel": {"ignored": "(not $focus_on_enable)","bindings":[{"binding_type":"view","source_control_name":"recovery_compass_toggle","source_property_name":"#toggle_state","target_property_name":"#visible"}],"size":[3,0]}},
-      {"652@cube_common.item_renderer": {"ignored": "(not $focus_on_enable)","bindings":[{"binding_type":"view","source_control_name":"recovery_compass_toggle","source_property_name":"#toggle_state","target_property_name":"#visible"}],"$item_id":652}}
+      {"653@cube_common.item_renderer": {"ignored": "(not $focus_on_enable)","bindings":[{"binding_type":"view","source_control_name":"recovery_compass_toggle","source_property_name":"#toggle_state","target_property_name":"#visible"}],"$item_id":653}}
     ]
   },
 
