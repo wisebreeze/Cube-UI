@@ -740,7 +740,7 @@
           "layer": 13
         }
       },
-      {
+      /*{
         "game_tip@game_tip.game_tip_panel": {
           "layer": 100,
           "$offset|default": [ 0, 110 ],
@@ -752,7 +752,7 @@
           ],
           "offset": "$offset"
         }
-      },
+      },*/
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       { "item_lock_notification_factory@common.item_lock_notification_factory": {} }
     ]
