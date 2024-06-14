@@ -1,0 +1,51 @@
+{
+"cell_image": {
+  "texture": "textures/ui/White",
+  "alpha":"$global_cell_alpha",
+  "color":"$global_cell_color"
+},
+"crafter_highlight_slot": {
+  "texture": "textures/ui/White",
+  "size": [ "100%", "100%" ],
+  "alpha": "$global_cell_alpha",
+  "color":"$global_cell_selected_color"
+},
+"crafter_disabled_slot": {
+  "controls": [
+    {
+      "default": {
+        "type": "image",
+        "texture": "textures/ui/White",
+        "alpha":"$global_cell_alpha",
+        "color":"$global_cell_red_color"
+      }
+    },
+    {
+      "hover": {
+        "type": "image",
+        "layer":2,
+        "texture": "cube_ui/textures/common/focus_border",
+        "controls":[
+          {
+            "bg":{
+              "type":"image",
+              "layer":-1,
+              "texture":"textures/ui/White",
+              "alpha":"$global_cell_alpha",
+              "color":"$global_cell_red_color"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pressed": {
+        "type": "image",
+        "texture": "textures/ui/White",
+        "alpha":"$global_cell_alpha",
+        "color":"$global_cell_red_color"
+      }
+    }
+  ]
+}
+}
