@@ -14,68 +14,33 @@
           "$text_font_scale_factor": 1.6
         }
       },
-      // §6 > 更改 // §a + 增加 // §b ✔ 修复 // §c - 移除 // §5 * 扩展包 //
+      // 更改 // 增加 // 修复 // 移除 // 扩展包 //
       {
-        "2.13.3@version.version_common": {
-          "$version": "V2.13.3",
-          "$update_time": "2023.6.6",
-          "$description": "§l§b(修复)§r\n§f✔ 修复追溯指南针的显示问题"
+        "2.17@version.version_common": {
+          "$version": "V2.17",
+          "$update_time": "2024.6.14",
+          "$description": "§l§b[更改]§r\n§f- 初步更改合成器相关控件"
         }
       },
       {
-        "2.13.2@version.version_common": {
-          "$version": "V2.13.2",
-          "$update_time": "2023.5.20",
-          "$description": "§l§b(修复)§r\n§f✔ 修复服务器表单屏幕字体显示问题"
+        "2.16@version.version_common": {
+          "$version": "V2.16",
+          "$update_time": "2024.5.18",
+          "$description": "§l§b[新增]§r\n§f- 日志屏幕新增清除日志按钮\n§l§b[修复]§r\n§f- 修复文件报错问题\n- 减少日志报错"
         }
       },
       {
-        "2.13.1@version.version_common": {
-          "$version": "V2.13.1",
-          "$update_time": "2023.5.13",
-          "$description": "§l§a(新增)§r\n§f+ 新增官方限时活动入口"
+        "2.15.1@version.version_common": {
+          "$version": "V2.15.1",
+          "$update_time": "2024.4.27",
+          "$description": "§l§b[更改]§r\n§f- 部分细节优化\n§l§b[修复]§r\n§f- 修复文件报错问题"
         }
       },
       {
-        "2.13@version.version_common": {
-          "$version": "V2.13",
-          "$update_time": "2023.5.13",
-          "$description": "§l§b(修复)§r\n§f✔ 修复1.20版本锻造台布局问题"
-        }
-      },
-      {
-        "2.12.2@version.version_common": {
-          "$version": "V2.12.2",
-          "$update_time": "2023.3.18",
-          "$description": "§l§a(新增)§r\n§f+ 新增自定义皮肤选择手臂粗细按钮"
-        }
-      },
-      {
-        "2.12.1@version.version_common": {
-          "$version": "V2.12.1",
-          "$update_time": "2023.3.3",
-          "$description": "§l§6(更改)§r\n§f> 优化聊天栏命令自动填充功能"
-        }
-      },
-      {
-        "2.12@version.version_common": {
-          "$version": "V2.12",
-          "$update_time": "2023.2.26",
-          "$description": "§l§6(更改)§r\n§f> 更改隐藏 HUD 按钮位置\n> 部分细节优化\n§l§d(变量)§r\n§f> 加入 $hide_hud_tip 变量，以方便关闭隐藏 HUD 提示"
-        }
-      },
-      {
-        "2.11.1@version.version_common": {
-          "$version": "V2.11.1",
-          "$update_time": "2023.2.21",
-          "$description": "§l§6(更改)§r\n§f> 更改HUD屏幕药水效果位置\n> 部分细节优化"
-        }
-      },
-      {
-        "2.11@version.version_common": {
-          "$version": "V2.11",
-          "$update_time": "2023.2.11",
-          "$description": "§l§6(更改)§r\n§f> 更改部分容器标题\n> 部分细节优化\n§l§b(修复)§r\n§f✔ 修复字体异常显示问题"
+        "2.15@version.version_common": {
+          "$version": "V2.15",
+          "$update_time": "2023.10.15",
+          "$description": "§l§b[更改]§r\n§f- 全局变量文件顶部教程更改\n- 点击音效更改为原版点击音效\n- 优化文件占用大小\n§l§b[修复]§r\n§f- 官方活动入口布局优化"
         }
       },
       { "dividers@cube_common.divider": {"ignored": "(not $subpacks_ignored)"} },
