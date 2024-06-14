@@ -6,15 +6,11 @@
   },
 
   "sidebar_divider": {
-    "alpha": 0
+    "ignored": true
   },
-  "content_view/content_view_stack": {
-    "modifications": [
-      {
-        "control_name": "divider",
-        "operation": "remove"
-      }
-    ]
+  "edge_bar": {
+    "visible":false,
+    "size": [0,0]
   },
   "sidebar_section": {
     "modifications": [

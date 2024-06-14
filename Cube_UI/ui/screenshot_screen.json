@@ -95,14 +95,39 @@
   },
   
   "screenshot_flash_image": {"layer":1000},
-  "content_panel/popup_content": {
-    "modifications": [
+  "content_panel": {
+    "type": "panel",
+    "size": [ 300, 225 ],
+    "controls": [      
+      { "popup_dialog_bg@feed_common.popup_dialog_bg": {} },
       {
-        "array_name": "controls",
-        "operation": "insert_back",
-        "value": [
-          {"bottom_tip@bottom_image":{}}
-        ]
+        "popup_content": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "size": ["100%", "100%"],
+          "controls": [
+            {
+              "new_post_dialog_header@screenshot.new_post_dialog_header": {
+                "size": [ "100%", "10%" ]
+              }
+            },
+            {
+              "new_post_share_post@screenshot.new_post_share_post": {
+                "size": [ "100%", "15%" ],
+                "offset": [ 0, "10%" ]
+              }
+            },
+            {
+              "screenshot_image@screenshot.screenshot_image": {
+                "size": [ "100%", "75%" ],
+                "offset": [ 0, "25%" ]
+              }
+            },
+            {"bottom_tip@bottom_image":{}}
+          ]
+        }
       }
     ]
   }
