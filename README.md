@@ -1,6 +1,10 @@
 # Cube-UI
 Cube UI是一个MinecraftBE UI，他能让繁琐的界面变得简洁，而且在原有的基础上增加了一些功能！
 
+> [!IMPORTANT]
+> **本版本（仓库）已停止维护。** 
+> 请访问 **[cubevisage.top](https://cubevisage.top)** 获取最新版本。
+
 ### 注意事项
 ---
 - 建议更新Minecraft BE时同时更新Cube UI（作者需要正式版刚发布1-2天再去更新Cube UI）
